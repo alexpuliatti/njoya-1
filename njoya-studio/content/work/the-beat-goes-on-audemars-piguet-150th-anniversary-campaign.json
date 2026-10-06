@@ -1,0 +1,81 @@
+{
+  "id": "92cc915c-efa4-4f73-aa00-7d71f0b7b31a",
+  "slug": "the-beat-goes-on-audemars-piguet-150th-anniversary-campaign",
+  "title": "The Beat Goes On, Audemars Piguet 150th Anniversary Campaign",
+  "client": "Audemars Piguet",
+  "date": "2025-01-01",
+  "categories": [
+    "worlds"
+  ],
+  "kind": "design-project",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/de798d5f5fc62efe89ecb16ada2c8b482921114b.webp",
+    "previewSrc": "/media/images/de798d5f5fc62efe89ecb16ada2c8b482921114b-720.webp",
+    "alt": "Campaign celebrating Audemars Piguet's 150th anniversary, shot by Campbell Addy with set design by Ibby Njoya (Njoya Studios). A portrait-driven, cinematic campaign titled \"The Beat Goes On,\" honouring the artisans, engineers, and collaborators of the Manufacture over 150 years of watchmaking excellence. Vibrant, diverse, and dynamically composed, the campaign was shot in Le Brassus — the brand's home in the Vallée de Joux, Switzerland.",
+    "width": 2481,
+    "height": 3508
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/100626b5b2a0471b04bed29c2a602bf4e4b69e86.webp",
+      "previewSrc": "/media/images/100626b5b2a0471b04bed29c2a602bf4e4b69e86-720.webp",
+      "alt": "Campaign celebrating Audemars Piguet's 150th anniversary, shot by Campbell Addy with set design by Ibby Njoya (Njoya Studios). A portrait-driven, cinematic campaign titled \"The Beat Goes On,\" honouring the artisans, engineers, and collaborators of the Manufacture over 150 years of watchmaking excellence. Vibrant, diverse, and dynamically composed, the campaign was shot in Le Brassus — the brand's home in the Vallée de Joux, Switzerland.",
+      "width": 4961,
+      "height": 3508
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e83ba708a3ab9fb15a8f668a4523a601de73f7bf.webp",
+      "previewSrc": "/media/images/e83ba708a3ab9fb15a8f668a4523a601de73f7bf-720.webp",
+      "alt": "The Beat Goes On, Audemars Piguet 150th Anniversary Campaign — image 2",
+      "width": 2481,
+      "height": 3508
+    },
+    {
+      "type": "image",
+      "src": "/media/images/675dc546e4326bb73fbbbe053ce968b4279fe952.webp",
+      "previewSrc": "/media/images/675dc546e4326bb73fbbbe053ce968b4279fe952-720.webp",
+      "alt": "The Beat Goes On, Audemars Piguet 150th Anniversary Campaign — image 3",
+      "width": 4961,
+      "height": 3508
+    }
+  ],
+  "credits": [
+    {
+      "role": "type",
+      "name": "Set Design"
+    },
+    {
+      "role": "location",
+      "name": "Le Brassus, Vallée de Joux, Switzerland"
+    },
+    {
+      "role": "photographer",
+      "name": "Campbell Addy"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "stylist",
+      "name": "Pau Avia"
+    },
+    {
+      "role": "other",
+      "customRole": "Movement Director",
+      "name": "Abdourahman Njie (Yagamoto)"
+    },
+    {
+      "role": "njoyaTeam",
+      "name": "Luiza Chara, Aish Xahamed"
+    }
+  ],
+  "tags": [
+    "Set Design",
+    "Le Brassus, Vallée de Joux, Switzerland"
+  ],
+  "legacyUrls": []
+}

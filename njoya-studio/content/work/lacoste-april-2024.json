@@ -1,0 +1,108 @@
+{
+  "id": "eba3e495-0a85-4a16-ac67-00535be1f3ad",
+  "slug": "lacoste-april-2024",
+  "title": "Lacoste, April 2024",
+  "client": "Lacoste",
+  "date": "2024-04-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/5bd592197cf506be7d3b61c22bd93ddcfb7ea173.webp",
+    "previewSrc": "/media/images/5bd592197cf506be7d3b61c22bd93ddcfb7ea173-720.webp",
+    "alt": "Venus Williams in a deep burgundy athletic set and red sneakers holds open the massive jaws of an oversized sculptural green crocodile with one arm raised, one foot planted on its red tongue — bold, athletic, and larger-than-life against a clean white background. Tagline: LACOSTE · PLAY BIG.",
+    "width": 4500,
+    "height": 5625
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/b8c0ea69d4d384cb99520c0908cd920bd1b45704.webp",
+      "previewSrc": "/media/images/b8c0ea69d4d384cb99520c0908cd920bd1b45704-720.webp",
+      "alt": "mag image 1",
+      "width": 8000,
+      "height": 4500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d3a5a8a541bf15e98dc32169f5958d859e06dfa6.webp",
+      "previewSrc": "/media/images/d3a5a8a541bf15e98dc32169f5958d859e06dfa6-720.webp",
+      "alt": "mag image 3",
+      "width": 8000,
+      "height": 4500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5973d045f04933573f422d7f1d891bac876e47fc.webp",
+      "previewSrc": "/media/images/5973d045f04933573f422d7f1d891bac876e47fc-720.webp",
+      "alt": "mag image 5",
+      "width": 4500,
+      "height": 5625
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5bd592197cf506be7d3b61c22bd93ddcfb7ea173.webp",
+      "previewSrc": "/media/images/5bd592197cf506be7d3b61c22bd93ddcfb7ea173-720.webp",
+      "alt": "mag image 6",
+      "width": 4500,
+      "height": 5625
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0d35e21b6d68baeb2070c1690752805a1ff3c801.webp",
+      "previewSrc": "/media/images/0d35e21b6d68baeb2070c1690752805a1ff3c801-720.webp",
+      "alt": "mag image 8",
+      "width": 4500,
+      "height": 5625
+    },
+    {
+      "type": "image",
+      "src": "/media/images/da21284a1ead2d03e2750c7d0841ed4a0da53072.webp",
+      "previewSrc": "/media/images/da21284a1ead2d03e2750c7d0841ed4a0da53072-720.webp",
+      "alt": "mag image 10",
+      "width": 4500,
+      "height": 5625
+    },
+    {
+      "type": "video",
+      "playbackId": "r93oSKi34TUj4Of01lwVxGjVnTWLuIK3QhnUL28JemC8",
+      "alt": "Lacoste, April 2024 — film"
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Willy Vanderperre"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Director",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "customRole": "Models",
+      "name": "Pierre Niney, Wang Yibo, Novak Djokovic, Venus Williams, Jeon Somi, Ahn Hyo Seop"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Yann Turchi"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Patrick Glatthaar"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/lacoste/editions/lacoste-april-2024",
+    "/shoots/lacoste"
+  ]
+}

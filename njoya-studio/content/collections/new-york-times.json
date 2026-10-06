@@ -1,0 +1,17 @@
+{
+  "id": "9c95df6e-579b-4f59-bb4c-1e6d03095406",
+  "slug": "new-york-times",
+  "title": "New York Times",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3.webp",
+    "previewSrc": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3-720.webp",
+    "alt": "Mag Cover",
+    "width": 1537,
+    "height": 1922
+  },
+  "workIds": [
+    "4cbea949-0607-4e31-afbf-5bdcaa2bedb1"
+  ],
+  "isMultiEdition": false
+}

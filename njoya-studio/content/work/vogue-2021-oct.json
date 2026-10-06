@@ -1,0 +1,196 @@
+{
+  "id": "9af5013e-2bce-4a0a-8de2-8172ef18d60b",
+  "slug": "vogue-2021-oct",
+  "title": "British Vogue, October 2021",
+  "client": "British Vogue",
+  "date": "2021-10-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/5d0d3321da38f5bae4f6540e7bd9538cc86cadcf.webp",
+    "previewSrc": "/media/images/5d0d3321da38f5bae4f6540e7bd9538cc86cadcf-720.webp",
+    "alt": "A model's face emerges from the center of an enormous layered circular ruffled blue organza and crinoline headpiece by Noel Stewart, bathed entirely in deep cobalt blue light, creating a hypnotic, otherworldly spiral effect.",
+    "width": 1714,
+    "height": 2236
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/5d0d3321da38f5bae4f6540e7bd9538cc86cadcf.webp",
+      "previewSrc": "/media/images/5d0d3321da38f5bae4f6540e7bd9538cc86cadcf-720.webp",
+      "alt": "A model's face emerges from the center of an enormous layered circular ruffled blue organza and crinoline headpiece by Noel Stewart, bathed entirely in deep cobalt blue light, creating a hypnotic, otherworldly spiral effect.",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ebb51e5befc511ce9083fa5d74aa6b7995eb0569.webp",
+      "previewSrc": "/media/images/ebb51e5befc511ce9083fa5d74aa6b7995eb0569-720.webp",
+      "alt": "mag image 2",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/37875103788839c841ffafafb2f6435c1c3f3784.webp",
+      "previewSrc": "/media/images/37875103788839c841ffafafb2f6435c1c3f3784-720.webp",
+      "alt": "mag image 3",
+      "width": 1715,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b9f2256c7dfb20d739ce03f7b6a9e8778c89eec0.webp",
+      "previewSrc": "/media/images/b9f2256c7dfb20d739ce03f7b6a9e8778c89eec0-720.webp",
+      "alt": "mag image 4",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4c2bbf0059f6d999b0307a303b61bfe49ead0e96.webp",
+      "previewSrc": "/media/images/4c2bbf0059f6d999b0307a303b61bfe49ead0e96-720.webp",
+      "alt": "mag image 5",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/150dcf26d618197e9232cccb0fd8d5f1e564ca5b.webp",
+      "previewSrc": "/media/images/150dcf26d618197e9232cccb0fd8d5f1e564ca5b-720.webp",
+      "alt": "mag image 6",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/715bd1f06efc993fb26d130b457eae7d12261869.webp",
+      "previewSrc": "/media/images/715bd1f06efc993fb26d130b457eae7d12261869-720.webp",
+      "alt": "mag image 7",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9667a550629bd51cbed3e038827d2ce48d1e7c43.webp",
+      "previewSrc": "/media/images/9667a550629bd51cbed3e038827d2ce48d1e7c43-720.webp",
+      "alt": "mag image 8",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8acd06b9b802b8f402d3410dd233504aa9d48e37.webp",
+      "previewSrc": "/media/images/8acd06b9b802b8f402d3410dd233504aa9d48e37-720.webp",
+      "alt": "mag image 9",
+      "width": 1715,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3e16bb7103e723e36db94fde0cef83c6c5746fd8.webp",
+      "previewSrc": "/media/images/3e16bb7103e723e36db94fde0cef83c6c5746fd8-720.webp",
+      "alt": "mag image 10",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c4444e87642ca4d36a0490037c9af95d01ab9a2c.webp",
+      "previewSrc": "/media/images/c4444e87642ca4d36a0490037c9af95d01ab9a2c-720.webp",
+      "alt": "mag image 11",
+      "width": 1300,
+      "height": 1684
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4d05a70908a07b5e09762998adaec4a95e29262e.webp",
+      "previewSrc": "/media/images/4d05a70908a07b5e09762998adaec4a95e29262e-720.webp",
+      "alt": "mag image 12",
+      "width": 1300,
+      "height": 1684
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c1318534c5a5598cac9203967931dddde24ab957.webp",
+      "previewSrc": "/media/images/c1318534c5a5598cac9203967931dddde24ab957-720.webp",
+      "alt": "mag image 13",
+      "width": 1713,
+      "height": 2235
+    },
+    {
+      "type": "image",
+      "src": "/media/images/217b5004bd2c06018bdfbce4ec6fc8394598ff3e.webp",
+      "previewSrc": "/media/images/217b5004bd2c06018bdfbce4ec6fc8394598ff3e-720.webp",
+      "alt": "mag image 14",
+      "width": 1715,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/68d5e99f24a9fdeed1f203578b1cc65e793ec2cf.webp",
+      "previewSrc": "/media/images/68d5e99f24a9fdeed1f203578b1cc65e793ec2cf-720.webp",
+      "alt": "mag image 15",
+      "width": 1714,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c3249bce15f4e6ddbb9ca9570ba18949fb512094.webp",
+      "previewSrc": "/media/images/c3249bce15f4e6ddbb9ca9570ba18949fb512094-720.webp",
+      "alt": "mag image 16",
+      "width": 1715,
+      "height": 2236
+    },
+    {
+      "type": "image",
+      "src": "/media/images/2672d34cf52fe73d40fb75e6af54f12e6701821a.webp",
+      "previewSrc": "/media/images/2672d34cf52fe73d40fb75e6af54f12e6701821a-720.webp",
+      "alt": "mag image 17",
+      "width": 1714,
+      "height": 2236
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Kate Phelan"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Cyndia Harvey"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "castDirector",
+      "name": "Rosie Vogel"
+    },
+    {
+      "role": "manicurist",
+      "name": "Sylvie Macmillan"
+    },
+    {
+      "role": "model",
+      "name": "Amane Taniguchi, Hyunser Park, Jan Baiboon, Jundan Chen, Seohyun Kim, Xue Huizi, Yoonmi Sun"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2021-oct"
+  ]
+}

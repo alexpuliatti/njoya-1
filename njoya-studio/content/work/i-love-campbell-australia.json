@@ -1,0 +1,89 @@
+{
+  "id": "53eaf2c4-c6a3-4ff7-957c-99732d47a1f5",
+  "slug": "i-love-campbell-australia",
+  "title": "I Love Campbell Australia",
+  "client": "11th Ballarat International Foto Biennale",
+  "date": "2025-08-01",
+  "categories": [
+    "exhibition"
+  ],
+  "kind": "design-project",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/511a9fb5a349d825717bda5e2e7729bc1546a61c.webp",
+    "previewSrc": "/media/images/511a9fb5a349d825717bda5e2e7729bc1546a61c-720.webp",
+    "alt": "Exhibition poster for I Love Campbell at the 11th Ballarat International Foto Biennale. Two people in a bare-skinned, intimate embrace — one with their back to the camera, arms of both figures wrapped tightly around each other. The title \"I LOVE CAMPBELL\" is painted over their bodies in bold red brush lettering. Dark, smoky grey background. Logos for 180 Studios and New School at the bottom left and right. Dates: 23 August – 19 October 2025",
+    "width": 4320,
+    "height": 6000
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/4effdd52d05ef5ea468ff02eaf0f6cbfe7a97863.webp",
+      "previewSrc": "/media/images/4effdd52d05ef5ea468ff02eaf0f6cbfe7a97863-720.webp",
+      "alt": "I Love Campbell Australia — image 1",
+      "width": 7264,
+      "height": 4843
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ca59e1275addbab61216641b9c6f2f471f2ce17e.webp",
+      "previewSrc": "/media/images/ca59e1275addbab61216641b9c6f2f471f2ce17e-720.webp",
+      "alt": "I Love Campbell Australia — image 2",
+      "width": 7301,
+      "height": 4867
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9cc8beda3731f3a6fb4bf9d5691cac8089b991f6.webp",
+      "previewSrc": "/media/images/9cc8beda3731f3a6fb4bf9d5691cac8089b991f6-720.webp",
+      "alt": "I Love Campbell Australia — image 3",
+      "width": 6782,
+      "height": 4521
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5bbe0afa170bd422b279d28337551bc02ba391b4.webp",
+      "previewSrc": "/media/images/5bbe0afa170bd422b279d28337551bc02ba391b4-720.webp",
+      "alt": "I Love Campbell Australia — image 4",
+      "width": 7801,
+      "height": 5201
+    }
+  ],
+  "credits": [
+    {
+      "role": "type",
+      "name": "Exhibition Design"
+    },
+    {
+      "role": "location",
+      "name": "Ballarat, Victoria, Australia"
+    },
+    {
+      "role": "photographer",
+      "name": "Campbell Addy"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Art Director",
+      "name": "Luiza Chara"
+    },
+    {
+      "role": "assistant",
+      "name": "Aisha Ahamed"
+    },
+    {
+      "role": "renderDesign",
+      "name": "Kwok Hei Yung"
+    }
+  ],
+  "tags": [
+    "Exhibition Design",
+    "Ballarat, Victoria, Australia"
+  ],
+  "legacyUrls": []
+}

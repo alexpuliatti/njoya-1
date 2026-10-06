@@ -1,0 +1,119 @@
+{
+  "id": "1acdd8e5-92c3-4df6-a9c3-6659c87effad",
+  "slug": "british-vogue-march-2025",
+  "title": "British Vogue, March 2025",
+  "client": "British Vogue",
+  "date": "2025-03-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/9912b730cca7b429c38fdfc86c95c4bfac44deb9.webp",
+    "previewSrc": "/media/images/9912b730cca7b429c38fdfc86c95c4bfac44deb9-720.webp",
+    "alt": "Tyla poses against a saturated cobalt blue background wearing a sculptural neon-pink strapless bustier and fitted black skirt, with voluminous natural hair swept upward. She faces the camera directly with a cool, high-glamour gaze — a bold, colour-charged British Vogue debut cover.",
+    "width": 2693,
+    "height": 3366
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/9912b730cca7b429c38fdfc86c95c4bfac44deb9.webp",
+      "previewSrc": "/media/images/9912b730cca7b429c38fdfc86c95c4bfac44deb9-720.webp",
+      "alt": "British Vogue, March 2025 — image 1",
+      "width": 2693,
+      "height": 3366
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6dd714de5d93ac77bfa83a2dc6f3099de88feeb0.webp",
+      "previewSrc": "/media/images/6dd714de5d93ac77bfa83a2dc6f3099de88feeb0-720.webp",
+      "alt": "British Vogue, March 2025 — image 2",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a9c8eb67c258427440f47f220285ec821bbb22be.webp",
+      "previewSrc": "/media/images/a9c8eb67c258427440f47f220285ec821bbb22be-720.webp",
+      "alt": "British Vogue, March 2025 — image 3",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "type": "image",
+      "src": "/media/images/804e0d4bc43cddf82adacde709c22b9055162663.webp",
+      "previewSrc": "/media/images/804e0d4bc43cddf82adacde709c22b9055162663-720.webp",
+      "alt": "British Vogue, March 2025 — image 4",
+      "width": 4800,
+      "height": 6000
+    },
+    {
+      "type": "image",
+      "src": "/media/images/254b8d6c2987f09aa95d71d63bb3d30ae4974c47.webp",
+      "previewSrc": "/media/images/254b8d6c2987f09aa95d71d63bb3d30ae4974c47-720.webp",
+      "alt": "British Vogue, March 2025 — image 5",
+      "width": 2400,
+      "height": 3000
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5220aad1d4dca4ae0b0b01aec1410bbcb18ec631.webp",
+      "previewSrc": "/media/images/5220aad1d4dca4ae0b0b01aec1410bbcb18ec631-720.webp",
+      "alt": "British Vogue, March 2025 — image 6",
+      "width": 4800,
+      "height": 6000
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c7661f355e0527b81aec79463470443d9e7f43ee.webp",
+      "previewSrc": "/media/images/c7661f355e0527b81aec79463470443d9e7f43ee-720.webp",
+      "alt": "British Vogue, March 2025 — image 7",
+      "width": 4800,
+      "height": 6000
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "stylist",
+      "name": "George Krakowiak"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Tyla"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Zhou Xue Ming"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "manicurist",
+      "name": "Simone Cummings"
+    },
+    {
+      "role": "other",
+      "customRole": "Production",
+      "name": "Ragi Dholakia Productions"
+    },
+    {
+      "role": "other",
+      "customRole": "Digital artwork",
+      "name": "Dtouch London"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": []
+}

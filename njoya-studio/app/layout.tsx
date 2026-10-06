@@ -1,0 +1,49 @@
+import "@/styles/globals.css";
+import type { Metadata, Viewport } from "next";
+
+import { Providers } from "./providers";
+
+import { getSearchIndex, getSite } from "@/lib/content/repository";
+import SearchProvider from "@/components/search-provider";
+import { Navbar } from "@/components/navbar";
+import StudioNavigation from "@/components/njoya-carousel-bottom-menu";
+import { siteConfig } from "@/config/site";
+import { fontSans } from "@/config/fonts";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
+  title: { default: siteConfig.name, template: `%s — ${siteConfig.name}` },
+  description:
+    "A multidisciplinary creative practice working across space, image, objects and experiences.",
+  icons: { icon: "/favicon.ico" },
+};
+export const viewport: Viewport = { themeColor: "#261b15" };
+
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const [searchIndex, site] = await Promise.all([getSearchIndex(), getSite()]);
+
+  return (
+    <html suppressHydrationWarning className="bg-[#261b15]" lang="en">
+      <body
+        className={`${fontSans.variable} studio-body font-sans antialiased`}
+      >
+        <Providers themeProps={{ attribute: "class", forcedTheme: "dark" }}>
+          <SearchProvider catalog={searchIndex}>
+            <a className="skip-link" href="#main-content">
+              Skip to content
+            </a>
+            <Navbar instagram={site.instagram} />
+            <main className="studio-main" id="main-content">
+              {children}
+            </main>
+            <StudioNavigation />
+          </SearchProvider>
+        </Providers>
+      </body>
+    </html>
+  );
+}

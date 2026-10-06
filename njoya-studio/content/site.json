@@ -1,0 +1,22 @@
+{
+  "name": "NJOYA STUDIOS",
+  "headline": "WE BUILD WORLDS",
+  "statement": "A multidisciplinary creative practice working across space, image, objects and experiences.",
+  "instagram": "https://www.instagram.com/njoyastudios/",
+  "videoPlaybackEnabled": false,
+  "contacts": [
+    {
+      "label": "Job inquiries",
+      "emails": [
+        "sam@newschoolrepresents.com"
+      ]
+    },
+    {
+      "label": "General & studio inquiries",
+      "emails": [
+        "luiza@ibbynjoya.com",
+        "aisha@ibbynjoya.com"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "77b9a0a0-3d2a-41c6-8b04-70b1893b791f",
+  "slug": "dior",
+  "title": "DIOR",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/0809fce956cd30b136d2499f4544018b7f106b96.webp",
+    "previewSrc": "/media/images/0809fce956cd30b136d2499f4544018b7f106b96-720.webp",
+    "alt": "Dior Mag Cover",
+    "width": 1540,
+    "height": 1915
+  },
+  "workIds": [
+    "e867a2ec-ad89-4661-b661-c0e047d49a86",
+    "4f23cf2e-116c-4123-a5c1-e5956f13dbdc",
+    "97ad7387-4a88-4b33-bfbc-62d1c55b8080"
+  ],
+  "isMultiEdition": true
+}

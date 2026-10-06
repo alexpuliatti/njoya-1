@@ -1,0 +1,105 @@
+{
+  "id": "10f5c26b-7037-4c4b-a2fc-6bce702f5aea",
+  "slug": "wmagazine-2024-june",
+  "title": "W Magazine, June 2024",
+  "client": "W Magazine",
+  "date": "2024-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/6ff719bb93c520a94b36fa068a2a984aa61d7755.webp",
+    "previewSrc": "/media/images/6ff719bb93c520a94b36fa068a2a984aa61d7755-720.webp",
+    "alt": "Two models photographed back to back against a dark, moody backdrop. On the left, a glossy brown bob and a black-and-white polka dot coat-dress with a crisp white collar and a single crystal drop earring. On the right, a sheer black polka dot dress with bare shoulders, delicate crossed straps, and sparkling crystal earrings. Low, dramatic lighting creates a cinematic, high-fashion mood.",
+    "width": 1500,
+    "height": 1980
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/71edc66cd292cf92775471adc379a59fa9128423.webp",
+      "previewSrc": "/media/images/71edc66cd292cf92775471adc379a59fa9128423-720.webp",
+      "alt": "mag image 1",
+      "width": 2100,
+      "height": 1703
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b7f423fb3dd6de595d05cd49cbebb37531bdae6d.webp",
+      "previewSrc": "/media/images/b7f423fb3dd6de595d05cd49cbebb37531bdae6d-720.webp",
+      "alt": "mag image 2",
+      "width": 2100,
+      "height": 1339
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6ff719bb93c520a94b36fa068a2a984aa61d7755.webp",
+      "previewSrc": "/media/images/6ff719bb93c520a94b36fa068a2a984aa61d7755-720.webp",
+      "alt": "mag image 3",
+      "width": 1500,
+      "height": 1980
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e15a61da77d2c3395bc04e1887483eae4d9066ae.webp",
+      "previewSrc": "/media/images/e15a61da77d2c3395bc04e1887483eae4d9066ae-720.webp",
+      "alt": "mag image 4",
+      "width": 1500,
+      "height": 1911
+    },
+    {
+      "type": "image",
+      "src": "/media/images/128802336e62076ee1edbc1aad4bb1897e3b8232.webp",
+      "previewSrc": "/media/images/128802336e62076ee1edbc1aad4bb1897e3b8232-720.webp",
+      "alt": "mag image 5",
+      "width": 2100,
+      "height": 1391
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Nadine Ijewere"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Ola Ebiti"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Pablo Kuemin"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "David Koppelaar"
+    },
+    {
+      "role": "castDirector",
+      "name": "Michelle Lee"
+    },
+    {
+      "role": "other",
+      "customRole": "Choreographer",
+      "name": "Benjamin Jonsson"
+    },
+    {
+      "role": "manicurist",
+      "name": "Saffron Goddard"
+    },
+    {
+      "role": "model",
+      "name": "Abény Nhial, Ling Chen, Nyagua Ruea, Qun Ye, Xie Chaoyu, Yoonmi Sun"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/wmagazine/editions/wmagazine-2024-june"
+  ]
+}

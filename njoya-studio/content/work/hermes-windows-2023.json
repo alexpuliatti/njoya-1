@@ -1,0 +1,100 @@
+{
+  "id": "79ccc8ae-13c5-49ac-9b4b-819d64084823",
+  "slug": "hermes-windows-2023",
+  "title": "Hermès Windows 2023",
+  "client": "Hermès",
+  "date": "2023-03-15",
+  "categories": [
+    "worlds"
+  ],
+  "kind": "design-project",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/78912891725be3a7efae965b16e4fc794774bba2.webp",
+    "previewSrc": "/media/images/78912891725be3a7efae965b16e4fc794774bba2-720.webp",
+    "alt": "Design Project Image 1",
+    "width": 4599,
+    "height": 3066
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/855321dc5e826e205e65628af2bd8a969f4dc883.webp",
+      "previewSrc": "/media/images/855321dc5e826e205e65628af2bd8a969f4dc883-720.webp",
+      "alt": "Design Project Image 2",
+      "width": 4465,
+      "height": 2977
+    },
+    {
+      "type": "image",
+      "src": "/media/images/92e33723c67b76b21f764695f17bec0fabfa17c4.webp",
+      "previewSrc": "/media/images/92e33723c67b76b21f764695f17bec0fabfa17c4-720.webp",
+      "alt": "Design Project Image 3",
+      "width": 4793,
+      "height": 3195
+    },
+    {
+      "type": "image",
+      "src": "/media/images/98484176b9ddd520972dab5844365cfdd6c932c0.webp",
+      "previewSrc": "/media/images/98484176b9ddd520972dab5844365cfdd6c932c0-720.webp",
+      "alt": "Design Project Image 4",
+      "width": 3309,
+      "height": 4964
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8c590d7cd8241d6f967cfd59c9f1e4a0d7fbf3de.webp",
+      "previewSrc": "/media/images/8c590d7cd8241d6f967cfd59c9f1e4a0d7fbf3de-720.webp",
+      "alt": "Design Project Image 5",
+      "width": 3138,
+      "height": 4707
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1a65efa3e0b9a76743b0a8644d8ca4ba0a726e25.webp",
+      "previewSrc": "/media/images/1a65efa3e0b9a76743b0a8644d8ca4ba0a726e25-720.webp",
+      "alt": "Design Project Image 6",
+      "width": 4552,
+      "height": 3034
+    },
+    {
+      "type": "image",
+      "src": "/media/images/94351f4f64c1e9bbc757c1268c7c7d7eb1132cf0.webp",
+      "previewSrc": "/media/images/94351f4f64c1e9bbc757c1268c7c7d7eb1132cf0-720.webp",
+      "alt": "Design Project Image 7",
+      "width": 3096,
+      "height": 4644
+    },
+    {
+      "type": "image",
+      "src": "/media/images/bdf34d7309138cf9e93358c02b5b94e27a689521.webp",
+      "previewSrc": "/media/images/bdf34d7309138cf9e93358c02b5b94e27a689521-720.webp",
+      "alt": "Design Project Image 8",
+      "width": 3186,
+      "height": 4780
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7809f7664515f102065998a6562c9d2fa91605ca.webp",
+      "previewSrc": "/media/images/7809f7664515f102065998a6562c9d2fa91605ca-720.webp",
+      "alt": "Design Project Image 9",
+      "width": 3322,
+      "height": 4983
+    }
+  ],
+  "credits": [
+    {
+      "role": "type",
+      "name": "Window Design and Dressing"
+    },
+    {
+      "role": "location",
+      "name": "London, UK"
+    }
+  ],
+  "tags": [
+    "Window Design and Dressing",
+    "London, United Kingdom"
+  ],
+  "legacyUrls": []
+}

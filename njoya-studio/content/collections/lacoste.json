@@ -1,0 +1,17 @@
+{
+  "id": "91d20523-e00d-4308-835d-289dfcaad204",
+  "slug": "lacoste",
+  "title": "Lacoste",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/c6de961e5912e034fe15514710b7b26ae4a8c9d4.webp",
+    "previewSrc": "/media/images/c6de961e5912e034fe15514710b7b26ae4a8c9d4-720.webp",
+    "alt": "Mag Cover",
+    "width": 1530,
+    "height": 1916
+  },
+  "workIds": [
+    "eba3e495-0a85-4a16-ac67-00535be1f3ad"
+  ],
+  "isMultiEdition": false
+}

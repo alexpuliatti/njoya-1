@@ -1,0 +1,80 @@
+{
+  "id": "4cbea949-0607-4e31-afbf-5bdcaa2bedb1",
+  "slug": "the-new-york-times-magazine-january-2023",
+  "title": "The New York Times Magazine, January 2023",
+  "client": "The New York Times Magazine",
+  "date": "2023-01-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/116f05f91a008eaccab2ae24a0b48d2c738a65eb.webp",
+    "previewSrc": "/media/images/116f05f91a008eaccab2ae24a0b48d2c738a65eb-720.webp",
+    "alt": "Kendrick Lamar and Dave Free stand against a deep crimson background in a stark, powerful double portrait. Lamar wears a white T-shirt and black wide-leg trousers layered with a structured skirt-like panel adorned with gold ring hardware, grounded by chunky black boots. Free stands to his right in an all-black double-breasted oversized blazer featuring ring-detail buttons over a white tee and wide black trousers, finished with black-and-white low-top sneakers. The minimal styling and bold red backdrop give the image an almost confrontational gravitas.",
+    "width": 1440,
+    "height": 1798
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/116f05f91a008eaccab2ae24a0b48d2c738a65eb.webp",
+      "previewSrc": "/media/images/116f05f91a008eaccab2ae24a0b48d2c738a65eb-720.webp",
+      "alt": "Mag image 1",
+      "width": 1440,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4e8c356226757411b91aca3ef0a68e27d2eec036.webp",
+      "previewSrc": "/media/images/4e8c356226757411b91aca3ef0a68e27d2eec036-720.webp",
+      "alt": "Mag image 3",
+      "width": 1639,
+      "height": 2048
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d1f05ab459d3f0862ce77957eedab75986cb6d72.webp",
+      "previewSrc": "/media/images/d1f05ab459d3f0862ce77957eedab75986cb6d72-720.webp",
+      "alt": "Mag image 4",
+      "width": 1638,
+      "height": 2048
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "George Krakowiak"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Kendrick Lamar, Dave Free"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Mata Marielle"
+    },
+    {
+      "role": "other",
+      "customRole": "Manicurist",
+      "name": "Lauren Michelle Pires"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/new-york-times/editions/the-new-york-times-magazine-january-2023",
+    "/shoots/new-york-times/editions/new-york-times",
+    "/shoots/new-york-times"
+  ]
+}

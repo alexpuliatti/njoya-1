@@ -1,0 +1,140 @@
+{
+  "id": "8db22354-87ea-4d97-9263-8c3f4c84511f",
+  "slug": "vogue-italia-july-2021",
+  "title": "Vogue Italia, July 2021",
+  "client": "Vogue Italia",
+  "date": "2021-07-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/2590b94328d360c9de4ecce6be144c73b8638479.webp",
+    "previewSrc": "/media/images/2590b94328d360c9de4ecce6be144c73b8638479-720.webp",
+    "alt": "Monica Bellucci, Deva Cassel with long dark hair and smoky eye makeup, both dressed in black. The foreground model stares directly at the camera with a quiet, intense expression and braided hair, while the second model behind her leans in close, slightly blurred — giving the image a dreamlike, motion-blur quality. The palette is muted and almost monochromatic. In the upper right, a sculptural black fabric rose with unraveling thread hangs from above, with the handwritten text \"being 16\" below it. Issue N.850.",
+    "width": 1200,
+    "height": 1613
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/2590b94328d360c9de4ecce6be144c73b8638479.webp",
+      "previewSrc": "/media/images/2590b94328d360c9de4ecce6be144c73b8638479-720.webp",
+      "alt": "Monica Bellucci, Deva Cassel with long dark hair and smoky eye makeup, both dressed in black. The foreground model stares directly at the camera with a quiet, intense expression and braided hair, while the second model behind her leans in close, slightly blurred — giving the image a dreamlike, motion-blur quality. The palette is muted and almost monochromatic. In the upper right, a sculptural black fabric rose with unraveling thread hangs from above, with the handwritten text \"being 16\" below it. Issue N.850.",
+      "width": 1200,
+      "height": 1613
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3906e78b16b26e3dd36ee8443c47530c868560af.webp",
+      "previewSrc": "/media/images/3906e78b16b26e3dd36ee8443c47530c868560af-720.webp",
+      "alt": "mag image 2",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/60e0ca07ec84380a1455da3fbf5dcce119f2237c.webp",
+      "previewSrc": "/media/images/60e0ca07ec84380a1455da3fbf5dcce119f2237c-720.webp",
+      "alt": "mag image 3",
+      "width": 1200,
+      "height": 1601
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9de8baee2140c9ac190811ec5ab5e7c142cdea83.webp",
+      "previewSrc": "/media/images/9de8baee2140c9ac190811ec5ab5e7c142cdea83-720.webp",
+      "alt": "mag image 4",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/18ffc4a0f3fcf27f9446af7d7f0b70986d5fbd4e.webp",
+      "previewSrc": "/media/images/18ffc4a0f3fcf27f9446af7d7f0b70986d5fbd4e-720.webp",
+      "alt": "mag image 5",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/848be8de14d84bb6622ab66b04ab11d3ba059930.webp",
+      "previewSrc": "/media/images/848be8de14d84bb6622ab66b04ab11d3ba059930-720.webp",
+      "alt": "mag image 6",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e184f14824cff13f3b2e63f1499abaabaf320b8c.webp",
+      "previewSrc": "/media/images/e184f14824cff13f3b2e63f1499abaabaf320b8c-720.webp",
+      "alt": "mag image 7",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3b6889d50a606c7b1e249b6b2e4610ff83b22aba.webp",
+      "previewSrc": "/media/images/3b6889d50a606c7b1e249b6b2e4610ff83b22aba-720.webp",
+      "alt": "mag image 8",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/776c6eb561d9748eaf540626be95f92a65be5376.webp",
+      "previewSrc": "/media/images/776c6eb561d9748eaf540626be95f92a65be5376-720.webp",
+      "alt": "mag image 9",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/86738de0472569669789cfa4b88fff69e52f1bf7.webp",
+      "previewSrc": "/media/images/86738de0472569669789cfa4b88fff69e52f1bf7-720.webp",
+      "alt": "mag image 10",
+      "width": 1200,
+      "height": 1798
+    },
+    {
+      "type": "image",
+      "src": "/media/images/57f898a1629fe930ff0cc01bfb31136eefb09745.webp",
+      "previewSrc": "/media/images/57f898a1629fe930ff0cc01bfb31136eefb09745-720.webp",
+      "alt": "mag image 11",
+      "width": 1200,
+      "height": 801
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Paolo Roversi"
+    },
+    {
+      "role": "stylist",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "John Nollet"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Letizia Carnevale"
+    },
+    {
+      "role": "manicurist",
+      "name": "Anais Cordevant"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-italia-july-2021",
+    "/shoots/vogue/editions/vogue-2021-summer"
+  ]
+}

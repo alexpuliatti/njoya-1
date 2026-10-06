@@ -1,0 +1,138 @@
+{
+  "id": "4f23cf2e-116c-4123-a5c1-e5956f13dbdc",
+  "slug": "dior-magazine-no-37-march-2022",
+  "title": "Dior Magazine, No. 37, March 2022",
+  "client": "Dior Magazine",
+  "date": null,
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/d8863d97a1d73c5542a1b4b2b6835e6615e90b79.webp",
+    "previewSrc": "/media/images/d8863d97a1d73c5542a1b4b2b6835e6615e90b79-720.webp",
+    "alt": "Close-up portrait of model Hannah Motler against a vivid chartreuse-yellow background, wearing a matching yellow lapel jacket. Ultra-graphic cat-eye liner with bold kohl flicks and contrasting green eye, playful wink, and open-mouthed smile evoke a mod, 1960s-inflected energy. The \"Let's Play!\" theme reads immediately — cheeky, high-contrast, and youthful.",
+    "width": 1315,
+    "height": 1654
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/d8863d97a1d73c5542a1b4b2b6835e6615e90b79.webp",
+      "previewSrc": "/media/images/d8863d97a1d73c5542a1b4b2b6835e6615e90b79-720.webp",
+      "alt": "Close-up portrait of model Hannah Motler against a vivid chartreuse-yellow background, wearing a matching yellow lapel jacket. Ultra-graphic cat-eye liner with bold kohl flicks and contrasting green eye, playful wink, and open-mouthed smile evoke a mod, 1960s-inflected energy. The \"Let's Play!\" theme reads immediately — cheeky, high-contrast, and youthful.",
+      "width": 1315,
+      "height": 1654
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1da384008ea83090eea7aef904a03217a7fa0a6a.webp",
+      "previewSrc": "/media/images/1da384008ea83090eea7aef904a03217a7fa0a6a-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1236,
+      "height": 1648
+    },
+    {
+      "type": "image",
+      "src": "/media/images/be559bfff09736c1ab6e798ddd168a458e4361d1.webp",
+      "previewSrc": "/media/images/be559bfff09736c1ab6e798ddd168a458e4361d1-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1229,
+      "height": 1639
+    },
+    {
+      "type": "image",
+      "src": "/media/images/364e86edb76131e96996aefa338239d4538728e6.webp",
+      "previewSrc": "/media/images/364e86edb76131e96996aefa338239d4538728e6-720.webp",
+      "alt": "Mag Image 4",
+      "width": 1234,
+      "height": 1645
+    },
+    {
+      "type": "image",
+      "src": "/media/images/37520fe52d5f26b1f047eeee06b43a4295c24b0a.webp",
+      "previewSrc": "/media/images/37520fe52d5f26b1f047eeee06b43a4295c24b0a-720.webp",
+      "alt": "Mag Image 5",
+      "width": 1238,
+      "height": 1650
+    },
+    {
+      "type": "image",
+      "src": "/media/images/2e9d0bd14152d37fb42e234741808e85eb6e9652.webp",
+      "previewSrc": "/media/images/2e9d0bd14152d37fb42e234741808e85eb6e9652-720.webp",
+      "alt": "Mag Image 6",
+      "width": 1225,
+      "height": 1633
+    },
+    {
+      "type": "image",
+      "src": "/media/images/929f2210f9658941fce765d1bdd59a808b23276f.webp",
+      "previewSrc": "/media/images/929f2210f9658941fce765d1bdd59a808b23276f-720.webp",
+      "alt": "Mag Image 7",
+      "width": 1243,
+      "height": 1657
+    },
+    {
+      "type": "image",
+      "src": "/media/images/18bee92b5ad30eb3b346ca52c442311ba348f82c.webp",
+      "previewSrc": "/media/images/18bee92b5ad30eb3b346ca52c442311ba348f82c-720.webp",
+      "alt": "Mag Image 8",
+      "width": 1245,
+      "height": 1660
+    },
+    {
+      "type": "image",
+      "src": "/media/images/73427f75e0817b12a97fd9e1c66287f2f6f9b525.webp",
+      "previewSrc": "/media/images/73427f75e0817b12a97fd9e1c66287f2f6f9b525-720.webp",
+      "alt": "Mag Image 9",
+      "width": 1226,
+      "height": 1635
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Elizaveta Porodina"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Vanessa Reid"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Creative Director",
+      "name": "Margot Populaire"
+    },
+    {
+      "role": "hairStylist",
+      "customRole": "Hair Stylist",
+      "name": "Olivier Schawalder"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Cécile Paravina"
+    },
+    {
+      "role": "other",
+      "customRole": "Manicurist",
+      "name": "Elsa Deslandes"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Hannah Motler"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dior/editions/dior-magazine-no-37-march-2022",
+    "/shoots/dior/editions/dior-e"
+  ]
+}

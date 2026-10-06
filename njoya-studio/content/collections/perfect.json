@@ -1,0 +1,19 @@
+{
+  "id": "ae2b3498-a276-4402-b0f7-b1d01251e920",
+  "slug": "perfect",
+  "title": "Perfect",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/8ed997bbe63023644d97b12b478aad846fdc9e60.webp",
+    "previewSrc": "/media/images/8ed997bbe63023644d97b12b478aad846fdc9e60-720.webp",
+    "alt": "Mag Cover",
+    "width": 1080,
+    "height": 1347
+  },
+  "workIds": [
+    "c16cfcd1-fdfe-428f-b9a2-7d1417efe592",
+    "728d66f1-f330-4ed6-aaf8-23ad4294e779",
+    "940b860b-68dc-4a6e-bf4a-c4a7d673f205"
+  ],
+  "isMultiEdition": true
+}

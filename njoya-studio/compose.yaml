@@ -1,0 +1,14 @@
+services:
+  website:
+    build:
+      context: .
+      args:
+        SITE_URL: ${SITE_URL:-http://localhost:3000}
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    volumes:
+      - image-cache:/app/.next/cache
+
+volumes:
+  image-cache:

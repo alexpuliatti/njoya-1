@@ -1,0 +1,20 @@
+{
+  "id": "9b052ffc-b689-444f-9739-2d7bf31e5c7c",
+  "slug": "off-white",
+  "title": "Off White",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/c9d03cb969197e9a65f9dd829e33344f5190996e.webp",
+    "previewSrc": "/media/images/c9d03cb969197e9a65f9dd829e33344f5190996e-720.webp",
+    "alt": "Mag Cover",
+    "width": 1534,
+    "height": 1924
+  },
+  "workIds": [
+    "19199feb-98e9-46a0-bb62-3ccc7fd94088",
+    "39164410-2700-4bf3-ad21-bb17371980fb",
+    "e22bc855-53a0-4284-923a-994f803e5ca2",
+    "f251a6a6-0d9d-4995-bf90-0b8db6440a08"
+  ],
+  "isMultiEdition": true
+}

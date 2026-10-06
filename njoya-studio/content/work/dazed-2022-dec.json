@@ -1,0 +1,139 @@
+{
+  "id": "83a18416-244b-4943-bc88-db72587a7340",
+  "slug": "dazed-2022-dec",
+  "title": "Dazed, December 2022",
+  "client": "Dazed",
+  "date": "2022-12-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/62022c296c66b98639b491fea019447f8acc3e13.webp",
+    "previewSrc": "/media/images/62022c296c66b98639b491fea019447f8acc3e13-720.webp",
+    "alt": "A surrealist fashion editorial image featuring a model with an oversized head and platinum blonde bob, wearing a black long-sleeve top, a vibrant blue sequined mini skirt with feather trim, black tights, and black heels. The figure stands on a bold red-orange brushstroke against a light grey background with blue gradient elements, creating a graphic, painterly composition. The makeup is expressive and theatrical, with yellow and green color-blocking on the face.",
+    "width": 945,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/62022c296c66b98639b491fea019447f8acc3e13.webp",
+      "previewSrc": "/media/images/62022c296c66b98639b491fea019447f8acc3e13-720.webp",
+      "alt": "A surrealist fashion editorial image featuring a model with an oversized head and platinum blonde bob, wearing a black long-sleeve top, a vibrant blue sequined mini skirt with feather trim, black tights, and black heels. The figure stands on a bold red-orange brushstroke against a light grey background with blue gradient elements, creating a graphic, painterly composition. The makeup is expressive and theatrical, with yellow and green color-blocking on the face.",
+      "width": 945,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/52efcf7c77d51b5a45e7da53aa7c6575dcaad25f.webp",
+      "previewSrc": "/media/images/52efcf7c77d51b5a45e7da53aa7c6575dcaad25f-720.webp",
+      "alt": "Mag Image #2",
+      "width": 1004,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7a317d8d5383415eeed5accac601a9223018d3ad.webp",
+      "previewSrc": "/media/images/7a317d8d5383415eeed5accac601a9223018d3ad-720.webp",
+      "alt": "Mag Image #3",
+      "width": 1009,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7c09418b15ed66e8aa93bbcbbeecd5ebf1681a00.webp",
+      "previewSrc": "/media/images/7c09418b15ed66e8aa93bbcbbeecd5ebf1681a00-720.webp",
+      "alt": "Mag Image #4",
+      "width": 999,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/16233a4c3758f63790caa8935088caa773071609.webp",
+      "previewSrc": "/media/images/16233a4c3758f63790caa8935088caa773071609-720.webp",
+      "alt": "Mag Image #5",
+      "width": 990,
+      "height": 1335
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d641468882fb66ba7735fd797fdf5baa6f6d8e1c.webp",
+      "previewSrc": "/media/images/d641468882fb66ba7735fd797fdf5baa6f6d8e1c-720.webp",
+      "alt": "Mag Image #6",
+      "width": 1009,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ecbffbd3ee69db6b5c780d257c1af673e70b3973.webp",
+      "previewSrc": "/media/images/ecbffbd3ee69db6b5c780d257c1af673e70b3973-720.webp",
+      "alt": "Mag Image #7",
+      "width": 1004,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4b4e4c4c01c16b6688e631042368b00e424aad94.webp",
+      "previewSrc": "/media/images/4b4e4c4c01c16b6688e631042368b00e424aad94-720.webp",
+      "alt": "Mag Image #8",
+      "width": 1004,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/33435e1bbd5f1e0b83609661b5867d2933e808dc.webp",
+      "previewSrc": "/media/images/33435e1bbd5f1e0b83609661b5867d2933e808dc-720.webp",
+      "alt": "Mag Image #9",
+      "width": 1004,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f69d29b16955998100b007594d62531c56032f8d.webp",
+      "previewSrc": "/media/images/f69d29b16955998100b007594d62531c56032f8d-720.webp",
+      "alt": "Mag Image #10",
+      "width": 999,
+      "height": 1337
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Viviane Sassen"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Abény Nhial, Elisa Nijman"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Olivier Schawalder"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Min Kim"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Mischa Notcutt"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-2022-dec"
+  ]
+}

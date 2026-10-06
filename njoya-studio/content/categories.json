@@ -1,0 +1,26 @@
+[
+  {
+    "id": "worlds",
+    "title": "Worlds",
+    "description": "Spaces, environments and experiences.",
+    "coverWorkId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272"
+  },
+  {
+    "id": "exhibition",
+    "title": "Exhibition",
+    "description": "Stories brought into physical space.",
+    "coverWorkId": "fefe418e-7518-4af7-a591-1cad5a67c3e4"
+  },
+  {
+    "id": "commercials",
+    "title": "Commercials",
+    "description": "Imagined worlds for brands.",
+    "coverWorkId": "eba3e495-0a85-4a16-ac67-00535be1f3ad"
+  },
+  {
+    "id": "editorials",
+    "title": "Editorials",
+    "description": "Image-making through colour and storytelling.",
+    "coverWorkId": "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef"
+  }
+]

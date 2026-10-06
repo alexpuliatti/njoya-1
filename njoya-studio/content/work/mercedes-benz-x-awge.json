@@ -1,0 +1,124 @@
+{
+  "id": "cd1fbc20-012d-41b7-bd96-d8be40b53013",
+  "slug": "mercedes-benz-x-awge",
+  "title": "Mercedes-Benz x AWGE",
+  "client": "Mercedes-Benz",
+  "date": "2022-03-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/3c6eac39ade2b9bd148821bd07c5d7023516167d.webp",
+    "previewSrc": "/media/images/3c6eac39ade2b9bd148821bd07c5d7023516167d-720.webp",
+    "alt": "Mag Cover",
+    "width": 1534,
+    "height": 1922
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/18346c0fa6939ee38d4783e2f3b2db0b21da1146.webp",
+      "previewSrc": "/media/images/18346c0fa6939ee38d4783e2f3b2db0b21da1146-720.webp",
+      "alt": "A$AP Rocky perches on the trunk of a mint-green Mercedes-Benz sports car bearing an \"AWGE\" license plate. He wears an oversized white Mercedes-Benz branded crewneck sweatshirt and matching sweatpants with white Adidas high-top sneakers, accessorized with layered rings and a bracelet. His expression is direct and assured, with braids framing his face. The car's open trunk creates a striking curved silhouette behind him against a neutral studio backdrop, merging luxury automotive and streetwear aesthetics.",
+      "width": 1440,
+      "height": 1797
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6b58f59ce5e930c1a6fe97efa167b0e028f80cc4.webp",
+      "previewSrc": "/media/images/6b58f59ce5e930c1a6fe97efa167b0e028f80cc4-720.webp",
+      "alt": "Mag image 2",
+      "width": 1900,
+      "height": 2850
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d36a4b1fe13d47c643b4e34bc29e66d59c87ed33.webp",
+      "previewSrc": "/media/images/d36a4b1fe13d47c643b4e34bc29e66d59c87ed33-720.webp",
+      "alt": "mag image 3",
+      "width": 1440,
+      "height": 1797
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e21570ef651670f7c9852c851eb05a64b68eab9c.webp",
+      "previewSrc": "/media/images/e21570ef651670f7c9852c851eb05a64b68eab9c-720.webp",
+      "alt": "mag image 4",
+      "width": 1440,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a1513509ba8479c7e3c3bcd77be744384dcea966.webp",
+      "previewSrc": "/media/images/a1513509ba8479c7e3c3bcd77be744384dcea966-720.webp",
+      "alt": "Mag image 5",
+      "width": 1440,
+      "height": 1797
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7e1a468c713f5cdcd1eb5a663d4cc9f0d12c3469.webp",
+      "previewSrc": "/media/images/7e1a468c713f5cdcd1eb5a663d4cc9f0d12c3469-720.webp",
+      "alt": "mag image 6",
+      "width": 1440,
+      "height": 1794
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4345afafc2e4681675161083789208a6d1ad7275.webp",
+      "previewSrc": "/media/images/4345afafc2e4681675161083789208a6d1ad7275-720.webp",
+      "alt": "mag image 7",
+      "width": 1440,
+      "height": 1796
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c73728bfd17946c113f204c6528d4242620fb54f.webp",
+      "previewSrc": "/media/images/c73728bfd17946c113f204c6528d4242620fb54f-720.webp",
+      "alt": "mag image 8",
+      "width": 2850,
+      "height": 1900
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Gabriel Moses"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Danny Reed"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "A$AP Rocky"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Adiam Habtezion"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Patrick Glatthaar"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Chili Dia, Elyas Polat"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/mercedes-benz/editions/mercedes-benz-x-awge",
+    "/shoots/mercedes-benz/editions/mercedes-benz",
+    "/shoots/mercedes-benz"
+  ]
+}

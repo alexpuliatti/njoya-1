@@ -1,0 +1,139 @@
+{
+  "id": "6cc7ad54-c9a7-42d3-a6f9-a24f47e6a8e5",
+  "slug": "balmain-fall-winter-menswear-design",
+  "title": "Balmain Men’s Fall Winter,  2024",
+  "client": "Balmain",
+  "date": "2024-01-26",
+  "categories": [
+    "worlds"
+  ],
+  "kind": "design-project",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/17d1b3d26e4041f6e6cad902c6f6a3e5114e4fd5.webp",
+    "previewSrc": "/media/images/17d1b3d26e4041f6e6cad902c6f6a3e5114e4fd5-720.webp",
+    "alt": "Balmain Image #1",
+    "width": 739,
+    "height": 1109
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/4a32fa1b82057100813d32ae4cdbea73d0eaad6e.webp",
+      "previewSrc": "/media/images/4a32fa1b82057100813d32ae4cdbea73d0eaad6e-720.webp",
+      "alt": "Balmain Image #2",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/48d6cd971d4e4f07cea28a2ad3a7499b334f14cb.webp",
+      "previewSrc": "/media/images/48d6cd971d4e4f07cea28a2ad3a7499b334f14cb-720.webp",
+      "alt": "Balmain Image #3",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e9a33f68810135556d3472ed482fe98141d2ee1a.webp",
+      "previewSrc": "/media/images/e9a33f68810135556d3472ed482fe98141d2ee1a-720.webp",
+      "alt": "Balmain Image #4",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ee2fc4830a6c7ee1f9b6ef22cc32789e6fef75c1.webp",
+      "previewSrc": "/media/images/ee2fc4830a6c7ee1f9b6ef22cc32789e6fef75c1-720.webp",
+      "alt": "Balmain Image #5",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4e49e1002e0c28fb6b71340aa83401add3ab9954.webp",
+      "previewSrc": "/media/images/4e49e1002e0c28fb6b71340aa83401add3ab9954-720.webp",
+      "alt": "Balmain Image #6",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ac619f050b9b1fac12907b97b6589392fe7d21c2.webp",
+      "previewSrc": "/media/images/ac619f050b9b1fac12907b97b6589392fe7d21c2-720.webp",
+      "alt": "Balmain Image #7",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c97ba09c6da531da79dba5670c6e674e26982c19.webp",
+      "previewSrc": "/media/images/c97ba09c6da531da79dba5670c6e674e26982c19-720.webp",
+      "alt": "Balmain Image #8",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9c6973f973a7dfa65e3f2823b28c46f2ff0e2592.webp",
+      "previewSrc": "/media/images/9c6973f973a7dfa65e3f2823b28c46f2ff0e2592-720.webp",
+      "alt": "Balmain Image #8",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3c5c65571d93be454f750a1897b870a942bdecba.webp",
+      "previewSrc": "/media/images/3c5c65571d93be454f750a1897b870a942bdecba-720.webp",
+      "alt": "Balmain Image #10",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/55527d830cf55357d41875b747d8a2d26931a6ea.webp",
+      "previewSrc": "/media/images/55527d830cf55357d41875b747d8a2d26931a6ea-720.webp",
+      "alt": "Balmain Image #11",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6ce0fb7b42420086d053f906cb3241951e35433a.webp",
+      "previewSrc": "/media/images/6ce0fb7b42420086d053f906cb3241951e35433a-720.webp",
+      "alt": "Balmain Image #12",
+      "width": 896,
+      "height": 1344
+    },
+    {
+      "type": "image",
+      "src": "/media/images/2ea36f896e5361856e53db3b31328be53c1c6ba0.webp",
+      "previewSrc": "/media/images/2ea36f896e5361856e53db3b31328be53c1c6ba0-720.webp",
+      "alt": "Balmain Image #13",
+      "width": 896,
+      "height": 1344
+    }
+  ],
+  "credits": [
+    {
+      "role": "type",
+      "name": "Fashion Show Design"
+    },
+    {
+      "role": "location",
+      "name": "Paris France"
+    },
+    {
+      "role": "other",
+      "customRole": "Suitcase Designer",
+      "name": "Ibby Njoya"
+    }
+  ],
+  "tags": [
+    "Fashion Show Design",
+    "Paris France"
+  ],
+  "legacyUrls": [
+    "/design-projects/balmain-fall-winter-menswear-design"
+  ]
+}

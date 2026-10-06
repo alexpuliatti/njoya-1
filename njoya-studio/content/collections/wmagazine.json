@@ -1,0 +1,21 @@
+{
+  "id": "c8439bec-f3b1-4a2e-9146-c374d2a55da5",
+  "slug": "wmagazine",
+  "title": "WMagazine",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/f75a1866c89f7a22138adc5cfb713898c9e556fb.webp",
+    "previewSrc": "/media/images/f75a1866c89f7a22138adc5cfb713898c9e556fb-720.webp",
+    "alt": "Mag Cover",
+    "width": 1509,
+    "height": 2133
+  },
+  "workIds": [
+    "10f5c26b-7037-4c4b-a2fc-6bce702f5aea",
+    "1491650e-071c-4245-a33d-331e122f043f",
+    "18385486-6bcb-491c-ad8a-6f395d893d09",
+    "4c1faaa1-1cf4-4121-b643-c760ec36d202",
+    "80b24701-f1da-40b7-b122-ebd5e8b47e6a"
+  ],
+  "isMultiEdition": true
+}

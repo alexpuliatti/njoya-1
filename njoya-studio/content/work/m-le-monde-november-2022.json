@@ -1,0 +1,124 @@
+{
+  "id": "323b57e0-5c35-4f7e-91ea-0945834acb6d",
+  "slug": "m-le-monde-november-2022",
+  "title": "M Le Monde, November 2022",
+  "client": "M Le Monde",
+  "date": "2022-11-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/3f2be5223e5f076e8c7c50eb1cbc96051e582e59.webp",
+    "previewSrc": "/media/images/3f2be5223e5f076e8c7c50eb1cbc96051e582e59-720.webp",
+    "alt": "A figure in a dramatic white satin corset adorned with iridescent blue glittered botanical sprays and copper branch structures, paired with a black woven skirt overflowing with fresh chrysanthemums and wildflowers. A lacquered red rose and black feathers crown a severe dark bob, while pale skin, vivid rosy cheeks, and deep crimson lips complete the look. Theatrical and surrealist in mood, evoking a dark garden fantasy against a clean white backdrop.",
+    "width": 1080,
+    "height": 1301
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/3f2be5223e5f076e8c7c50eb1cbc96051e582e59.webp",
+      "previewSrc": "/media/images/3f2be5223e5f076e8c7c50eb1cbc96051e582e59-720.webp",
+      "alt": "Mag Image 1",
+      "width": 1080,
+      "height": 1301
+    },
+    {
+      "type": "image",
+      "src": "/media/images/fe5b7038500fece93404fbee6eb0fa591a6e5a65.webp",
+      "previewSrc": "/media/images/fe5b7038500fece93404fbee6eb0fa591a6e5a65-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1080,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d128c4b81be19327ad4c60b647519935955c689e.webp",
+      "previewSrc": "/media/images/d128c4b81be19327ad4c60b647519935955c689e-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1080,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/16a39e04ef557a859cb55011983ad234d4546144.webp",
+      "previewSrc": "/media/images/16a39e04ef557a859cb55011983ad234d4546144-720.webp",
+      "alt": "Mag Image 4",
+      "width": 1080,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0e1fc9371ea9e2200d35cab11c255d5b1a415789.webp",
+      "previewSrc": "/media/images/0e1fc9371ea9e2200d35cab11c255d5b1a415789-720.webp",
+      "alt": "Mag Image 5",
+      "width": 1080,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a44a357fe9e13fdcd5fa9d91363073a30d781377.webp",
+      "previewSrc": "/media/images/a44a357fe9e13fdcd5fa9d91363073a30d781377-720.webp",
+      "alt": "Mag Image6",
+      "width": 1080,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5489718a56b2774df227afde5d866815b28a8363.webp",
+      "previewSrc": "/media/images/5489718a56b2774df227afde5d866815b28a8363-720.webp",
+      "alt": "Mag Image 7",
+      "width": 2160,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f7729f1bfa1796f7308ed5b5e5a0a2287047d38c.webp",
+      "previewSrc": "/media/images/f7729f1bfa1796f7308ed5b5e5a0a2287047d38c-720.webp",
+      "alt": "Mag Image 9",
+      "width": 2160,
+      "height": 1349
+    },
+    {
+      "type": "image",
+      "src": "/media/images/15efcf575a2f748e5006835733b946900076dc2a.webp",
+      "previewSrc": "/media/images/15efcf575a2f748e5006835733b946900076dc2a-720.webp",
+      "alt": "Mag Image 11",
+      "width": 2160,
+      "height": 1349
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Théo de Gueltzl"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Robbie Spencer"
+    },
+    {
+      "role": "other",
+      "customRole": "Set and Costume Design",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Choreographer",
+      "name": "Eric Christison"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Kieron Harper, Monyjok Deng, Pierre-Antoine Bardot"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/m-le-monde/editions/m-le-monde-november-2022",
+    "/shoots/m-le-monde/editions/m-le-monde-2022-nov"
+  ]
+}

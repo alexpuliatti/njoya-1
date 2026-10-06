@@ -1,0 +1,89 @@
+{
+  "id": "713e1a25-cc90-4b38-9efc-7be5f0682929",
+  "slug": "vogue-italia-april-2021",
+  "title": "Vogue Italia, April 2021",
+  "client": "Vogue Italia",
+  "date": "2021-04-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/6bc4d8dd5a9f0b59ed588b2e25beae2dc8a7244b.webp",
+    "previewSrc": "/media/images/6bc4d8dd5a9f0b59ed588b2e25beae2dc8a7244b-720.webp",
+    "alt": "Magazine cover of Vogue Italia, April 2021, issue number 847. Model Natalia Vodianova with blue-grey eyes and voluminous brown hair styled in vintage waves looks directly at the camera. She wears a honeycomb-patterned dress covered in multicolored sequins in green, red, black, and white, and a layered gold and diamond necklace with a snake-shaped pendant. The background is a soft pink gradient. Handwritten black text on the right side reads: \"many friends have helped us in writing this book,\" decorated with two small gold bead ornaments.",
+    "width": 1000,
+    "height": 1340
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/6bc4d8dd5a9f0b59ed588b2e25beae2dc8a7244b.webp",
+      "previewSrc": "/media/images/6bc4d8dd5a9f0b59ed588b2e25beae2dc8a7244b-720.webp",
+      "alt": "Magazine cover of Vogue Italia, April 2021, issue number 847. Model Natalia Vodianova with blue-grey eyes and voluminous brown hair styled in vintage waves looks directly at the camera. She wears a honeycomb-patterned dress covered in multicolored sequins in green, red, black, and white, and a layered gold and diamond necklace with a snake-shaped pendant. The background is a soft pink gradient. Handwritten black text on the right side reads: \"many friends have helped us in writing this book,\" decorated with two small gold bead ornaments.",
+      "width": 1000,
+      "height": 1340
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e6223dfc076b7fcce0f53b819891880980ed9071.webp",
+      "previewSrc": "/media/images/e6223dfc076b7fcce0f53b819891880980ed9071-720.webp",
+      "alt": "mag image 2",
+      "width": 1000,
+      "height": 1345
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d7fb6b568f588a24532ee13c3a3dd1ca308b4f29.webp",
+      "previewSrc": "/media/images/d7fb6b568f588a24532ee13c3a3dd1ca308b4f29-720.webp",
+      "alt": "mag image 3",
+      "width": 1000,
+      "height": 1329
+    },
+    {
+      "type": "image",
+      "src": "/media/images/57e5af30dce859e655b10f5809d266558d975b26.webp",
+      "previewSrc": "/media/images/57e5af30dce859e655b10f5809d266558d975b26-720.webp",
+      "alt": "mag image 4",
+      "width": 1000,
+      "height": 1345
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Paolo Roversi"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Natalia Vodianova"
+    },
+    {
+      "role": "model",
+      "name": "Freek Iven, Takfarines Bengana"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Yann Turchi"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Marie Duhart"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-italia-april-2021",
+    "/shoots/vogue/editions/vogue-2021-apr"
+  ]
+}

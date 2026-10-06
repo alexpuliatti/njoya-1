@@ -1,0 +1,116 @@
+{
+  "id": "18385486-6bcb-491c-ad8a-6f395d893d09",
+  "slug": "wmagazine-2022-june",
+  "title": "W Magazine, June 2022",
+  "client": "W Magazine",
+  "date": "2022-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/3f601dcf6d117392b808a64a62121206eedd0f89.webp",
+    "previewSrc": "/media/images/3f601dcf6d117392b808a64a62121206eedd0f89-720.webp",
+    "alt": "Black-and-white editorial portrait of model Raquel Zimmermann in a sheer, intricately knit full-body catsuit with a sweetheart neckline and matching over-the-elbow gloves, finished with black floral-embellished heels. Her voluminous blonde hair is swept dramatically across her face as she strikes a dynamic, wide-legged power pose against a soft, mottled studio backdrop.",
+    "width": 1504,
+    "height": 1921
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/674c75e90b4e32b85d3946c55b8ca35ce58ad60f.webp",
+      "previewSrc": "/media/images/674c75e90b4e32b85d3946c55b8ca35ce58ad60f-720.webp",
+      "alt": "Black-and-white editorial portrait of model Raquel Zimmermann in a sheer, intricately knit full-body catsuit with a sweetheart neckline and matching over-the-elbow gloves, finished with black floral-embellished heels. Her voluminous blonde hair is swept dramatically across her face as she strikes a dynamic, wide-legged power pose against a soft, mottled studio backdrop.",
+      "width": 1800,
+      "height": 2301
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a6e35340106c1a5d73f6cc83142e7eb706782229.webp",
+      "previewSrc": "/media/images/a6e35340106c1a5d73f6cc83142e7eb706782229-720.webp",
+      "alt": "mag image 2",
+      "width": 1800,
+      "height": 2298
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ed1f8984fca07d38218a026f7cf9302fd5c76c28.webp",
+      "previewSrc": "/media/images/ed1f8984fca07d38218a026f7cf9302fd5c76c28-720.webp",
+      "alt": "mag image 3",
+      "width": 1800,
+      "height": 2299
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7ef03487b860e83aac41ae997a63a9535c4ef74b.webp",
+      "previewSrc": "/media/images/7ef03487b860e83aac41ae997a63a9535c4ef74b-720.webp",
+      "alt": "mag image 4",
+      "width": 1800,
+      "height": 2288
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0b06f5041ec35134b292cc022197e483733a17ed.webp",
+      "previewSrc": "/media/images/0b06f5041ec35134b292cc022197e483733a17ed-720.webp",
+      "alt": "mag image 5",
+      "width": 1800,
+      "height": 2319
+    },
+    {
+      "type": "image",
+      "src": "/media/images/14f6364e8fd556966d8d57279f9fa027413e7a1d.webp",
+      "previewSrc": "/media/images/14f6364e8fd556966d8d57279f9fa027413e7a1d-720.webp",
+      "alt": "mag image 6",
+      "width": 1800,
+      "height": 2290
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3a16a3d0e994d611fa2a6cccb8584eed7586dc99.webp",
+      "previewSrc": "/media/images/3a16a3d0e994d611fa2a6cccb8584eed7586dc99-720.webp",
+      "alt": "mag image 7",
+      "width": 1800,
+      "height": 2311
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5da4fe1c0670c20edb7e3662665dd162c3389cdd.webp",
+      "previewSrc": "/media/images/5da4fe1c0670c20edb7e3662665dd162c3389cdd-720.webp",
+      "alt": "mag image 8",
+      "width": 1800,
+      "height": 2330
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Katie Grand"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Virginie Pinto Moreira"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Daniel Sallstrom"
+    },
+    {
+      "role": "model",
+      "name": "Raquel Zimmermann"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/wmagazine/editions/wmagazine-2022-june"
+  ]
+}

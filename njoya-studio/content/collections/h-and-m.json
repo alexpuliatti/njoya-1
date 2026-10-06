@@ -1,0 +1,20 @@
+{
+  "id": "9878c310-3728-44e7-aa0c-872ecac412c3",
+  "slug": "h-and-m",
+  "title": "H&M",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/7673af196bedaa335c7b0b58df8df499a05fde79.webp",
+    "previewSrc": "/media/images/7673af196bedaa335c7b0b58df8df499a05fde79-720.webp",
+    "alt": "Mag Cover",
+    "width": 1536,
+    "height": 1911
+  },
+  "workIds": [
+    "97a27198-7e09-4a28-b135-24f4109f281b",
+    "86ed8436-c086-4e6b-8965-64d05b927516",
+    "31ef9f5d-ca42-4f2e-85ff-0134e9b96e3e",
+    "fbd8f400-e75c-4800-bef2-1a83d026447a"
+  ],
+  "isMultiEdition": true
+}

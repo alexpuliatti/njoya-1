@@ -1,0 +1,18 @@
+{
+  "id": "86699ebf-c3ec-4f56-a4df-2ff7e55591da",
+  "slug": "balmain",
+  "title": "Balmain",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/5e91323427d5d3139f477cab9d50b332aee40deb.webp",
+    "previewSrc": "/media/images/5e91323427d5d3139f477cab9d50b332aee40deb-720.webp",
+    "alt": "Balmain Cover Magazine",
+    "width": 1525,
+    "height": 1893
+  },
+  "workIds": [
+    "7fdb50fd-37a1-400d-b16c-6ad4a6c6e7c1",
+    "71dd7573-571c-4a67-b42c-e93f5209c434"
+  ],
+  "isMultiEdition": true
+}

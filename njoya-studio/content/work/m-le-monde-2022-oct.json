@@ -1,0 +1,99 @@
+{
+  "id": "518d805b-e83e-4f77-b1df-43dfabeb6c95",
+  "slug": "m-le-monde-2022-oct",
+  "title": "M Le Monde, October 2022",
+  "client": "M Le Monde",
+  "date": "2022-10-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/385cecec89faef61a4744a3d0989b8a41fdd19b0.webp",
+    "previewSrc": "/media/images/385cecec89faef61a4744a3d0989b8a41fdd19b0-720.webp",
+    "alt": "Two figures completely enveloped in layered, oversized beige padded garments and cream ribbed knitwear, their bodies merged into one abstract, sculptural mass. Faceless and limb-distorted, the pair stand dynamically against a warm golden-ochre background, wearing white slouchy socks and beige shoes. The styling erases individual identity in favour of collective, surreal volume — pure deconstruction of the male silhouette, for a Spécial Mode Homme issue headlined Jeux de Déconstruction.",
+    "width": 1080,
+    "height": 1309
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/385cecec89faef61a4744a3d0989b8a41fdd19b0.webp",
+      "previewSrc": "/media/images/385cecec89faef61a4744a3d0989b8a41fdd19b0-720.webp",
+      "alt": "Mag Image 1",
+      "width": 1080,
+      "height": 1309
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c586d9714f072e665dd1d39b6bad18756c7a4af1.webp",
+      "previewSrc": "/media/images/c586d9714f072e665dd1d39b6bad18756c7a4af1-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1080,
+      "height": 1308
+    },
+    {
+      "type": "image",
+      "src": "/media/images/df62fdc2605b8799a014b0c240589acf652f90fb.webp",
+      "previewSrc": "/media/images/df62fdc2605b8799a014b0c240589acf652f90fb-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1080,
+      "height": 1308
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f6743a3634106af22f5a3ec1f599f968c4bf042d.webp",
+      "previewSrc": "/media/images/f6743a3634106af22f5a3ec1f599f968c4bf042d-720.webp",
+      "alt": "Mag Image 4",
+      "width": 1080,
+      "height": 1308
+    },
+    {
+      "type": "image",
+      "src": "/media/images/be5d8be921614c334a08b02ab1646d00f13c62c6.webp",
+      "previewSrc": "/media/images/be5d8be921614c334a08b02ab1646d00f13c62c6-720.webp",
+      "alt": "Mag Image 5",
+      "width": 1080,
+      "height": 1309
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f7511e2b798b1e586264dc78260499be14119763.webp",
+      "previewSrc": "/media/images/f7511e2b798b1e586264dc78260499be14119763-720.webp",
+      "alt": "Mag image 6",
+      "width": 1080,
+      "height": 1308
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Théo de Gueltzl"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Robbie Spencer"
+    },
+    {
+      "role": "other",
+      "customRole": "Set and Costume Design",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Choreographer",
+      "name": "Eric Christison"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Kieron Harper, Monyjok Deng, Pierre-Antoine Bardot"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/m-le-monde/editions/m-le-monde-2022-oct"
+  ]
+}

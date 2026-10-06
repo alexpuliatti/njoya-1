@@ -1,0 +1,190 @@
+{
+  "id": "4a8f9d77-b256-4eb2-a103-e21f925d5423",
+  "slug": "dazed-summer-2025",
+  "title": "Dazed, Summer 2025",
+  "client": "Dazed",
+  "date": "2025-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/2844bb073bdd54e3f7764b6dd3f0547e6a243858.webp",
+    "previewSrc": "/media/images/2844bb073bdd54e3f7764b6dd3f0547e6a243858-720.webp",
+    "alt": "Dazed, Summer 2025",
+    "width": 2717,
+    "height": 3544
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/2844bb073bdd54e3f7764b6dd3f0547e6a243858.webp",
+      "previewSrc": "/media/images/2844bb073bdd54e3f7764b6dd3f0547e6a243858-720.webp",
+      "alt": "1",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a126c379a0e40521dc51220c27cfe70c01b553bf.webp",
+      "previewSrc": "/media/images/a126c379a0e40521dc51220c27cfe70c01b553bf-720.webp",
+      "alt": "2",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b2ad29f6035cf5c77f68e9f879d86914f9a193fe.webp",
+      "previewSrc": "/media/images/b2ad29f6035cf5c77f68e9f879d86914f9a193fe-720.webp",
+      "alt": "3",
+      "width": 2715,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9b1e8c2c1c10e99e20e974676af65465da41908c.webp",
+      "previewSrc": "/media/images/9b1e8c2c1c10e99e20e974676af65465da41908c-720.webp",
+      "alt": "4",
+      "width": 2714,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d78f29caa6ff64865cb810963e4b3d6047773afe.webp",
+      "previewSrc": "/media/images/d78f29caa6ff64865cb810963e4b3d6047773afe-720.webp",
+      "alt": "5",
+      "width": 2717,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c9394d8f66237fdbe4764b6027bbf6e356a2aa32.webp",
+      "previewSrc": "/media/images/c9394d8f66237fdbe4764b6027bbf6e356a2aa32-720.webp",
+      "alt": "6",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/079625aeb185a05be43f53e8a5e2ccad3fdff918.webp",
+      "previewSrc": "/media/images/079625aeb185a05be43f53e8a5e2ccad3fdff918-720.webp",
+      "alt": "7",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9fde852e4561f4513d75f8c4565cabc3253505c1.webp",
+      "previewSrc": "/media/images/9fde852e4561f4513d75f8c4565cabc3253505c1-720.webp",
+      "alt": "8",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/68216245ca04679c13cb28d1a1962602829c5896.webp",
+      "previewSrc": "/media/images/68216245ca04679c13cb28d1a1962602829c5896-720.webp",
+      "alt": "9",
+      "width": 2716,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/76174e75a2f72c48a16931275d8597ec7bcc5ae4.webp",
+      "previewSrc": "/media/images/76174e75a2f72c48a16931275d8597ec7bcc5ae4-720.webp",
+      "alt": "10",
+      "width": 2717,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c93ae7d729e01fbe183f2ad15e35078a5410a016.webp",
+      "previewSrc": "/media/images/c93ae7d729e01fbe183f2ad15e35078a5410a016-720.webp",
+      "alt": "11",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c45730564f51742a53605fc92cd7ddea020ebdf5.webp",
+      "previewSrc": "/media/images/c45730564f51742a53605fc92cd7ddea020ebdf5-720.webp",
+      "alt": "12",
+      "width": 2716,
+      "height": 3543
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Julian Song"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Monica Mong"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Talent",
+      "name": "Nat Veil"
+    },
+    {
+      "role": "other",
+      "customRole": "Editor-in-Chief",
+      "name": "Ibby Kamara"
+    },
+    {
+      "role": "other",
+      "customRole": "Art Director",
+      "name": "Gareth Wrighton"
+    },
+    {
+      "role": "other",
+      "customRole": "Editorial Director",
+      "name": "Kacion Mayers"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Director",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Zhou Xue Ming"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Yooyo Keong Ming"
+    },
+    {
+      "role": "other",
+      "customRole": "Executive Set",
+      "name": "aziofstudio"
+    },
+    {
+      "role": "other",
+      "customRole": "Styling Assistants",
+      "name": "Novak, Tean, Sheen"
+    },
+    {
+      "role": "other",
+      "customRole": "Hair Assistants",
+      "name": "Amu, Ding Xue"
+    },
+    {
+      "role": "other",
+      "customRole": "Make-up Assistants",
+      "name": "Zhan En, Xi Wen"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-summer-2025"
+  ]
+}

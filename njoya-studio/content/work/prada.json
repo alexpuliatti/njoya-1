@@ -1,0 +1,172 @@
+{
+  "id": "728d66f1-f330-4ed6-aaf8-23ad4294e779",
+  "slug": "prada",
+  "title": "Perfect No. 7, Autumn/Winter 2024 — Prada Special",
+  "client": "Perfect",
+  "date": "2024-09-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/87771e6622120c015e7e63d75eeda9cb877661fb.webp",
+    "previewSrc": "/media/images/87771e6622120c015e7e63d75eeda9cb877661fb-720.webp",
+    "alt": "Black and white group portrait of thirteen models in Prada Pre-Fall 2024, arranged in a pyramid composition against a soft grey backdrop. Figures wear tailored blazers, turtlenecks, belted coats, and a metallic leather jacket, with sculptural curled and waved hairstyles throughout. A structured Prada bag appears in the foreground. The composition is densely layered, with figures seated, standing, and reclining. Bold hot-pink masthead reads \"Perfect\" at the top; cover line reads \"Prada is Full-Hot\" in matching pink at the bottom, with the photographer credit.",
+    "width": 1080,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/87771e6622120c015e7e63d75eeda9cb877661fb.webp",
+      "previewSrc": "/media/images/87771e6622120c015e7e63d75eeda9cb877661fb-720.webp",
+      "alt": "Black and white group portrait of thirteen models in Prada Pre-Fall 2024, arranged in a pyramid composition against a soft grey backdrop. Figures wear tailored blazers, turtlenecks, belted coats, and a metallic leather jacket, with sculptural curled and waved hairstyles throughout. A structured Prada bag appears in the foreground. The composition is densely layered, with figures seated, standing, and reclining. Bold hot-pink masthead reads \"Perfect\" at the top; cover line reads \"Prada is Full-Hot\" in matching pink at the bottom, with the photographer credit.",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7748ee479c79936aaeac1c8f2b581d63351cf026.webp",
+      "previewSrc": "/media/images/7748ee479c79936aaeac1c8f2b581d63351cf026-720.webp",
+      "alt": "3",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/696c8e629eeba8c1811b26db5d9ff8a6f170410b.webp",
+      "previewSrc": "/media/images/696c8e629eeba8c1811b26db5d9ff8a6f170410b-720.webp",
+      "alt": "4",
+      "width": 1000,
+      "height": 603
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e457ea4c4f570b65885c5da9d8e5facaf04b6431.webp",
+      "previewSrc": "/media/images/e457ea4c4f570b65885c5da9d8e5facaf04b6431-720.webp",
+      "alt": "6",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/281a20c08cb81d15bd55d955e72d20aca4146d3a.webp",
+      "previewSrc": "/media/images/281a20c08cb81d15bd55d955e72d20aca4146d3a-720.webp",
+      "alt": "7",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1b3f3de3fc0e0abcb2852b0e268506993e2ce438.webp",
+      "previewSrc": "/media/images/1b3f3de3fc0e0abcb2852b0e268506993e2ce438-720.webp",
+      "alt": "8",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/bfb7d81ef590b6b7ca3919ca3defc0463f041b6a.webp",
+      "previewSrc": "/media/images/bfb7d81ef590b6b7ca3919ca3defc0463f041b6a-720.webp",
+      "alt": "9",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/65beee1b8e70258ff91a547b61d95ee13940cd3a.webp",
+      "previewSrc": "/media/images/65beee1b8e70258ff91a547b61d95ee13940cd3a-720.webp",
+      "alt": "10",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/35ee6ec81a47dec263322afee11479114ac0e456.webp",
+      "previewSrc": "/media/images/35ee6ec81a47dec263322afee11479114ac0e456-720.webp",
+      "alt": "11",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1e48e6e6984ff8cd290763e47187306f782a186d.webp",
+      "previewSrc": "/media/images/1e48e6e6984ff8cd290763e47187306f782a186d-720.webp",
+      "alt": "12",
+      "width": 1080,
+      "height": 648
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e457fe0678e0dbc623e177cdf150282873c35921.webp",
+      "previewSrc": "/media/images/e457fe0678e0dbc623e177cdf150282873c35921-720.webp",
+      "alt": "13",
+      "width": 1080,
+      "height": 651
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e8cded1ef0479e1a564a8db701b580c593a563ec.webp",
+      "previewSrc": "/media/images/e8cded1ef0479e1a564a8db701b580c593a563ec-720.webp",
+      "alt": "14",
+      "width": 1077,
+      "height": 645
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7f8881bbbe5e0f6dc1b33bfdebd9a525d10d62b7.webp",
+      "previewSrc": "/media/images/7f8881bbbe5e0f6dc1b33bfdebd9a525d10d62b7-720.webp",
+      "alt": "15",
+      "width": 1076,
+      "height": 647
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0cb263ab2a9152b4bdcdb2a69dc50e42df28735b.webp",
+      "previewSrc": "/media/images/0cb263ab2a9152b4bdcdb2a69dc50e42df28735b-720.webp",
+      "alt": "16",
+      "width": 1080,
+      "height": 1350
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "George Krakowiak"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Ali Pirzadeh"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "castDirector",
+      "name": "Anita Bitton, Calvin Wilson"
+    },
+    {
+      "role": "manicurist",
+      "name": "Lauren Michelle Pires"
+    },
+    {
+      "role": "model",
+      "name": "Aker Ajak, Alexander Acquah, Bangali Drammeh, Gabriel Nhial, Leah Simon, Manyuon Deng, Mohammed Abubakar, Nyadora Jany, Nyakong Chan, Nyanderi Deng, Rejoice Chuol, Seyi Adumati, Yar Aguer"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/perfect/editions/prada"
+  ]
+}

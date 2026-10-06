@@ -1,0 +1,18 @@
+{
+  "id": "cd548f34-6ccb-43fd-b376-0aee25c2d4a9",
+  "slug": "m-le-monde",
+  "title": "M Le Monde",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/1180132d8be58b3c0d4568e71d72615e2b28b5a8.webp",
+    "previewSrc": "/media/images/1180132d8be58b3c0d4568e71d72615e2b28b5a8-720.webp",
+    "alt": "Mag Cover",
+    "width": 1576,
+    "height": 1899
+  },
+  "workIds": [
+    "323b57e0-5c35-4f7e-91ea-0945834acb6d",
+    "518d805b-e83e-4f77-b1df-43dfabeb6c95"
+  ],
+  "isMultiEdition": true
+}

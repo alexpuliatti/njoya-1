@@ -1,0 +1,18 @@
+{
+  "id": "4f73dc64-abac-4eb2-9776-ff5748eac275",
+  "slug": "acne-paper",
+  "title": "Acne Paper",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/c59411eca9e0739ca2fef1624f5ba2d8f799ee35.webp",
+    "previewSrc": "/media/images/c59411eca9e0739ca2fef1624f5ba2d8f799ee35-720.webp",
+    "alt": "Mag Cover",
+    "width": 1541,
+    "height": 1917
+  },
+  "workIds": [
+    "6ad40c1b-3d7e-4632-8307-26c1eee4c404",
+    "430b5cc4-28f5-459d-97b2-bc5307c52755"
+  ],
+  "isMultiEdition": true
+}

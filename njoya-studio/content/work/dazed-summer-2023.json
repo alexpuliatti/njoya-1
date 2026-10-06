@@ -1,0 +1,142 @@
+{
+  "id": "0ebb4d98-8f16-4e6f-a08f-c5697d8f488f",
+  "slug": "dazed-summer-2023",
+  "title": "Dazed, Summer 2023",
+  "client": "Dazed",
+  "date": "2023-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/f4751393535af355581d6ea15241b8afd0dde7e3.webp",
+    "previewSrc": "/media/images/f4751393535af355581d6ea15241b8afd0dde7e3-720.webp",
+    "alt": "Deakin Bradley plays basketball against four figures in green morphsuits on a green screen set, all reaching for a red basketball. Bradley wears white Jordan shorts with red trim, a red headband and wristband, and Air Jordan sneakers. The all-green background and suited figures create a surreal, dynamic visual. Cover line reads \"Leap of Faith.\"",
+    "width": 2608,
+    "height": 3260
+  },
+  "coverVideoPlaybackId": "l1bMgJc9Uav9iFOpFNiozTXFzV6vXu87X02SrDR02JxgA",
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/f4751393535af355581d6ea15241b8afd0dde7e3.webp",
+      "previewSrc": "/media/images/f4751393535af355581d6ea15241b8afd0dde7e3-720.webp",
+      "alt": "Deakin Bradley plays basketball against four figures in green morphsuits on a green screen set, all reaching for a red basketball. Bradley wears white Jordan shorts with red trim, a red headband and wristband, and Air Jordan sneakers. The all-green background and suited figures create a surreal, dynamic visual. Cover line reads \"Leap of Faith.\"",
+      "width": 2608,
+      "height": 3260
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c3286d29125e0a240728fed482fea8cf7aad2581.webp",
+      "previewSrc": "/media/images/c3286d29125e0a240728fed482fea8cf7aad2581-720.webp",
+      "alt": "Image #2",
+      "width": 1350,
+      "height": 874
+    },
+    {
+      "type": "image",
+      "src": "/media/images/257a891130bda168b00b9493cab41d03cf2d107d.webp",
+      "previewSrc": "/media/images/257a891130bda168b00b9493cab41d03cf2d107d-720.webp",
+      "alt": "Image #3",
+      "width": 1350,
+      "height": 854
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f3dff22bc468906c7544f87788a78c777e8c27dc.webp",
+      "previewSrc": "/media/images/f3dff22bc468906c7544f87788a78c777e8c27dc-720.webp",
+      "alt": "Image #4",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/85b45155fc8fbf7ebbf2a786ef86a0bc6cf71472.webp",
+      "previewSrc": "/media/images/85b45155fc8fbf7ebbf2a786ef86a0bc6cf71472-720.webp",
+      "alt": "Image #5",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6ff618df3ba7e72f782ce5c70955f9dae19517af.webp",
+      "previewSrc": "/media/images/6ff618df3ba7e72f782ce5c70955f9dae19517af-720.webp",
+      "alt": "Image #6",
+      "width": 1350,
+      "height": 863
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9fef869056314120ffd5ec05058ff9264ef62404.webp",
+      "previewSrc": "/media/images/9fef869056314120ffd5ec05058ff9264ef62404-720.webp",
+      "alt": "Image #7",
+      "width": 1350,
+      "height": 897
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e91307f70dc4b31972fe0f9e70cdda7b5854cd8c.webp",
+      "previewSrc": "/media/images/e91307f70dc4b31972fe0f9e70cdda7b5854cd8c-720.webp",
+      "alt": "Image #8",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/50b6be9d90b1c2532a5ca94e1b992163ced1dcf3.webp",
+      "previewSrc": "/media/images/50b6be9d90b1c2532a5ca94e1b992163ced1dcf3-720.webp",
+      "alt": "Image #9",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f6198fa2dfdc566a65874087f146c782178d3e74.webp",
+      "previewSrc": "/media/images/f6198fa2dfdc566a65874087f146c782178d3e74-720.webp",
+      "alt": "Image #10",
+      "width": 1350,
+      "height": 895
+    },
+    {
+      "type": "video",
+      "playbackId": "l1bMgJc9Uav9iFOpFNiozTXFzV6vXu87X02SrDR02JxgA",
+      "alt": "Dazed, Summer 2023 — film"
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Gabriel Moses"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Director",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Sophie Jane Anderson"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Mischa Notcutt"
+    },
+    {
+      "role": "other",
+      "customRole": "Movement Director",
+      "name": "Abdourahman Njie, Manu Loca"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-summer-2023",
+    "/shoots/dazed/editions/dazed-2023-summer-may"
+  ]
+}

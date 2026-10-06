@@ -1,0 +1,105 @@
+{
+  "id": "7fdb50fd-37a1-400d-b16c-6ad4a6c6e7c1",
+  "slug": "balmain-spring-2024-campaign",
+  "title": "Balmain, Spring 2024 Campaign",
+  "client": "Balmain Paris",
+  "date": "2024-02-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/c9604743a15126b3e6e3d6204aaf7f0502897169.webp",
+    "previewSrc": "/media/images/c9604743a15126b3e6e3d6204aaf7f0502897169-720.webp",
+    "alt": "Gisele Bündchen radiates pinup energy against a saturated cerulean blue backdrop, posing in a plunging short-sleeved Balmain mini-dress in vivid emerald green, embellished with intricate 3D rose motifs in soft pink and silver beadwork cascading down the front. Her tousled honey-blonde waves frame her face dramatically, paired with sculptural drop earrings, a wide cuff bracelet, and a confident hand-on-hip stance. Pink caged stiletto sandals complete the look. The bold \"BALMAIN PARIS\" wordmark sits centered over the composition — pure retro pinup glamour meets Rousteing's rose-garden romance.",
+    "width": 1080,
+    "height": 1346
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/c9604743a15126b3e6e3d6204aaf7f0502897169.webp",
+      "previewSrc": "/media/images/c9604743a15126b3e6e3d6204aaf7f0502897169-720.webp",
+      "alt": "Gisele Bündchen radiates pinup energy against a saturated cerulean blue backdrop, posing in a plunging short-sleeved Balmain mini-dress in vivid emerald green, embellished with intricate 3D rose motifs in soft pink and silver beadwork cascading down the front. Her tousled honey-blonde waves frame her face dramatically, paired with sculptural drop earrings, a wide cuff bracelet, and a confident hand-on-hip stance. Pink caged stiletto sandals complete the look. The bold \"BALMAIN PARIS\" wordmark sits centered over the composition — pure retro pinup glamour meets Rousteing's rose-garden romance.",
+      "width": 1080,
+      "height": 1346
+    },
+    {
+      "type": "image",
+      "src": "/media/images/bf90ea256ef8643bf4220ebf549db4d7a1564b7b.webp",
+      "previewSrc": "/media/images/bf90ea256ef8643bf4220ebf549db4d7a1564b7b-720.webp",
+      "alt": "Pure Rousteing maximalism on a powder-pink backdrop. Gisele wears an off-shoulder Balmain mini-dress encrusted with dense 3D floral embellishment — emerald-green palm-like foliage erupting across a black-and-white polka-dot base, dotted with raised pink rose clusters and crystal accents. Her windswept blonde waves cascade like a lion's mane, paired with statement floral chandelier earrings and a chunky turquoise-and-pink jeweled cuff. She carries Balmain's sculptural curved-handle handbag in glossy black-and-white. A baroque garden in dress form — that's the rose-garden moment. ​",
+      "width": 1080,
+      "height": 1346
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b1de05d6b358694aa5212f15036d220314b82f71.webp",
+      "previewSrc": "/media/images/b1de05d6b358694aa5212f15036d220314b82f71-720.webp",
+      "alt": "Gisele goes full pop-art bombshell against blush pink. The strapless Balmain mini-dress is rendered in glossy tangerine-orange latex, swarmed with sculptural multicolor 3D roses in coral pink, butter yellow, powder blue, and emerald green — bursting diagonally across the bodice like a 3D bouquet. Her tousled hair flies in every direction like a manga heroine. She accessorizes with stacked glitter-and-resin cuff bracelets in orange, blue, and turquoise, and clutches a lattice-cut Balmain bag in chartreuse green with gold \"B\" plaque. Plastic-fantastic glam meets couture craftsmanship. ​",
+      "width": 1080,
+      "height": 1347
+    },
+    {
+      "type": "image",
+      "src": "/media/images/eb340541160a771368af2ba9d7ce0ec178c115a9.webp",
+      "previewSrc": "/media/images/eb340541160a771368af2ba9d7ce0ec178c115a9-720.webp",
+      "alt": "Gisele serves Pretty Woman-meets-pinup against a buttery banana-yellow backdrop, wearing a plunging long-sleeved Balmain mini-dress in bubblegum pink satin scattered with oversized black polka dots. A single oversized 3D rose blooms at the bust, echoing the campaign's floral DNA. Her honey-blonde waves are caught mid-flight in a windswept wave, paired with a sleek black wrist cuff, scarlet manicure, and crisp white pointed-toe pumps. She holds a structured white top-handle Balmain bag with gold \"B\" hardware — playful retro Americana filtered through couture polish. ​",
+      "width": 1080,
+      "height": 1346
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "stylist",
+      "name": "Charlotte Stockdale, Katie Lyall"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Gisele Bündchen"
+    },
+    {
+      "role": "other",
+      "customRole": "Designer",
+      "name": "Olivier Rousteing"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Sam McKnight"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Peter Philips"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Anita Bitton"
+    },
+    {
+      "role": "other",
+      "customRole": "Director of Photography",
+      "name": "Errol Rainey"
+    },
+    {
+      "role": "other",
+      "customRole": "Executive Producer",
+      "name": "Victoria Pavon"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/balmain/editions/balmain-spring-2024-campaign",
+    "/shoots/balmain/editions/balmain"
+  ]
+}

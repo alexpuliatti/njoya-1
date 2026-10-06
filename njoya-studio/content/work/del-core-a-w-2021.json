@@ -1,0 +1,96 @@
+{
+  "id": "afebc806-19b2-479e-bee9-f899df0e2f79",
+  "slug": "del-core-a-w-2021",
+  "title": "Del Core, A/W 2021",
+  "client": "Delcore",
+  "date": "2021-07-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/ea2c95d498fc167c1da70fc8641c32bf77adb8c5.webp",
+    "previewSrc": "/media/images/ea2c95d498fc167c1da70fc8641c32bf77adb8c5-720.webp",
+    "alt": "Dark, cinematic campaign with sci-fi undertones. A red-haired model wearing a sculptural dark green headpiece and draped garments is captured across multiple stacked monitors — fragmented, multiplied, and slightly eerie. Mood is cold and technological, referencing classic sci-fi film aesthetics.",
+    "width": 1486,
+    "height": 1914
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/68fa63c61609b5cd705293d459a531a58cfbcdd5.webp",
+      "previewSrc": "/media/images/68fa63c61609b5cd705293d459a531a58cfbcdd5-720.webp",
+      "alt": "Mag Image 1",
+      "width": 1854,
+      "height": 1200
+    },
+    {
+      "type": "image",
+      "src": "/media/images/18910cb031892a92fca3c9b699e05074185e318d.webp",
+      "previewSrc": "/media/images/18910cb031892a92fca3c9b699e05074185e318d-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1854,
+      "height": 1200
+    },
+    {
+      "type": "image",
+      "src": "/media/images/603188b885270b1c179160902bd54f654c9ebea7.webp",
+      "previewSrc": "/media/images/603188b885270b1c179160902bd54f654c9ebea7-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1854,
+      "height": 1200
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Harley Weir"
+    },
+    {
+      "role": "other",
+      "customRole": "Art Director",
+      "name": "David Lane"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Carlos Nazario"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Creative Director",
+      "name": "Daniel Del Core"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Louis Ghewy"
+    },
+    {
+      "role": "other",
+      "customRole": "Makeup Artist",
+      "name": "Lucia Pica"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Samuel Ellis Scheinman"
+    },
+    {
+      "role": "other",
+      "customRole": "Model",
+      "name": "Alyda Grace, Malika Louback"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/delcore/editions/del-core-a-w-2021",
+    "/shoots/delcore/editions/delcore",
+    "/shoots/delcore"
+  ]
+}
