@@ -1,5 +1,7 @@
 # Self-hosting Njoya Studios
 
+For the GitHub Pages deployment, use [GitHub Pages instructions](github-pages.md). This document covers the optional Node.js/Docker deployment instead.
+
 The website runs as a normal Next.js Node.js server. It does not require Vercel, Sanity, a database, or API credentials. Prepared images are served from the application, and content is bundled as local JSON files. Video playback is disabled pending the actual video files; projects use local still images.
 
 ## Build and run with Node.js
@@ -65,4 +67,4 @@ The content filesystem is read-only during normal use. Next.js needs a writable 
 - Instagram and inquiry email links open their respective destinations only when visitors use them.
 - Vercel Analytics has been removed.
 
-No deployment has been performed as part of implementation. The exact domain, reverse proxy and host service configuration can be set once the hosting destination is chosen.
+The current deployment target is GitHub Pages. These Node.js/Docker instructions remain available for a future server host; its domain, reverse proxy and service configuration would be set for that host.

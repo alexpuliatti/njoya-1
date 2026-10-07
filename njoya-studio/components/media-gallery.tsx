@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import StudioVideo from "./studio-video";
 
+import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl, muxThumbnail } from "@/lib/mux";
 
 export default function MediaGallery({ entries }: { entries: GalleryEntry[] }) {
@@ -31,7 +32,7 @@ export default function MediaGallery({ entries }: { entries: GalleryEntry[] }) {
                 alt={entry.alt}
                 height={entry.height}
                 sizes="(max-width: 767px) 92vw, 56vw"
-                src={entry.src}
+                src={assetPath(entry.src)}
                 width={entry.width}
               />
               {entry.type === "synopsis" && entry.text && (

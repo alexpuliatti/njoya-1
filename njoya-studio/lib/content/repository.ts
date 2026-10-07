@@ -79,9 +79,11 @@ export const getWork = cache(async (slug: string) =>
 export const getCollection = cache(async (slug: string) =>
   (await getCollections()).find((collection) => collection.slug === slug),
 );
+export const getLegacyRoutes = cache(async () =>
+  z.record(z.string()).parse(await readJson("legacy-routes.json")),
+);
 export const getLegacyDestination = cache(
-  async (url: string) =>
-    z.record(z.string()).parse(await readJson("legacy-routes.json"))[url],
+  async (url: string) => (await getLegacyRoutes())[url],
 );
 export const getLabEntries = cache(
   async (): Promise<LabEntry[]> =>

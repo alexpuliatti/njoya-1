@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
+import { assetPath } from "@/lib/asset-path";
 import { getAbout, getSite } from "@/lib/content/repository";
 
 export const metadata: Metadata = { title: "About" };
@@ -28,7 +29,7 @@ export default async function AboutPage() {
               priority
               alt={about.portrait.alt}
               sizes="(max-width: 767px) 80vw, 30vw"
-              src={about.portrait.src}
+              src={assetPath(about.portrait.src)}
             />
           </div>
         )}
@@ -47,7 +48,7 @@ export default async function AboutPage() {
                     fill
                     alt={person.image.alt}
                     sizes="(max-width: 767px) 65vw, 24vw"
-                    src={person.image.src}
+                    src={assetPath(person.image.src)}
                   />
                 </div>
               )}

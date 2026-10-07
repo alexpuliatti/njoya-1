@@ -12,6 +12,7 @@ import {
   workMedia,
 } from "@/lib/content/repository";
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return (await getWorks()).map((work) => ({ slug: work.slug }));
 }

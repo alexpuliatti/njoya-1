@@ -45,7 +45,8 @@ const cases = [
   { url: "/shoots/vogue", status: 308, destination: "/shoots/vogue/editions" },
   { url: "/shoots", status: 307, destination: "/work" },
   { url: "/design-projects", status: 307, destination: "/work/worlds" },
-  { url: "/?q=Rihanna", status: 307, destination: "/search?q=Rihanna" },
+  // Query migration runs in the browser so it also works on static hosts.
+  { url: "/?q=Rihanna", status: 200 },
   ...[
     "/work/not-a-category",
     "/work/projects/not-a-project",

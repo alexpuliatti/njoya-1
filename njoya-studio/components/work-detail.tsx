@@ -8,6 +8,7 @@ import { ArrowLeft } from "lucide-react";
 import StudioVideo from "./studio-video";
 import MediaGallery from "./media-gallery";
 
+import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
 
 export default function WorkDetail({
@@ -44,7 +45,7 @@ export default function WorkDetail({
               muted
               playsInline
               aria-label={title}
-              poster={cover.src}
+              poster={assetPath(cover.src)}
               preload="metadata"
               src={muxPlaybackUrl(heroVideoPlaybackId)}
             />
@@ -54,7 +55,7 @@ export default function WorkDetail({
               alt={cover.alt}
               height={cover.height}
               sizes="(max-width: 767px) 92vw, 52vw"
-              src={cover.src}
+              src={assetPath(cover.src)}
               width={cover.width}
             />
           )}

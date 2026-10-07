@@ -13,7 +13,7 @@ npm run dev
 
 Open the Local URL printed by Next.js. No Sanity project ID or API token is required.
 
-The site targets a normal Node.js host, not Vercel. A standalone server build, Dockerfile, and Compose configuration are included; see [self-hosting instructions](docs/self-hosting.md).
+The site can publish to **GitHub Pages** through the repository's Pages workflow; see [GitHub Pages instructions](docs/github-pages.md). A standalone Node.js server build, Dockerfile, and Compose configuration are also available; see [self-hosting instructions](docs/self-hosting.md).
 
 ```bash
 npm run content:validate

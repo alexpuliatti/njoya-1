@@ -1,6 +1,19 @@
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
-import { getLegacyDestination } from "@/lib/content/repository";
+import {
+  getLegacyDestination,
+  getLegacyRoutes,
+} from "@/lib/content/repository";
+import LegacyRedirect from "@/components/legacy-redirect";
+
+export const dynamicParams = false;
+export async function generateStaticParams() {
+  return Object.keys(await getLegacyRoutes()).flatMap((url) => {
+    const match = url.match(/^\/shoots\/([^/]+)\/editions\/([^/]+)$/);
+
+    return match ? [{ slug: match[1], edition: match[2] }] : [];
+  });
+}
 export default async function LegacyEdition({
   params,
 }: {
@@ -11,5 +24,6 @@ export default async function LegacyEdition({
   );
 
   if (!destination) notFound();
-  permanentRedirect(destination);
+
+  return <LegacyRedirect href={destination} />;
 }
