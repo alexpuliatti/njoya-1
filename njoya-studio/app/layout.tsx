@@ -12,7 +12,10 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_URL || "http://localhost:3000"),
+  // Next adds basePath to generated metadata assets itself.
+  metadataBase: new URL(
+    new URL(process.env.SITE_URL || "http://localhost:3000").origin,
+  ),
   title: { default: siteConfig.name, template: `%s — ${siteConfig.name}` },
   description:
     "A multidisciplinary creative practice working across space, image, objects and experiences.",

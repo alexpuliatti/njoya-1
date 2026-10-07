@@ -2,7 +2,7 @@
 
 Verified locally on 30 October 2026.
 
-- GitHub Pages export passed 259 static route checks, 123 automatic-forwarding checks and 1,014 asset/link checks under `/njoya-1/`. Chrome confirmed search after refreshing its URL and forwarding from an old project URL.
+- GitHub Pages export passed 259 static route checks, 123 automatic-forwarding checks and 1,015 asset/link checks under `/njoya-1/`, including the social-preview image. Chrome confirmed search after refreshing its URL and forwarding from an old project URL.
 - Production build passed with `NEXT_PUBLIC_SANITY_PROJECT_ID` unset. Fonts, content and prepared images are local.
 - Content validation passed for 90 works, 23 collections, 1,624 prepared image files and all legacy mappings.
 - All eight content, chronology, search and migration tests passed.

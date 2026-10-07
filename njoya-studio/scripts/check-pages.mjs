@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const output = path.resolve("out");
-const { basePath } = JSON.parse(await fs.readFile(path.join(output, "pages-build.json"), "utf8"));
+const { basePath, origin } = JSON.parse(await fs.readFile(path.join(output, "pages-build.json"), "utf8"));
 const read = async (file) => JSON.parse(await fs.readFile(path.join("content", file), "utf8"));
 const records = async (folder) => Promise.all(
   (await fs.readdir(path.join("content", folder)))
@@ -35,8 +35,13 @@ const assets = new Set();
 for (const route of [...routes, "/404.html"]) {
   const html = await fs.readFile(route === "/404.html" ? path.join(output, route) : pagePath(route), "utf8");
   assert.doesNotMatch(html, /\/_next\/image\?/, `Image optimizer is unavailable on Pages: ${route}`);
-  for (const match of html.matchAll(/\b(?:src|href)="(\/[^\"]*)"/g)) {
-    const url = match[1].replaceAll("&amp;", "&");
+  const urls = [...html.matchAll(/\b(?:src|href)="(\/[^\"]*)"/g)].map((match) => match[1]);
+  for (const match of html.matchAll(/<meta\b[^>]*\bcontent="(https?:\/\/[^\"]*)"/g)) {
+    const url = new URL(match[1].replaceAll("&amp;", "&"));
+    if (url.origin === origin) urls.push(url.pathname + url.search);
+  }
+  for (const source of urls) {
+    const url = source.replaceAll("&amp;", "&");
     if (url.startsWith("//")) continue;
     assert.ok(!basePath || url === basePath || url.startsWith(`${basePath}/`), `Unprefixed asset/link on ${route}: ${url}`);
     assets.add(decodeURIComponent(url.slice(basePath.length).split(/[?#]/)[0] || "/"));

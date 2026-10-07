@@ -7,7 +7,7 @@ import { Instagram, Search } from "lucide-react";
 import { useSearch } from "./search-provider";
 
 export function Navbar({ instagram }: { instagram: string }) {
-  const pathname = usePathname();
+  const pathname = usePathname().replace(/\/$/, "") || "/";
   const search = useSearch();
   const titles: Record<string, string> = {
     "/work": "Work",
