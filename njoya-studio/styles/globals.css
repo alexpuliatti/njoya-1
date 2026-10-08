@@ -174,33 +174,37 @@ button:disabled {
 .studio-navigation {
   position: fixed;
   z-index: 90;
-  bottom: 22px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 72px;
-  padding: 18px 35px;
-  border-radius: 50px;
-  background: rgba(38, 27, 21, 0.93);
-  backdrop-filter: blur(12px);
+  bottom: max(22px, env(safe-area-inset-bottom));
+  left: 22%;
+  right: 22%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  padding: 0 4.4vw;
+  pointer-events: none;
 }
 .studio-navigation a {
   position: relative;
-  padding: 6px 9px;
-  font-size: 11px;
+  justify-self: center;
+  padding: 6px 0 12px;
+  min-height: 44px;
+  font-size: clamp(14px, 1vw, 20px);
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
   text-transform: uppercase;
   transition: opacity 160ms;
+  pointer-events: auto;
 }
 .studio-navigation a::after {
   content: "";
   position: absolute;
-  width: 3px;
-  height: 3px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: currentColor;
-  bottom: -2px;
-  left: calc(50% - 1px);
+  bottom: 0;
+  left: calc(50% - 2.5px);
   opacity: 0;
 }
 .studio-navigation a:hover {
@@ -981,12 +985,14 @@ button:disabled {
     display: none;
   }
   .studio-navigation {
-    bottom: max(12px, env(safe-area-inset-bottom));
-    gap: 42px;
-    padding: 15px 24px;
+    bottom: max(16px, env(safe-area-inset-bottom));
+    left: 0;
+    right: 0;
+    gap: 12px;
+    padding: 0 24px;
   }
   .studio-navigation a {
-    font-size: 10px;
+    font-size: 14px;
   }
   .portfolio-stage {
     padding: 18px 24px 45px;
