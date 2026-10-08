@@ -9,6 +9,7 @@ Verified locally on 30 October 2026.
 - The packaged standalone Node server passed 252 route/redirect checks, local image checks and Next.js image optimization.
 - With `videoPlaybackEnabled: false`, the route checks confirmed that all successful pages omit video elements and external Mux media URLs. Exported references remain in the source content.
 - Chrome checks covered homepage browsing, project detail panels, search suggestions/results, keyboard dismissal, direct project pages and desktop/mobile layouts. The final Chanel page uses its local cover image.
+- The bottom navigation appears only on Home. Inner pages use compact desktop header links or a mobile Menu; Chrome checks confirmed the active section, menu navigation and Escape dismissal.
 - `git diff --check` passed. The build has existing lint warnings in older unused components; no build or TypeScript errors remain.
 
 The standalone server was tested on the local macOS Node.js 26 installation. The Docker configuration targets Node.js 22 on Linux. Docker is not installed on this machine, so the image has not been built or run here. GitHub Pages uses the static export and does not need this server or Docker image.

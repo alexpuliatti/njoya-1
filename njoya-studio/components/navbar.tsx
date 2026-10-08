@@ -3,24 +3,66 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Instagram, Search } from "lucide-react";
+import { useEffect, useRef } from "react";
 
 import { useSearch } from "./search-provider";
 
+import { siteConfig } from "@/config/site";
+
 export function Navbar({ instagram }: { instagram: string }) {
   const pathname = usePathname().replace(/\/$/, "") || "/";
+  const isHome = pathname === "/";
   const search = useSearch();
-  const titles: Record<string, string> = {
-    "/work": "Work",
-    "/work/worlds": "Worlds",
-    "/work/exhibition": "Exhibition",
-    "/work/commercials": "Commercials",
-    "/work/editorials": "Editorials",
-    "/lab": "Lab",
-    "/about": "About",
-    "/search": "Search",
-    "/shoots": "Archive",
-    "/design-projects": "Design projects",
-  };
+  const menuRef = useRef<HTMLDetailsElement>(null);
+  const menuButtonRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    if (menuRef.current) menuRef.current.open = false;
+  }, [pathname]);
+
+  useEffect(() => {
+    const closeOutside = (event: PointerEvent) => {
+      const menu = menuRef.current;
+
+      if (
+        menu?.open &&
+        event.target instanceof Node &&
+        !menu.contains(event.target)
+      )
+        menu.open = false;
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && menuRef.current?.open) {
+        menuRef.current.open = false;
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    window.addEventListener("pointerdown", closeOutside);
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      window.removeEventListener("pointerdown", closeOutside);
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
+
+  const sectionLinks = siteConfig.navItems.map(({ href, label }) => (
+    <Link
+      key={href}
+      aria-current={
+        pathname === href || pathname.startsWith(`${href}/`)
+          ? "page"
+          : undefined
+      }
+      href={href}
+      onClick={() => {
+        if (menuRef.current) menuRef.current.open = false;
+      }}
+    >
+      {label}
+    </Link>
+  ));
 
   return (
     <header className="studio-header">
@@ -34,8 +76,18 @@ export function Navbar({ instagram }: { instagram: string }) {
           STUDIOS
         </span>
       </Link>
-      <span className="page-label">{titles[pathname] ?? ""}</span>
+      {!isHome && (
+        <nav aria-label="Main navigation" className="header-navigation">
+          {sectionLinks}
+        </nav>
+      )}
       <div className="header-actions">
+        {!isHome && (
+          <details ref={menuRef} className="section-menu">
+            <summary ref={menuButtonRef}>Menu</summary>
+            <nav aria-label="Mobile navigation">{sectionLinks}</nav>
+          </details>
+        )}
         <button
           aria-label="Search work, people and credits"
           className="icon-button"
