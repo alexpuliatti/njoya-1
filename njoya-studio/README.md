@@ -36,7 +36,9 @@ content/collections/*.json    Legacy publication/brand collections
 content/lab/*.json            Research entries; published:false stays private
 content/legacy-routes.json    Old project URLs and their new destinations
 content/media-sources.json    Source image inventory for local tooling
-public/media/images/          Prepared web images and 720px previews
+content/media-variants.json   Generated responsive image profiles
+public/media/images/          Prepared responsive WebP/AVIF images
+public/media/brand/           Optimized supplied intro artwork
 media/originals/              Local original uploads (Git-ignored)
 ```
 
@@ -46,7 +48,7 @@ The schema is in `lib/content/schema.mjs`. The server-only repository in `lib/co
 
 Edit its JSON file under `content/work/`, then rebuild. Preserve `id` and `slug` for existing projects. Each project has:
 
-- `id`, `slug`, `title`, `client`, and a `date` in `YYYY-MM-DD` format (or `null` for a date that has not been established).
+- `id`, `slug`, `title`, `client`, and a `date` in `YYYY-MM-DD` format, or `YYYY-MM` when only the month is known (or `null` for a date that has not been established).
 - `categories`: one or more of `worlds`, `exhibition`, `commercials`, `editorials`.
 - `kind`: `edition` or `design-project`.
 - `cover`: a local image object.
@@ -67,9 +69,11 @@ When creating a project, use a new stable ID, create a unique slug, and name the
 npm run media:add -- "/absolute/path/to/photo.jpg" --alt "Describe what the image shows"
 ```
 
-The command retains a local original in `media/originals/`, creates a web image up to 2000px wide and a 720px preview, and prints the image object to paste into a project cover, gallery, team portrait, or research entry. It does not modify the source image.
+The command retains a local original in `media/originals/`, prepares responsive images, and prints the image object to paste into a project cover, gallery, team portrait, or research entry. It does not modify the source image.
 
-Include the generated files under `public/media/images/` with the content changes when sharing or deploying. Original uploads and the full Sanity archive do not belong in the public directory. Production builds use the prepared web files and do not need the original archive.
+Images are generated directly from the original at 480, 960, 1600 and up to 2560 pixels wide, omitting sizes larger than the source. WebP uses quality 88; AVIF uses quality 80 with 4:4:4 chroma. These settings were compared visually on the installed Sharp 0.33.5 encoder. AVIF is selected only when its full-size output is at least 8% smaller than WebP; otherwise WebP is retained. An AVIF image also has a full-size WebP fallback. The browser downloads the appropriate format and resolution through `<picture>`/`srcset`, with crop-aware sizing for tall cards. Photos use these prepared files on every host, without another lossy encoding pass in Next.js.
+
+Include the generated files under `public/media/images/` and both media manifests with the content changes when sharing or deploying. Do not edit `media-variants.json` manually. Original uploads and the full Sanity archive do not belong in the public directory. Production builds use the prepared web files and do not need the original archive.
 
 To regenerate existing media from the original Sanity export:
 
@@ -79,7 +83,9 @@ npm run media:prepare
 npm run media:prepare -- "/path/to/export/images"
 ```
 
-This command is incremental and skips images whose full-size and preview outputs already exist. Original files must be available when regenerating missing output. HEIF originals are converted using macOS `sips` when needed; a different build platform must support decoding the source format or use the already-prepared web images.
+This command is incremental and resumable. It fingerprints the encoding profile and original file, skips valid existing outputs, and updates content paths after all images are ready. Profile changes receive versioned filenames to avoid stale browser caches. The former quality-82 images and 720px previews are retained privately under `media/originals/previous-webp-82/`, outside the deployment. Original files must be available when regenerating missing output. HEIF originals are converted using macOS `sips` when needed; a different build platform must support decoding the source format or use the already-prepared web images.
+
+Future obsolete profile files are also archived privately under `media/originals/previous-prepared/`, so the public directory contains only current outputs. See [image optimization notes](docs/image-optimization.md) for the format comparisons and source-resolution limits.
 
 ## Add a synopsis image
 
@@ -88,8 +94,8 @@ The studio designs these cards as images. Add the image normally, then set its `
 ```json
 {
   "type": "synopsis",
-  "src": "/media/images/IMAGE_HASH.webp",
-  "previewSrc": "/media/images/IMAGE_HASH-720.webp",
+  "src": "/media/images/IMAGE_HASH-PROFILE.webp",
+  "previewSrc": "/media/images/IMAGE_HASH-PROFILE-480.webp",
   "alt": "Behind the scenes of the Lacoste project",
   "width": 1200,
   "height": 1600,
@@ -119,7 +125,9 @@ Once the actual files are supplied, local video serving can be added alongside t
 
 `content/home.json` contains exactly four `{ "title": "Display title", "workId": "PROJECT_ID" }` entries. Match `workId` to a project's `id`. The studio statement is separate and stays fixed while the four project slots browse in a loop.
 
-Jaguar currently has `workId: null` and displays a deliberate Coming soon card. Replace it with the real project ID once the project and artwork are available.
+All four slots now point to published projects. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
+
+The homepage intro uses `public/media/brand/njoya-intro.webp`, prepared from the supplied logo artwork. It plays once per browser-tab session, then reveals the homepage with an upward screen wipe. Skip/Escape dismiss it immediately; reduced-motion visitors go straight to the page. The session key and pre-hydration check are in `lib/intro.ts`.
 
 ## Add a Lab entry
 
@@ -160,10 +168,9 @@ The historical Sanity Studio source remains in `njoyastudio/` as an archive, wit
 
 ## Outstanding studio content
 
-- Jaguar project details and selected hero artwork.
 - Final Lab research entries and design direction.
 - Designed synopsis cards.
 - Editorial review of category assignments and uncertain dates.
-- Final approved wordmark asset; the current header is a typographic interpretation of the brief.
+- Final header wordmark asset; the loading intro now uses the supplied illustrated logo.
 
 The detailed brief mapping and original implementation sequence are in `docs/implementation-plan.md`.

@@ -1,13 +1,18 @@
 import type { GalleryEntry } from "@/lib/content/types";
 
-import Image from "next/image";
-
+import Image from "./studio-image";
 import StudioVideo from "./studio-video";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl, muxThumbnail } from "@/lib/mux";
 
-export default function MediaGallery({ entries }: { entries: GalleryEntry[] }) {
+export default function MediaGallery({
+  entries,
+  maxWidth = 780,
+}: {
+  entries: GalleryEntry[];
+  maxWidth?: number;
+}) {
   if (!entries.length) return null;
 
   return (
@@ -31,7 +36,8 @@ export default function MediaGallery({ entries }: { entries: GalleryEntry[] }) {
               <Image
                 alt={entry.alt}
                 height={entry.height}
-                sizes="(max-width: 767px) 92vw, 56vw"
+                image={entry}
+                sizes={`(max-width: 767px) calc(100vw - 48px), ${maxWidth}px`}
                 src={assetPath(entry.src)}
                 width={entry.width}
               />

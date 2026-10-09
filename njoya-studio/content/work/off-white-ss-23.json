@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468.webp",
-    "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-720.webp",
+    "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef.webp",
+    "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef-480.avif",
     "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder-blue oversized double-breasted coat with matching wide-leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders — while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
     "width": 1080,
     "height": 1351
@@ -19,56 +19,56 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468.webp",
-      "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-720.webp",
+      "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef.webp",
+      "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef-480.avif",
       "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder-blue oversized double-breasted coat with matching wide-leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders — while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
       "width": 1080,
       "height": 1351
     },
     {
       "type": "image",
-      "src": "/media/images/f1ef012942d5ea89deaaa1c74993706bd94e8818.webp",
-      "previewSrc": "/media/images/f1ef012942d5ea89deaaa1c74993706bd94e8818-720.webp",
+      "src": "/media/images/f1ef012942d5ea89deaaa1c74993706bd94e8818-pf257cef.webp",
+      "previewSrc": "/media/images/f1ef012942d5ea89deaaa1c74993706bd94e8818-pf257cef-480.webp",
       "alt": "Mag Image 2",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/8d01542e2157d7b971f5c74849927fb3ccdc74d3.webp",
-      "previewSrc": "/media/images/8d01542e2157d7b971f5c74849927fb3ccdc74d3-720.webp",
+      "src": "/media/images/8d01542e2157d7b971f5c74849927fb3ccdc74d3-pf257cef.webp",
+      "previewSrc": "/media/images/8d01542e2157d7b971f5c74849927fb3ccdc74d3-pf257cef-480.avif",
       "alt": "Mag Image 3",
       "width": 1080,
       "height": 1351
     },
     {
       "type": "image",
-      "src": "/media/images/5301906eef2d0e2555790ed34a3f6185a1187ecb.webp",
-      "previewSrc": "/media/images/5301906eef2d0e2555790ed34a3f6185a1187ecb-720.webp",
+      "src": "/media/images/5301906eef2d0e2555790ed34a3f6185a1187ecb-pf257cef.webp",
+      "previewSrc": "/media/images/5301906eef2d0e2555790ed34a3f6185a1187ecb-pf257cef-480.webp",
       "alt": "Mag Image 4",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/1b43ccc16bc7ec41f942fd351cc6eef8c60820ab.webp",
-      "previewSrc": "/media/images/1b43ccc16bc7ec41f942fd351cc6eef8c60820ab-720.webp",
+      "src": "/media/images/1b43ccc16bc7ec41f942fd351cc6eef8c60820ab-pf257cef.webp",
+      "previewSrc": "/media/images/1b43ccc16bc7ec41f942fd351cc6eef8c60820ab-pf257cef-480.avif",
       "alt": "Mag Image 5",
       "width": 1080,
       "height": 1351
     },
     {
       "type": "image",
-      "src": "/media/images/b1c7c1d31fdc824e5b1bcd3abc0d47145dbbaa64.webp",
-      "previewSrc": "/media/images/b1c7c1d31fdc824e5b1bcd3abc0d47145dbbaa64-720.webp",
+      "src": "/media/images/b1c7c1d31fdc824e5b1bcd3abc0d47145dbbaa64-pf257cef.webp",
+      "previewSrc": "/media/images/b1c7c1d31fdc824e5b1bcd3abc0d47145dbbaa64-pf257cef-480.avif",
       "alt": "Mag Image 6",
       "width": 1080,
       "height": 1351
     },
     {
       "type": "image",
-      "src": "/media/images/6332813e4205bcb60552e5d4ccb0bdf823d48526.webp",
-      "previewSrc": "/media/images/6332813e4205bcb60552e5d4ccb0bdf823d48526-720.webp",
+      "src": "/media/images/6332813e4205bcb60552e5d4ccb0bdf823d48526-pf257cef.webp",
+      "previewSrc": "/media/images/6332813e4205bcb60552e5d4ccb0bdf823d48526-pf257cef-480.webp",
       "alt": "Mag Image 7",
       "width": 1080,
       "height": 1080

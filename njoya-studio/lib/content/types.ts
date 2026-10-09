@@ -9,11 +9,13 @@ import type {
   siteSchema,
   aboutSchema,
   labSchema,
+  responsiveMediaSchema,
 } from "./schema.mjs";
 
 export type Work = z.infer<typeof workSchema>;
 export type Collection = z.infer<typeof collectionSchema>;
 export type ContentImage = z.infer<typeof imageSchema>;
+export type ResponsiveMedia = z.infer<typeof responsiveMediaSchema>;
 export type ContentVideo = z.infer<typeof videoSchema>;
 export type GalleryEntry = ContentImage | ContentVideo;
 export type Category = z.infer<typeof categorySchema>;

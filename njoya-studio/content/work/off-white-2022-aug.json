@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3.webp",
-    "previewSrc": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-720.webp",
+    "src": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-pf257cef.webp",
+    "previewSrc": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-pf257cef-480.avif",
     "alt": "Mag Cover",
     "width": 1349,
     "height": 1687
@@ -19,128 +19,128 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3.webp",
-      "previewSrc": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-720.webp",
+      "src": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-pf257cef.webp",
+      "previewSrc": "/media/images/f39e440c69f23bcf48c3c343f414642a4032c1c3-pf257cef-480.avif",
       "alt": "Mag Image 1",
       "width": 1349,
       "height": 1687
     },
     {
       "type": "image",
-      "src": "/media/images/e2ac8efb5c9b53448e4b1e3a07d2d524f93665f6.webp",
-      "previewSrc": "/media/images/e2ac8efb5c9b53448e4b1e3a07d2d524f93665f6-720.webp",
+      "src": "/media/images/e2ac8efb5c9b53448e4b1e3a07d2d524f93665f6-pf257cef.webp",
+      "previewSrc": "/media/images/e2ac8efb5c9b53448e4b1e3a07d2d524f93665f6-pf257cef-480.webp",
       "alt": "Mag Image 2",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/cadb453e922d6afdbcc431fcf2f0461ed18be033.webp",
-      "previewSrc": "/media/images/cadb453e922d6afdbcc431fcf2f0461ed18be033-720.webp",
+      "src": "/media/images/cadb453e922d6afdbcc431fcf2f0461ed18be033-pf257cef.webp",
+      "previewSrc": "/media/images/cadb453e922d6afdbcc431fcf2f0461ed18be033-pf257cef-480.avif",
       "alt": "Mag Image 3",
       "width": 1349,
       "height": 1687
     },
     {
       "type": "image",
-      "src": "/media/images/f4fb730ae15468b4336f76c13d93b308c93a43a5.webp",
-      "previewSrc": "/media/images/f4fb730ae15468b4336f76c13d93b308c93a43a5-720.webp",
+      "src": "/media/images/f4fb730ae15468b4336f76c13d93b308c93a43a5-pf257cef.webp",
+      "previewSrc": "/media/images/f4fb730ae15468b4336f76c13d93b308c93a43a5-pf257cef-480.avif",
       "alt": "Mag Image 4",
       "width": 1911,
       "height": 2548
     },
     {
       "type": "image",
-      "src": "/media/images/498aab678d1c7bd60ded9593ae67ac521ca72627.webp",
-      "previewSrc": "/media/images/498aab678d1c7bd60ded9593ae67ac521ca72627-720.webp",
+      "src": "/media/images/498aab678d1c7bd60ded9593ae67ac521ca72627-pf257cef.webp",
+      "previewSrc": "/media/images/498aab678d1c7bd60ded9593ae67ac521ca72627-pf257cef-480.webp",
       "alt": "Mag Image 5",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/cddd6b2f578da35981c2f255e7ebb39517a726ec.webp",
-      "previewSrc": "/media/images/cddd6b2f578da35981c2f255e7ebb39517a726ec-720.webp",
+      "src": "/media/images/cddd6b2f578da35981c2f255e7ebb39517a726ec-pf257cef.webp",
+      "previewSrc": "/media/images/cddd6b2f578da35981c2f255e7ebb39517a726ec-pf257cef-480.webp",
       "alt": "Mag Image 6",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/3848789f84bcd384d06948fba4f2d7898f64b77b.webp",
-      "previewSrc": "/media/images/3848789f84bcd384d06948fba4f2d7898f64b77b-720.webp",
+      "src": "/media/images/3848789f84bcd384d06948fba4f2d7898f64b77b-pf257cef.webp",
+      "previewSrc": "/media/images/3848789f84bcd384d06948fba4f2d7898f64b77b-pf257cef-480.avif",
       "alt": "Mag Image 7",
       "width": 1349,
       "height": 1687
     },
     {
       "type": "image",
-      "src": "/media/images/a740b559a00240bfd73d90931e937cf3ebdddbf2.webp",
-      "previewSrc": "/media/images/a740b559a00240bfd73d90931e937cf3ebdddbf2-720.webp",
+      "src": "/media/images/a740b559a00240bfd73d90931e937cf3ebdddbf2-pf257cef.webp",
+      "previewSrc": "/media/images/a740b559a00240bfd73d90931e937cf3ebdddbf2-pf257cef-480.avif",
       "alt": "Mag Image 8",
       "width": 1349,
       "height": 1687
     },
     {
       "type": "image",
-      "src": "/media/images/73d1dfbdd9a1c4587b473a69f59e9263f5f94e1d.webp",
-      "previewSrc": "/media/images/73d1dfbdd9a1c4587b473a69f59e9263f5f94e1d-720.webp",
+      "src": "/media/images/73d1dfbdd9a1c4587b473a69f59e9263f5f94e1d-pf257cef.webp",
+      "previewSrc": "/media/images/73d1dfbdd9a1c4587b473a69f59e9263f5f94e1d-pf257cef-480.avif",
       "alt": "Mag image 9",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/6087638d8d4d4d627d70315141d82a5c06420b53.webp",
-      "previewSrc": "/media/images/6087638d8d4d4d627d70315141d82a5c06420b53-720.webp",
+      "src": "/media/images/6087638d8d4d4d627d70315141d82a5c06420b53-pf257cef.webp",
+      "previewSrc": "/media/images/6087638d8d4d4d627d70315141d82a5c06420b53-pf257cef-480.avif",
       "alt": "Mag Image 10",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/ed49db5700739d1cb04c5b6e87b228d21a53c966.webp",
-      "previewSrc": "/media/images/ed49db5700739d1cb04c5b6e87b228d21a53c966-720.webp",
+      "src": "/media/images/ed49db5700739d1cb04c5b6e87b228d21a53c966-pf257cef.webp",
+      "previewSrc": "/media/images/ed49db5700739d1cb04c5b6e87b228d21a53c966-pf257cef-480.webp",
       "alt": "Mag Image 11",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/92b7aca0c66fd3be0a3a45b6f4331b4c6aed864f.webp",
-      "previewSrc": "/media/images/92b7aca0c66fd3be0a3a45b6f4331b4c6aed864f-720.webp",
+      "src": "/media/images/92b7aca0c66fd3be0a3a45b6f4331b4c6aed864f-pf257cef.webp",
+      "previewSrc": "/media/images/92b7aca0c66fd3be0a3a45b6f4331b4c6aed864f-pf257cef-480.webp",
       "alt": "Mag Image 12",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/c92b2a65b7c74607578f9bc1dccc0b3ef316d8df.webp",
-      "previewSrc": "/media/images/c92b2a65b7c74607578f9bc1dccc0b3ef316d8df-720.webp",
+      "src": "/media/images/c92b2a65b7c74607578f9bc1dccc0b3ef316d8df-pf257cef.webp",
+      "previewSrc": "/media/images/c92b2a65b7c74607578f9bc1dccc0b3ef316d8df-pf257cef-480.webp",
       "alt": "Mag Image 13",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/633b6826c5ba74b2071345ccd451e52896d7d445.webp",
-      "previewSrc": "/media/images/633b6826c5ba74b2071345ccd451e52896d7d445-720.webp",
+      "src": "/media/images/633b6826c5ba74b2071345ccd451e52896d7d445-pf257cef.webp",
+      "previewSrc": "/media/images/633b6826c5ba74b2071345ccd451e52896d7d445-pf257cef-480.avif",
       "alt": "Mag Image 14",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/2f3f60a7e31524399beabb948f72c143d7224935.webp",
-      "previewSrc": "/media/images/2f3f60a7e31524399beabb948f72c143d7224935-720.webp",
+      "src": "/media/images/2f3f60a7e31524399beabb948f72c143d7224935-pf257cef.webp",
+      "previewSrc": "/media/images/2f3f60a7e31524399beabb948f72c143d7224935-pf257cef-480.avif",
       "alt": "Mag Image 15",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/ba88eee991b371aeb0e99976ce867b9a1f73c5cd.webp",
-      "previewSrc": "/media/images/ba88eee991b371aeb0e99976ce867b9a1f73c5cd-720.webp",
+      "src": "/media/images/ba88eee991b371aeb0e99976ce867b9a1f73c5cd-pf257cef.webp",
+      "previewSrc": "/media/images/ba88eee991b371aeb0e99976ce867b9a1f73c5cd-pf257cef-480.avif",
       "alt": "Mag Image 16",
       "width": 1080,
       "height": 1080

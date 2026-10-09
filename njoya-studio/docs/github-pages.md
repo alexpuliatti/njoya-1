@@ -22,9 +22,9 @@ npm run build:pages
 npm run test:pages
 ```
 
-The output is in `out/`. `npm start` runs the Node build, not the static export. To preview Pages locally, serve `out/` beneath `/njoya-1/` using a static file server.
+The output is in `out/`. The script builds in a temporary source copy and then copies the finished export back, so a running development server can keep using its own `.next/` files. Environment files, original uploads and the archived Sanity Studio are excluded from that temporary copy. `npm start` runs the Node build, not the static export. To preview Pages locally, serve `out/` beneath `/njoya-1/` using a static file server.
 
-The build uses `STATIC_EXPORT=true`, `trailingSlash`, and the repository's base path. Local media and font URLs include that path. Prepared WebP images are served directly, without a live image-optimization server. Search filters the published catalog in the browser; opening a search URL or refreshing it works. Existing project URLs have generated redirect pages with a normal link and automatic browser forwarding, since Pages cannot emit application HTTP redirects.
+The build uses `STATIC_EXPORT=true`, `trailingSlash`, and the repository's base path. Local media and font URLs include that path, including every responsive image candidate. Prepared WebP/AVIF images are served directly through `<picture>` and `srcset`, without a live image-optimization server. Search filters the published catalog in the browser; opening a search URL or refreshing it works. Existing project URLs have generated redirect pages with a normal link and automatic browser forwarding, since Pages cannot emit application HTTP redirects.
 
 The workflow reads the base path and public URL from `actions/configure-pages`. If a custom domain is configured later, the next build uses its corresponding path. To test an export at the domain root locally:
 

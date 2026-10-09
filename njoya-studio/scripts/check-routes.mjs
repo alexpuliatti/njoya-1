@@ -94,7 +94,7 @@ await Promise.all(
 for (const image of [works[0].cover.src, works[0].cover.previewSrc]) {
   const response = await fetch(new URL(image, origin), { method: "HEAD" });
   assert.equal(response.status, 200, `Local image missing: ${image}`);
-  assert.match(response.headers.get("content-type"), /^image\/webp/);
+  assert.match(response.headers.get("content-type"), /^image\/(webp|avif)/);
 }
 const optimized = new URL("/_next/image", origin);
 optimized.searchParams.set("url", works[0].cover.src);

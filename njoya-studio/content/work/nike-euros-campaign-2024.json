@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/7846913088ef294a702be81a1d77df0eae103a79.webp",
-    "previewSrc": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-720.webp",
+    "src": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-pf257cef.webp",
+    "previewSrc": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-pf257cef-480.avif",
     "alt": "A Nike Euros 2024 campaign image featuring an athlete mid-motion wearing the Netherlands national team away kit — deep navy blue jersey and shorts with bold orange trim, KNVB crest on chest, white Nike swoosh. Shot against a vivid gradient background in warm oranges and reds with a teal streak, creating a high-energy, electric atmosphere. Water droplets glisten on the skin, amplifying the intensity of movement.",
     "width": 1080,
     "height": 1350
@@ -19,80 +19,80 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/7846913088ef294a702be81a1d77df0eae103a79.webp",
-      "previewSrc": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-720.webp",
+      "src": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-pf257cef.webp",
+      "previewSrc": "/media/images/7846913088ef294a702be81a1d77df0eae103a79-pf257cef-480.avif",
       "alt": "A Nike Euros 2024 campaign image featuring an athlete mid-motion wearing the Netherlands national team away kit — deep navy blue jersey and shorts with bold orange trim, KNVB crest on chest, white Nike swoosh. Shot against a vivid gradient background in warm oranges and reds with a teal streak, creating a high-energy, electric atmosphere. Water droplets glisten on the skin, amplifying the intensity of movement.",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/54f423250792e294c20ee2e3eb64ad2b4b837595.webp",
-      "previewSrc": "/media/images/54f423250792e294c20ee2e3eb64ad2b4b837595-720.webp",
+      "src": "/media/images/54f423250792e294c20ee2e3eb64ad2b4b837595-pf257cef.webp",
+      "previewSrc": "/media/images/54f423250792e294c20ee2e3eb64ad2b4b837595-pf257cef-480.webp",
       "alt": "mag image 2",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/36e28d7543774766df00d1263c7c9d7f99f85c4a.webp",
-      "previewSrc": "/media/images/36e28d7543774766df00d1263c7c9d7f99f85c4a-720.webp",
+      "src": "/media/images/36e28d7543774766df00d1263c7c9d7f99f85c4a-pf257cef.webp",
+      "previewSrc": "/media/images/36e28d7543774766df00d1263c7c9d7f99f85c4a-pf257cef-480.avif",
       "alt": "mag image 3",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/86949e1a14c36dd2b33a31eb01e26aa544948fc1.webp",
-      "previewSrc": "/media/images/86949e1a14c36dd2b33a31eb01e26aa544948fc1-720.webp",
+      "src": "/media/images/86949e1a14c36dd2b33a31eb01e26aa544948fc1-pf257cef.webp",
+      "previewSrc": "/media/images/86949e1a14c36dd2b33a31eb01e26aa544948fc1-pf257cef-480.avif",
       "alt": "mag image 4",
       "width": 1080,
       "height": 1078
     },
     {
       "type": "image",
-      "src": "/media/images/e945c4630ade769ba69837d64471553cfa4bad5c.webp",
-      "previewSrc": "/media/images/e945c4630ade769ba69837d64471553cfa4bad5c-720.webp",
+      "src": "/media/images/e945c4630ade769ba69837d64471553cfa4bad5c-pf257cef.webp",
+      "previewSrc": "/media/images/e945c4630ade769ba69837d64471553cfa4bad5c-pf257cef-480.avif",
       "alt": "mag image 5",
       "width": 1080,
       "height": 1079
     },
     {
       "type": "image",
-      "src": "/media/images/f99da2dd627ddbf0b67d89ad92aee170ed7f44b4.webp",
-      "previewSrc": "/media/images/f99da2dd627ddbf0b67d89ad92aee170ed7f44b4-720.webp",
+      "src": "/media/images/f99da2dd627ddbf0b67d89ad92aee170ed7f44b4-pf257cef.webp",
+      "previewSrc": "/media/images/f99da2dd627ddbf0b67d89ad92aee170ed7f44b4-pf257cef-480.avif",
       "alt": "mag image 6",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/cd13fd838ecb561aa7565bd3c20e5f572d1eb0f5.webp",
-      "previewSrc": "/media/images/cd13fd838ecb561aa7565bd3c20e5f572d1eb0f5-720.webp",
+      "src": "/media/images/cd13fd838ecb561aa7565bd3c20e5f572d1eb0f5-pf257cef.webp",
+      "previewSrc": "/media/images/cd13fd838ecb561aa7565bd3c20e5f572d1eb0f5-pf257cef-480.webp",
       "alt": "mag image 7",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/95d2a1d9c729c449fb63261ce02c6d1c50f5a023.webp",
-      "previewSrc": "/media/images/95d2a1d9c729c449fb63261ce02c6d1c50f5a023-720.webp",
+      "src": "/media/images/95d2a1d9c729c449fb63261ce02c6d1c50f5a023-pf257cef.webp",
+      "previewSrc": "/media/images/95d2a1d9c729c449fb63261ce02c6d1c50f5a023-pf257cef-480.avif",
       "alt": "mag image 8",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/835b2ce99c4f3b8fc99e8a7824886f8a73bda7b7.webp",
-      "previewSrc": "/media/images/835b2ce99c4f3b8fc99e8a7824886f8a73bda7b7-720.webp",
+      "src": "/media/images/835b2ce99c4f3b8fc99e8a7824886f8a73bda7b7-pf257cef.webp",
+      "previewSrc": "/media/images/835b2ce99c4f3b8fc99e8a7824886f8a73bda7b7-pf257cef-480.webp",
       "alt": "mag image 9",
       "width": 1080,
       "height": 1080
     },
     {
       "type": "image",
-      "src": "/media/images/5c38f5d5e557f0c4a30cff580e819f602bad1557.webp",
-      "previewSrc": "/media/images/5c38f5d5e557f0c4a30cff580e819f602bad1557-720.webp",
+      "src": "/media/images/5c38f5d5e557f0c4a30cff580e819f602bad1557-pf257cef.webp",
+      "previewSrc": "/media/images/5c38f5d5e557f0c4a30cff580e819f602bad1557-pf257cef-480.avif",
       "alt": "mag image 10",
       "width": 1080,
       "height": 1080

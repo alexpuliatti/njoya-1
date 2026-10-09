@@ -169,7 +169,7 @@ Use a separate search results route so the homepage remains curated. Existing `/
 
 ## Decisions and missing inputs
 
-- **Jaguar:** no matching project document or original image filename was found. Unreferenced images may still contain the artwork; review those before requesting new source material. A complete Jaguar entry and chosen cover are needed for the final four-hero homepage.
+- **Jaguar (resolved):** the supplied Miami photographs and credits have been added as a local project, dated December 2024. All four homepage heroes now have real content.
 - **Hero artwork:** Brides de Galaxy, Lacoste, and Vogue Hommes have matching content. Verify the exact image/crop shown in the brief. Lacoste's edition cover matches the Venus Williams reference better than its current parent collection cover.
 - **Chronology:** Brides de Galaxy is titled 2025 but dated `2023-11-15`; confirm the date before relying on date sorting. Two published editions have no date.
 - **Categorization:** agree which work belongs in Worlds, Exhibition, Commercials, and Editorials, and whether intentional overlap is allowed. The model can support multiple categories.

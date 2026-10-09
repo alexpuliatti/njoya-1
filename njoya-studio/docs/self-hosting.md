@@ -40,7 +40,7 @@ The included multi-stage Dockerfile installs dependencies, validates content, bu
 docker compose up --build -d
 ```
 
-The site listens on port 3000. The named volume preserves Next.js's generated image cache across container replacements. Put HTTPS in front of this port using the host's reverse proxy.
+The site listens on port 3000. Photographs use the same prepared responsive WebP/AVIF files as the static site. The named volume preserves Next.js's cache across container replacements. Put HTTPS in front of this port using the host's reverse proxy.
 
 ## Verify a running server
 
@@ -58,7 +58,7 @@ This checks every local project page, category, collection, and legacy redirect,
 
 No runtime upload directory or database needs to be maintained. Keep the source content and prepared images backed up together. The original Sanity export remains a separate private archive.
 
-The content filesystem is read-only during normal use. Next.js needs a writable `.next/cache` directory for on-demand image optimization. All local content files and prepared images must accompany the deployment.
+The content filesystem is read-only during normal use. Next.js keeps its normal writable `.next/cache` directory; photographs do not require on-demand image optimization. All local content files, including `media-variants.json`, and prepared images must accompany the deployment.
 
 ## External requests
 

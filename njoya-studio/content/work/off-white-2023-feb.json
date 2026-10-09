@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37.webp",
-    "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-720.webp",
+    "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-pf257cef.webp",
+    "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-pf257cef-480.avif",
     "alt": "Black and white studio shot of a young male model standing against a mottled grey backdrop, surrounded by scattered basketballs on the floor. He wears an Off-White varsity bomber jacket covered in embroidered patches and lettering — including \"Off-White,\" \"Milano Italy Chicago U.S.A.\" — paired with low-rise baggy wide-leg jeans, a white waistband peeking above, and white sneakers. He casually holds a basketball under one arm, looking directly at the camera with a cool, composed expression.",
     "width": 1360,
     "height": 1813
@@ -19,24 +19,24 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba.webp",
-      "previewSrc": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba-720.webp",
+      "src": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba-pf257cef.webp",
+      "previewSrc": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba-pf257cef-480.webp",
       "alt": "mag image 2",
       "width": 1360,
       "height": 765
     },
     {
       "type": "image",
-      "src": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002.webp",
-      "previewSrc": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002-720.webp",
+      "src": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002-pf257cef.webp",
+      "previewSrc": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002-pf257cef-480.avif",
       "alt": "mag image 3",
       "width": 1360,
       "height": 1813
     },
     {
       "type": "image",
-      "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37.webp",
-      "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-720.webp",
+      "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-pf257cef.webp",
+      "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-pf257cef-480.avif",
       "alt": "mag image 4",
       "width": 1360,
       "height": 1813

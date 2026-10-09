@@ -3,12 +3,13 @@
 import type { NjoyaClickPayload } from "@/lib/njoya-carousel-types";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 
+import Image from "./studio-image";
 import MediaGallery from "./media-gallery";
 import StudioVideo from "./studio-video";
 
+import { panelImageSize } from "@/lib/image-sources";
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
 
@@ -252,7 +253,7 @@ export default function NjoyaCarouselDetailPanel({
     `;
     const cloneImg = document.createElement("img");
 
-    cloneImg.src = imgEl.src;
+    cloneImg.src = imgEl.currentSrc || imgEl.src;
     cloneImg.style.cssText =
       "width:100%;height:100%;object-fit:cover;object-position:top center;display:block;";
     clone.appendChild(cloneImg);
@@ -605,7 +606,8 @@ export default function NjoyaCarouselDetailPanel({
                 priority
                 alt={item?.imageAlt ?? item?.title ?? ""}
                 className="absolute inset-0 block h-full w-full object-cover object-top"
-                sizes="(max-width: 767px) 90vw, 55vw"
+                image={item?.cover}
+                sizes={panelImageSize(item?.cover)}
                 src={assetPath(item?.heroImageUrl ?? item?.imageUrl ?? "")}
                 style={{ opacity: 0 }}
               />
@@ -620,7 +622,7 @@ export default function NjoyaCarouselDetailPanel({
             className="mx-auto flex w-full max-w-[1200px] flex-col items-center gap-6 px-4 pb-24 md:gap-10 md:px-10 md:pb-32"
             style={{ opacity: 0 }}
           >
-            <MediaGallery entries={item?.gallery ?? []} />
+            <MediaGallery entries={item?.gallery ?? []} maxWidth={620} />
           </div>
         )}
       </div>

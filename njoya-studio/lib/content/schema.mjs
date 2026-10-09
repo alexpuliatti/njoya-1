@@ -8,7 +8,21 @@ export const categoryIdSchema = z.enum([
 ]);
 const localImagePath = z
   .string()
-  .regex(/^\/media\/images\/[a-zA-Z0-9_-]+\.webp$/);
+  .regex(/^\/media\/images\/[a-zA-Z0-9_-]+\.(?:webp|avif)$/);
+const variantSchema = z
+  .object({
+    src: localImagePath,
+    width: z.number().positive(),
+    bytes: z.number().nonnegative(),
+  })
+  .strict();
+export const responsiveMediaSchema = z.object({
+  width: z.number().positive(),
+  height: z.number().positive(),
+  format: z.enum(["webp", "avif"]),
+  fallback: variantSchema,
+  variants: z.array(variantSchema).min(1),
+});
 export const imageSchema = z
   .object({
     type: z.enum(["image", "synopsis"]),
@@ -17,6 +31,7 @@ export const imageSchema = z
     alt: z.string().min(1),
     width: z.number().positive(),
     height: z.number().positive(),
+    responsive: responsiveMediaSchema.optional(),
     text: z.string().optional(),
     caption: z.string().optional(),
   })
@@ -49,7 +64,7 @@ export const workSchema = z
     client: z.string(),
     date: z
       .string()
-      .regex(/^\d{4}-\d{2}-\d{2}$/)
+      .regex(/^\d{4}-\d{2}(?:-\d{2})?$/)
       .nullable(),
     categories: z.array(categoryIdSchema).min(1),
     kind: z.enum(["edition", "design-project"]),

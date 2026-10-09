@@ -1,10 +1,10 @@
 import type { ContentImage, GalleryEntry } from "@/lib/content/types";
 import type { NjoyaCarouselMetadata } from "@/lib/njoya-carousel-types";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
+import Image from "./studio-image";
 import StudioVideo from "./studio-video";
 import MediaGallery from "./media-gallery";
 
@@ -54,6 +54,7 @@ export default function WorkDetail({
               priority
               alt={cover.alt}
               height={cover.height}
+              image={cover}
               sizes="(max-width: 767px) 92vw, 52vw"
               src={assetPath(cover.src)}
               width={cover.width}

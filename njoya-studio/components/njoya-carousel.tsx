@@ -6,16 +6,12 @@ import type {
 } from "@/lib/njoya-carousel-types";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
 import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import NjoyaCarouselCard from "./njoya-carousel-card";
 import NjoyaCarouselDetailPanel from "./njoya-carousel-detail-panel";
-
-import animationData from "@/assets/njoya_loader_lottie.json";
-
-const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+import StudioIntro from "./studio-intro";
 
 export default function NjoyaCarousel({
   items,
@@ -37,38 +33,14 @@ export default function NjoyaCarousel({
   const [reset, setReset] = useState(0);
   const [selected, setSelected] = useState(0);
   const [scrollable, setScrollable] = useState(false);
-  const [loading, setLoading] = useState(showLoader);
+  const [reveal, setReveal] = useState(false);
   const dragging = useRef(false);
   const pointerDown = useRef(false);
-  const finishIntro = useCallback(() => {
-    setLoading(false);
-    try {
-      sessionStorage.setItem("njoya-intro-seen", "true");
-    } catch {
-      /* Storage may be unavailable. */
-    }
-  }, []);
+  const revealHome = useCallback(
+    (animated: boolean) => setReveal(animated),
+    [],
+  );
 
-  useEffect(() => {
-    if (!showLoader) return;
-    try {
-      if (sessionStorage.getItem("njoya-intro-seen")) {
-        setLoading(false);
-
-        return;
-      }
-    } catch {
-      /* Optional session memory. */
-    }
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      setLoading(false);
-
-      return;
-    }
-    const timeout = window.setTimeout(finishIntro, 4500);
-
-    return () => window.clearTimeout(timeout);
-  }, [showLoader, finishIntro]);
   useEffect(() => {
     if (!api) return;
     const select = () => {
@@ -149,7 +121,7 @@ export default function NjoyaCarousel({
   return (
     <section
       aria-label={label}
-      className={`portfolio-stage ${pinned ? "has-statement" : ""}`}
+      className={`portfolio-stage ${pinned ? "has-statement" : ""} ${reveal ? "intro-reveal" : ""}`}
     >
       {pinned}
       <div className="project-carousel">
@@ -164,6 +136,7 @@ export default function NjoyaCarousel({
             {items.map((item, index) => (
               <div key={item.id} className="project-slide">
                 <NjoyaCarouselCard
+                  home={!!pinned}
                   item={item}
                   priority={index < 2}
                   resetSignal={reset}
@@ -199,19 +172,7 @@ export default function NjoyaCarousel({
           </div>
         )}
       </div>
-      {loading && (
-        <div aria-label="Njoya Studios introduction" className="intro-overlay">
-          <Lottie
-            animationData={animationData}
-            className="intro-animation"
-            loop={false}
-            onComplete={finishIntro}
-          />
-          <button className="intro-skip" onClick={finishIntro}>
-            Skip intro
-          </button>
-        </div>
-      )}
+      {showLoader && <StudioIntro onReveal={revealHome} />}
       <NjoyaCarouselDetailPanel clickPayload={payload} onClose={close} />
     </section>
   );

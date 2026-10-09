@@ -1,8 +1,9 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import os from "node:os";
 import { createHash } from "node:crypto";
 import { fileURLToPath } from "node:url";
-import sharp from "sharp";
+import { MEDIA_PROFILE, PROFILE_ID, prepareImage } from "./media-pipeline.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const args = process.argv.slice(2);
@@ -15,51 +16,61 @@ const alt = args.includes("--alt")
   ? args[args.indexOf("--alt") + 1]
   : undefined;
 if (!alt?.trim()) throw new Error("Provide descriptive alt text with --alt.");
-const data = await fs.readFile(source);
-const id = createHash("sha1").update(data).digest("hex");
-const metadata = await sharp(data).metadata();
-const rotated = [5, 6, 7, 8].includes(metadata.orientation ?? 1);
-const width = rotated ? metadata.height : metadata.width;
-const height = rotated ? metadata.width : metadata.height;
-const destination = path.join(root, "public/media/images");
-await fs.mkdir(destination, { recursive: true });
-for (const [size, suffix] of [
-  [2000, ""],
-  [720, "-720"],
-]) {
-  await sharp(data, { limitInputPixels: 200_000_000 })
-    .rotate()
-    .resize({ width: size, withoutEnlargement: true })
-    .webp({ quality: 82, effort: 4 })
-    .toFile(path.join(destination, `${id}${suffix}.webp`));
-}
+const id = createHash("sha1")
+  .update(await fs.readFile(source))
+  .digest("hex");
 const original = `media/originals/${id}${path.extname(source).toLowerCase()}`;
 await fs.mkdir(path.join(root, "media/originals"), { recursive: true });
-await fs.copyFile(source, path.join(root, original));
-const manifestPath = path.join(root, "content/media-sources.json");
-const manifest = JSON.parse(await fs.readFile(manifestPath, "utf8"));
-manifest[id] = {
-  file: path.basename(source),
-  localSource: original,
-  originalFilename: path.basename(source),
-  width,
-  height,
-};
-await fs.writeFile(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
-console.log(
-  "Prepared local media. Paste this object into a cover or gallery field:",
-);
-console.log(
-  JSON.stringify(
-    {
-      type: "image",
-      src: `/media/images/${id}.webp`,
-      previewSrc: `/media/images/${id}-720.webp`,
-      alt: alt.trim(),
-      width,
-      height,
-    },
-    null,
-    2,
-  ),
-);
+if (source !== path.join(root, original))
+  await fs.copyFile(source, path.join(root, original));
+const sourcesPath = path.join(root, "content/media-sources.json");
+const variantsPath = path.join(root, "content/media-variants.json");
+const sources = JSON.parse(await fs.readFile(sourcesPath, "utf8"));
+let variants;
+try {
+  variants = JSON.parse(await fs.readFile(variantsPath, "utf8"));
+} catch (error) {
+  if (error.code !== "ENOENT") throw error;
+}
+if (variants && variants.profileId !== PROFILE_ID)
+  throw new Error(
+    "Run npm run media:prepare to update the existing image profile first.",
+  );
+variants ??= { profile: MEDIA_PROFILE, profileId: PROFILE_ID, images: {} };
+const temporary = await fs.mkdtemp(path.join(os.tmpdir(), "njoya-upload-"));
+try {
+  const entry = {
+    file: path.basename(source),
+    localSource: original,
+    originalFilename: path.basename(source),
+  };
+  const media = await prepareImage({ id, entry, root, temporary });
+  sources[id] = { ...entry, width: media.width, height: media.height };
+  variants.images[id] = media;
+  for (const [file, value] of [
+    [sourcesPath, sources],
+    [variantsPath, variants],
+  ]) {
+    await fs.writeFile(`${file}.tmp`, `${JSON.stringify(value, null, 2)}\n`);
+    await fs.rename(`${file}.tmp`, file);
+  }
+  console.log(
+    "Prepared local media. Paste this object into a cover or gallery field:",
+  );
+  console.log(
+    JSON.stringify(
+      {
+        type: "image",
+        src: media.fallback.src,
+        previewSrc: media.variants[0].src,
+        alt: alt.trim(),
+        width: media.width,
+        height: media.height,
+      },
+      null,
+      2,
+    ),
+  );
+} finally {
+  await fs.rm(temporary, { recursive: true, force: true });
+}

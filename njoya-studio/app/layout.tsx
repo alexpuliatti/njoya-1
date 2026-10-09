@@ -10,6 +10,7 @@ import { Navbar } from "@/components/navbar";
 import StudioNavigation from "@/components/njoya-carousel-bottom-menu";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
+import { INTRO_BOOTSTRAP } from "@/lib/intro";
 
 export const metadata: Metadata = {
   // Next adds basePath to generated metadata assets itself.
@@ -32,6 +33,9 @@ export default async function RootLayout({
 
   return (
     <html suppressHydrationWarning className="bg-[#261b15]" lang="en">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: INTRO_BOOTSTRAP }} />
+      </head>
       <body
         className={`${fontSans.variable} studio-body font-sans antialiased`}
       >

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import Image from "@/components/studio-image";
 import { assetPath } from "@/lib/asset-path";
+import { coverSize } from "@/lib/image-sources";
 import CategoryBrowser from "@/components/category-browser";
 import { getCategories, getWorks } from "@/lib/content/repository";
 
@@ -32,8 +33,9 @@ export default async function WorkPage() {
               <Image
                 fill
                 alt={cover.alt}
+                image={cover}
                 priority={index < 3}
-                sizes="(max-width: 767px) 78vw, 32vw"
+                sizes={`(max-width: 767px) ${coverSize("78vw", "clamp(400px, 62svh, 650px)", cover)}, ${coverSize("calc(22.8vw - 18px)", "calc(100svh - 168px)", cover)}`}
                 src={assetPath(cover.src)}
               />
             )}

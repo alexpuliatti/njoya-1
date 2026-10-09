@@ -10,8 +10,8 @@
   "kind": "design-project",
   "cover": {
     "type": "image",
-    "src": "/media/images/92b7d6b3b5205ab0ad6f116c54a885032f998249.webp",
-    "previewSrc": "/media/images/92b7d6b3b5205ab0ad6f116c54a885032f998249-720.webp",
+    "src": "/media/images/92b7d6b3b5205ab0ad6f116c54a885032f998249-pf257cef.webp",
+    "previewSrc": "/media/images/92b7d6b3b5205ab0ad6f116c54a885032f998249-pf257cef-480.webp",
     "alt": "Design Project Image 1",
     "width": 1321,
     "height": 1981
@@ -19,32 +19,32 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/14618f1d8552cb96cb37900e639c3b0a611f1bd1.webp",
-      "previewSrc": "/media/images/14618f1d8552cb96cb37900e639c3b0a611f1bd1-720.webp",
+      "src": "/media/images/14618f1d8552cb96cb37900e639c3b0a611f1bd1-pf257cef.webp",
+      "previewSrc": "/media/images/14618f1d8552cb96cb37900e639c3b0a611f1bd1-pf257cef-480.webp",
       "alt": "Design Project Image 2",
       "width": 1321,
       "height": 1981
     },
     {
       "type": "image",
-      "src": "/media/images/69cb91163d147241d004cbfa7756853f5c5a0673.webp",
-      "previewSrc": "/media/images/69cb91163d147241d004cbfa7756853f5c5a0673-720.webp",
+      "src": "/media/images/69cb91163d147241d004cbfa7756853f5c5a0673-pf257cef.webp",
+      "previewSrc": "/media/images/69cb91163d147241d004cbfa7756853f5c5a0673-pf257cef-480.webp",
       "alt": "Design Project Image 3",
       "width": 1981,
       "height": 1321
     },
     {
       "type": "image",
-      "src": "/media/images/b8103d885ebe8afc23ecf1922445055cd0ba6a9e.webp",
-      "previewSrc": "/media/images/b8103d885ebe8afc23ecf1922445055cd0ba6a9e-720.webp",
+      "src": "/media/images/b8103d885ebe8afc23ecf1922445055cd0ba6a9e-pf257cef.webp",
+      "previewSrc": "/media/images/b8103d885ebe8afc23ecf1922445055cd0ba6a9e-pf257cef-480.webp",
       "alt": "Design Project Image 4",
       "width": 1981,
       "height": 1321
     },
     {
       "type": "image",
-      "src": "/media/images/41301d169fd01f2f38c4cfc49b33add8e31c37e5.webp",
-      "previewSrc": "/media/images/41301d169fd01f2f38c4cfc49b33add8e31c37e5-720.webp",
+      "src": "/media/images/41301d169fd01f2f38c4cfc49b33add8e31c37e5-pf257cef.webp",
+      "previewSrc": "/media/images/41301d169fd01f2f38c4cfc49b33add8e31c37e5-pf257cef-480.avif",
       "alt": "Design Project Image 5",
       "width": 2000,
       "height": 1325
