@@ -10,6 +10,14 @@ import CategoryBrowser from "@/components/category-browser";
 import { getCategories, getWorks } from "@/lib/content/repository";
 
 export const metadata: Metadata = { title: "Work" };
+// Match the 3:4 cards in globals.css, including the viewport-height cap.
+const desktopCardWidth =
+  "min(calc(22.8vw - 18px), calc((100svh - 168px) * 0.75))";
+const desktopCardHeight =
+  "min(calc((22.8vw - 18px) * 4 / 3), calc(100svh - 168px))";
+const mobileCardWidth = "calc((100vw - 48px) * 0.86)";
+const mobileCardHeight = "calc((100vw - 48px) * 0.86 * 4 / 3)";
+
 export default async function WorkPage() {
   const [categories, works] = await Promise.all([getCategories(), getWorks()]);
 
@@ -35,7 +43,7 @@ export default async function WorkPage() {
                 alt={cover.alt}
                 image={cover}
                 priority={index < 3}
-                sizes={`(max-width: 767px) ${coverSize("78vw", "clamp(400px, 62svh, 650px)", cover)}, ${coverSize("calc(22.8vw - 18px)", "calc(100svh - 168px)", cover)}`}
+                sizes={`(max-width: 767px) ${coverSize(mobileCardWidth, mobileCardHeight, cover)}, ${coverSize(desktopCardWidth, desktopCardHeight, cover)}`}
                 src={assetPath(cover.src)}
               />
             )}
