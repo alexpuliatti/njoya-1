@@ -158,14 +158,26 @@ export default function NjoyaCarousel({
             <button
               aria-label="Previous project"
               className="icon-button"
-              onClick={() => api?.scrollPrev()}
+              onClick={(event) =>
+                api?.scrollPrev(
+                  event.detail === 0 ||
+                    window.matchMedia("(prefers-reduced-motion: reduce)")
+                      .matches,
+                )
+              }
             >
               <ArrowLeft size={19} />
             </button>
             <button
               aria-label="Next project"
               className="icon-button"
-              onClick={() => api?.scrollNext()}
+              onClick={(event) =>
+                api?.scrollNext(
+                  event.detail === 0 ||
+                    window.matchMedia("(prefers-reduced-motion: reduce)")
+                      .matches,
+                )
+              }
             >
               <ArrowRight size={19} />
             </button>
