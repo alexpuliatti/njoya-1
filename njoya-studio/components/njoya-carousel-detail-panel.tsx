@@ -581,10 +581,10 @@ export default function NjoyaCarouselDetailPanel({
         tabIndex={-1}
       >
         {/* Hero — image OR video, sized identically */}
-        <div className="flex h-screen w-full items-center justify-center">
+        <div className="flex h-[100svh] w-full items-center justify-center">
           <div
             ref={paneRef}
-            className="relative aspect-[9/13] h-[85vh] max-h-[780px] max-w-[90vw] overflow-hidden rounded-[var(--studio-radius)]"
+            className="relative aspect-[9/13] h-[85svh] max-h-[780px] max-w-[90vw] overflow-hidden rounded-[var(--studio-radius)]"
           >
             {hasHeroVideo ? (
               <StudioVideo
@@ -926,7 +926,7 @@ function MobileInfoModal({
       />
       <div
         ref={cardRef}
-        className="relative flex max-h-[80vh] w-full max-w-[340px] flex-col overflow-hidden rounded-[var(--studio-radius)] border border-[var(--studio-line)] bg-[var(--studio-surface)] p-6 shadow-2xl"
+        className="relative flex max-h-[80svh] w-full max-w-[340px] flex-col overflow-hidden rounded-[var(--studio-radius)] border border-[var(--studio-line)] bg-[var(--studio-surface)] p-6 shadow-2xl"
         style={{ opacity: 0 }}
       >
         <button

@@ -15,8 +15,8 @@ const desktopCardWidth =
   "min(calc(22.8vw - 18px), calc((100svh - 168px) * 0.75))";
 const desktopCardHeight =
   "min(calc((22.8vw - 18px) * 4 / 3), calc(100svh - 168px))";
-const mobileCardWidth = "calc((100vw - 48px) * 0.86)";
-const mobileCardHeight = "calc((100vw - 48px) * 0.86 * 4 / 3)";
+const mobileCardWidth = "calc((100vw - clamp(36px, 10vw, 48px)) * 0.92)";
+const mobileCardHeight = "clamp(330px, 67svh, 640px)";
 
 export default async function WorkPage() {
   const [categories, works] = await Promise.all([getCategories(), getWorks()]);
