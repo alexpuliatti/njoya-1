@@ -6,7 +6,7 @@ import { Instagram, Search } from "lucide-react";
 import { useEffect, useRef } from "react";
 
 import { useSearch } from "./search-provider";
-import { StudioButton } from "./ui/studio-button";
+import { StudioButton, StudioIconButton } from "./ui/studio-button";
 
 import { siteConfig } from "@/config/site";
 
@@ -89,16 +89,12 @@ export function Navbar({ instagram }: { instagram: string }) {
             <nav aria-label="Mobile navigation">{sectionLinks}</nav>
           </details>
         )}
-        <StudioButton
-          aria-label="Search work, people and credits"
-          className="header-search-button"
-          variant="outline"
+        <StudioIconButton
+          label="Search work, people and credits"
           onClick={(event) => search?.openSearch(event.detail === 0)}
         >
-          <Search size={17} strokeWidth={1.6} />
-          <span>Search</span>
-          <kbd>⌘ K</kbd>
-        </StudioButton>
+          <Search size={20} strokeWidth={1.6} />
+        </StudioIconButton>
         <StudioButton asChild className="studio-icon-button">
           <a
             aria-label="Njoya Studios on Instagram"

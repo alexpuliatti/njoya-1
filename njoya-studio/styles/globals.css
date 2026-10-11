@@ -390,23 +390,6 @@ button:disabled {
   text-wrap: balance;
   color: #f4efe7;
 }
-.carousel-controls {
-  position: absolute;
-  display: flex;
-  gap: 3px;
-  align-items: center;
-  right: 0;
-  bottom: -54px;
-}
-.carousel-count {
-  margin-right: 14px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  font-variant-numeric: tabular-nums;
-}
-.carousel-count span {
-  color: var(--studio-muted);
-}
 .pending-project {
   display: flex;
   flex-direction: column;
@@ -1287,16 +1270,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .project-card-title {
     font-size: 19px;
-  }
-  .carousel-controls {
-    position: static;
-    flex: 0 0 auto;
-    min-height: 52px;
-    padding-top: 8px;
-  }
-  .carousel-count {
-    margin-right: auto;
-    font-size: 11px;
   }
   .pending-project-symbol {
     font-size: 190px;
