@@ -24,6 +24,16 @@ npm start
 
 Content and media validation runs automatically before production builds. The repo uses legacy peer dependency resolution for its existing dependency tree; `.npmrc` applies this consistently to installs.
 
+## Experimental components
+
+The local `experiment/refined-design` prototype adds a small owned component set in `components/ui/`: `StudioButton`, `StudioIconButton`, `StudioDialog` with composable panel/hero/close parts, `SearchField`, and `SurfaceLight`. Styles live in `styles/studio-components.css`. No packages were added.
+
+Project cards open a framed viewer with an image morph, credits and the existing ordered gallery. Search uses the same native dialog shell, with thumbnails, suggested searches and an Escape-to-clear field. Keyboard activation and reduced-motion preferences skip the animated entrance; closing restores focus and page scrolling. The pointer highlight only runs for a fine pointer with motion enabled.
+
+Design references: [BoardUI controls](https://www.boardui.com/components), [React Bits Spotlight Card](https://reactbits.dev/components/spotlight-card), and [Motion Primitives Morphing Dialog](https://motion-primitives.com/docs/morphing-dialog). The components are custom implementations adapted to the studio.
+
+To review locally, run `npm run dev`, open a project card, browse its credits and gallery, and close it with the close control, Escape or the backdrop. Open Search with its button or ⌘/Ctrl K; try a suggested search, clear it with Escape, then press Escape again to close. Check the same flows at phone width and with reduced motion enabled. The automated build and static checks pass; visual interaction QA remains pending because the browser-control host was unavailable during implementation.
+
 ## Content structure
 
 ```text

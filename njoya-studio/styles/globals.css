@@ -19,16 +19,6 @@
   -webkit-mask-clip: content-box, border-box;
   -webkit-mask-composite: xor;
 }
-/* The credits lists draw their own proportional rail (see MetadataList in
-   njoya-carousel-detail-panel), so the native scrollbar is hidden to avoid
-   two rails side by side. Scrollbar pseudo-elements aren't reachable from
-   Tailwind utilities. */
-.credits-scroll {
-  scrollbar-width: none;
-}
-.credits-scroll::-webkit-scrollbar {
-  display: none;
-}
 .embla {
   overflow: hidden;
 }
@@ -611,8 +601,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
 .category-card-top svg,
 .statement-topline svg,
 .text-button svg,
-.contact-list a svg,
-.search-suggestions > a > svg {
+.contact-list a svg {
   flex-shrink: 0;
   transition: transform 180ms var(--studio-ease);
 }
@@ -898,98 +887,13 @@ html[data-njoya-intro="skip"] .intro-overlay {
   font-size: 23px;
   color: var(--studio-text);
 }
-.search-dialog {
-  max-width: none;
-  width: 100vw;
-  height: 100svh;
-  max-height: none;
-  background: transparent;
-  border: 0;
-  padding: 18svh 24px 24px;
-  margin: 0;
-  color: var(--studio-text);
-}
-.search-dialog::backdrop {
-  background: #100b08b8;
-  backdrop-filter: blur(12px);
-}
-.search-dialog-inner {
-  margin: 0 auto;
-  max-width: 680px;
-  padding: 32px;
-  background: var(--studio-surface);
-  border: 1px solid var(--studio-line);
-  border-radius: 22px;
-  box-shadow: 0 24px 80px #120c0940;
-  max-height: calc(82svh - 24px);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-.search-heading {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 25px;
-}
-.search-heading h2 {
-  font-size: 31px;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-.search-input-wrap {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  border-bottom: 1px solid var(--studio-line);
-  padding-bottom: 20px;
-  transition: border-color 180ms ease;
-}
-.search-input-wrap input {
-  width: 100%;
-  min-width: 0;
-  outline: 0;
-  background: none;
-  color: var(--studio-text);
-  border: 0;
-  font-size: 16px;
-}
-.search-input-wrap input::placeholder {
-  color: var(--studio-muted);
-}
-.search-input-wrap:focus-within,
 .search-page-heading form > div:focus-within {
   border-color: var(--studio-accent);
-}
-.search-suggestions {
-  margin-top: 24px;
-}
-.search-suggestions > a {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  border-top: 1px solid var(--studio-line);
-  padding: 17px 0;
-  transition: color 180ms ease;
-}
-.search-suggestions strong {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-}
-.search-suggestions small {
-  display: block;
-  color: var(--studio-muted);
-  font-size: 11px;
-  margin-top: 5px;
 }
 .muted-copy {
   font-size: 13px;
   line-height: 1.7;
   color: var(--studio-muted);
-}
-.all-results {
-  margin-top: 15px;
 }
 .search-page-heading {
   padding: 24px 4.4vw 0;
@@ -1075,13 +979,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
 .project-information {
   padding-top: 15px;
 }
-.project-panel-title {
-  font-weight: 500;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-  overflow-wrap: anywhere;
-  color: var(--studio-text);
-}
 .project-information h1 {
   font-size: clamp(27px, 3.2vw, 47px);
   line-height: 1.12;
@@ -1159,16 +1056,14 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .statement-card:hover .statement-topline svg,
   .category-card:hover .category-card-top svg,
-  .contact-list a:hover svg,
-  .search-suggestions > a:hover > svg {
+  .contact-list a:hover svg {
     transform: translate(2px, -2px);
   }
   .category-card:hover img {
     transform: scale(1.025);
   }
   .text-button:hover,
-  .contact-list a:hover,
-  .search-suggestions > a:hover {
+  .contact-list a:hover {
     color: var(--studio-accent);
   }
   .contact-list a:hover {
@@ -1321,7 +1216,9 @@ html[data-njoya-intro="skip"] .intro-overlay {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto minmax(280px, 1fr);
     align-items: stretch;
-    height: calc(100svh - var(--studio-header-height) - var(--studio-navigation-height));
+    height: calc(
+      100svh - var(--studio-header-height) - var(--studio-navigation-height)
+    );
     min-height: 530px;
     padding-top: 12px;
     padding-bottom: 12px;
@@ -1494,28 +1391,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
   .lab-article {
     margin-top: 10px;
   }
-  .search-dialog {
-    padding: 9svh 15px 24px;
-  }
-  .search-dialog-inner {
-    padding: 22px;
-    max-height: calc(91svh - 24px);
-  }
-  .search-heading h2 {
-    font-size: 27px;
-  }
-  .search-input-wrap {
-    gap: 10px;
-  }
-  .search-input-wrap > svg {
-    display: none;
-  }
-  .search-input-wrap input {
-    font-size: 16px;
-  }
-  .search-input-wrap .text-button {
-    font-size: 10px;
-  }
   .search-page-heading {
     padding: 22px 24px 0;
   }
@@ -1558,14 +1433,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
     bottom: calc(48px + env(safe-area-inset-bottom));
     font-size: 9px;
   }
-  .project-overlay > .icon-button[aria-label="Close"] {
-    top: calc(12px + env(safe-area-inset-top));
-    right: max(12px, env(safe-area-inset-right));
-  }
-  .project-mobile-info {
-    bottom: calc(16px + env(safe-area-inset-bottom));
-    right: max(16px, env(safe-area-inset-right));
-  }
 }
 @media (prefers-reduced-motion: reduce) {
   .intro-visual,
@@ -1584,13 +1451,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
     scroll-behavior: auto !important;
   }
 }
-.project-overlay .media-gallery {
-  margin-top: 0;
-  width: 100%;
-}
-.project-overlay .media-gallery figure {
-  width: min(100%, 620px);
-}
 .category-browser-footer {
   display: flex;
   align-items: center;
@@ -1605,9 +1465,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
   display: flex;
 }
 @media (min-width: 768px) {
-  .project-mobile-info {
-    display: none;
-  }
   .studio-main:has(> .category-stage) {
     height: calc(100svh - 112px);
     min-height: 0;
@@ -1660,15 +1517,4 @@ html[data-njoya-intro="skip"] .intro-overlay {
   .category-browser-footer {
     display: none;
   }
-}
-.search-dialog-dismiss {
-  position: fixed;
-  inset: 0;
-  border: 0;
-  background: transparent;
-  cursor: default;
-}
-.search-dialog-inner {
-  position: relative;
-  z-index: 1;
 }

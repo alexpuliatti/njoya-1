@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 
 import Image from "./studio-image";
 import StudioVideo from "./studio-video";
+import SurfaceLight from "./ui/surface-light";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
@@ -183,10 +184,6 @@ export default function NjoyaCarouselCard({
     onClick({
       item,
       imgEl: imgRef.current,
-      fromRect: imgRef.current.getBoundingClientRect(),
-      fromRadius: getComputedStyle(imgRef.current).borderTopLeftRadius,
-      morphProg: 0,
-      rotation: 0,
       instant,
     });
   };
@@ -208,6 +205,7 @@ export default function NjoyaCarouselCard({
 
   return (
     <div
+      aria-haspopup="dialog"
       aria-label={`View ${item.title}`}
       className="project-card relative cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#261b15]"
       role="button"
@@ -267,6 +265,7 @@ export default function NjoyaCarouselCard({
         />
 
         {/* 4. Card info */}
+        <SurfaceLight />
         <div className="project-card-info absolute bottom-0 left-0 right-0 z-[2]">
           <div className="project-card-category">{item.category}</div>
           {item.subtitle && item.type === "design-project" && (
