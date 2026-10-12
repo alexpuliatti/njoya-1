@@ -1,5 +1,6 @@
 "use client";
 
+import type { TiltedCardEntry } from "./react-bits/tilted-card";
 import type {
   NjoyaCarouselItem,
   NjoyaClickPayload,
@@ -12,6 +13,7 @@ import { useRouter } from "next/navigation";
 import Image from "./studio-image";
 import StudioVideo from "./studio-video";
 import SurfaceLight from "./ui/surface-light";
+import TiltedCard from "./react-bits/tilted-card";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
@@ -28,6 +30,8 @@ interface Props {
   resetSignal: number;
   priority?: boolean;
   home?: boolean;
+  introDelay?: number;
+  introState?: TiltedCardEntry;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -51,6 +55,8 @@ export default function NjoyaCarouselCard({
   resetSignal,
   priority = false,
   home = false,
+  introDelay = 0,
+  introState = "animate",
 }: Props) {
   const router = useRouter();
   const morphRef = useRef<HTMLDivElement>(null);
@@ -133,7 +139,7 @@ export default function NjoyaCarouselCard({
 
     tl.to(
       morphRef.current,
-      { y: -3, duration: 0.25, ease: "power3.out" },
+      { y: home ? 0 : -3, duration: 0.25, ease: "power3.out" },
       0,
     ).to(
       [imgRef.current, gradRef.current],
@@ -203,11 +209,11 @@ export default function NjoyaCarouselCard({
     );
   }
 
-  return (
+  const card = (
     <div
       aria-haspopup="dialog"
       aria-label={`View ${item.title}`}
-      className="project-card relative cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#261b15]"
+      className={`${home ? "project-card-content" : "project-card"} relative cursor-pointer select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#261b15]`}
       role="button"
       tabIndex={0}
       onClick={(event) => handleClick(event.detail === 0)}
@@ -277,5 +283,17 @@ export default function NjoyaCarouselCard({
         </div>
       </div>
     </div>
+  );
+
+  return home ? (
+    <TiltedCard
+      className="project-card"
+      entry={introState}
+      introDelay={introDelay}
+    >
+      {card}
+    </TiltedCard>
+  ) : (
+    card
   );
 }
