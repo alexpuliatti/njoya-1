@@ -1421,41 +1421,119 @@
     "width": 2400,
     "height": 1601
   },
-  "65a721a2685a0de9c96e7262d5ad0a2adb02cf3b": {
-    "file": "65a721a2685a0de9c96e7262d5ad0a2adb02cf3b-4038x5000.jpg",
-    "originalFilename": "17_sRGB.jpg",
-    "width": 4038,
-    "height": 5000
+  "cb65e03613f5cc86d166903d18f181dd66aa37b7": {
+    "file": "cb65e03613f5cc86d166903d18f181dd66aa37b7.png",
+    "localSource": "media/originals/cb65e03613f5cc86d166903d18f181dd66aa37b7.png",
+    "originalFilename": "17_sRGB-borderless.png",
+    "width": 3956,
+    "height": 4915,
+    "derivedFrom": {
+      "file": "65a721a2685a0de9c96e7262d5ad0a2adb02cf3b-4038x5000.jpg",
+      "originalFilename": "17_sRGB.jpg",
+      "width": 4038,
+      "height": 5000,
+      "crop": {
+        "left": 47,
+        "top": 36,
+        "width": 3956,
+        "height": 4915
+      }
+    }
   },
-  "24a256fff1dbece7c91bd562cab6f6c5028a3c9d": {
-    "file": "24a256fff1dbece7c91bd562cab6f6c5028a3c9d-4079x5000.jpg",
-    "originalFilename": "01_sRGB.jpg",
-    "width": 4079,
-    "height": 5000
+  "4529a1bc042b1186b4ca6367221739ef2fcd6f27": {
+    "file": "4529a1bc042b1186b4ca6367221739ef2fcd6f27.png",
+    "localSource": "media/originals/4529a1bc042b1186b4ca6367221739ef2fcd6f27.png",
+    "originalFilename": "01_sRGB-borderless.png",
+    "width": 3982,
+    "height": 4915,
+    "derivedFrom": {
+      "file": "24a256fff1dbece7c91bd562cab6f6c5028a3c9d-4079x5000.jpg",
+      "originalFilename": "01_sRGB.jpg",
+      "width": 4079,
+      "height": 5000,
+      "crop": {
+        "left": 59,
+        "top": 34,
+        "width": 3982,
+        "height": 4915
+      }
+    }
   },
-  "8763b3d13efd72be63d030d15d889fa2098c753a": {
-    "file": "8763b3d13efd72be63d030d15d889fa2098c753a-5000x4079.jpg",
-    "originalFilename": "02_sRGB.jpg",
-    "width": 5000,
-    "height": 4079
+  "f59da5c80bfa1ba9a42761bb3a5b039f6d592561": {
+    "file": "f59da5c80bfa1ba9a42761bb3a5b039f6d592561.png",
+    "localSource": "media/originals/f59da5c80bfa1ba9a42761bb3a5b039f6d592561.png",
+    "originalFilename": "02_sRGB-borderless.png",
+    "width": 4904,
+    "height": 3992,
+    "derivedFrom": {
+      "file": "8763b3d13efd72be63d030d15d889fa2098c753a-5000x4079.jpg",
+      "originalFilename": "02_sRGB.jpg",
+      "width": 5000,
+      "height": 4079,
+      "crop": {
+        "left": 47,
+        "top": 39,
+        "width": 4904,
+        "height": 3992
+      }
+    }
   },
-  "9d4376b43c5a6c009cf5b79f5e576c78e337248e": {
-    "file": "9d4376b43c5a6c009cf5b79f5e576c78e337248e-4038x5000.jpg",
-    "originalFilename": "08_sRGB.jpg",
-    "width": 4038,
-    "height": 5000
+  "6bd313febdded4fd28e3c96fb1463533e4c8fb6b": {
+    "file": "6bd313febdded4fd28e3c96fb1463533e4c8fb6b.png",
+    "localSource": "media/originals/6bd313febdded4fd28e3c96fb1463533e4c8fb6b.png",
+    "originalFilename": "08_sRGB-borderless.png",
+    "width": 3954,
+    "height": 4892,
+    "derivedFrom": {
+      "file": "9d4376b43c5a6c009cf5b79f5e576c78e337248e-4038x5000.jpg",
+      "originalFilename": "08_sRGB.jpg",
+      "width": 4038,
+      "height": 5000,
+      "crop": {
+        "left": 47,
+        "top": 39,
+        "width": 3954,
+        "height": 4892
+      }
+    }
   },
-  "3ebfa1c37f97ed0fdf48492b3995c3d5a14c1bac": {
-    "file": "3ebfa1c37f97ed0fdf48492b3995c3d5a14c1bac-4038x5000.jpg",
-    "originalFilename": "09_sRGB.jpg",
-    "width": 4038,
-    "height": 5000
+  "0241c3b603527cf5c2c841f4024303467447c507": {
+    "file": "0241c3b603527cf5c2c841f4024303467447c507.png",
+    "localSource": "media/originals/0241c3b603527cf5c2c841f4024303467447c507.png",
+    "originalFilename": "09_sRGB-borderless.png",
+    "width": 3957,
+    "height": 4909,
+    "derivedFrom": {
+      "file": "3ebfa1c37f97ed0fdf48492b3995c3d5a14c1bac-4038x5000.jpg",
+      "originalFilename": "09_sRGB.jpg",
+      "width": 4038,
+      "height": 5000,
+      "crop": {
+        "left": 35,
+        "top": 44,
+        "width": 3957,
+        "height": 4909
+      }
+    }
   },
-  "b1f17e16646cc79903aee4ebe1b02b50fe040f2c": {
-    "file": "b1f17e16646cc79903aee4ebe1b02b50fe040f2c-4038x5000.jpg",
-    "originalFilename": "12_sRGB.jpg",
-    "width": 4038,
-    "height": 5000
+  "13da3070ca11665289356cbe73786e85a389112e": {
+    "file": "13da3070ca11665289356cbe73786e85a389112e.png",
+    "localSource": "media/originals/13da3070ca11665289356cbe73786e85a389112e.png",
+    "originalFilename": "12_sRGB-borderless.png",
+    "width": 3955,
+    "height": 4903,
+    "derivedFrom": {
+      "file": "b1f17e16646cc79903aee4ebe1b02b50fe040f2c-4038x5000.jpg",
+      "originalFilename": "12_sRGB.jpg",
+      "width": 4038,
+      "height": 5000,
+      "crop": {
+        "left": 50,
+        "top": 38,
+        "width": 3955,
+        "height": 4903
+      }
+    }
   },
   "4ea9a5c6214ec3688950e68d35acec2e1d547589": {
     "file": "4ea9a5c6214ec3688950e68d35acec2e1d547589-1358x1772.jpg",

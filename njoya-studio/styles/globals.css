@@ -111,34 +111,16 @@ button:disabled {
   background: var(--studio-bg);
 }
 .wordmark {
-  display: flex;
-  width: max-content;
-  flex-direction: column;
+  display: inline-flex;
   align-items: center;
-  line-height: 1;
+  justify-content: center;
+  min-height: 44px;
   flex: 0 0 auto;
 }
-.wordmark-name {
-  display: flex;
-  align-items: center;
-  font-weight: 850;
-  font-size: 32px;
-  letter-spacing: -2px;
-}
-.wordmark-o {
-  display: inline-block;
-  width: 38px;
-  height: 18px;
-  border: 5px solid currentColor;
-  border-radius: 20px;
-  margin: 0 2px 0 3px;
-}
-.wordmark-caption {
-  padding-left: 6px;
-  margin-top: 5px;
-  font-size: 7px;
-  font-weight: 650;
-  letter-spacing: 9px;
+.wordmark-logo {
+  display: block;
+  width: 128px;
+  height: auto;
 }
 .header-navigation {
   position: absolute;
@@ -667,13 +649,13 @@ html[data-njoya-intro="skip"] .intro-overlay {
 }
 .studio-biography {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 10vw;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8vw;
   align-items: center;
   padding-bottom: 104px;
 }
 .studio-biography h1 {
-  margin: 24px 0 32px;
+  margin: 24px 0 0;
   font-size: clamp(60px, 7.5vw, 115px);
   font-weight: 550;
   line-height: 0.98;
@@ -687,73 +669,31 @@ html[data-njoya-intro="skip"] .intro-overlay {
   color: #e2d9d0;
   text-wrap: pretty;
 }
-.studio-portrait {
-  position: relative;
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  border-radius: 50% 50% var(--studio-radius) var(--studio-radius);
-}
-.studio-portrait img {
-  object-fit: cover;
-}
-.team-section {
-  border-top: 1px solid var(--studio-line);
-  padding-top: 72px;
-}
-.section-title h2,
-.contact-section h2 {
+.contact-section h2,
+.newsletter-section h2 {
   margin: 24px 0 48px;
   font-size: clamp(45px, 5vw, 76px);
   line-height: 1.05;
   letter-spacing: -0.045em;
   font-weight: 500;
 }
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 5vw;
-}
-.team-portrait {
-  position: relative;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 32px;
-}
-.team-portrait img {
-  object-fit: cover;
-}
-.team-card h3 {
-  font-size: 22px;
-  letter-spacing: -0.03em;
-  margin: 0 0 12px;
-  font-weight: 550;
-}
-.team-description {
-  font-size: 13px;
-  line-height: 1.8;
-  color: var(--studio-muted);
-  margin: 24px 0;
-  text-wrap: pretty;
-}
-.team-card .text-button {
-  text-align: left;
-  overflow-wrap: anywhere;
-}
-.contact-section {
-  margin-top: 112px;
-  padding-top: 80px;
+.contact-section,
+.newsletter-section {
+  padding-block: 72px;
   border-top: 1px solid var(--studio-line);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 8vw;
+  align-items: center;
+}
+.contact-section h2 {
+  margin-bottom: 0;
 }
 .contact-list {
   display: flex;
   flex-direction: column;
   gap: 40px;
   justify-content: center;
-  padding-bottom: 40px;
 }
 .contact-list h3 {
   margin-bottom: 15px;
@@ -763,6 +703,8 @@ html[data-njoya-intro="skip"] .intro-overlay {
   align-items: center;
   gap: 12px;
   width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   margin-top: 10px;
   font-size: clamp(12px, 1.35vw, 19px);
   border-bottom: 1px solid var(--studio-line);
@@ -770,6 +712,26 @@ html[data-njoya-intro="skip"] .intro-overlay {
   transition:
     color 180ms ease,
     border-color 180ms ease;
+}
+.contact-list a svg {
+  flex-shrink: 0;
+}
+.newsletter-section {
+  padding-bottom: 0;
+}
+.newsletter-section h2 {
+  margin-bottom: 20px;
+  font-size: clamp(36px, 3.8vw, 58px);
+}
+.newsletter-copy {
+  max-width: 340px;
+  color: var(--studio-muted);
+  font-size: 14px;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+.newsletter-signup {
+  min-width: 0;
 }
 .lab-page {
   max-width: 1500px;
@@ -1099,18 +1061,8 @@ html[data-njoya-intro="skip"] .intro-overlay {
     min-height: 0;
     padding-bottom: var(--studio-navigation-height);
   }
-  .wordmark-name {
-    font-size: 25px;
-    letter-spacing: -1.5px;
-  }
-  .wordmark-o {
-    width: 30px;
-    height: 15px;
-    border-width: 4px;
-  }
-  .wordmark-caption {
-    font-size: 5px;
-    letter-spacing: 7.5px;
+  .wordmark-logo {
+    width: 104px;
   }
   .header-actions {
     gap: 5px;
@@ -1304,36 +1256,17 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .studio-biography h1 {
     font-size: clamp(48px, 14vw, 64px);
-    margin: 25px 0;
+    margin: 25px 0 0;
   }
   .biography-copy {
     font-size: 14px;
     line-height: 1.85;
   }
-  .studio-portrait {
-    width: 78%;
-    max-width: 350px;
-    margin: 0 auto;
-  }
-  .team-section {
-    padding-top: 50px;
-  }
-  .team-grid {
+  .contact-section,
+  .newsletter-section {
     grid-template-columns: 1fr;
-    gap: 60px;
-  }
-  .team-portrait {
-    width: 72%;
-    max-width: 300px;
-  }
-  .team-description {
-    max-width: 460px;
-  }
-  .contact-section {
-    grid-template-columns: 1fr;
-    gap: 0;
-    margin-top: 65px;
-    padding-top: 50px;
+    gap: 36px;
+    padding-block: 50px;
   }
   .contact-section h2 {
     font-size: clamp(40px, 12vw, 51px);
@@ -1343,6 +1276,9 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .contact-list a {
     font-size: 13px;
+  }
+  .newsletter-section {
+    padding-bottom: 0;
   }
   .lab-page {
     padding: 40px 24px;
