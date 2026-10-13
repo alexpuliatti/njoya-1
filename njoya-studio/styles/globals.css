@@ -708,17 +708,23 @@ html[data-njoya-intro="skip"] .intro-overlay {
   font-weight: 500;
   text-wrap: balance;
 }
-.contact-section,
 .newsletter-section {
   display: flex;
   flex-direction: column;
   gap: 36px;
   align-items: center;
 }
+.contact-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 64px;
+  text-align: left;
+}
 .contact-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 32px;
   width: 100%;
 }
@@ -732,7 +738,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
   width: fit-content;
   max-width: 100%;
   overflow-wrap: anywhere;
-  margin: 8px auto 0;
+  margin: 8px 0 0;
   min-height: 44px;
   font-size: clamp(14px, 1.3vw, 17px);
   border-bottom: 1px solid var(--studio-line);
@@ -1303,6 +1309,17 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .selected-clients-list li {
     font-size: 18px;
+  }
+  .contact-section {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    text-align: center;
+  }
+  .contact-list {
+    align-items: center;
+  }
+  .contact-list a {
+    margin-inline: auto;
   }
   .newsletter-section {
     padding-bottom: 0;
