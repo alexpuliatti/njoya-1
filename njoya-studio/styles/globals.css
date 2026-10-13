@@ -643,60 +643,87 @@ html[data-njoya-intro="skip"] .intro-overlay {
   transition: color 180ms ease;
 }
 .about-page {
-  max-width: 1600px;
-  padding: 72px 7vw 104px;
+  max-width: 1200px;
+  padding: 88px 6vw 80px;
   margin: 0 auto;
+  text-align: center;
 }
 .studio-biography {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 8vw;
-  align-items: center;
-  padding-bottom: 104px;
+  max-width: 960px;
+  margin-inline: auto;
+  padding-bottom: 80px;
 }
 .studio-biography h1 {
-  margin: 24px 0 0;
-  font-size: clamp(60px, 7.5vw, 115px);
+  margin: 0 0 40px;
+  font-size: clamp(44px, 6vw, 88px);
   font-weight: 550;
-  line-height: 0.98;
-  letter-spacing: -0.055em;
+  line-height: 1.04;
+  letter-spacing: -0.065em;
+  text-wrap: balance;
+}
+.studio-biography h1 span {
+  display: inline-block;
 }
 .biography-copy {
-  margin: 0;
-  max-width: 610px;
-  font-size: clamp(14px, 1.3vw, 18px);
-  line-height: 1.75;
+  margin: 0 auto;
+  max-width: 680px;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.85;
   color: #e2d9d0;
   text-wrap: pretty;
 }
+.selected-clients,
+.contact-section,
+.newsletter-section {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-block: 64px;
+  border-top: 1px solid var(--studio-line);
+}
+.selected-clients h2 {
+  margin: 0 0 32px;
+}
+.selected-clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.selected-clients-list li {
+  font-size: clamp(18px, 1.8vw, 25px);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
 .contact-section h2,
 .newsletter-section h2 {
-  margin: 24px 0 48px;
-  font-size: clamp(45px, 5vw, 76px);
-  line-height: 1.05;
+  margin: 16px 0 0;
+  font-size: clamp(32px, 3.8vw, 48px);
+  line-height: 1.1;
   letter-spacing: -0.045em;
   font-weight: 500;
+  text-wrap: balance;
 }
 .contact-section,
 .newsletter-section {
-  padding-block: 72px;
-  border-top: 1px solid var(--studio-line);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
   align-items: center;
-}
-.contact-section h2 {
-  margin-bottom: 0;
 }
 .contact-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
 }
 .contact-list h3 {
-  margin-bottom: 15px;
+  margin: 0 0 8px;
 }
 .contact-list a {
   display: flex;
@@ -705,8 +732,9 @@ html[data-njoya-intro="skip"] .intro-overlay {
   width: fit-content;
   max-width: 100%;
   overflow-wrap: anywhere;
-  margin-top: 10px;
-  font-size: clamp(12px, 1.35vw, 19px);
+  margin: 8px auto 0;
+  min-height: 44px;
+  font-size: clamp(14px, 1.3vw, 17px);
   border-bottom: 1px solid var(--studio-line);
   padding-bottom: 8px;
   transition:
@@ -719,19 +747,21 @@ html[data-njoya-intro="skip"] .intro-overlay {
 .newsletter-section {
   padding-bottom: 0;
 }
-.newsletter-section h2 {
-  margin-bottom: 20px;
-  font-size: clamp(36px, 3.8vw, 58px);
-}
 .newsletter-copy {
-  max-width: 340px;
+  max-width: 360px;
+  margin: 18px auto 0;
   color: var(--studio-muted);
   font-size: 14px;
   line-height: 1.8;
   text-wrap: pretty;
 }
 .newsletter-signup {
+  width: 100%;
+  max-width: 500px;
   min-width: 0;
+}
+.newsletter-signup .newsletter-form > label {
+  text-align: left;
 }
 .lab-page {
   max-width: 1500px;
@@ -1247,35 +1277,32 @@ html[data-njoya-intro="skip"] .intro-overlay {
     min-height: 0;
   }
   .about-page {
-    padding: 35px 24px 50px;
+    padding: 44px 24px 56px;
   }
   .studio-biography {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding-bottom: 65px;
+    padding-bottom: 48px;
   }
   .studio-biography h1 {
-    font-size: clamp(48px, 14vw, 64px);
-    margin: 25px 0 0;
+    font-size: clamp(42px, 11vw, 64px);
+    margin-bottom: 32px;
   }
   .biography-copy {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.85;
   }
+  .selected-clients,
   .contact-section,
   .newsletter-section {
-    grid-template-columns: 1fr;
-    gap: 36px;
-    padding-block: 50px;
+    padding-block: 44px;
   }
-  .contact-section h2 {
-    font-size: clamp(40px, 12vw, 51px);
+  .selected-clients h2 {
+    margin-bottom: 24px;
   }
-  .contact-list {
-    gap: 30px;
+  .selected-clients-list {
+    gap: 12px 22px;
   }
-  .contact-list a {
-    font-size: 13px;
+  .selected-clients-list li {
+    font-size: 18px;
   }
   .newsletter-section {
     padding-bottom: 0;
