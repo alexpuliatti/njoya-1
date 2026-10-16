@@ -3,12 +3,17 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 
+import styles from "../lab.module.css";
+
 import { getLabEntries } from "@/lib/content/repository";
+import LabCaseStudy from "@/components/lab-case-study";
 import MediaGallery from "@/components/media-gallery";
 export const dynamicParams = false;
 export const dynamic = "force-static";
 export async function generateStaticParams() {
-  const entries = (await getLabEntries()).map((entry) => ({ slug: entry.slug }));
+  const entries = (await getLabEntries()).map((entry) => ({
+    slug: entry.slug,
+  }));
 
   // Next.js 14 rejects an empty params array during static export. This unused
   // path reaches notFound() below; it never creates a published Lab entry.
@@ -37,17 +42,14 @@ export default async function LabEntryPage({
   if (!entry) notFound();
 
   return (
-    <article className="lab-article">
-      <Link className="text-button" href="/lab">
+    <div className={styles.detail}>
+      <Link className={`text-button ${styles.back}`} href="/lab">
         ← Back to Lab
       </Link>
-      <p className="eyebrow">{entry.date}</p>
-      <h1>{entry.title}</h1>
-      <p className="lab-summary">{entry.summary}</p>
-      {entry.paragraphs.map((paragraph, index) => (
-        <p key={index}>{paragraph}</p>
-      ))}
-      <MediaGallery entries={entry.gallery} />
-    </article>
+      <LabCaseStudy entry={entry} heading="h1" />
+      {entry.gallery.length > 1 ? (
+        <MediaGallery entries={entry.gallery.slice(1)} />
+      ) : null}
+    </div>
   );
 }
