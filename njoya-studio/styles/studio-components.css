@@ -558,7 +558,7 @@
     transform: translate(2px, -2px);
   }
 }
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .newsletter-field {
     flex-wrap: wrap;
     padding: 8px;
@@ -571,8 +571,6 @@
   .newsletter-field .studio-button {
     flex-grow: 1;
   }
-}
-@media (max-width: 767px) {
   .studio-dialog {
     padding: max(12px, env(safe-area-inset-top)) 12px
       max(12px, env(safe-area-inset-bottom));
