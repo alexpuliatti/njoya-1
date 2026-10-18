@@ -142,9 +142,28 @@
   line-height: 1.6;
 }
 
+.studyLink {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 52px;
+  margin-top: 28px;
+  padding: 14px 0;
+  border-top: 1px solid var(--studio-line);
+  color: var(--studio-text);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  transition: opacity 160ms ease;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .back:hover {
     color: var(--studio-text);
+  }
+
+  .studyLink:hover {
+    opacity: 0.65;
   }
 }
 
