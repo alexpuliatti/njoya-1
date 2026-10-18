@@ -1,5 +1,7 @@
 "use client";
 
+import type { ReactNode } from "react";
+
 import Image from "next/image";
 import { Pause, Play, RotateCcw } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -20,8 +22,12 @@ const PHASES = [
 /** An image cutout rig and live type, sharing a single, reversible timeline. */
 export default function WorldBuilderHeadline({
   controls = false,
+  worlds,
+  onComplete,
 }: {
   controls?: boolean;
+  worlds?: ReactNode;
+  onComplete?: () => void;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<gsap.core.Timeline | null>(null);
@@ -57,6 +63,8 @@ export default function WorldBuilderHeadline({
     let disposed = false;
     let started = false;
     let imageReady = false;
+    let imageFailed = false;
+    let fallbackTimer: number | undefined;
     let currentPhase = -1;
     const initialPose = {
       letterX: -0.62,
@@ -212,7 +220,7 @@ export default function WorldBuilderHeadline({
     };
 
     const start = () => {
-      if (disposed || !imageReady) return;
+      if (disposed) return;
       setReducedMotion(motion.matches);
       if (motion.matches) {
         showStill("Still composition · reduced motion");
@@ -220,10 +228,27 @@ export default function WorldBuilderHeadline({
       }
       if (
         started ||
+        document.hidden ||
         (waitsForIntro &&
           document.documentElement.dataset.njoyaIntro !== "skip")
       )
         return;
+
+      if (imageFailed) {
+        started = true;
+        // Let all media-query change events reset the cast before advancing.
+        window.clearTimeout(fallbackTimer);
+        fallbackTimer = window.setTimeout(() => {
+          if (disposed || motion.matches) return;
+          if (document.hidden) {
+            started = false;
+            return;
+          }
+          onComplete?.();
+        }, 0);
+        return;
+      }
+      if (!imageReady) return;
 
       started = true;
       Object.assign(pose, initialPose);
@@ -233,7 +258,10 @@ export default function WorldBuilderHeadline({
       const timeline = gsap.timeline({
         paused: true,
         onUpdate: draw,
-        onComplete: () => setPlaying(false),
+        onComplete: () => {
+          setPlaying(false);
+          onComplete?.();
+        },
       });
 
       timelineRef.current = timeline;
@@ -345,6 +373,7 @@ export default function WorldBuilderHeadline({
     const onImageReady = () => {
       if (!image.naturalWidth || disposed) return;
       imageReady = true;
+      imageFailed = false;
       start();
     };
     const onMotionChange = () => {
@@ -357,8 +386,11 @@ export default function WorldBuilderHeadline({
     };
     const onImageError = () => {
       imageReady = false;
+      imageFailed = true;
+      started = false;
       setReady(false);
       showStill("Animation unavailable");
+      start();
     };
     const onResize = () => {
       if (!timelineRef.current) return;
@@ -366,6 +398,10 @@ export default function WorldBuilderHeadline({
       draw();
     };
     const onVisibilityChange = () => {
+      if (!document.hidden && !timelineRef.current) {
+        start();
+        return;
+      }
       if (document.hidden && timelineRef.current?.isActive()) {
         timelineRef.current.pause();
         setPlaying(false);
@@ -399,6 +435,7 @@ export default function WorldBuilderHeadline({
 
     return () => {
       disposed = true;
+      window.clearTimeout(fallbackTimer);
       observer.disconnect();
       image.removeEventListener("load", onImageReady);
       image.removeEventListener("error", onImageError);
@@ -410,7 +447,7 @@ export default function WorldBuilderHeadline({
       letter.style.removeProperty("transform");
       delete root.dataset.enhanced;
     };
-  }, [controls]);
+  }, [controls, onComplete]);
 
   const replay = () => {
     const timeline = timelineRef.current;
@@ -506,9 +543,11 @@ export default function WorldBuilderHeadline({
           BUILD
           <span className={styles.baseline} data-builder-baseline="" />{" "}
         </span>
-        <span aria-hidden="true" className={styles.line}>
-          WORLDS
-        </span>
+        {worlds ?? (
+          <span aria-hidden="true" className={styles.line}>
+            WORLDS
+          </span>
+        )}
       </h1>
 
       {controls && (

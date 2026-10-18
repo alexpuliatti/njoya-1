@@ -1,0 +1,146 @@
+.study {
+  position: relative;
+}
+
+.study .heading {
+  font-size: clamp(36px, 4.6vw, 68px);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+.scene {
+  position: relative;
+  isolation: isolate;
+  height: clamp(260px, 26vw, 360px);
+  margin-top: 30px;
+}
+
+.peekWindow {
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 56%;
+  width: 42%;
+  height: 97%;
+  overflow: hidden;
+}
+
+.project {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid var(--studio-line);
+  border-radius: 12px;
+  background: #34271e;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.caption {
+  position: absolute;
+  inset: auto 0 0;
+  display: grid;
+  gap: 8px;
+  padding: 48px 20px 22px;
+  background: linear-gradient(transparent, rgba(12, 7, 5, 0.85));
+  color: #f4efe7;
+}
+
+.caption span {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.caption strong {
+  font-size: clamp(14px, 1.5vw, 22px);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.controls {
+  max-width: 360px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid var(--studio-line);
+  color: var(--studio-muted);
+  font-size: 11px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.play,
+.replay,
+.speed {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  color: var(--studio-text);
+  transition: transform 160ms ease;
+}
+
+.play {
+  width: 44px;
+  border: 1px solid var(--studio-line);
+  border-radius: 50%;
+}
+
+.speed {
+  min-width: 44px;
+  margin-left: auto;
+  border: 1px solid var(--studio-line);
+  border-radius: 6px;
+}
+
+.speed[aria-pressed="true"] {
+  background: rgba(244, 239, 231, 0.08);
+}
+
+.progress {
+  display: block;
+  width: 100%;
+  height: 32px;
+  margin-top: 8px;
+  accent-color: #cab99c;
+}
+
+.output {
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+.controls button:disabled,
+.controls input:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.controls button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.controls :is(button, input):focus-visible,
+.project:focus-visible {
+  outline: 2px solid #cab99c;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controls button {
+    transition: none;
+  }
+}
