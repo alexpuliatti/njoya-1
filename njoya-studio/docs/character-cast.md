@@ -20,6 +20,6 @@ Assets: `public/media/motion/observer.webp` and `observer-blink.webp`, two trans
 
 ## Homepage cast
 
-The local homepage card now shares one semantic headline across all three characters. After the existing intro clears, the builder finishes the W, the explorer rolls the O into the same WORLDS line, then the observer peeks around the card edge. The approved builder size and standing position remain. The sequence plays once, leaves the card link available, pauses in a hidden tab, and presents a readable still headline for reduced motion or artwork errors. These additions remain on the local motion branch; main contains the previously approved builder only.
+The local homepage card shares one semantic headline across all three characters. Once the artwork is ready and the existing intro clears, they start together: the builder pulls the W, the explorer rolls the O into the same WORLDS line, and the observer peeks around the card edge. The approved builder size and standing position remain. The scene plays once, leaves the card link available, pauses in a hidden tab, and presents a readable still headline for reduced motion or artwork errors. These additions remain on the local motion branch; main contains the previously approved builder only.
 
 The cast should feel like it inhabits the typography and edges of the work. Each moment has a short action and a clear finish; larger appearances belong in the Lab, with occasional smaller appearances elsewhere.
