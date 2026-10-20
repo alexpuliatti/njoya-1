@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+  isolation: isolate;
+}
+
+.heading .line {
+  display: block;
+  white-space: nowrap;
+}
+
+.controls {
+  max-width: 360px;
+  margin-top: 28px;
+  padding-top: 17px;
+  border-top: 1px solid var(--studio-line);
+  color: var(--studio-muted);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.playButton,
+.textButton,
+.speedButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 44px;
+  padding: 0 4px;
+  color: var(--studio-text);
+  transition:
+    opacity 160ms ease,
+    transform 160ms ease;
+}
+
+.playButton {
+  width: 44px;
+  padding: 0;
+  border: 1px solid var(--studio-line);
+  border-radius: 50%;
+}
+
+.speedButton {
+  min-width: 44px;
+  margin-left: auto;
+  border: 1px solid var(--studio-line);
+  border-radius: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.speedButton[aria-pressed="true"] {
+  background: rgba(244, 239, 231, 0.08);
+  border-color: var(--studio-muted);
+}
+
+.phase {
+  display: block;
+  margin-top: 14px;
+  font-size: 10px;
+}
+
+.controls button:disabled {
+  cursor: default;
+  opacity: 0.4;
+}
+
+.controls button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+.controls button:focus-visible {
+  outline: 2px solid #cab99c;
+  outline-offset: 4px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .controls button:hover:not(:disabled) {
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .controls button {
+    transition: none;
+  }
+}
