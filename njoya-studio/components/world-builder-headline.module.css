@@ -63,6 +63,10 @@
   object-fit: contain;
 }
 
+.upperBody {
+  transform-origin: 70% 76%;
+}
+
 .torso {
   clip-path: polygon(
     0 0,
