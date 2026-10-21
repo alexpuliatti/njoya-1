@@ -8,7 +8,7 @@ Stone head, green reaching arm, purple eyes. Deliberate and a little stubborn. P
 
 ## 02 — The explorer
 
-Pink curved head, woven shoulder, green fringe, brown limbs. Curious and nimble. First movement: rolls the O into WORLDS, steadies it and steps aside. Preview: `/motion/explorer`.
+Pink curved head, woven shoulder, green fringe, brown limbs. Curious and nimble. First movement: rolls the O into WORLDS, steadies it, then steps back beside the S and stays visible. The resting position follows the end of the word on resize, with the character scaled to fit when space is tight. Preview: `/motion/explorer`.
 
 Asset: `public/media/motion/explorer.webp`, a transparent 768 × 615 WebP prepared from the user's pink-and-green character reference with built-in image_gen. The exact generation and cleanup prompts are saved in `docs/explorer-prompts.json`. No 3D model is used.
 

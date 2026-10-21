@@ -53,7 +53,7 @@ export default async function ExplorerMotionPage() {
           </h2>
           <p className={styles.description}>
             Curious, nimble, and a little mischievous. A second character brings
-            the O home, then steps aside to let the world appear.
+            the O home, then steps back to stay beside the S.
           </p>
           <div className={styles.detail}>
             <span className={styles.detailNumber}>01</span>
@@ -65,7 +65,7 @@ export default async function ExplorerMotionPage() {
           </div>
           <div className={styles.detail}>
             <span className={styles.detailNumber}>03</span>
-            <p>Make room for a world.</p>
+            <p>A place beside the S.</p>
           </div>
           <Link className={styles.studyLink} href="/motion">
             <span>01 / The builder</span>
