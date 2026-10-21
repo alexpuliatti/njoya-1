@@ -74,8 +74,8 @@ export default async function ObserverMotionPage() {
             <span className={styles.detailNumber}>03</span>
             <p>Leave the work centre stage.</p>
           </div>
-          <Link className={styles.studyLink} href="/">
-            <span>See the cast on the homepage</span>
+          <Link className={styles.studyLink} href="/about">
+            <span>See the observer on About</span>
             <ArrowUpRight aria-hidden="true" size={16} />
           </Link>
           <Link className={styles.studyLink} href="/motion">
