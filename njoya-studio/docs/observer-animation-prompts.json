@@ -1,0 +1,572 @@
+{
+  "tool": "built-in image_gen",
+  "identityReference": "public/media/motion/observer.webp",
+  "frameWidth": 128,
+  "frameHeight": 192,
+  "framesPerAnimation": 8,
+  "totalMovementFrames": 32,
+  "playbackFps": 12,
+  "foot": {
+    "x": 64,
+    "y": 184
+  },
+  "preview": "docs/observer-frame-preview.webp",
+  "animations": {
+    "walk-down": {
+      "prompt": "Use case: identity-preserve.\nAsset type: production 2D game-style SPRITE SHEET for the supplied sculptural website character, NOT a scene or a single image.\nInput image 1 is the sole identity reference. Preserve this EXACT red-faced observer character: huge textured red sculptural face, long vivid BLUE upper eyelids and dark green lower lids, white dotted cheeks, yellow beads on pink piping, small grey stone mask with white wiry hair on top, orange-brown HUMAN arms and feet, black/white/green zebra hip form, blue gingham rounded thigh, yellow mesh-patterned other thigh. Rich tactile collage/3D sculpture textures matching reference, not a new cartoon. Same proportions and small-scale detail across EVERY frame. Exactly TWO arms and TWO legs throughout.\nMANDATORY LAYOUT: exactly EIGHT full-body animation frames, ordered left to right across row 1 then left to right across row 2. A precise regular grid of FOUR equal columns and TWO equal rows; each cell is portrait, approximately 2:3 width:height. Overall landscape canvas 4:3 aspect ratio. Same cell framing, same camera, same character scale, same invisible foot baseline around 94% of each cell. Full head, hands and feet inside every cell with transparent padding, never crossing tile boundaries. No characters between cells. Each cell contains ONE version of the character in a DIFFERENT pose of the same continuous animation. Do not repeat an identical pose in all cells.\nBackground must be TRUE TRANSPARENT ALPHA across whole sheet and every space between body parts. NO background, floor, shadows, grids, cell borders, dividers, labels, frame numbers, words, typography, props or scenery. Retain antialiased clean cutout edges. Keep eyes open in movement frames.\nANIMATION: eight-phase seamless WALK DOWN / toward viewer cycle, near-frontal view. The character actually WALKS with articulated knees, ankles and shoulders. Arms swing in opposition to legs; head and body bob gently, maintaining identity. Frame 1 left foot forward contact, right foot back; 2 weight lowers onto left foot; 3 right leg passes through with right knee lifted; 4 rise on left support foot with right foot swinging ahead; 5 right foot forward contact, left foot back; 6 weight lowers onto right foot; 7 left knee passes forward; 8 rise on right support foot with left leg preparing next contact. Both arms must visibly swing and the two feet must occupy distinct gait poses. Full-body all eight frames, even where a knee lifts. Ground positions remain aligned, small natural body bob only.",
+      "cleanupPrompt": "Use case: background-extraction.\nEdit target: this exact supplied EIGHT-FRAME sprite sheet, FOUR columns × TWO rows.\nRemove ONLY the unwanted scattered red/orange speckles, red dust, red smears, colored haze and ghosty noise OUTSIDE the actual solid character silhouettes in all eight cells. Every pixel outside each actual physical body, clothing, hair, hands and feet must be alpha transparent, including gaps between limbs. Keep crisp antialiased cutout edges; do not leave a red aura or a background.\nCRITICAL: preserve every character pose, gait phase, face, colors, tactile materials, and limb exactly as drawn. Keep all eight frames in exactly the same cells and pixel positions on this same canvas. Do not recompose, resize, crop, alter the grid, change viewpoint or add frames. Do not remove red BODY material or any real fringe, beads, white hair, clothing, fingers or toes. Keep the entire silhouettes unchanged. This is purely a background-transparency cleanup. No floor, shadow, backdrop, text, grid lines or frame labels.",
+      "sourceImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-e79f5903-93d1-465f-93df-50b3f2a34ed1.png",
+      "cleanImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-76271818-defa-4a12-93d6-fe80bda9a0e2.png",
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-76271818-defa-4a12-93d6-fe80bda9a0e2.png",
+      "output": "public/media/motion/observer-walk-down.webp",
+      "scale": 0.3283582089552239,
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": {
+            "left": 30,
+            "top": 0,
+            "width": 299,
+            "height": 523,
+            "center": 189.42468062156604
+          },
+          "placement": {
+            "left": 12,
+            "top": 12,
+            "width": 98,
+            "height": 172
+          }
+        },
+        {
+          "frame": 1,
+          "sourceBounds": {
+            "left": 34,
+            "top": 7,
+            "width": 305,
+            "height": 516,
+            "center": 189.54474887346643
+          },
+          "placement": {
+            "left": 13,
+            "top": 15,
+            "width": 100,
+            "height": 169
+          }
+        },
+        {
+          "frame": 2,
+          "sourceBounds": {
+            "left": 20,
+            "top": 0,
+            "width": 331,
+            "height": 508,
+            "center": 194.0210812648759
+          },
+          "placement": {
+            "left": 7,
+            "top": 17,
+            "width": 109,
+            "height": 167
+          }
+        },
+        {
+          "frame": 3,
+          "sourceBounds": {
+            "left": 31,
+            "top": 0,
+            "width": 314,
+            "height": 513,
+            "center": 191.49005374467788
+          },
+          "placement": {
+            "left": 11,
+            "top": 16,
+            "width": 103,
+            "height": 168
+          }
+        },
+        {
+          "frame": 4,
+          "sourceBounds": {
+            "left": 44,
+            "top": 0,
+            "width": 311,
+            "height": 536,
+            "center": 196.47239486908225
+          },
+          "placement": {
+            "left": 14,
+            "top": 8,
+            "width": 102,
+            "height": 176
+          }
+        },
+        {
+          "frame": 5,
+          "sourceBounds": {
+            "left": 39,
+            "top": 7,
+            "width": 310,
+            "height": 529,
+            "center": 197.58594316608426
+          },
+          "placement": {
+            "left": 12,
+            "top": 10,
+            "width": 102,
+            "height": 174
+          }
+        },
+        {
+          "frame": 6,
+          "sourceBounds": {
+            "left": 32,
+            "top": 1,
+            "width": 306,
+            "height": 535,
+            "center": 189.59582641534004
+          },
+          "placement": {
+            "left": 12,
+            "top": 8,
+            "width": 100,
+            "height": 176
+          }
+        },
+        {
+          "frame": 7,
+          "sourceBounds": {
+            "left": 31,
+            "top": 0,
+            "width": 310,
+            "height": 536,
+            "center": 195.7173407717341
+          },
+          "placement": {
+            "left": 10,
+            "top": 8,
+            "width": 102,
+            "height": 176
+          }
+        }
+      ]
+    },
+    "walk-right": {
+      "prompt": "Use case: identity-preserve.\nAsset type: production 2D game-style SPRITE SHEET for the supplied sculptural website character, NOT a scene or a single image.\nInput image 1 is the sole identity reference. Preserve this EXACT red-faced observer character: huge textured red sculptural face, long vivid BLUE upper eyelids and dark green lower lids, white dotted cheeks, yellow beads on pink piping, small grey stone mask with white wiry hair on top, orange-brown HUMAN arms and feet, black/white/green zebra hip form, blue gingham rounded thigh, yellow mesh-patterned other thigh. Rich tactile collage/3D sculpture textures matching reference, not a new cartoon. Same proportions and small-scale detail across EVERY frame. Exactly TWO arms and TWO legs throughout.\nMANDATORY LAYOUT: exactly EIGHT full-body animation frames, ordered left to right across row 1 then left to right across row 2. A precise regular grid of FOUR equal columns and TWO equal rows; each cell is portrait, approximately 2:3 width:height. Overall landscape canvas 4:3 aspect ratio. Same cell framing, same camera, same character scale, same invisible foot baseline around 94% of each cell. Full head, hands and feet inside every cell with transparent padding, never crossing tile boundaries. No characters between cells. Each cell contains ONE version of the character in a DIFFERENT pose of the same continuous animation. Do not repeat an identical pose in all cells.\nBackground must be TRUE TRANSPARENT ALPHA across whole sheet and every space between body parts. NO background, floor, shadows, grids, cell borders, dividers, labels, frame numbers, words, typography, props or scenery. Retain antialiased clean cutout edges. Keep eyes open in movement frames.\nANIMATION: eight-phase seamless WALK RIGHT cycle in a right-facing three-quarter/profile view. This is the SAME character physically turned to the right, with its red face and eyelid features still recognizable. Show genuine sideward locomotion: articulated knees, ankles and shoulders, alternating heel/toe contacts, arms swinging in opposition, small body bob. Frames 1–4 progress left-foot contact, lowering, right-leg passing and rising; frames 5–8 show the opposite right-foot contact, lowering, left-leg passing and rising. Feet clearly swing horizontally to the RIGHT, front leg/back leg alternate. NOT a static pose translated across cells. Full-body same camera and scale across all eight frames, soles share a consistent baseline.",
+      "cleanupPrompt": "Use case: background-extraction.\nEdit target: this exact supplied EIGHT-FRAME sprite sheet, FOUR columns × TWO rows.\nRemove ONLY the unwanted scattered red/orange speckles, red dust, red smears, colored haze and ghosty noise OUTSIDE the actual solid character silhouettes in all eight cells. Every pixel outside each actual physical body, clothing, hair, hands and feet must be alpha transparent, including gaps between limbs. Keep crisp antialiased cutout edges; do not leave a red aura or a background.\nCRITICAL: preserve every character pose, gait phase, face, colors, tactile materials, and limb exactly as drawn. Keep all eight frames in exactly the same cells and pixel positions on this same canvas. Do not recompose, resize, crop, alter the grid, change viewpoint or add frames. Do not remove red BODY material or any real fringe, beads, white hair, clothing, fingers or toes. Keep the entire silhouettes unchanged. This is purely a background-transparency cleanup. No floor, shadow, backdrop, text, grid lines or frame labels.",
+      "sourceImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-19fd4488-f446-4259-a58d-0377875f8472.png",
+      "cleanImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-8328d5ff-4703-49b2-a535-98de58983cb0.png",
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-8328d5ff-4703-49b2-a535-98de58983cb0.png",
+      "output": "public/media/motion/observer-walk-right.webp",
+      "scale": 0.3378119001919386,
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": {
+            "left": 14,
+            "top": 5,
+            "width": 331,
+            "height": 521,
+            "center": 185.56212702472294
+          },
+          "placement": {
+            "left": 6,
+            "top": 8,
+            "width": 112,
+            "height": 176
+          }
+        },
+        {
+          "frame": 1,
+          "sourceBounds": {
+            "left": 6,
+            "top": 11,
+            "width": 338,
+            "height": 512,
+            "center": 182.98985555188003
+          },
+          "placement": {
+            "left": 4,
+            "top": 11,
+            "width": 114,
+            "height": 173
+          }
+        },
+        {
+          "frame": 2,
+          "sourceBounds": {
+            "left": 30,
+            "top": 11,
+            "width": 304,
+            "height": 512,
+            "center": 180.9896223587592
+          },
+          "placement": {
+            "left": 13,
+            "top": 11,
+            "width": 103,
+            "height": 173
+          }
+        },
+        {
+          "frame": 3,
+          "sourceBounds": {
+            "left": 76,
+            "top": 5,
+            "width": 240,
+            "height": 519,
+            "center": 178.9605345176874
+          },
+          "placement": {
+            "left": 29,
+            "top": 9,
+            "width": 81,
+            "height": 175
+          }
+        },
+        {
+          "frame": 4,
+          "sourceBounds": {
+            "left": 29,
+            "top": 6,
+            "width": 300,
+            "height": 519,
+            "center": 185.40123644087083
+          },
+          "placement": {
+            "left": 11,
+            "top": 9,
+            "width": 101,
+            "height": 175
+          }
+        },
+        {
+          "frame": 5,
+          "sourceBounds": {
+            "left": 29,
+            "top": 7,
+            "width": 292,
+            "height": 517,
+            "center": 182.18031018707927
+          },
+          "placement": {
+            "left": 12,
+            "top": 9,
+            "width": 99,
+            "height": 175
+          }
+        },
+        {
+          "frame": 6,
+          "sourceBounds": {
+            "left": 66,
+            "top": 7,
+            "width": 266,
+            "height": 521,
+            "center": 185.59426520617592
+          },
+          "placement": {
+            "left": 24,
+            "top": 8,
+            "width": 90,
+            "height": 176
+          }
+        },
+        {
+          "frame": 7,
+          "sourceBounds": {
+            "left": 21,
+            "top": 4,
+            "width": 321,
+            "height": 521,
+            "center": 183.42279411764707
+          },
+          "placement": {
+            "left": 9,
+            "top": 8,
+            "width": 108,
+            "height": 176
+          }
+        }
+      ]
+    },
+    "walk-left": {
+      "prompt": "Use case: identity-preserve.\nAsset type: production 2D game-style SPRITE SHEET for the supplied sculptural website character, NOT a scene or a single image.\nInput image 1 is the sole identity reference. Preserve this EXACT red-faced observer character: huge textured red sculptural face, long vivid BLUE upper eyelids and dark green lower lids, white dotted cheeks, yellow beads on pink piping, small grey stone mask with white wiry hair on top, orange-brown HUMAN arms and feet, black/white/green zebra hip form, blue gingham rounded thigh, yellow mesh-patterned other thigh. Rich tactile collage/3D sculpture textures matching reference, not a new cartoon. Same proportions and small-scale detail across EVERY frame. Exactly TWO arms and TWO legs throughout.\nMANDATORY LAYOUT: exactly EIGHT full-body animation frames, ordered left to right across row 1 then left to right across row 2. A precise regular grid of FOUR equal columns and TWO equal rows; each cell is portrait, approximately 2:3 width:height. Overall landscape canvas 4:3 aspect ratio. Same cell framing, same camera, same character scale, same invisible foot baseline around 94% of each cell. Full head, hands and feet inside every cell with transparent padding, never crossing tile boundaries. No characters between cells. Each cell contains ONE version of the character in a DIFFERENT pose of the same continuous animation. Do not repeat an identical pose in all cells.\nBackground must be TRUE TRANSPARENT ALPHA across whole sheet and every space between body parts. NO background, floor, shadows, grids, cell borders, dividers, labels, frame numbers, words, typography, props or scenery. Retain antialiased clean cutout edges. Keep eyes open in movement frames.\nANIMATION: eight-phase seamless WALK LEFT cycle in a left-facing three-quarter/profile view. This is the SAME character physically turned to the left, with its red face and eyelid features still recognizable. Show genuine sideward locomotion: articulated knees, ankles and shoulders, alternating heel/toe contacts, arms swinging in opposition, small body bob. Frames 1–4 progress right-foot contact, lowering, left-leg passing and rising; frames 5–8 show the opposite left-foot contact, lowering, right-leg passing and rising. Feet clearly swing horizontally to the LEFT, front leg/back leg alternate. NOT a static pose translated across cells. Full-body same camera and scale across all eight frames, soles share a consistent baseline.",
+      "cleanupPrompt": "Use case: background-extraction.\nEdit target: this exact supplied EIGHT-FRAME sprite sheet, FOUR columns × TWO rows.\nRemove ONLY the unwanted scattered red/orange speckles, red dust, red smears, colored haze and ghosty noise OUTSIDE the actual solid character silhouettes in all eight cells. Every pixel outside each actual physical body, clothing, hair, hands and feet must be alpha transparent, including gaps between limbs. Keep crisp antialiased cutout edges; do not leave a red aura or a background.\nCRITICAL: preserve every character pose, gait phase, face, colors, tactile materials, and limb exactly as drawn. Keep all eight frames in exactly the same cells and pixel positions on this same canvas. Do not recompose, resize, crop, alter the grid, change viewpoint or add frames. Do not remove red BODY material or any real fringe, beads, white hair, clothing, fingers or toes. Keep the entire silhouettes unchanged. This is purely a background-transparency cleanup. No floor, shadow, backdrop, text, grid lines or frame labels.",
+      "sourceImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-7884e421-c1d1-48b6-b5a8-7d9146161d8e.png",
+      "cleanImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-a08a8174-6333-46b1-81d3-7db86ba09493.png",
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-a08a8174-6333-46b1-81d3-7db86ba09493.png",
+      "output": "public/media/motion/observer-walk-left.webp",
+      "scale": 0.34782608695652173,
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": {
+            "left": 29,
+            "top": 9,
+            "width": 323,
+            "height": 504,
+            "center": 198.07749051063524
+          },
+          "placement": {
+            "left": 5,
+            "top": 9,
+            "width": 112,
+            "height": 175
+          }
+        },
+        {
+          "frame": 1,
+          "sourceBounds": {
+            "left": 56,
+            "top": 11,
+            "width": 273,
+            "height": 504,
+            "center": 198.33497536945814
+          },
+          "placement": {
+            "left": 14,
+            "top": 9,
+            "width": 95,
+            "height": 175
+          }
+        },
+        {
+          "frame": 2,
+          "sourceBounds": {
+            "left": 80,
+            "top": 13,
+            "width": 228,
+            "height": 501,
+            "center": 200.57792054233013
+          },
+          "placement": {
+            "left": 22,
+            "top": 10,
+            "width": 79,
+            "height": 174
+          }
+        },
+        {
+          "frame": 3,
+          "sourceBounds": {
+            "left": 55,
+            "top": 10,
+            "width": 287,
+            "height": 503,
+            "center": 200.96522385287014
+          },
+          "placement": {
+            "left": 13,
+            "top": 9,
+            "width": 100,
+            "height": 175
+          }
+        },
+        {
+          "frame": 4,
+          "sourceBounds": {
+            "left": 40,
+            "top": 8,
+            "width": 315,
+            "height": 506,
+            "center": 200.73691928042632
+          },
+          "placement": {
+            "left": 8,
+            "top": 8,
+            "width": 110,
+            "height": 176
+          }
+        },
+        {
+          "frame": 5,
+          "sourceBounds": {
+            "left": 55,
+            "top": 13,
+            "width": 271,
+            "height": 501,
+            "center": 197.51131824234355
+          },
+          "placement": {
+            "left": 14,
+            "top": 10,
+            "width": 94,
+            "height": 174
+          }
+        },
+        {
+          "frame": 6,
+          "sourceBounds": {
+            "left": 77,
+            "top": 15,
+            "width": 223,
+            "height": 499,
+            "center": 200.46627554435563
+          },
+          "placement": {
+            "left": 21,
+            "top": 10,
+            "width": 78,
+            "height": 174
+          }
+        },
+        {
+          "frame": 7,
+          "sourceBounds": {
+            "left": 53,
+            "top": 13,
+            "width": 295,
+            "height": 501,
+            "center": 201.97456934956935
+          },
+          "placement": {
+            "left": 12,
+            "top": 10,
+            "width": 103,
+            "height": 174
+          }
+        }
+      ]
+    },
+    "jump": {
+      "prompt": "Use case: identity-preserve.\nAsset type: production 2D game-style SPRITE SHEET for the supplied sculptural website character, NOT a scene or a single image.\nInput image 1 is the sole identity reference. Preserve this EXACT red-faced observer character: huge textured red sculptural face, long vivid BLUE upper eyelids and dark green lower lids, white dotted cheeks, yellow beads on pink piping, small grey stone mask with white wiry hair on top, orange-brown HUMAN arms and feet, black/white/green zebra hip form, blue gingham rounded thigh, yellow mesh-patterned other thigh. Rich tactile collage/3D sculpture textures matching reference, not a new cartoon. Same proportions and small-scale detail across EVERY frame. Exactly TWO arms and TWO legs throughout.\nMANDATORY LAYOUT: exactly EIGHT full-body animation frames, ordered left to right across row 1 then left to right across row 2. A precise regular grid of FOUR equal columns and TWO equal rows; each cell is portrait, approximately 2:3 width:height. Overall landscape canvas 4:3 aspect ratio. Same cell framing, same camera, same character scale, same invisible foot baseline around 94% of each cell. Full head, hands and feet inside every cell with transparent padding, never crossing tile boundaries. No characters between cells. Each cell contains ONE version of the character in a DIFFERENT pose of the same continuous animation. Do not repeat an identical pose in all cells.\nBackground must be TRUE TRANSPARENT ALPHA across whole sheet and every space between body parts. NO background, floor, shadows, grids, cell borders, dividers, labels, frame numbers, words, typography, props or scenery. Retain antialiased clean cutout edges. Keep eyes open in movement frames.\nANIMATION: eight DIFFERENT consecutive frames of ONE small playful JUMP, near-frontal view. Frame 1 relaxed standing; 2 bends knees and lowers hips, arms sweep slightly back in anticipation; 3 knees compress deeply ready to spring, heels about to leave floor; 4 pushes off, knees and arms extending; 5 airborne with both knees tucked and arms lifted out for balance; 6 starts descending with legs reaching down and arms balancing; 7 soft landing with visibly bent knees and spread hands; 8 returns to relaxed standing. Keep feet inside all tiles. The airborne pose must be clearly different from standing: legs tucked, both soles off the implied ground and body raised. Leave enough clear alpha padding above to include the entire head/hair during jump. No drawn ground line. All frames preserve this exact character, no added limbs.",
+      "cleanupPrompt": "Use case: background-extraction.\nEdit target: this exact supplied EIGHT-FRAME sprite sheet, FOUR columns × TWO rows.\nRemove ONLY the unwanted scattered red/orange speckles, red dust, red smears, colored haze and ghosty noise OUTSIDE the actual solid character silhouettes in all eight cells. Every pixel outside each actual physical body, clothing, hair, hands and feet must be alpha transparent, including gaps between limbs. Keep crisp antialiased cutout edges; do not leave a red aura or a background.\nCRITICAL: preserve every character pose, gait phase, face, colors, tactile materials, and limb exactly as drawn. Keep all eight frames in exactly the same cells and pixel positions on this same canvas. Do not recompose, resize, crop, alter the grid, change viewpoint or add frames. Do not remove red BODY material or any real fringe, beads, white hair, clothing, fingers or toes. Keep the entire silhouettes unchanged. This is purely a background-transparency cleanup. No floor, shadow, backdrop, text, grid lines or frame labels.",
+      "sourceImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-e3ae97c9-3f2a-47da-8a74-bc639f7b3121.png",
+      "cleanImage": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-fb2e072b-bab4-4e0b-929b-166c9f4f9671.png",
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-fb2e072b-bab4-4e0b-929b-166c9f4f9671.png",
+      "output": "public/media/motion/observer-jump.webp",
+      "scale": 0.3342618384401114,
+      "frames": [
+        {
+          "frame": 0,
+          "sourceBounds": {
+            "left": 19,
+            "top": 5,
+            "width": 305,
+            "height": 492,
+            "center": 191.67782167480053
+          },
+          "placement": {
+            "left": 6,
+            "top": 20,
+            "width": 102,
+            "height": 164
+          }
+        },
+        {
+          "frame": 1,
+          "sourceBounds": {
+            "left": 24,
+            "top": 32,
+            "width": 338,
+            "height": 465,
+            "center": 197.6313110913644
+          },
+          "placement": {
+            "left": 6,
+            "top": 29,
+            "width": 113,
+            "height": 155
+          }
+        },
+        {
+          "frame": 2,
+          "sourceBounds": {
+            "left": 28,
+            "top": 71,
+            "width": 334,
+            "height": 426,
+            "center": 192.73670852842076
+          },
+          "placement": {
+            "left": 9,
+            "top": 42,
+            "width": 112,
+            "height": 142
+          }
+        },
+        {
+          "frame": 3,
+          "sourceBounds": {
+            "left": 12,
+            "top": 0,
+            "width": 349,
+            "height": 491,
+            "center": 188.54408321498485
+          },
+          "placement": {
+            "left": 5,
+            "top": 20,
+            "width": 117,
+            "height": 164
+          }
+        },
+        {
+          "frame": 4,
+          "sourceBounds": {
+            "left": 3,
+            "top": 0,
+            "width": 359,
+            "height": 400,
+            "center": 188.3033837579618
+          },
+          "placement": {
+            "left": 2,
+            "top": 50,
+            "width": 120,
+            "height": 134
+          }
+        },
+        {
+          "frame": 5,
+          "sourceBounds": {
+            "left": 7,
+            "top": 9,
+            "width": 355,
+            "height": 452,
+            "center": 188.40176283295798
+          },
+          "placement": {
+            "left": 3,
+            "top": 33,
+            "width": 119,
+            "height": 151
+          }
+        },
+        {
+          "frame": 6,
+          "sourceBounds": {
+            "left": 5,
+            "top": 43,
+            "width": 357,
+            "height": 452,
+            "center": 188.28881132441342
+          },
+          "placement": {
+            "left": 3,
+            "top": 33,
+            "width": 119,
+            "height": 151
+          }
+        },
+        {
+          "frame": 7,
+          "sourceBounds": {
+            "left": 18,
+            "top": 11,
+            "width": 315,
+            "height": 486,
+            "center": 189.51061173533083
+          },
+          "placement": {
+            "left": 7,
+            "top": 22,
+            "width": 105,
+            "height": 162
+          }
+        }
+      ]
+    }
+  }
+}
