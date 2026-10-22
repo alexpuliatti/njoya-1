@@ -8,7 +8,7 @@ Run `npm run dev` from `njoya-studio`, then open `http://localhost:3000/motion`.
 
 ## First proof
 
-The first character grips a rope, braces, pulls the W in two movements, releases it and straightens its upper body into a more upright resting pose. Both feet stay planted at the end of BUILD during that finish, with no final hop. The torso and head share a transform anchored at the hips; the original artwork's bent legs stay in place. It is 20% larger than the first study; its soles track the actual tops of the BUILD letters across layouts. The other letters stay readable. Three clipped layers share one transparent 768 × 650 WebP (about 84 kB); GSAP drives the character, letter and rope on one timeline. No 3D model, new runtime dependency or video is required.
+The first character grips a rope, braces, pulls the W in two movements and releases it. After settling at the end of BUILD, it turns toward the viewer into separate, upright artwork with its green arm lowered and hands released. The right sole remains anchored to BUILD throughout the turn. The original pulling artwork is no longer stretched into a resting pose. It is 20% larger than the first study; its soles track the actual tops of the BUILD letters across layouts. The other letters stay readable. Three clipped layers share the original transparent 768 × 650 WebP; a second cutout supplies the new turned pose. GSAP drives the character, letter, rope and turn on one reversible timeline. No 3D model, new runtime dependency or video is required.
 
 The home card keeps its mobile two-line heading. Reduced motion and image failure show the complete, still headline. Browser visibility pauses the timeline. All decorative pieces are hidden from assistive technology.
 
@@ -26,4 +26,4 @@ Final cleanup prompt:
 
 ## Next art pass
 
-This is a first movement study. Refine joint masks and make dedicated hand/leg poses before extending to the full phrase and second character.
+The current motion branch adds dedicated resting artwork for both the builder and explorer. Their action images remain unchanged. Each character turns through profile with a short artwork blend, then stays in its new pose. The explorer completes its return beside S before turning; the narrower new silhouette is positioned using its visible bounds. Both action and resting images load before playback. Exact built-in image_gen prompts and canvas preparation are saved in `docs/character-rest-prompts.json`.

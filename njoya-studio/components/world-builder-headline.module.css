@@ -63,8 +63,12 @@
   object-fit: contain;
 }
 
-.upperBody {
-  transform-origin: 70% 76%;
+.pose {
+  transform-origin: 81% 96%;
+}
+
+.restPose {
+  opacity: 0;
 }
 
 .torso {
