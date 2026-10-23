@@ -1,14 +1,19 @@
-/** Exchange action/rest artwork while the character turns through profile. */
-export function drawCharacterTurn(
+/** Select an actual turn pose from a twelve-frame horizontal sprite strip. */
+export function drawCharacterTurnFrames(
   action: HTMLElement,
-  rest: HTMLElement,
+  sequence: HTMLElement,
+  strip: HTMLElement,
   progress: number,
 ) {
   const turn = Math.max(0, Math.min(1, progress));
-  const blend = Math.max(0, Math.min(1, (turn - 0.4) / 0.2));
+  const frame = Math.min(11, Math.floor(turn * 12));
 
-  action.style.opacity = String(1 - blend);
-  rest.style.opacity = String(blend);
-  action.style.transform = `perspective(8em) rotateY(${-72 * Math.min(1, turn / 0.6)}deg)`;
-  rest.style.transform = `perspective(8em) rotateY(${72 * Math.min(1, (1 - turn) / 0.6)}deg)`;
+  // Ease the original rig into the first drawn pose over one frame only.
+  const handoff = Math.min(1, turn * 12);
+
+  action.style.opacity = String(1 - handoff);
+  sequence.style.opacity = String(handoff);
+  action.style.removeProperty("transform");
+  sequence.style.removeProperty("transform");
+  strip.style.transform = `translate3d(${(-frame * 100) / 12}%, 0, 0)`;
 }
