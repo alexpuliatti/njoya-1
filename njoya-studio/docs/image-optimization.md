@@ -29,6 +29,19 @@ These are full-size files, not the bytes downloaded by every visitor. The browse
 
 The finished library has 165 AVIF selections and 650 WebP selections. All responsive variants and fallbacks occupy 569.1 MB; the complete static export is 615.7 MB, below [GitHub Pages' published-site limit](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits). The selected originals total 2.16 GB, while the preferred full-size outputs total 296.5 MB. These storage totals include the whole portfolio, rather than a single page load.
 
+## Lab process galleries
+
+The nineteen Brides de Galaxy sketches, making photographs and result photographs
+use a lighter, source-specific `web` profile: WebP quality 80, a maximum width of
+1920px, and responsive candidates at 480, 960 and 1440px where the original permits.
+The original files are retained privately and are never enlarged. The source
+manifest preserves this choice when regenerating media; new uploads can opt in
+with `npm run media:add -- "/path/to/image.jpg" --alt "Description" --web`.
+
+The popup supplies image sizes matching its actual width, mounts its galleries
+only when opened, and uses lazy loading and asynchronous decoding. Superseded
+derivatives are archived outside the public directory.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.

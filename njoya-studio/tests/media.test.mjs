@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { prepareImage } from "../scripts/media-pipeline.mjs";
+import { prepareImage, WEB_PROFILE_ID } from "../scripts/media-pipeline.mjs";
 
 // Exercise the upload pipeline with a real EXIF-rotated source. This catches
 // upscaling, lost orientation and profiles that disagree with encoded bytes.
@@ -43,6 +43,41 @@ test("responsive uploads preserve orientation, avoid upscaling, and provide a va
         .format,
       "webp",
     );
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});
+
+test("web gallery uploads cap large originals and retain responsive WebP candidates", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "njoya-gallery-test-"));
+  try {
+    await sharp({
+      create: { width: 2400, height: 1600, channels: 3, background: "#c85091" },
+    })
+      .png()
+      .toFile(path.join(root, "gallery.png"));
+    const media = await prepareImage({
+      id: "gallery-test",
+      entry: { localSource: "gallery.png", profile: "web" },
+      root,
+      temporary: root,
+    });
+    assert.equal(media.format, "webp");
+    assert.equal(media.width, 2400);
+    assert.equal(media.height, 1600);
+    assert.deepEqual(
+      media.variants.map((variant) => variant.width),
+      [480, 960, 1440, 1920],
+    );
+    assert.ok(media.signature.startsWith(`${WEB_PROFILE_ID}:`));
+    for (const variant of media.variants) {
+      const file = path.join(root, "public", variant.src);
+      const metadata = await sharp(file).metadata();
+      assert.equal(metadata.format, "webp");
+      assert.equal(metadata.width, variant.width);
+      assert.equal(metadata.height, Math.round((variant.width * 2) / 3));
+      assert.equal((await fs.stat(file)).size, variant.bytes);
+    }
   } finally {
     await fs.rm(root, { recursive: true, force: true });
   }

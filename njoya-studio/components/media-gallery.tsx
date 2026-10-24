@@ -9,9 +9,11 @@ import { muxPlaybackUrl, muxThumbnail } from "@/lib/mux";
 export default function MediaGallery({
   entries,
   maxWidth = 780,
+  sizes = `(max-width: 767px) calc(100vw - 48px), ${maxWidth}px`,
 }: {
   entries: GalleryEntry[];
   maxWidth?: number;
+  sizes?: string;
 }) {
   if (!entries.length) return null;
 
@@ -37,7 +39,7 @@ export default function MediaGallery({
                 alt={entry.alt}
                 height={entry.height}
                 image={entry}
-                sizes={`(max-width: 767px) calc(100vw - 48px), ${maxWidth}px`}
+                sizes={sizes}
                 src={assetPath(entry.src)}
                 width={entry.width}
               />

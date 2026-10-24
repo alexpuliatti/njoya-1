@@ -7,6 +7,7 @@ import {
   MEDIA_PROFILE,
   PROFILE_ID,
   prepareImage,
+  profileIdForSource,
   migrateImageReferences,
 } from "./media-pipeline.mjs";
 
@@ -64,7 +65,7 @@ try {
             : path.join(sourceRoot, entry.file);
           const stat = await fs.stat(source);
           const cached = manifest.images[id];
-          const signature = `${PROFILE_ID}:${stat.size}:${stat.mtimeMs}`;
+          const signature = `${profileIdForSource(entry)}:${stat.size}:${stat.mtimeMs}`;
           const files = cached
             ? [
                 ...new Set([

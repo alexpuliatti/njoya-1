@@ -21,8 +21,12 @@ export default async function LabPage() {
           an idea.
         </h1>
         <p>
-          A space for the questions, materials, sketches and experiments that
-          shape our practice.
+          Our studio explores the creative direction of worlds where ideas come
+          to life. The process always begins with a narrative - a story that
+          engages our thoughts and feelings. From this foundation, we use memory,
+          colour, texture, materials, forms, and sound to shape the identity and
+          atmosphere of each project. Here, we share a glimpse into our process,
+          creative explorations, and final outcomes.
         </p>
       </header>
       {entries.length ? (

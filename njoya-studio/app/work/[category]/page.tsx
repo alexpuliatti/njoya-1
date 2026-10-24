@@ -52,15 +52,23 @@ export default async function CategoryPage({
           <ArrowLeft size={15} /> All work
         </Link>
         <p>
-          {selected.length} projects <span>· Newest first</span>
+          {selected.length} projects
+          {selected.length > 0 ? <span> · Newest first</span> : null}
         </p>
       </div>
-      <NjoyaCarousel
-        items={selected.map((work) =>
-          toCarouselItem(work, categories, site.videoPlaybackEnabled),
-        )}
-        label={category.title}
-      />
+      {selected.length ? (
+        <NjoyaCarousel
+          items={selected.map((work) =>
+            toCarouselItem(work, categories, site.videoPlaybackEnabled),
+          )}
+          label={category.title}
+        />
+      ) : (
+        <section className="empty-state">
+          <h1>{category.title}</h1>
+          <p>New projects coming soon.</p>
+        </section>
+      )}
     </>
   );
 }

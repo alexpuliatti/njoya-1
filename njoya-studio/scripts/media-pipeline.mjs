@@ -15,12 +15,26 @@ export const MEDIA_PROFILE = {
 };
 export const PROFILE_ID = `p${createHash("sha1").update(JSON.stringify(MEDIA_PROFILE)).digest("hex").slice(0, 7)}`;
 
+// A smaller, broadly supported profile for long, scrollable process galleries.
+export const WEB_MEDIA_PROFILE = {
+  ...MEDIA_PROFILE,
+  maxWidth: 1920,
+  widths: [480, 960, 1440],
+  webp: { quality: 80, effort: 6 },
+  format: "webp",
+};
+export const WEB_PROFILE_ID = `p${createHash("sha1").update(JSON.stringify(WEB_MEDIA_PROFILE)).digest("hex").slice(0, 7)}`;
+export const profileIdForSource = (entry) =>
+  entry.profile === "web" ? WEB_PROFILE_ID : PROFILE_ID;
+
 export async function prepareImage({ id, entry, root, sourceRoot, temporary }) {
+  const profile = entry.profile === "web" ? WEB_MEDIA_PROFILE : MEDIA_PROFILE;
+  const profileId = profileIdForSource(entry);
   const source = entry.localSource
     ? path.join(root, entry.localSource)
     : path.join(sourceRoot, entry.file);
   const stat = await fs.stat(source);
-  const signature = `${PROFILE_ID}:${stat.size}:${stat.mtimeMs}`;
+  const signature = `${profileId}:${stat.size}:${stat.mtimeMs}`;
   const output = path.join(root, "public/media/images");
   await fs.mkdir(output, { recursive: true });
   let decoded;
@@ -42,23 +56,23 @@ export async function prepareImage({ id, entry, root, sourceRoot, temporary }) {
       .toBuffer({ resolveWithObject: true });
   }
   const { width, height, channels } = decoded.info;
-  const fullWidth = Math.min(width, MEDIA_PROFILE.maxWidth);
+  const fullWidth = Math.min(width, profile.maxWidth);
   const pipeline = (size) =>
     sharp(decoded.data, { raw: { width, height, channels } }).resize({
       width: size,
       withoutEnlargement: true,
     });
-  const fullWebp = await pipeline(fullWidth)
-    .webp(MEDIA_PROFILE.webp)
-    .toBuffer();
-  const fullAvif = await pipeline(fullWidth)
-    .avif(MEDIA_PROFILE.avif)
-    .toBuffer();
+  const fullWebp = await pipeline(fullWidth).webp(profile.webp).toBuffer();
+  const fullAvif =
+    profile.format === "webp"
+      ? null
+      : await pipeline(fullWidth).avif(profile.avif).toBuffer();
   const format =
-    fullAvif.length <= fullWebp.length * (1 - MEDIA_PROFILE.minimumAvifSaving)
+    fullAvif &&
+    fullAvif.length <= fullWebp.length * (1 - profile.minimumAvifSaving)
       ? "avif"
       : "webp";
-  const prefix = `${id}-${PROFILE_ID}`;
+  const prefix = `${id}-${profileId}`;
   const fallback = {
     src: `/media/images/${prefix}.webp`,
     width: fullWidth,
@@ -72,7 +86,7 @@ export async function prepareImage({ id, entry, root, sourceRoot, temporary }) {
   await write(fallback.src, fullWebp);
   const variants = [];
   for (const size of [
-    ...MEDIA_PROFILE.widths.filter((size) => size < fullWidth),
+    ...profile.widths.filter((size) => size < fullWidth),
     fullWidth,
   ]) {
     const src = `/media/images/${prefix}${size === fullWidth ? "" : `-${size}`}.${format}`;
@@ -81,7 +95,7 @@ export async function prepareImage({ id, entry, root, sourceRoot, temporary }) {
         ? format === "avif"
           ? fullAvif
           : fullWebp
-        : await pipeline(size)[format](MEDIA_PROFILE[format]).toBuffer();
+        : await pipeline(size)[format](profile[format]).toBuffer();
     if (src !== fallback.src) await write(src, data);
     variants.push({ src, width: size, bytes: data.length });
   }

@@ -1,0 +1,85 @@
+.introduction {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(28px, 4vw, 64px);
+  padding: clamp(24px, 3vw, 40px) 24px 48px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(25px, 2.5vw, 34px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.35;
+}
+
+.title span {
+  display: block;
+}
+
+.brief {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(23px, 2.2vw, 28px);
+  line-height: 1.45;
+}
+
+.gallery {
+  padding: 0 24px 24px;
+}
+
+.processSection {
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  margin: 0 0 28px;
+  font-size: clamp(23px, 2.5vw, 30px);
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.25;
+}
+
+.imageRows {
+  display: grid;
+  gap: 24px;
+}
+
+.imageRow {
+  display: grid;
+  grid-template-columns: var(--image-columns);
+  align-items: start;
+  gap: 24px;
+}
+
+.imageRow :global(.media-gallery) {
+  display: block;
+  min-width: 0;
+  margin: 0;
+}
+
+.imageRow :global(.media-gallery figure) {
+  width: 100%;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .introduction {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    padding: 24px 16px 32px;
+  }
+
+  .brief {
+    font-size: 23px;
+  }
+
+  .gallery {
+    padding: 0 16px 16px;
+  }
+
+  .imageRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
