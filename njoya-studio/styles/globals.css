@@ -1509,26 +1509,31 @@ html[data-njoya-intro="skip"] .intro-overlay {
 .category-browser-footer > div {
   display: flex;
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .category-card {
+    flex-basis: calc((100% - 30px) / 2);
+    aspect-ratio: 3 / 4;
+  }
+}
+@media (min-width: 1024px) {
   .studio-main:has(> .category-stage) {
-    height: calc(100svh - 112px);
+    height: auto;
     min-height: 0;
     padding-bottom: 0;
   }
   .category-stage {
     --category-card-width: min(
-      calc(22.8vw - 18px),
-      calc((100svh - 168px) * 0.75)
+      calc((91.2vw - (var(--category-count) - 1) * 24px) / var(--category-count)),
+      calc(max(240px, 100svh - 230px) * 0.75)
     );
-    height: 100%;
-    min-height: 0;
+    min-height: calc(100svh - 174px);
     padding: 24px 4.4vw 32px;
   }
   .category-track {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(var(--category-count), minmax(0, 1fr));
     flex: 0 0 auto;
-    width: calc(var(--category-card-width) * 4 + 72px);
+    width: calc(var(--category-card-width) * var(--category-count) + (var(--category-count) - 1) * 24px);
     align-self: center;
     min-height: 0;
     gap: 24px;
@@ -1557,6 +1562,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
     font-size: clamp(14px, calc(var(--category-card-width) * 0.078), 32px);
   }
   .category-description {
+    min-height: 3.3em;
     font-size: clamp(10px, calc(var(--category-card-width) * 0.032), 12px);
   }
   .category-browser-footer {
