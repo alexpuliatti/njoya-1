@@ -42,6 +42,12 @@ The popup supplies image sizes matching its actual width, mounts its galleries
 only when opened, and uses lazy loading and asynchronous decoding. Superseded
 derivatives are archived outside the public directory.
 
+Lab galleries use two equal columns with matching 4:3 image tiles, capped at
+360px high. Portraits and final unpaired images keep the same tile size. Photos
+fill their tiles with a centred crop; sketches fit in full on a white background.
+Phone layouts use one column with the same height cap. Responsive image sizes
+account for the photo crop rather than requesting full-width gallery images.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.

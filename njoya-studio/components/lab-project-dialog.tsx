@@ -1,9 +1,10 @@
 "use client";
 
-import type { CSSProperties } from "react";
 import type { ContentImage, LabEntry } from "@/lib/content/types";
 
 import { useId } from "react";
+
+import { coverSize } from "@/lib/image-sources";
 
 import styles from "./lab-project-dialog.module.css";
 import MediaGallery from "./media-gallery";
@@ -13,43 +14,29 @@ import {
   StudioDialogPanel,
 } from "./ui/studio-dialog";
 
-function LabImageGallery({ images }: { images: ContentImage[] }) {
-  const rows = Array.from(
-    { length: Math.ceil(images.length / 2) },
-    (_, index) => images.slice(index * 2, index * 2 + 2),
-  );
+function LabImageGallery({
+  images,
+  sketches = false,
+}: {
+  images: ContentImage[];
+  sketches?: boolean;
+}) {
+  const mobileWidth = "calc(100vw - 58px)";
+  const desktopWidth = "min(calc((100vw - 130px) / 2), 553px)";
+  const imageSize = (width: string, image: ContentImage) =>
+    sketches
+      ? width
+      : coverSize(width, `min(calc((${width}) * 0.75), 360px)`, image);
 
   return (
-    <div className={styles.imageRows}>
-      {rows.map((row) => {
-        const ratios = row.map((image) => image.width / image.height);
-        const total = ratios.reduce((sum, ratio) => sum + ratio, 0);
-
-        return (
-          <div
-            key={row[0].src}
-            className={styles.imageRow}
-            style={
-              {
-                "--image-columns": ratios
-                  .map((ratio) => `${ratio}fr`)
-                  .join(" "),
-              } as CSSProperties
-            }
-          >
-            {row.map((image, index) => {
-              const fraction = ratios[index] / total;
-              const available = row.length === 1 ? 1130 : 1106;
-              const inset = row.length === 1 ? 106 : 130;
-              const sizes = `(max-width: 767px) calc(100vw - 58px), min(calc((100vw - ${inset}px) * ${fraction}), ${available * fraction}px)`;
-
-              return (
-                <MediaGallery key={image.src} entries={[image]} sizes={sizes} />
-              );
-            })}
-          </div>
-        );
-      })}
+    <div className={`${styles.imageGrid} ${sketches ? styles.sketches : ""}`}>
+      {images.map((image) => (
+        <MediaGallery
+          key={image.src}
+          entries={[image]}
+          sizes={`(max-width: 767px) ${imageSize(mobileWidth, image)}, ${imageSize(desktopWidth, image)}`}
+        />
+      ))}
     </div>
   );
 }
@@ -95,7 +82,7 @@ export default function LabProjectDialog({
             <h3 className={styles.sectionTitle} id={sketchesTitleId}>
               Conceptual sketches
             </h3>
-            <LabImageGallery images={project.sketches} />
+            <LabImageGallery sketches images={project.sketches} />
           </section>
         ) : null}
         {project.making?.length ? (
