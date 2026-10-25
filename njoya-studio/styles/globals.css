@@ -595,13 +595,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
   line-height: 1.65;
   color: #e1d7ca;
 }
-.category-count {
-  margin-top: 10px;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: #d2c5b7;
-}
 .browse-hint {
   text-align: right;
   margin-top: 25px;

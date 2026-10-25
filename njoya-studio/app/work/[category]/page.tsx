@@ -51,10 +51,6 @@ export default async function CategoryPage({
         <Link className="text-button" href="/work">
           <ArrowLeft size={15} /> All work
         </Link>
-        <p>
-          {selected.length} projects
-          {selected.length > 0 ? <span> · Newest first</span> : null}
-        </p>
       </div>
       {selected.length ? (
         <NjoyaCarousel
