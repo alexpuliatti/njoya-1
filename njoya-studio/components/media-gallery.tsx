@@ -22,16 +22,19 @@ export default function MediaGallery({
       {entries.map((entry, index) => (
         <figure
           key={`${entry.type}-${index}`}
-          className={entry.type === "synopsis" ? "synopsis-media" : undefined}
+          className={entry.type === "synopsis" ? "synopsis-media" : entry.type === "video" && "src" in entry ? "film-media" : undefined}
         >
           {entry.type === "video" ? (
             <StudioVideo
               controls
               playsInline
               aria-label={entry.alt}
-              poster={muxThumbnail(entry.playbackId)}
+              height={"src" in entry ? entry.poster.height : undefined}
+              muted={false}
+              poster={"src" in entry ? assetPath(entry.poster.src) : muxThumbnail(entry.playbackId)}
               preload="none"
-              src={muxPlaybackUrl(entry.playbackId)}
+              src={"src" in entry ? assetPath(entry.src) : muxPlaybackUrl(entry.playbackId)}
+              width={"src" in entry ? entry.poster.width : undefined}
             />
           ) : (
             <>

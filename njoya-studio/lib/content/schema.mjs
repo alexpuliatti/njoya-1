@@ -37,13 +37,23 @@ export const imageSchema = z
     caption: z.string().optional(),
   })
   .strict();
-export const videoSchema = z
+const localVideoPath = z.string().regex(/^\/media\/videos\/[a-zA-Z0-9_-]+\.mp4$/);
+const muxVideoSchema = z
   .object({
     type: z.literal("video"),
     playbackId: z.string().min(1),
     alt: z.string().min(1),
   })
   .strict();
+export const localVideoSchema = z
+  .object({
+    type: z.literal("video"),
+    src: localVideoPath,
+    poster: imageSchema,
+    alt: z.string().min(1),
+  })
+  .strict();
+export const videoSchema = z.union([muxVideoSchema, localVideoSchema]);
 export const creditSchema = z
   .object({
     role: z.string().min(1),
@@ -71,6 +81,7 @@ export const workSchema = z
     kind: z.enum(["edition", "design-project"]),
     cover: imageSchema,
     coverVideoPlaybackId: z.string().optional(),
+    previewVideoSrc: localVideoPath.optional(),
     gallery: z.array(z.union([imageSchema, videoSchema])),
     credits: z.array(creditSchema),
     tags: z.array(z.string()),

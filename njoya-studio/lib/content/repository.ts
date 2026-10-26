@@ -181,8 +181,9 @@ export function toCarouselItem(
     gallery: media.gallery,
     metadata: workMetadata(work),
     coverVideoPlaybackId: media.coverVideoPlaybackId,
+    previewVideoSrc: work.previewVideoSrc,
     galleryVideoPlaybackIds: media.gallery.flatMap((entry) =>
-      entry.type === "video" ? [entry.playbackId] : [],
+      entry.type === "video" && "playbackId" in entry ? [entry.playbackId] : [],
     ),
   };
 }
@@ -193,7 +194,7 @@ export function workMedia(work: Work, videoPlaybackEnabled = false) {
       : undefined,
     gallery: videoPlaybackEnabled
       ? work.gallery
-      : work.gallery.filter((entry) => entry.type !== "video"),
+      : work.gallery.filter((entry) => entry.type !== "video" || "src" in entry),
   };
 }
 export const getSearchIndex = cache(async (): Promise<SearchItem[]> => {

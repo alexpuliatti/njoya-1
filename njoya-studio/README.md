@@ -115,11 +115,22 @@ The studio designs these cards as images. Add the image normally, then set its `
 
 Replace the example paths with actual generated files. Place the object at the intended point in `gallery`. Both direct project pages and the animated detail panel preserve this order.
 
-## Videos (pending assets)
+## Videos
 
-`videoPlaybackEnabled` is `false` in `content/site.json`. Cover films display their local cover image, and video gallery entries are omitted. Existing playback references remain in the project files for future use. The current site makes no video-provider requests.
+Prepared MP4 files in `public/media/videos/` are served directly with the GitHub Pages export. Gallery films have native playback controls, local posters, preserved audio and `preload="none"`. A work can provide a small silent `previewVideoSrc` for its desktop hover preview; touch and reduced-motion visitors retain the still cover and open the project to play its films.
 
-Once the actual files are supplied, local video serving can be added alongside the local image setup. The export alone cannot supply those files. Optional Mux support is retained in code; enabling `videoPlaybackEnabled` would instead use those external streams and should only be done after confirming their availability. The preserved reference format is:
+Use a prepared image object for the poster, just as for a project cover:
+
+```json
+{
+  "type": "video",
+  "src": "/media/videos/project-film.mp4",
+  "poster": { "type": "image", "src": "/media/images/PREPARED.webp", "previewSrc": "/media/images/PREPARED-480.webp", "alt": "Film poster", "width": 1080, "height": 1920 },
+  "alt": "Describe the project film"
+}
+```
+
+`videoPlaybackEnabled` remains `false` in `content/site.json` for the unavailable legacy Mux references. Local films work independently of that setting. The current site makes no video-provider requests. The preserved remote format is:
 
 ```json
 {

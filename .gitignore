@@ -3,4 +3,6 @@ NJOYA STUDIOS VIRTUAL WOLRDS ( WEBSITE, SOCIALS) -(2026).pdf
 
 # Local source artwork; publish the prepared assets in njoya-studio/public.
 /additional material/
+# Incoming motion sources; publish only prepared assets under public/media.
+/motion/
 .DS_Store

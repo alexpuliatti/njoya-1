@@ -5128,5 +5128,37 @@
     "profile": "web",
     "width": 1024,
     "height": 724
+  },
+  "cd898e14219d6c1388089a7221d04785a06a7904": {
+    "file": "COVER IMAGE.jpg",
+    "localSource": "media/originals/cd898e14219d6c1388089a7221d04785a06a7904.jpg",
+    "originalFilename": "COVER IMAGE.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1350
+  },
+  "b2a97824a5ebd48199462b57e72ab0f4964045ea": {
+    "file": "film-01.jpg",
+    "localSource": "media/originals/b2a97824a5ebd48199462b57e72ab0f4964045ea.jpg",
+    "originalFilename": "film-01.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1920
+  },
+  "402178268e7188ab0a26f919f33ed1d3f03f3b95": {
+    "file": "film-02.jpg",
+    "localSource": "media/originals/402178268e7188ab0a26f919f33ed1d3f03f3b95.jpg",
+    "originalFilename": "film-02.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1920
+  },
+  "dd1e64676f80b818d68e6d661a0f5d5dccf2fee8": {
+    "file": "film-03.jpg",
+    "localSource": "media/originals/dd1e64676f80b818d68e6d661a0f5d5dccf2fee8.jpg",
+    "originalFilename": "film-03.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1920
   }
 }

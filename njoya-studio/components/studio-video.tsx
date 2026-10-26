@@ -15,12 +15,9 @@ const StudioVideo = forwardRef<
   useEffect(() => {
     const video = videoRef.current;
 
-    if (!video || !src) return;
-    if (!src.includes(".m3u8")) {
-      video.src = src;
-
-      return;
-    }
+    // Native MP4 playback is owned by the rendered src attribute. Reassigning
+    // it in an effect restarts loading, especially during hydration/refresh.
+    if (!video || !src?.includes(".m3u8")) return;
     let cancelled = false;
     let destroy: (() => void) | undefined;
 
@@ -51,7 +48,14 @@ const StudioVideo = forwardRef<
     };
   }, [src]);
 
-  return <video ref={videoRef} muted {...props} />;
+  return (
+    <video
+      ref={videoRef}
+      muted
+      {...props}
+      src={src?.includes(".m3u8") ? undefined : src}
+    />
+  );
 });
 
 export default StudioVideo;

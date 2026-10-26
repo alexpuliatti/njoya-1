@@ -69,7 +69,12 @@ export default function NjoyaCarouselCard({
   const hasPrefetchedRef = useRef(false);
   const hasPreloadedHeroRef = useRef(false);
 
-  const hasVideo = !!item.coverVideoPlaybackId;
+  const videoSource = item.previewVideoSrc
+    ? assetPath(item.previewVideoSrc)
+    : item.coverVideoPlaybackId
+      ? muxPlaybackUrl(item.coverVideoPlaybackId)
+      : undefined;
+  const hasVideo = !!videoSource;
 
   /* ── Reset to base ─────────────────────────────────── */
   const resetHover = useCallback(() => {
@@ -180,11 +185,30 @@ export default function NjoyaCarouselCard({
     [],
   );
 
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const pauseWhenHidden = () => {
+      if (document.hidden) video.pause();
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) video.pause();
+    });
+    observer.observe(video);
+    document.addEventListener("visibilitychange", pauseWhenHidden);
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", pauseWhenHidden);
+      video.pause();
+    };
+  }, [hasVideo]);
+
   /* ── Click: launch detail panel ────────────────────── */
   const handleClick = (instant = false) => {
     if (!imgRef.current) return;
     isLaunchingRef.current = true;
     hoverTl.current?.kill();
+    videoRef.current?.pause();
     // Always pass the <img> — the panel clones the still poster,
     // which is what was visible (or about to be visible) anyway.
     onClick({
@@ -253,8 +277,10 @@ export default function NjoyaCarouselCard({
             muted
             playsInline
             className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
-            preload="metadata"
-            src={muxPlaybackUrl(item.coverVideoPlaybackId!)}
+            aria-hidden="true"
+            preload="none"
+            src={videoSource}
+            tabIndex={-1}
             style={{ opacity: 0, borderRadius: "var(--studio-radius)" }}
           />
         )}

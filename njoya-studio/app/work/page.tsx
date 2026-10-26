@@ -24,16 +24,7 @@ export default async function WorkPage() {
   return (
     <CategoryBrowser categoryCount={categories.length}>
       {categories.map((category, index) => {
-        const cover = category.id === "motion"
-          ? {
-              type: "image" as const,
-              src: "/images/motion-placeholder.svg",
-              previewSrc: "/images/motion-placeholder.svg",
-              alt: "Abstract overlapping frames — Motion placeholder",
-              width: 600,
-              height: 800,
-            }
-          : works.find((work) => work.id === category.coverWorkId)?.cover;
+        const cover = works.find((work) => work.id === category.coverWorkId)?.cover;
         return (
           <Link
             key={category.id}
