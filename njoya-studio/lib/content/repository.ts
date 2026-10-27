@@ -137,21 +137,11 @@ export const getLabEntries = cache(
 );
 
 export function workMetadata(work: Work) {
-  const dateLabel =
-    work.date?.length === 7
-      ? new Intl.DateTimeFormat("en-GB", {
-          month: "long",
-          year: "numeric",
-          timeZone: "UTC",
-        }).format(new Date(`${work.date}-01T00:00:00Z`))
-      : work.date;
-
   return [
     ...(work.client
       ? [{ label: "Client / publication", value: work.client }]
       : []),
     ...creditsToMetadata(work),
-    ...(dateLabel ? [{ label: "Date", value: dateLabel }] : []),
   ];
 }
 export function toCarouselItem(
