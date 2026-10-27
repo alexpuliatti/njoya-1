@@ -24965,35 +24965,35 @@
       "sourceBytes": 21382688
     },
     "b0b16411b07c5f883837f206b94b801ed8c622e4": {
-      "signature": "pf257cef:6139448:1793728113458.31",
+      "signature": "pe8c9d63:6139448:1793879013409.6978",
       "width": 8205,
       "height": 4923,
       "format": "webp",
       "fallback": {
-        "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pf257cef.webp",
-        "width": 2560,
-        "bytes": 551984
+        "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pe8c9d63.webp",
+        "width": 1920,
+        "bytes": 234832
       },
       "variants": [
         {
-          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pf257cef-480.webp",
+          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pe8c9d63-480.webp",
           "width": 480,
-          "bytes": 38052
+          "bytes": 27874
         },
         {
-          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pf257cef-960.webp",
+          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pe8c9d63-960.webp",
           "width": 960,
-          "bytes": 114382
+          "bytes": 81166
         },
         {
-          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pf257cef-1600.webp",
-          "width": 1600,
-          "bytes": 264012
+          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pe8c9d63-1440.webp",
+          "width": 1440,
+          "bytes": 152800
         },
         {
-          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pf257cef.webp",
-          "width": 2560,
-          "bytes": 551984
+          "src": "/media/images/b0b16411b07c5f883837f206b94b801ed8c622e4-pe8c9d63.webp",
+          "width": 1920,
+          "bytes": 234832
         }
       ],
       "sourceBytes": 6139448
