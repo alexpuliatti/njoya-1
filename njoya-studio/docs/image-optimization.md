@@ -64,6 +64,20 @@ Full films use native controls and do not preload their video data. The card
 preview loads on desktop hover, pauses on leave, when off-screen, and when the
 tab is hidden. Reduced-motion and touch users get the supplied still cover.
 
+## CHANEL motion film
+
+The existing Chanel Mother's Day project is shared between Commercials and
+Motion. All five supplied still images matched the original SHA-1 source IDs,
+so their prepared images and existing references are reused. The supplied
+1280×478 HEVC MOV is converted to H.264 CRF 18 at the original resolution and
+frame timing, with `-an` removing the audio track entirely and `+faststart`
+placing movie metadata before the media. It is 1,842,008 bytes, compared with
+5,008,874 bytes for the MOV. Range-normalized SSIM against the source is 0.996077.
+The eight-second silent hover preview is 429,088 bytes. The film poster is a
+prepared frame from the video. Encoding details and source mapping are in
+`content/chanel-video-assets.json`. Tests inspect MP4 track handlers directly
+to ensure that neither published file contains an audio track.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.
