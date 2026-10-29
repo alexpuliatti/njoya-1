@@ -60,6 +60,16 @@ test("published work and collections have valid local media and legacy links", (
     content.works.length,
   );
 });
+test("category cards use separate optimized images with the project cover framing", () => {
+  for (const category of content.categories) {
+    const work = content.works.find((work) => work.id === category.coverWorkId);
+    assert.ok(category.cover, `${category.id} has a dedicated card image`);
+    assert.notEqual(category.cover.src, work.cover.src);
+    assert.equal(category.cover.width, work.cover.width);
+    assert.equal(category.cover.height, work.cover.height);
+    assert.equal(category.cover.alt, work.cover.alt);
+  }
+});
 test("credit search finds Rihanna across different publications", () => {
   const results = content.works.filter((work) =>
     matchesSearch(searchable(work), "Rihanna"),

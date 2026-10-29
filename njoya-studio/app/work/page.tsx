@@ -24,7 +24,10 @@ export default async function WorkPage() {
   return (
     <CategoryBrowser categoryCount={categories.length}>
       {categories.map((category, index) => {
-        const cover = works.find((work) => work.id === category.coverWorkId)?.cover;
+        const cover =
+          category.cover ??
+          works.find((work) => work.id === category.coverWorkId)?.cover;
+
         return (
           <Link
             key={category.id}
