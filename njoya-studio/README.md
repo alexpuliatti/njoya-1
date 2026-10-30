@@ -127,7 +127,7 @@ Once the actual files are supplied, local video serving can be added alongside t
 
 All four slots now point to published projects. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
 
-The homepage intro uses `public/media/brand/njoya-intro.webp`, prepared from the supplied logo artwork. It plays once per browser-tab session, then reveals the homepage with an upward screen wipe. Skip/Escape dismiss it immediately; reduced-motion visitors go straight to the page. The session key and pre-hydration check are in `lib/intro.ts`.
+The homepage intro uses `public/media/brand/njoya-intro.webp`, prepared from the supplied logo artwork. It plays once per browser-tab session, then reveals the homepage with an upward screen wipe. It finishes automatically without a visible skip button; Escape dismisses it immediately, and reduced-motion visitors go straight to the page. The session key and pre-hydration check are in `lib/intro.ts`.
 
 ## Add a Lab entry
 

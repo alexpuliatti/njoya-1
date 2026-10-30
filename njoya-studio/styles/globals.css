@@ -488,18 +488,6 @@ html[data-njoya-intro="skip"] .intro-overlay {
   from { opacity: 0; transform: translate3d(0, 20px, 0); }
   to { opacity: 1; transform: none; }
 }
-.intro-skip {
-  position: absolute;
-  bottom: 20px;
-  border: 0;
-  border-bottom: 1px solid var(--studio-line);
-  background: transparent;
-  color: var(--studio-muted);
-  font-size: 11px;
-  padding: 12px;
-  min-height: 44px;
-  cursor: pointer;
-}
 .category-stage {
   padding: 24px 4.4vw 70px;
   min-height: calc(100svh - 212px);
@@ -1202,12 +1190,13 @@ html[data-njoya-intro="skip"] .intro-overlay {
     gap: 18px;
   }
   .category-card {
-    height: clamp(400px, 62svh, 650px);
+    height: auto;
+    aspect-ratio: 3 / 4;
     flex-basis: 86%;
     min-width: 0;
   }
   .category-name {
-    font-size: 30px;
+    font-size: clamp(20px, 6.5vw, 30px);
   }
   .listing-heading {
     padding: 10px 24px 0;
@@ -1380,6 +1369,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
     padding-bottom: 0;
   }
   .category-stage {
+    --category-card-width: min(calc(22.8vw - 18px), calc((100svh - 168px) * 0.75));
     height: 100%;
     min-height: 0;
     padding: 24px 4.4vw 32px;
@@ -1387,7 +1377,9 @@ html[data-njoya-intro="skip"] .intro-overlay {
   .category-track {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    flex: 1;
+    flex: 0 0 auto;
+    width: calc(var(--category-card-width) * 4 + 72px);
+    align-self: center;
     min-height: 0;
     gap: 24px;
     padding-bottom: 0;
@@ -1395,25 +1387,27 @@ html[data-njoya-intro="skip"] .intro-overlay {
     scroll-snap-type: none;
   }
   .category-card {
+    aspect-ratio: 3 / 4;
     height: auto;
     min-width: 0;
     min-height: 0;
   }
   .category-card-info {
-    left: clamp(14px, 1.4vw, 24px);
-    right: clamp(14px, 1.4vw, 24px);
-    bottom: 24px;
-    gap: 10px;
+    left: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
+    right: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
+    bottom: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
+    gap: clamp(6px, calc(var(--category-card-width) * 0.025), 10px);
   }
   .category-card-top {
-    left: clamp(14px, 1.4vw, 24px);
-    right: clamp(14px, 1.4vw, 24px);
+    top: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
+    left: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
+    right: clamp(12px, calc(var(--category-card-width) * 0.06), 24px);
   }
   .category-name {
-    font-size: clamp(16px, 1.8vw, 32px);
+    font-size: clamp(14px, calc(var(--category-card-width) * 0.078), 32px);
   }
   .category-description {
-    font-size: clamp(10px, 0.9vw, 12px);
+    font-size: clamp(10px, calc(var(--category-card-width) * 0.032), 12px);
   }
   .category-browser-footer {
     display: none;

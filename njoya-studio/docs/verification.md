@@ -13,9 +13,9 @@ Verified locally on 30 October 2026.
 - With `videoPlaybackEnabled: false`, the route checks confirmed that all successful pages omit video elements and external Mux media URLs. Exported references remain in the source content.
 - Chrome checks covered homepage browsing, project detail panels, search suggestions/results, keyboard dismissal, direct project pages and desktop/mobile layouts. The final Chanel page uses its local cover image.
 - The bottom navigation appears only on Home. Inner pages use compact desktop header links or a mobile Menu; Chrome checks confirmed the active section, menu navigation and Escape dismissal.
-- Work displays all four categories within the desktop viewport. Chrome checks at 1280×720 and 1024×600 confirmed no horizontal or vertical overflow; mobile keeps horizontal browsing.
+- Work uses larger 3:4 category cards instead of stretching them to the full page height. Chrome checks at 1280×720, 1024×600 and 2560×540 confirmed that all four cards and their labels fit without page scrolling; the row also caps its width on short screens. Mobile keeps horizontal browsing with the same proportions, checked at 390×844.
 - Jaguar uses the supplied three photographs and credits. Its date remains month-precise (`2024-12`) and displays as December 2024.
-- The supplied logo artwork replaces the old Lottie intro. Chrome checks covered desktop/mobile rendering, the automatic screen-lift reveal, return-visit bypass without a flash, immediate Skip behavior and scroll restoration. JavaScript and CSS both bypass the intro for reduced-motion preferences.
+- The supplied logo artwork replaces the old Lottie intro. The visible Skip Intro button has been removed. Chrome confirmed that the intro contains no skip button, completes its screen-lift reveal automatically and restores scrolling; earlier checks covered desktop/mobile rendering and return-visit bypass without a flash. Escape still dismisses the intro, and JavaScript and CSS both bypass it for reduced-motion preferences.
 - The Pages build now runs in an isolated temporary source copy, keeping its generated files separate from the running dev server.
 - `git diff --check` passed. The build has existing lint warnings in older unused components; no build or TypeScript errors remain.
 

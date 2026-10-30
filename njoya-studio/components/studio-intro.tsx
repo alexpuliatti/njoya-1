@@ -137,13 +137,6 @@ export default function StudioIntro({
         />
       </div>
       <p className="intro-caption">We build worlds</p>
-      <button
-        className="intro-skip"
-        type="button"
-        onClick={() => dismiss(false)}
-      >
-        Skip intro
-      </button>
     </dialog>
   );
 }
