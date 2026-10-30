@@ -190,14 +190,14 @@ export default function NjoyaCarouselDetailPanel({
 
       gsap.to(side, {
         y: -shift,
-        duration: reduced ? 0 : 0.65,
+        duration: reduced ? 0 : 0.4,
         ease: shouldShow ? "expo.out" : "power2.inOut",
       });
       gsap.to(meta, {
         opacity: shouldShow ? 1 : 0,
         y: shouldShow ? 0 : 12,
-        duration: reduced ? 0 : shouldShow ? 0.55 : 0.4,
-        ease: shouldShow ? "expo.out" : "power2.in",
+        duration: reduced ? 0 : 0.25,
+        ease: "power2.out",
       });
     };
 
@@ -215,7 +215,7 @@ export default function NjoyaCarouselDetailPanel({
 
     if (!overlay || !backdrop || !pane) return;
 
-    if (prefersReducedMotion()) {
+    if (clickPayload.instant || prefersReducedMotion()) {
       gsap.set(
         [
           backdrop,
@@ -267,7 +267,7 @@ export default function NjoyaCarouselDetailPanel({
       fromRect.top + fromRect.height / 2 - (toRect.top + toRect.height / 2);
 
     const startRadius = parseFloat(fromRadius) / scale;
-    const endRadius = 24;
+    const endRadius = parseFloat(getComputedStyle(pane).borderTopLeftRadius);
 
     gsap.set(clone, {
       x: dx,
@@ -290,7 +290,7 @@ export default function NjoyaCarouselDetailPanel({
     if (sideMetaRef.current)
       gsap.set(sideMetaRef.current, { opacity: 0, y: 12 });
     if (mobileInfoBtnRef.current)
-      gsap.set(mobileInfoBtnRef.current, { opacity: 0, scale: 0.85 });
+      gsap.set(mobileInfoBtnRef.current, { opacity: 0, scale: 0.96 });
 
     /* Crossfade clone → real media. Image items wait for decode();
        video items wait for loadeddata (readyState >= 2) so we
@@ -374,7 +374,7 @@ export default function NjoyaCarouselDetailPanel({
         scale: 1,
         rotation: 0,
         borderRadius: endRadius,
-        duration: 1.0,
+        duration: 0.75,
         ease: "power3.inOut",
       },
       0,
@@ -383,29 +383,29 @@ export default function NjoyaCarouselDetailPanel({
     if (hasGallery && galleryRef.current) {
       tl.to(
         galleryRef.current,
-        { opacity: 1, y: 0, duration: 0.55, ease: "expo.out" },
-        0.7,
+        { opacity: 1, y: 0, duration: 0.35, ease: "expo.out" },
+        0.45,
       );
     }
     if (hasGallery && hintRef.current) {
       tl.to(
         hintRef.current,
-        { opacity: 1, y: 0, duration: 0.45, ease: "expo.out" },
-        0.85,
+        { opacity: 1, y: 0, duration: 0.25, ease: "expo.out" },
+        0.6,
       );
     }
     if (sideTitleRef.current) {
       tl.to(
         sideTitleRef.current,
-        { opacity: 1, x: 0, duration: 0.6, ease: "expo.out" },
-        0.75,
+        { opacity: 1, x: 0, duration: 0.35, ease: "expo.out" },
+        0.5,
       );
     }
     if (hasInfo && mobileInfoBtnRef.current) {
       tl.to(
         mobileInfoBtnRef.current,
-        { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" },
-        0.85,
+        { opacity: 1, scale: 1, duration: 0.25, ease: "power2.out" },
+        0.6,
       );
     }
 
@@ -418,90 +418,93 @@ export default function NjoyaCarouselDetailPanel({
   }, [isRendered, clickPayload, hasGallery, hasInfo, hasHeroVideo]);
 
   /* ── Close ───────────────────────────────────────────── */
-  const handleClose = useCallback(() => {
-    openTlRef.current?.kill();
-    if (!backdropRef.current) return;
-    if (prefersReducedMotion()) {
-      setIsRendered(false);
-      setMobileInfoOpen(false);
-      onClose();
-
-      return;
-    }
-
-    // Stop the hero video so audio (if any was added) cuts immediately.
-    // Gallery videos manage their own state via native controls.
-    if (panelVideoRef.current) {
-      try {
-        panelVideoRef.current.pause();
-      } catch {
-        /* noop */
-      }
-    }
-
-    const tl = gsap.timeline({
-      onComplete: () => {
+  const handleClose = useCallback(
+    (instant = false) => {
+      openTlRef.current?.kill();
+      if (!backdropRef.current) return;
+      if (instant || prefersReducedMotion()) {
         setIsRendered(false);
         setMobileInfoOpen(false);
         onClose();
-      },
-    });
 
-    tl.to(
-      backdropRef.current,
-      { opacity: 0, duration: 0.35, ease: "power2.in" },
-      0,
-    );
-    if (panelImgRef.current) {
+        return;
+      }
+
+      // Stop the hero video so audio (if any was added) cuts immediately.
+      // Gallery videos manage their own state via native controls.
+      if (panelVideoRef.current) {
+        try {
+          panelVideoRef.current.pause();
+        } catch {
+          /* noop */
+        }
+      }
+
+      const tl = gsap.timeline({
+        onComplete: () => {
+          setIsRendered(false);
+          setMobileInfoOpen(false);
+          onClose();
+        },
+      });
+
       tl.to(
-        panelImgRef.current,
-        { opacity: 0, duration: 0.3, ease: "power2.in" },
+        backdropRef.current,
+        { opacity: 0, duration: 0.25, ease: "power2.out" },
         0,
       );
-    }
-    if (panelVideoRef.current) {
-      tl.to(
-        panelVideoRef.current,
-        { opacity: 0, duration: 0.3, ease: "power2.in" },
-        0,
-      );
-    }
-    if (galleryRef.current) {
-      tl.to(
-        galleryRef.current,
-        { opacity: 0, y: 12, duration: 0.3, ease: "power2.in" },
-        0,
-      );
-    }
-    if (hintRef.current) {
-      tl.to(
-        hintRef.current,
-        { opacity: 0, duration: 0.2, ease: "power2.in" },
-        0,
-      );
-    }
-    if (sideTitleRef.current) {
-      tl.to(
-        sideTitleRef.current,
-        { opacity: 0, x: -16, duration: 0.3, ease: "power2.in" },
-        0,
-      );
-    }
-    if (sideMetaRef.current) {
-      tl.to(
-        sideMetaRef.current,
-        { opacity: 0, y: 8, duration: 0.25, ease: "power2.in" },
-        0,
-      );
-    }
-    if (mobileInfoBtnRef.current) {
-      tl.to(
-        mobileInfoBtnRef.current,
-        { opacity: 0, scale: 0.85, duration: 0.25, ease: "power2.in" },
-        0,
-      );
-    }
-  }, [onClose]);
+      if (panelImgRef.current) {
+        tl.to(
+          panelImgRef.current,
+          { opacity: 0, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+      if (panelVideoRef.current) {
+        tl.to(
+          panelVideoRef.current,
+          { opacity: 0, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+      if (galleryRef.current) {
+        tl.to(
+          galleryRef.current,
+          { opacity: 0, y: 8, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+      if (hintRef.current) {
+        tl.to(
+          hintRef.current,
+          { opacity: 0, duration: 0.18, ease: "power2.out" },
+          0,
+        );
+      }
+      if (sideTitleRef.current) {
+        tl.to(
+          sideTitleRef.current,
+          { opacity: 0, x: -8, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+      if (sideMetaRef.current) {
+        tl.to(
+          sideMetaRef.current,
+          { opacity: 0, y: 6, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+      if (mobileInfoBtnRef.current) {
+        tl.to(
+          mobileInfoBtnRef.current,
+          { opacity: 0, scale: 0.96, duration: 0.22, ease: "power2.out" },
+          0,
+        );
+      }
+    },
+    [onClose],
+  );
 
   /* ESC — close mobile modal first if open, else close the panel */
   useEffect(() => {
@@ -513,7 +516,7 @@ export default function NjoyaCarouselDetailPanel({
 
         return;
       }
-      handleClose();
+      handleClose(true);
     };
 
     window.addEventListener("keydown", onKey);
@@ -534,7 +537,7 @@ export default function NjoyaCarouselDetailPanel({
       {/* Backdrop */}
       <div
         ref={backdropRef}
-        className="fixed inset-0 bg-[#261b15] backdrop-blur-lg"
+        className="fixed inset-0 bg-[var(--studio-bg)]"
         style={{ opacity: 0 }}
       />
 
@@ -548,12 +551,8 @@ export default function NjoyaCarouselDetailPanel({
           className="flex shrink-0 flex-col gap-1.5"
           style={{ opacity: 0 }}
         >
-          {item?.category && (
-            <span className="text-[9px] font-medium uppercase tracking-[0.22em] text-white/40">
-              {item.category}
-            </span>
-          )}
-          <h2 className="font-sans text-[22px] font-semibold leading-[1.05] text-white lg:text-[26px] xl:text-[30px]">
+          {item?.category && <span className="eyebrow">{item.category}</span>}
+          <h2 className="project-panel-title font-sans text-[22px] leading-[1.15] lg:text-[26px] xl:text-[30px]">
             {item?.title}
           </h2>
         </div>
@@ -585,7 +584,7 @@ export default function NjoyaCarouselDetailPanel({
         <div className="flex h-screen w-full items-center justify-center">
           <div
             ref={paneRef}
-            className="relative aspect-[9/13] h-[85vh] max-h-[780px] max-w-[90vw] overflow-hidden rounded-[24px]"
+            className="relative aspect-[9/13] h-[85vh] max-h-[780px] max-w-[90vw] overflow-hidden rounded-[var(--studio-radius)]"
           >
             {hasHeroVideo ? (
               <StudioVideo
@@ -631,12 +630,12 @@ export default function NjoyaCarouselDetailPanel({
       <button
         ref={closeButtonRef}
         aria-label="Close"
-        className="fixed right-2 top-2 z-[30] flex h-7 w-7 cursor-pointer items-center justify-center rounded-full text-[15px] text-white transition-colors md:right-8 md:top-8 md:h-10 md:w-10"
+        className="icon-button fixed right-3 top-3 z-[30] text-[15px] md:right-8 md:top-8"
         style={{
           background: "rgba(255,255,255,0.07)",
           border: "1px solid rgba(255,255,255,0.12)",
         }}
-        onClick={handleClose}
+        onClick={(event) => handleClose(event.detail === 0)}
       >
         ✕
       </button>
@@ -646,7 +645,7 @@ export default function NjoyaCarouselDetailPanel({
         <button
           ref={mobileInfoBtnRef}
           aria-label="View details"
-          className="fixed bottom-3 right-3 z-[30] flex h-9 w-9 cursor-pointer items-center justify-center rounded-full text-white transition-colors md:hidden"
+          className="icon-button project-mobile-info fixed bottom-3 right-3 z-[30]"
           style={{
             background: "rgba(255,255,255,0.07)",
             border: "1px solid rgba(255,255,255,0.12)",
@@ -689,7 +688,6 @@ export default function NjoyaCarouselDetailPanel({
         >
           <span>Scroll</span>
           <svg
-            className="animate-bounce"
             fill="none"
             height="14"
             stroke="currentColor"
@@ -815,11 +813,9 @@ function MetadataList({
       >
         {items.map((m, i) => (
           <div key={i} className="flex shrink-0 flex-col gap-0.5">
-            <span className="text-[9px] font-medium uppercase tracking-[0.18em] text-white/40">
-              {m.label}
-            </span>
+            <span className="eyebrow">{m.label}</span>
             <span
-              className={`text-[12px] font-medium leading-snug text-white/85 ${valueClassName}`}
+              className={`text-[12px] font-normal leading-relaxed text-[var(--studio-text)] [overflow-wrap:anywhere] ${valueClassName}`}
             >
               {m.value}
             </span>
@@ -865,28 +861,43 @@ function MobileInfoModal({
     gsap.fromTo(
       backdropRef.current,
       { opacity: 0 },
-      { opacity: 1, duration: 0.25, ease: "power2.out" },
+      {
+        opacity: 1,
+        duration: prefersReducedMotion() ? 0 : 0.2,
+        ease: "power2.out",
+      },
     );
     gsap.fromTo(
       cardRef.current,
       { opacity: 0, y: 18, scale: 0.96 },
-      { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "expo.out" },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: prefersReducedMotion() ? 0 : 0.25,
+        ease: "expo.out",
+      },
     );
   }, []);
 
   const handleClose = () => {
     if (closingRef.current) return;
     closingRef.current = true;
+    if (prefersReducedMotion()) {
+      onClose();
+
+      return;
+    }
     const tl = gsap.timeline({ onComplete: onClose });
 
     tl.to(
       cardRef.current,
-      { opacity: 0, y: 12, scale: 0.96, duration: 0.25, ease: "power2.in" },
+      { opacity: 0, y: 8, scale: 0.98, duration: 0.2, ease: "power2.out" },
       0,
     );
     tl.to(
       backdropRef.current,
-      { opacity: 0, duration: 0.25, ease: "power2.in" },
+      { opacity: 0, duration: 0.2, ease: "power2.out" },
       0,
     );
   };
@@ -915,12 +926,12 @@ function MobileInfoModal({
       />
       <div
         ref={cardRef}
-        className="relative flex max-h-[80vh] w-full max-w-[340px] flex-col overflow-hidden rounded-[20px] border border-white/10 bg-[#1d130d]/95 p-6 shadow-2xl"
+        className="relative flex max-h-[80vh] w-full max-w-[340px] flex-col overflow-hidden rounded-[var(--studio-radius)] border border-[var(--studio-line)] bg-[var(--studio-surface)] p-6 shadow-2xl"
         style={{ opacity: 0 }}
       >
         <button
           aria-label="Close info"
-          className="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full text-[14px] text-white"
+          className="icon-button absolute right-2 top-2 z-10 text-[14px]"
           style={{
             background: "rgba(255,255,255,0.07)",
             border: "1px solid rgba(255,255,255,0.12)",
@@ -930,14 +941,10 @@ function MobileInfoModal({
           ✕
         </button>
 
-        <div className="flex min-h-0 flex-col gap-5 pr-6">
+        <div className="flex min-h-0 flex-col gap-5 pr-8">
           <div className="flex shrink-0 flex-col gap-1.5">
-            {item?.category && (
-              <span className="text-[9px] font-medium uppercase tracking-[0.22em] text-white/40">
-                {item.category}
-              </span>
-            )}
-            <h2 className="font-sans text-[22px] font-semibold leading-[1.1] text-white">
+            {item?.category && <span className="eyebrow">{item.category}</span>}
+            <h2 className="project-panel-title font-sans text-[22px] leading-[1.15]">
               {item?.title}
             </h2>
             {item?.subtitle && (

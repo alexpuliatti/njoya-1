@@ -14,7 +14,8 @@ export default function CategoryBrowser({
 
     if (!element) return;
     const card = element.firstElementChild as HTMLElement | null;
-    const distance = (card?.offsetWidth ?? element.clientWidth) + 30;
+    const gap = parseFloat(getComputedStyle(element).columnGap) || 0;
+    const distance = (card?.offsetWidth ?? element.clientWidth) + gap;
 
     element.scrollBy({
       left: direction * distance,

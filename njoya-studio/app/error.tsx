@@ -16,9 +16,12 @@ export default function Error({
   }, [error]);
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <div className="empty-state">
+      <p className="eyebrow">Njoya Studios</p>
+      <h2>Something went wrong.</h2>
+      <p>Please try loading this page again.</p>
       <button
+        className="text-button"
         onClick={
           // Attempt to recover by trying to re-render the segment
           () => reset()

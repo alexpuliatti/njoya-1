@@ -72,4 +72,6 @@ export interface NjoyaClickPayload {
   fromRadius: string;
   morphProg: number;
   rotation: number;
+  /** Keyboard activation opens the project immediately. */
+  instant?: boolean;
 }

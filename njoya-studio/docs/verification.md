@@ -21,6 +21,21 @@ Verified locally on 30 October 2026.
 
 The standalone server was tested on the local macOS Node.js 26 installation. The Docker configuration targets Node.js 22 on Linux. Docker is not installed on this machine, so the image has not been built or run here. GitHub Pages uses the static export and does not need this server or Docker image.
 
+## Experimental refinement
+
+Branch: `experiment/refined-design`, based on `e62d71a`. The original brown background, content, imagery, page structure, Work card proportions and studio intro are preserved. The experiment refines typography, spacing, cream text colours, card borders and corner radii, search surfaces and project credits. Hover keeps project captions visible, uses less movement, and the detail panel opens and closes sooner. Keyboard project activation, Escape dismissal and carousel arrow buttons respond immediately. Shared icon controls have 44px targets, and mobile category buttons use the actual card gap.
+
+Verification for this branch:
+
+- `npm test`: all nine existing tests pass.
+- `npm run build:pages`: production compilation, TypeScript checks, content/media validation and all 265 generated pages pass. Build warnings remain in unchanged legacy files; the modified components produce no build warnings.
+- `npm run test:pages`: 260 static routes, 123 redirects and 2,950 asset/link checks pass under `/njoya-1/`.
+- `npm run test:routes`: 253 live route/redirect checks, local media checks and self-hosted image optimization pass against the local development server.
+- Calculated text contrast: cream body text on brown 14.68:1, muted labels on brown 7.73:1, and muted labels on the search surface 7.19:1. Image-overlay contrast depends on the photograph.
+- `git diff --check` passes.
+
+Current visual verification is incomplete: the computer-use connection reports `Sky Computer Use native pipe startup failed`, and no Chrome browser connection is available, including after a connection reset. The checks above do not replace a desktop/mobile browser review of this experiment. The Chrome verification elsewhere in this document describes the earlier implementation.
+
 ## Content still to supply or review
 
 - Lab research entries and final design; designed synopsis artwork and its text equivalent.
