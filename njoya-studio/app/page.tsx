@@ -1,10 +1,11 @@
 import type { NjoyaCarouselItem } from "@/lib/njoya-carousel-types";
 
 import Link from "next/link";
-import { redirect } from "next/navigation";
+import { Suspense } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 import NjoyaCarousel from "@/components/njoya-carousel";
+import HomeQueryRedirect from "@/components/home-query-redirect";
 import {
   getCategories,
   getHome,
@@ -13,13 +14,7 @@ import {
   toCarouselItem,
 } from "@/lib/content/repository";
 
-export default async function Home({
-  searchParams,
-}: {
-  searchParams: { q?: string };
-}) {
-  if (searchParams.q)
-    redirect(`/search?q=${encodeURIComponent(searchParams.q)}`);
+export default async function Home() {
   const [site, home, works, categories] = await Promise.all([
     getSite(),
     getHome(),
@@ -49,26 +44,31 @@ export default async function Home({
   });
 
   return (
-    <NjoyaCarousel
-      showLoader
-      items={items}
-      label="Selected projects"
-      pinned={
-        <Link className="statement-card" href="/about">
-          <span className="statement-topline">
-            Njoya Studios <ArrowUpRight size={19} />
-          </span>
-          <h1>
-            <span>WE </span>
-            <span>BUILD </span>
-            <span>WORLDS</span>
-          </h1>
-          <p>{site.statement}</p>
-          <span className="statement-footer">
-            Space. Image. Objects. Experiences.
-          </span>
-        </Link>
-      }
-    />
+    <>
+      <Suspense fallback={null}>
+        <HomeQueryRedirect />
+      </Suspense>
+      <NjoyaCarousel
+        showLoader
+        items={items}
+        label="Selected projects"
+        pinned={
+          <Link className="statement-card" href="/about">
+            <span className="statement-topline">
+              Njoya Studios <ArrowUpRight size={19} />
+            </span>
+            <h1>
+              <span>WE </span>
+              <span>BUILD </span>
+              <span>WORLDS</span>
+            </h1>
+            <p>{site.statement}</p>
+            <span className="statement-footer">
+              Space. Image. Objects. Experiences.
+            </span>
+          </Link>
+        }
+      />
+    </>
   );
 }

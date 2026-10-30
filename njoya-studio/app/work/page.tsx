@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
+import { assetPath } from "@/lib/asset-path";
 import CategoryBrowser from "@/components/category-browser";
 import { getCategories, getWorks } from "@/lib/content/repository";
 
@@ -33,7 +34,7 @@ export default async function WorkPage() {
                 alt={cover.alt}
                 priority={index < 3}
                 sizes="(max-width: 767px) 78vw, 32vw"
-                src={cover.src}
+                src={assetPath(cover.src)}
               />
             )}
             <span className="category-shade" />

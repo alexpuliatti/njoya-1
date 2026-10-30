@@ -5,10 +5,17 @@ import NjoyaCarousel from "@/components/njoya-carousel";
 import {
   getCategories,
   getCollection,
+  getCollections,
   getSite,
   getWorks,
   toCarouselItem,
 } from "@/lib/content/repository";
+export const dynamicParams = false;
+export async function generateStaticParams() {
+  return (await getCollections()).map((collection) => ({
+    slug: collection.slug,
+  }));
+}
 export default async function CollectionPage({
   params,
 }: {

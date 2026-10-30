@@ -12,6 +12,7 @@ import Image from "next/image";
 
 import StudioVideo from "./studio-video";
 
+import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
 
 interface Props {
@@ -111,9 +112,7 @@ export default function NjoyaCarouselCard({
       const heroPreload = new window.Image();
 
       heroPreload.decoding = "async";
-      heroPreload.src = `/_next/image?url=${encodeURIComponent(
-        item.imageUrl,
-      )}&w=1920&q=75`;
+      heroPreload.src = assetPath(item.heroImageUrl ?? item.imageUrl);
     }
 
     hoverTl.current?.kill();
@@ -218,7 +217,7 @@ export default function NjoyaCarouselCard({
           className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
           priority={priority}
           sizes="(max-width: 767px) 82vw, (max-width: 1023px) 45vw, 32vw"
-          src={item.imageUrl}
+          src={assetPath(item.imageUrl)}
           style={{ borderRadius: "20px" }}
         />
 

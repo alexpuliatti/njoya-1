@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
+import { assetPath } from "@/lib/asset-path";
 import { getLabEntries } from "@/lib/content/repository";
 export const metadata: Metadata = {
   title: "Lab",
@@ -38,7 +39,7 @@ export default async function LabPage() {
                 <Image
                   alt={entry.gallery[0].alt}
                   height={900}
-                  src={entry.gallery[0].previewSrc}
+                  src={assetPath(entry.gallery[0].previewSrc)}
                   width={720}
                 />
               )}

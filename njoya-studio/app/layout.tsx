@@ -3,6 +3,7 @@ import type { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
+import { assetPath } from "@/lib/asset-path";
 import { getSearchIndex, getSite } from "@/lib/content/repository";
 import SearchProvider from "@/components/search-provider";
 import { Navbar } from "@/components/navbar";
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { default: siteConfig.name, template: `%s — ${siteConfig.name}` },
   description:
     "A multidisciplinary creative practice working across space, image, objects and experiences.",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: assetPath("/favicon.ico") },
 };
 export const viewport: Viewport = { themeColor: "#261b15" };
 

@@ -12,6 +12,7 @@ import {
   toCarouselItem,
 } from "@/lib/content/repository";
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return (await getCategories()).map((category) => ({ category: category.id }));
 }

@@ -2,6 +2,7 @@
 
 Verified locally on 30 October 2026.
 
+- GitHub Pages export passed 259 static route checks, 123 automatic-forwarding checks and 1,014 asset/link checks under `/njoya-1/`. Chrome confirmed search after refreshing its URL and forwarding from an old project URL.
 - Production build passed with `NEXT_PUBLIC_SANITY_PROJECT_ID` unset. Fonts, content and prepared images are local.
 - Content validation passed for 90 works, 23 collections, 1,624 prepared image files and all legacy mappings.
 - All eight content, chronology, search and migration tests passed.
@@ -10,7 +11,7 @@ Verified locally on 30 October 2026.
 - Chrome checks covered homepage browsing, project detail panels, search suggestions/results, keyboard dismissal, direct project pages and desktop/mobile layouts. The final Chanel page uses its local cover image.
 - `git diff --check` passed. The build has existing lint warnings in older unused components; no build or TypeScript errors remain.
 
-The standalone server was tested on the local macOS Node.js 26 installation. The Docker configuration targets Node.js 22 on Linux. Docker is not installed on this machine, so the image has not been built or run here. No deployment has been performed.
+The standalone server was tested on the local macOS Node.js 26 installation. The Docker configuration targets Node.js 22 on Linux. Docker is not installed on this machine, so the image has not been built or run here. GitHub Pages uses the static export and does not need this server or Docker image.
 
 ## Content still to supply or review
 

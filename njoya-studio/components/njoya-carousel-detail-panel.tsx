@@ -9,6 +9,7 @@ import gsap from "gsap";
 import MediaGallery from "./media-gallery";
 import StudioVideo from "./studio-video";
 
+import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
 
 interface Props {
@@ -593,7 +594,7 @@ export default function NjoyaCarouselDetailPanel({
                 muted
                 playsInline
                 className="absolute inset-0 block h-full w-full object-cover object-top"
-                poster={item?.imageUrl}
+                poster={assetPath(item?.imageUrl ?? "")}
                 src={muxPlaybackUrl(heroVideoId!)}
                 style={{ opacity: 0 }}
               />
@@ -605,7 +606,7 @@ export default function NjoyaCarouselDetailPanel({
                 alt={item?.imageAlt ?? item?.title ?? ""}
                 className="absolute inset-0 block h-full w-full object-cover object-top"
                 sizes="(max-width: 767px) 90vw, 55vw"
-                src={item?.heroImageUrl ?? item?.imageUrl ?? ""}
+                src={assetPath(item?.heroImageUrl ?? item?.imageUrl ?? "")}
                 style={{ opacity: 0 }}
               />
             )}

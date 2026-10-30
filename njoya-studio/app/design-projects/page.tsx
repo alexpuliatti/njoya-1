@@ -1,6 +1,5 @@
-import { redirect } from "next/navigation";
+import LegacyRedirect from "@/components/legacy-redirect";
 
-export const dynamic = "force-dynamic";
 export default function DesignProjectsPage() {
-  redirect("/work/worlds");
+  return <LegacyRedirect href="/work/worlds" permanent={false} />;
 }
