@@ -1,0 +1,121 @@
+{
+  "id": "e335cffa-161d-4b20-bf56-7b014bf049e0",
+  "slug": "british-vogue-september-2021",
+  "title": "British Vogue, September 2021",
+  "client": "British Vogue",
+  "date": "2021-09-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/5aa697e2e89a28ed861ebae97b824196dbcc5183.webp",
+    "previewSrc": "/media/images/5aa697e2e89a28ed861ebae97b824196dbcc5183-720.webp",
+    "alt": "Surreal, cinematic editorial shot for British Vogue's \"New Beginnings\" September 2021 issue. Emma Corrin stands atop a moss-covered miniature house against a deep purple textured background, wearing an oversized green Prada double-breasted coat, a purple knit turtleneck, dark leather gloves, white platform boots, and carrying a sequined black tote bag. Short platinum blonde bob, cool and composed gaze — an otherworldly, fairytale-meets-high-fashion mood, all looks by Prada FW21.",
+    "width": 1600,
+    "height": 2094
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/5aa697e2e89a28ed861ebae97b824196dbcc5183.webp",
+      "previewSrc": "/media/images/5aa697e2e89a28ed861ebae97b824196dbcc5183-720.webp",
+      "alt": "mag image 1",
+      "width": 1600,
+      "height": 2094
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a27d93e486ca8935d5c16b71c2a599c8ac78c172.webp",
+      "previewSrc": "/media/images/a27d93e486ca8935d5c16b71c2a599c8ac78c172-720.webp",
+      "alt": "mag image 2",
+      "width": 1600,
+      "height": 2094
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c87be7cd203aad2e1cf815f028845cdeceee7351.webp",
+      "previewSrc": "/media/images/c87be7cd203aad2e1cf815f028845cdeceee7351-720.webp",
+      "alt": "mag image 3",
+      "width": 1600,
+      "height": 2096
+    },
+    {
+      "type": "image",
+      "src": "/media/images/35465b03b7e807b4ad4a175d0d055235e19aa6ac.webp",
+      "previewSrc": "/media/images/35465b03b7e807b4ad4a175d0d055235e19aa6ac-720.webp",
+      "alt": "mag image 4",
+      "width": 1600,
+      "height": 2097
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d91d20c2ab4ec837bf98da92a9763b2150936325.webp",
+      "previewSrc": "/media/images/d91d20c2ab4ec837bf98da92a9763b2150936325-720.webp",
+      "alt": "mag image 5",
+      "width": 1600,
+      "height": 2095
+    },
+    {
+      "type": "image",
+      "src": "/media/images/93a46679d8a8830a16aa6946a534e3bb68fcc499.webp",
+      "previewSrc": "/media/images/93a46679d8a8830a16aa6946a534e3bb68fcc499-720.webp",
+      "alt": "mag image 6",
+      "width": 1600,
+      "height": 2088
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7771dd02277d869527fbcbebcc126b4fa3392073.webp",
+      "previewSrc": "/media/images/7771dd02277d869527fbcbebcc126b4fa3392073-720.webp",
+      "alt": "mag image 7",
+      "width": 1600,
+      "height": 2096
+    },
+    {
+      "type": "image",
+      "src": "/media/images/cdfe75d2dcc86125823136e447f140714a5e25da.webp",
+      "previewSrc": "/media/images/cdfe75d2dcc86125823136e447f140714a5e25da-720.webp",
+      "alt": "mag image 8",
+      "width": 1600,
+      "height": 2089
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Edward Enninful"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Emma Corrin, Jessie Mei Li, Simone Ashley, Wunmi Mosaku"
+    },
+    {
+      "role": "designer",
+      "name": "Miuccia Prada & Raf Simons (Prada FW21)"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Eugene Souleiman"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Ammy Drammeh"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/british-vogue-september-2021",
+    "/shoots/vogue/editions/vogue-2021-sept"
+  ]
+}

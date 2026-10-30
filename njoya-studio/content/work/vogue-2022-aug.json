@@ -1,0 +1,132 @@
+{
+  "id": "f03541ee-7fb3-4a00-83d3-ba723c7a3335",
+  "slug": "vogue-2022-aug",
+  "title": "British Vogue, August 2022",
+  "client": "British Vogue",
+  "date": "2022-08-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/d4bc6375cb17ed8cba7ce49de2f18bb38429d736.webp",
+    "previewSrc": "/media/images/d4bc6375cb17ed8cba7ce49de2f18bb38429d736-720.webp",
+    "alt": "mag cover",
+    "width": 1526,
+    "height": 1920
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/5cc37011d4658b96248ff9736ab155c07cca1f8e.webp",
+      "previewSrc": "/media/images/5cc37011d4658b96248ff9736ab155c07cca1f8e-720.webp",
+      "alt": "mag image 1",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/56ff3b054c7cb7cdf8d980645135e7a105a98365.webp",
+      "previewSrc": "/media/images/56ff3b054c7cb7cdf8d980645135e7a105a98365-720.webp",
+      "alt": "mag image 2",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/41e7659aa5b1138309b95efddf0e790eee626b68.webp",
+      "previewSrc": "/media/images/41e7659aa5b1138309b95efddf0e790eee626b68-720.webp",
+      "alt": "mag image 3",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/479d0e8f620c3235bfe4cbdb434d59b69b73edbe.webp",
+      "previewSrc": "/media/images/479d0e8f620c3235bfe4cbdb434d59b69b73edbe-720.webp",
+      "alt": "mag image 4",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/41e7659aa5b1138309b95efddf0e790eee626b68.webp",
+      "previewSrc": "/media/images/41e7659aa5b1138309b95efddf0e790eee626b68-720.webp",
+      "alt": "mag image 5",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/07fa152550319cae5a5a437598ba68d91194c29e.webp",
+      "previewSrc": "/media/images/07fa152550319cae5a5a437598ba68d91194c29e-720.webp",
+      "alt": "mag image 6",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/725670bfcbd7a172bbe53f33dd6d4f3a6cc9bf48.webp",
+      "previewSrc": "/media/images/725670bfcbd7a172bbe53f33dd6d4f3a6cc9bf48-720.webp",
+      "alt": "mag image 7",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/434f7dff1e7dc26efb9a2a744f770ec2266c59d8.webp",
+      "previewSrc": "/media/images/434f7dff1e7dc26efb9a2a744f770ec2266c59d8-720.webp",
+      "alt": "mag image 8",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/cd90e57ee8678fb73571102f1695cd4e326d820e.webp",
+      "previewSrc": "/media/images/cd90e57ee8678fb73571102f1695cd4e326d820e-720.webp",
+      "alt": "mag image 9",
+      "width": 1875,
+      "height": 2438
+    },
+    {
+      "type": "image",
+      "src": "/media/images/166a81d04928e429ae9f8e041e8ec3a5d80d4b38.webp",
+      "previewSrc": "/media/images/166a81d04928e429ae9f8e041e8ec3a5d80d4b38-720.webp",
+      "alt": "mag image 10",
+      "width": 1875,
+      "height": 2438
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Kate Phelan"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Eugene Souleiman"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "manicurist",
+      "name": "Lauren Michelle Pires"
+    },
+    {
+      "role": "model",
+      "name": "Mamuor Majeng, Mao Xiaoxing, Mona Tougaard, Nyaueth Riam, Wang Chenming"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2022-aug"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "54443f9d-f67e-4c20-86bd-204e66e13009",
+  "slug": "dries-van-noten",
+  "title": "Dries Van Noten",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/76fb6431037d4c354a9415e9f1d469e6e847d483.webp",
+    "previewSrc": "/media/images/76fb6431037d4c354a9415e9f1d469e6e847d483-720.webp",
+    "alt": "Dries van noten cover",
+    "width": 1435,
+    "height": 1779
+  },
+  "workIds": [
+    "b839e5f6-0eee-4e91-9f22-8f1e6580e7c2"
+  ],
+  "isMultiEdition": false
+}

@@ -1,0 +1,106 @@
+{
+  "id": "877657d4-23c5-4cc5-95d6-26269491578a",
+  "slug": "dazed-march-2023",
+  "title": "Dazed, March 2023",
+  "client": "Dazed",
+  "date": "2023-03-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/8ea0eae0cf7c6c0e7f1dbd4dd093e081dc858e3b.webp",
+    "previewSrc": "/media/images/8ea0eae0cf7c6c0e7f1dbd4dd093e081dc858e3b-720.webp",
+    "alt": "Model Sculy Mejia hugs a pair of oversized wooden stilts topped with giant white lace-up platform boots, her face hidden behind a voluminous red feathery headpiece. She wears a bright green long-sleeve top, an extravagant purple tiered tulle skirt, teal patterned tights, and black heeled shoes. Grey studio background. Playful and maximalist. Section label: \"Tallest Boots\".",
+    "width": 1042,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/8ea0eae0cf7c6c0e7f1dbd4dd093e081dc858e3b.webp",
+      "previewSrc": "/media/images/8ea0eae0cf7c6c0e7f1dbd4dd093e081dc858e3b-720.webp",
+      "alt": "Image #1",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a9a3f2626c05fd20b7f56dc480fa75c24093acc6.webp",
+      "previewSrc": "/media/images/a9a3f2626c05fd20b7f56dc480fa75c24093acc6-720.webp",
+      "alt": "Image #2",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/2532828fa22fa2d02089b7f793a6da0595d55eec.webp",
+      "previewSrc": "/media/images/2532828fa22fa2d02089b7f793a6da0595d55eec-720.webp",
+      "alt": "Image #3",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/43d5511ab164d1ca4d13130536083db6f7f613d1.webp",
+      "previewSrc": "/media/images/43d5511ab164d1ca4d13130536083db6f7f613d1-720.webp",
+      "alt": "Image #4",
+      "width": 1042,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5f426d5ebe93cda37b80ca0c2f2536a29b0378f2.webp",
+      "previewSrc": "/media/images/5f426d5ebe93cda37b80ca0c2f2536a29b0378f2-720.webp",
+      "alt": "Image #5",
+      "width": 1350,
+      "height": 874
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Andrea Artemisio"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Models",
+      "name": "Ajak Deng Chol, Ajibike Abdulraheem, Alicia Athamnia, Sculy Mejia"
+    },
+    {
+      "role": "other",
+      "customRole": "Art Director",
+      "name": "Gareth Wrighton"
+    },
+    {
+      "role": "other",
+      "customRole": "Hair Stylist",
+      "name": "Laurent Philippon"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Lili Choi"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Sarah Small"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-march-2023",
+    "/shoots/dazed/editions/dazed-2023-march"
+  ]
+}

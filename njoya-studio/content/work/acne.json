@@ -1,0 +1,148 @@
+{
+  "id": "6ad40c1b-3d7e-4632-8307-26c1eee4c404",
+  "slug": "acne",
+  "title": "Acne Paper No. 19, Nocturne, S/S 2024",
+  "client": "Acne Paper",
+  "date": "2024-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/8f2e3c691dc145bc02b30f629f9462929aca7b06.webp",
+    "previewSrc": "/media/images/8f2e3c691dc145bc02b30f629f9462929aca7b06-720.webp",
+    "alt": "Mag Cover",
+    "width": 1080,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/8f2e3c691dc145bc02b30f629f9462929aca7b06.webp",
+      "previewSrc": "/media/images/8f2e3c691dc145bc02b30f629f9462929aca7b06-720.webp",
+      "alt": "Mag Image 1",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ea4e9de0c58e8c3bc5eaa760ec93f6399ee2b6b1.webp",
+      "previewSrc": "/media/images/ea4e9de0c58e8c3bc5eaa760ec93f6399ee2b6b1-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4cb80616b39f8f1654cebd3c4a73644de5f0d307.webp",
+      "previewSrc": "/media/images/4cb80616b39f8f1654cebd3c4a73644de5f0d307-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4934eb64f449f4f5e630ef3eb88a5b4bc8a14cdf.webp",
+      "previewSrc": "/media/images/4934eb64f449f4f5e630ef3eb88a5b4bc8a14cdf-720.webp",
+      "alt": "Mag Image 4",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3a8582a7a862551f1a183f355627e86c6017d22e.webp",
+      "previewSrc": "/media/images/3a8582a7a862551f1a183f355627e86c6017d22e-720.webp",
+      "alt": "Mag Image 5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/cfe05286833c060cb45c874cee724100fb9c3461.webp",
+      "previewSrc": "/media/images/cfe05286833c060cb45c874cee724100fb9c3461-720.webp",
+      "alt": "Mag Image 6",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/2ccc91f52862bf08bc77454f38ff84952dfe0415.webp",
+      "previewSrc": "/media/images/2ccc91f52862bf08bc77454f38ff84952dfe0415-720.webp",
+      "alt": "Mag Image 7",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d826f4297d261d166ba7b42d934ee8e0ec865877.webp",
+      "previewSrc": "/media/images/d826f4297d261d166ba7b42d934ee8e0ec865877-720.webp",
+      "alt": "Mag Image 8",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/710c39c392106a79dc458ffb01f8f21558edd743.webp",
+      "previewSrc": "/media/images/710c39c392106a79dc458ffb01f8f21558edd743-720.webp",
+      "alt": "Mag Image 9",
+      "width": 1080,
+      "height": 1346
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8e2d4a1d823c6b581abb7d134c4e29e514460f7c.webp",
+      "previewSrc": "/media/images/8e2d4a1d823c6b581abb7d134c4e29e514460f7c-720.webp",
+      "alt": "Mag Image 10",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e29af3b8832bf5e3b08a106abed4f3ee34e92698.webp",
+      "previewSrc": "/media/images/e29af3b8832bf5e3b08a106abed4f3ee34e92698-720.webp",
+      "alt": "Mag Image 11",
+      "width": 1080,
+      "height": 857
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "George Krakowiak"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Eugene Souleiman"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "castDirector",
+      "name": "Mollie Dendle"
+    },
+    {
+      "role": "manicurist",
+      "name": "Lauren Michelle Pires"
+    },
+    {
+      "role": "model",
+      "name": "Alys Luttrell-Hunt, Arthur del Beato, Baboya Peter, Jum Kuochnin, Lara Menezes, Rejoice Chuol"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/acne-paper/editions/acne"
+  ]
+}

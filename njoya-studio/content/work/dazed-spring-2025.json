@@ -1,0 +1,167 @@
+{
+  "id": "cc1954d9-59a4-471e-9809-19137813a65f",
+  "slug": "dazed-spring-2025",
+  "title": "Dazed, Spring 2025",
+  "client": "Dazed",
+  "date": "2025-03-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/7160eca423180caf759bd05065ed7c32dceb4936.webp",
+    "previewSrc": "/media/images/7160eca423180caf759bd05065ed7c32dceb4936-720.webp",
+    "alt": "Amelia Gray poses against a stark white background, body wrapped in Louis Vuitton x Murakami multicolor monogram belts and straps used as a makeshift bandeau top, paired with white high-waist briefs. Face adorned with dark lip, colorful dot embellishments, and a black choker. Editorial, avant-garde, and playful — channeling the Superflat universe.",
+    "width": 2712,
+    "height": 3544
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/5f7aea16b3d6832f22a490659ebf4cd3a5b16dc7.webp",
+      "previewSrc": "/media/images/5f7aea16b3d6832f22a490659ebf4cd3a5b16dc7-720.webp",
+      "alt": "Dazed, Spring 2025 — image 1",
+      "width": 5434,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4bd47d9663362897780bdddfda8250a00ec5d642.webp",
+      "previewSrc": "/media/images/4bd47d9663362897780bdddfda8250a00ec5d642-720.webp",
+      "alt": "Dazed, Spring 2025 — image 2",
+      "width": 2717,
+      "height": 1200
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6ae3bdf23c81361a6701ee83d8514d38ccd93780.webp",
+      "previewSrc": "/media/images/6ae3bdf23c81361a6701ee83d8514d38ccd93780-720.webp",
+      "alt": "Dazed, Spring 2025 — image 3",
+      "width": 2717,
+      "height": 1153
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7bab869dab9fdb9157bdc6f2b0c12f30170bfc4e.webp",
+      "previewSrc": "/media/images/7bab869dab9fdb9157bdc6f2b0c12f30170bfc4e-720.webp",
+      "alt": "Dazed, Spring 2025 — image 4",
+      "width": 5433,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/987b3f9958d708abc37233638d0c72fdafc68dd9.webp",
+      "previewSrc": "/media/images/987b3f9958d708abc37233638d0c72fdafc68dd9-720.webp",
+      "alt": "Dazed, Spring 2025 — image 5",
+      "width": 1452,
+      "height": 1453
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7160eca423180caf759bd05065ed7c32dceb4936.webp",
+      "previewSrc": "/media/images/7160eca423180caf759bd05065ed7c32dceb4936-720.webp",
+      "alt": "Dazed, Spring 2025 — image 6",
+      "width": 2712,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/03e3ed4b5d2119243dd1bca62009a9c0ca31eaa7.webp",
+      "previewSrc": "/media/images/03e3ed4b5d2119243dd1bca62009a9c0ca31eaa7-720.webp",
+      "alt": "Dazed, Spring 2025 — image 7",
+      "width": 2717,
+      "height": 3544
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Theo Liu"
+    },
+    {
+      "role": "stylist",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya at New School Represents"
+    },
+    {
+      "role": "talent",
+      "name": "Amelia Gray"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Charlie Le Mindu"
+    },
+    {
+      "role": "other",
+      "customRole": "Hair Assistant",
+      "name": "Mheila Kilama"
+    },
+    {
+      "role": "other",
+      "customRole": "Wig Artist",
+      "name": "Han Bin"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Jewel Yang"
+    },
+    {
+      "role": "other",
+      "customRole": "Make-up Assistants",
+      "name": "Loïse Hulin, Luo Minyan"
+    },
+    {
+      "role": "manicurist",
+      "name": "Tomoya Nakagawa"
+    },
+    {
+      "role": "other",
+      "customRole": "Movement Direction",
+      "name": "Eric Christison at Parent"
+    },
+    {
+      "role": "model",
+      "name": "Hephilie at HT Casting"
+    },
+    {
+      "role": "other",
+      "customRole": "Photographic Assistants",
+      "name": "Frédéric Troehler, Valentino Bianchi, Diane Souëtre"
+    },
+    {
+      "role": "other",
+      "customRole": "Styling Assistants",
+      "name": "Aroua Ammari, Camilla Poce, Asya Andreatta"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Design Assistants",
+      "name": "Clementine Debray, Sasha Gabilan"
+    },
+    {
+      "role": "producer",
+      "name": "Louis2"
+    },
+    {
+      "role": "other",
+      "customRole": "Production Assistants",
+      "name": "Alexandre Johannes, Florian Perez Perrier, Inès Diarassouba"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting",
+      "name": "Mischa Notcutt at 11Casting"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Associate",
+      "name": "Ophelia Horton at 11Casting"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": []
+}

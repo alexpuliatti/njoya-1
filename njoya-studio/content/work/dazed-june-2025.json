@@ -1,0 +1,117 @@
+{
+  "id": "e4584b6c-5b5a-4604-a818-d517b85238f8",
+  "slug": "dazed-june-2025",
+  "title": "Dazed, June 2025",
+  "client": "Dazed",
+  "date": "2025-06-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543.webp",
+    "previewSrc": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543-720.webp",
+    "alt": "Naomi Campbell kneels against a stark black background, wearing a sheer long-sleeve bodysuit with tribal-inspired printed patterns and a colourful mini skirt. Large butterfly wings in vibrant orange and black are projected or composited behind her. Her hair falls loosely across her face, partially obscuring it, and she wears an elaborate cowrie shell headdress/hair adornment. Silver chain necklaces, bracelets, and rings complete the look. The mood is powerful, primal, and celebratory.",
+    "width": 4500,
+    "height": 5625
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543.webp",
+      "previewSrc": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543-720.webp",
+      "alt": "Naomi Campbell kneels against a stark black background, wearing a sheer long-sleeve bodysuit with tribal-inspired printed patterns and a colourful mini skirt. Large butterfly wings in vibrant orange and black are projected or composited behind her. Her hair falls loosely across her face, partially obscuring it, and she wears an elaborate cowrie shell headdress/hair adornment. Silver chain necklaces, bracelets, and rings complete the look. The mood is powerful, primal, and celebratory.",
+      "width": 4500,
+      "height": 5625
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c7c21a6c688584bbde38420a7be382c5c27922a0.webp",
+      "previewSrc": "/media/images/c7c21a6c688584bbde38420a7be382c5c27922a0-720.webp",
+      "alt": "2",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c1a92e52cda5e3fada8efcfd2ca1b64015cdeedd.webp",
+      "previewSrc": "/media/images/c1a92e52cda5e3fada8efcfd2ca1b64015cdeedd-720.webp",
+      "alt": "3",
+      "width": 2717,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b2ddd9d9b454857f0bafe119644320b180aabbb8.webp",
+      "previewSrc": "/media/images/b2ddd9d9b454857f0bafe119644320b180aabbb8-720.webp",
+      "alt": "4",
+      "width": 2717,
+      "height": 3544
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f3aca69953d1889c786f903d0b1c23be0d3a67ba.webp",
+      "previewSrc": "/media/images/f3aca69953d1889c786f903d0b1c23be0d3a67ba-720.webp",
+      "alt": "5",
+      "width": 2717,
+      "height": 3543
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1f65ea7563267a75e2401af823b8b3d68d49b4be.webp",
+      "previewSrc": "/media/images/1f65ea7563267a75e2401af823b8b3d68d49b4be-720.webp",
+      "alt": "6",
+      "width": 2717,
+      "height": 3544
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Legend",
+      "name": "Naomi Campbell"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Director",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Lorenzo Barcella"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Ngozi Esther Edeme"
+    },
+    {
+      "role": "other",
+      "customRole": "Manicurist",
+      "name": "Michelle Class"
+    },
+    {
+      "role": "other",
+      "customRole": "Production",
+      "name": "Tiagi"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-june-2025"
+  ]
+}

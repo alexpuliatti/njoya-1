@@ -1,0 +1,17 @@
+{
+  "id": "e937434c-7306-4579-af5b-d6cfb37306db",
+  "slug": "delcore",
+  "title": "Delcore",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/68fa63c61609b5cd705293d459a531a58cfbcdd5.webp",
+    "previewSrc": "/media/images/68fa63c61609b5cd705293d459a531a58cfbcdd5-720.webp",
+    "alt": "Delcore Cover",
+    "width": 1854,
+    "height": 1200
+  },
+  "workIds": [
+    "afebc806-19b2-479e-bee9-f899df0e2f79"
+  ],
+  "isMultiEdition": false
+}

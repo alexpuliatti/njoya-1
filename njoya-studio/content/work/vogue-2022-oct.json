@@ -1,0 +1,141 @@
+{
+  "id": "30c431b4-b337-491b-9519-8a064909fba8",
+  "slug": "vogue-2022-oct",
+  "title": "Vogue, October 2022",
+  "client": "Vogue",
+  "date": "2022-10-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/a46bff22a8f96b8e7503fcb6937d6d210b0f1336.webp",
+    "previewSrc": "/media/images/a46bff22a8f96b8e7503fcb6937d6d210b0f1336-720.webp",
+    "alt": "Energetic editorial shot of a tall model with a sleek high ponytail, wearing a bold color-block sportswear look — an oversized blue Balenciaga x Adidas logo T-shirt, yellow track pants with white stripes, layered red skirt panels, and metallic blue stiletto knee boots — caught mid-dance pose against a two-tone blue and yellow background. The mood is athletic, playful, and high-fashion.",
+    "width": 1451,
+    "height": 1934
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/828b04b88c9f7b7e7ce8c64f38d0dfd08ca4c20b.webp",
+      "previewSrc": "/media/images/828b04b88c9f7b7e7ce8c64f38d0dfd08ca4c20b-720.webp",
+      "alt": "Energetic editorial shot of a tall model with a sleek high ponytail, wearing a bold color-block sportswear look — an oversized blue Balenciaga x Adidas logo T-shirt, yellow track pants with white stripes, layered red skirt panels, and metallic blue stiletto knee boots — caught mid-dance pose against a two-tone blue and yellow background. The mood is athletic, playful, and high-fashion.",
+      "width": 5696,
+      "height": 7594
+    },
+    {
+      "type": "image",
+      "src": "/media/images/dd41966805585f834792891c8b46f0d447e5b4c8.webp",
+      "previewSrc": "/media/images/dd41966805585f834792891c8b46f0d447e5b4c8-720.webp",
+      "alt": "mag image 2",
+      "width": 5290,
+      "height": 6912
+    },
+    {
+      "type": "image",
+      "src": "/media/images/241e4d589978e77e7963a5b54f2f3452f62567c0.webp",
+      "previewSrc": "/media/images/241e4d589978e77e7963a5b54f2f3452f62567c0-720.webp",
+      "alt": "mag image 3",
+      "width": 6188,
+      "height": 7516
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c681b6af4aeb72f99dc8d3c742760e4d004770fa.webp",
+      "previewSrc": "/media/images/c681b6af4aeb72f99dc8d3c742760e4d004770fa-720.webp",
+      "alt": "mag image 4",
+      "width": 4354,
+      "height": 5258
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ead2ec779eda560e8976d776c83acd168aeb3a8a.webp",
+      "previewSrc": "/media/images/ead2ec779eda560e8976d776c83acd168aeb3a8a-720.webp",
+      "alt": "mag image 5",
+      "width": 4926,
+      "height": 5934
+    },
+    {
+      "type": "image",
+      "src": "/media/images/25b96e975043043f522279d6b8f25bd798337dd9.webp",
+      "previewSrc": "/media/images/25b96e975043043f522279d6b8f25bd798337dd9-720.webp",
+      "alt": "mag image 6",
+      "width": 6276,
+      "height": 7610
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a0efa86b7ce430d2bae2f6671a39c0e17b275752.webp",
+      "previewSrc": "/media/images/a0efa86b7ce430d2bae2f6671a39c0e17b275752-720.webp",
+      "alt": "mag image 7",
+      "width": 5450,
+      "height": 6594
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f9eb0e6993216ef4cfad0c1fbd71042b0aa5ae04.webp",
+      "previewSrc": "/media/images/f9eb0e6993216ef4cfad0c1fbd71042b0aa5ae04-720.webp",
+      "alt": "mag image 8",
+      "width": 5282,
+      "height": 6380
+    },
+    {
+      "type": "image",
+      "src": "/media/images/391493838f866d2014daa60fa18fdf0b747f99ac.webp",
+      "previewSrc": "/media/images/391493838f866d2014daa60fa18fdf0b747f99ac-720.webp",
+      "alt": "mag image 9",
+      "width": 5688,
+      "height": 6880
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a72d9ed5c3de0645d80a8826456536d6cfb609a5.webp",
+      "previewSrc": "/media/images/a72d9ed5c3de0645d80a8826456536d6cfb609a5-720.webp",
+      "alt": "mag image 10",
+      "width": 6252,
+      "height": 7554
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Campbell Addy"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Gabriella Karefa-Johnson"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Issac Poleon"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "castDirector",
+      "name": "Ignacio Murillo, Rosie Vogel"
+    },
+    {
+      "role": "other",
+      "customRole": "Choreographer",
+      "name": "Abdourahman Njie"
+    },
+    {
+      "role": "manicurist",
+      "name": "Simone Cummings"
+    },
+    {
+      "role": "model",
+      "name": "Achenrin Madit, Akon Changkou, Maty Fall, Nyagua Ruea"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2022-oct"
+  ]
+}

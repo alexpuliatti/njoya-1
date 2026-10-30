@@ -1,0 +1,17 @@
+{
+  "id": "a2aa46fb-887b-434d-ae29-74b875b43d13",
+  "slug": "louboutin",
+  "title": "Louboutin",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/6ba60ff786bdc1fd195b398fe5e5439940eeb948.webp",
+    "previewSrc": "/media/images/6ba60ff786bdc1fd195b398fe5e5439940eeb948-720.webp",
+    "alt": "Louboutin",
+    "width": 1080,
+    "height": 1350
+  },
+  "workIds": [
+    "bafe4b27-e90c-4285-817a-11b2778cd34a"
+  ],
+  "isMultiEdition": false
+}

@@ -1,0 +1,92 @@
+{
+  "id": "279b6b0b-7048-43c3-aede-14829ddbc6ab",
+  "slug": "chanel",
+  "title": "Chanel Beauty, Mother’s Day 2024",
+  "client": "Chanel",
+  "date": "2024-05-12",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/e0a7d81a368e0d02a633f56d64a0a933ad9c84bc.webp",
+    "previewSrc": "/media/images/e0a7d81a368e0d02a633f56d64a0a933ad9c84bc-720.webp",
+    "alt": "A headless figure in a fine-knit lilac and pink striped long-sleeve top holds a large white rectangular box against their torso. In place of their head, an explosive cloud of Chanel camellia flowers in shades of hot pink, fuchsia, coral, orange, red, and white erupts upward against a clean white background. Colourful bracelets adorn the wrist. Graphic, playful, and distinctly Chanel.",
+    "width": 1080,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/bf7fbb6db85a4a22c72083ae4c3517717ea8248a.webp",
+      "previewSrc": "/media/images/bf7fbb6db85a4a22c72083ae4c3517717ea8248a-720.webp",
+      "alt": "mag image 1",
+      "width": 1242,
+      "height": 1242
+    },
+    {
+      "type": "image",
+      "src": "/media/images/861fea786f77fae13ce61a988c73134d568e28c8.webp",
+      "previewSrc": "/media/images/861fea786f77fae13ce61a988c73134d568e28c8-720.webp",
+      "alt": "mag image 2",
+      "width": 1242,
+      "height": 1242
+    },
+    {
+      "type": "image",
+      "src": "/media/images/bb74b0cf9f97719e7480d82c0757fd4ae36bef24.webp",
+      "previewSrc": "/media/images/bb74b0cf9f97719e7480d82c0757fd4ae36bef24-720.webp",
+      "alt": "mag image 3",
+      "width": 1011,
+      "height": 1038
+    },
+    {
+      "type": "image",
+      "src": "/media/images/203c3af05b8c9ab2b63bda56c1b83a08f93d991e.webp",
+      "previewSrc": "/media/images/203c3af05b8c9ab2b63bda56c1b83a08f93d991e-720.webp",
+      "alt": "mag image 4",
+      "width": 1011,
+      "height": 1038
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e0a7d81a368e0d02a633f56d64a0a933ad9c84bc.webp",
+      "previewSrc": "/media/images/e0a7d81a368e0d02a633f56d64a0a933ad9c84bc-720.webp",
+      "alt": "mag image 5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "video",
+      "playbackId": "s00x5Ge8mFR00zsseSRpOFnnw61h3rcDJwXAQWqNpuHUk",
+      "alt": "Chanel Beauty, Mother’s Day 2024 — film"
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Nicolas Kantor⁠"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Director of Photography",
+      "name": "Jeremy Valender"
+    },
+    {
+      "role": "other",
+      "customRole": "1st Assistant Set Design",
+      "name": "Axel Drury"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/chanel/editions/chanel"
+  ],
+  "coverVideoPlaybackId": "vcj002VsHfo2mu7YcZCIKTr7MkRO6Nb86AZ1f5jGyvDI"
+}

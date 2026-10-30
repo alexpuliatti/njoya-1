@@ -1,0 +1,17 @@
+{
+  "id": "6690378f-03f4-40df-a3bd-8d03104e3d14",
+  "slug": "nike-x-ambush",
+  "title": "Nike X Ambush",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/4e31cab14461e3affc3e7042408be9715f78b669.webp",
+    "previewSrc": "/media/images/4e31cab14461e3affc3e7042408be9715f78b669-720.webp",
+    "alt": "Mag Cover",
+    "width": 1538,
+    "height": 1922
+  },
+  "workIds": [
+    "4818726c-f6d5-403c-8e5f-45df6944d0b0"
+  ],
+  "isMultiEdition": false
+}

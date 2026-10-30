@@ -1,0 +1,104 @@
+{
+  "id": "c6fc2208-0d39-44a8-8182-335b559640d9",
+  "slug": "vogue-paris-september-2021",
+  "title": "Vogue Paris, September 2021",
+  "client": "Vogue Paris",
+  "date": "2021-09-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/64a4c61a1b76fabf3c16027734f36024fefbe078.webp",
+    "previewSrc": "/media/images/64a4c61a1b76fabf3c16027734f36024fefbe078-720.webp",
+    "alt": "Black and white editorial shot from the \"Kim Jones' heroine\" story, all looks by Fendi. One model seated, wearing a ribbed mohair crop top and tube skirt, long leather gloves, an FF logo metal necklace, and holding a \"Fendi First\" leather bag with golden metal chain. Voluminous sculptural curled updo, serene and powerful gaze — a glamorous, old-Hollywood-meets-couture mood.",
+    "width": 1537,
+    "height": 1851
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/4c26f6112c0f88ecbdd84dc17b3f34f02bd1c26b.webp",
+      "previewSrc": "/media/images/4c26f6112c0f88ecbdd84dc17b3f34f02bd1c26b-720.webp",
+      "alt": "mag image 1",
+      "width": 849,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e0c5033743b52d31e859dc679d90999358ef34d8.webp",
+      "previewSrc": "/media/images/e0c5033743b52d31e859dc679d90999358ef34d8-720.webp",
+      "alt": "mag image 2",
+      "width": 849,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7d7583a19334b037a0a8aa26331a7da490531e68.webp",
+      "previewSrc": "/media/images/7d7583a19334b037a0a8aa26331a7da490531e68-720.webp",
+      "alt": "mag image 3",
+      "width": 849,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/5d03bc22d023f382626b11d493cd790d6f1dfccd.webp",
+      "previewSrc": "/media/images/5d03bc22d023f382626b11d493cd790d6f1dfccd-720.webp",
+      "alt": "mag image 4",
+      "width": 849,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/7369d4a8e3d9837a14fd841a62889bae6c6783b5.webp",
+      "previewSrc": "/media/images/7369d4a8e3d9837a14fd841a62889bae6c6783b5-720.webp",
+      "alt": "mag image 5",
+      "width": 850,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ec9e5843145fa1a2c6d7c385f63277ff26b6950a.webp",
+      "previewSrc": "/media/images/ec9e5843145fa1a2c6d7c385f63277ff26b6950a-720.webp",
+      "alt": "mag image 6",
+      "width": 848,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/45bff2c394d252f053179b1e5d5daf9b58348cc0.webp",
+      "previewSrc": "/media/images/45bff2c394d252f053179b1e5d5daf9b58348cc0-720.webp",
+      "alt": "mag image 7",
+      "width": 849,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ee5621e2ab3455f0b80d7220b646f2a0b971b807.webp",
+      "previewSrc": "/media/images/ee5621e2ab3455f0b80d7220b646f2a0b971b807-720.webp",
+      "alt": "mag image 8",
+      "width": 850,
+      "height": 1024
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8f1bfe7cdf4e8ab5abc304279f07202995eac947.webp",
+      "previewSrc": "/media/images/8f1bfe7cdf4e8ab5abc304279f07202995eac947-720.webp",
+      "alt": "mag image 9",
+      "width": 1080,
+      "height": 1304
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-paris-september-2021",
+    "/shoots/vogue/editions/vogue-2021-autumn"
+  ]
+}

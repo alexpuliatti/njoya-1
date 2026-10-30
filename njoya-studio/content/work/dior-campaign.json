@@ -1,0 +1,166 @@
+{
+  "id": "e867a2ec-ad89-4661-b661-c0e047d49a86",
+  "slug": "dior-campaign",
+  "title": "Cactus Jack Dior, Summer 2022",
+  "client": "Dior",
+  "date": "2022-02-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/0f0a28e291fb618c7bd2ad101c34f585d99d707b.webp",
+    "previewSrc": "/media/images/0f0a28e291fb618c7bd2ad101c34f585d99d707b-720.webp",
+    "alt": "Two male models pose against a vivid green gradient backdrop. The model on the left wears an oversized floral jacquard knit in neon yellow with brown and ivory blooms, paired with copper-brown satin flares trimmed with crystal embellishment down the side seam. The model on the right wears a matching floral jacquard top in green with black, white, and pale pink florals, layered over a softer pink-and-green floral capelet, with emerald tailored trousers. Both wear angular black-and-white narrow sunglasses, with closely cropped hair. A bold black \"DIOR\" wordmark anchors the lower right corner.",
+    "width": 1110,
+    "height": 1200
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/9a9c38cc734cedad30a8b9fe19a2307f469b6a54.webp",
+      "previewSrc": "/media/images/9a9c38cc734cedad30a8b9fe19a2307f469b6a54-720.webp",
+      "alt": "mag Image #1",
+      "width": 1170,
+      "height": 1457
+    },
+    {
+      "type": "image",
+      "src": "/media/images/aaef05ab829861461f7728c173fb60509842e0dc.webp",
+      "previewSrc": "/media/images/aaef05ab829861461f7728c173fb60509842e0dc-720.webp",
+      "alt": "mag image #2",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4ce644798b3d6cf6c24bc905c5318d6c9f14302e.webp",
+      "previewSrc": "/media/images/4ce644798b3d6cf6c24bc905c5318d6c9f14302e-720.webp",
+      "alt": "mag image #3",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0a6f59c03a9507af06ca34858582b03d0061365a.webp",
+      "previewSrc": "/media/images/0a6f59c03a9507af06ca34858582b03d0061365a-720.webp",
+      "alt": "mag image 4",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d03dfb594923f75b925a73bba4995a4770a1f609.webp",
+      "previewSrc": "/media/images/d03dfb594923f75b925a73bba4995a4770a1f609-720.webp",
+      "alt": "mage image 6",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6e52002a012e05e37f3471f2f9e145472b780eee.webp",
+      "previewSrc": "/media/images/6e52002a012e05e37f3471f2f9e145472b780eee-720.webp",
+      "alt": "mag image 6",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/4dbd3a294832c8870b1d51fa063ff2ae201af51c.webp",
+      "previewSrc": "/media/images/4dbd3a294832c8870b1d51fa063ff2ae201af51c-720.webp",
+      "alt": "mag image 7",
+      "width": 2598,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/3704dc9d30720de3bf077e511996f11fdc6f517b.webp",
+      "previewSrc": "/media/images/3704dc9d30720de3bf077e511996f11fdc6f517b-720.webp",
+      "alt": "mag image 10",
+      "width": 1170,
+      "height": 1455
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8e2db59a2adab80d9330065c2e0ad5431b0f5ae6.webp",
+      "previewSrc": "/media/images/8e2db59a2adab80d9330065c2e0ad5431b0f5ae6-720.webp",
+      "alt": "mag image 11",
+      "width": 1299,
+      "height": 1683
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b110141596eadcd98c650a93a024832c045f6695.webp",
+      "previewSrc": "/media/images/b110141596eadcd98c650a93a024832c045f6695-720.webp",
+      "alt": "mag image 12",
+      "width": 1170,
+      "height": 1445
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8d6e48d74a1d581f5e416e8f2340df535669aceb.webp",
+      "previewSrc": "/media/images/8d6e48d74a1d581f5e416e8f2340df535669aceb-720.webp",
+      "alt": "mag image 13",
+      "width": 1170,
+      "height": 749
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Ellie Grace Cumming, Melanie Ward"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Designer",
+      "name": "Travis Scott"
+    },
+    {
+      "role": "other",
+      "customRole": "Designers",
+      "name": "Kim Jones, Travis Scott"
+    },
+    {
+      "role": "creativeDirector",
+      "name": "Karl Bolander"
+    },
+    {
+      "role": "other",
+      "customRole": "Art Director",
+      "name": "Ronnie Cooke-Newhouse"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Benjamin Muller"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Peter Philips"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting Director",
+      "name": "Shelley Durkan"
+    },
+    {
+      "role": "other",
+      "customRole": "Models",
+      "name": "Ahmadou Gueye, Fabio Silva, Lucas Dermont, Wang Chenming, Yoesry Detre"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dior/editions/dior-campaign"
+  ]
+}

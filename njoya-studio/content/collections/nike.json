@@ -1,0 +1,17 @@
+{
+  "id": "e3988a60-c313-41f3-954a-3caaf57c8823",
+  "slug": "nike",
+  "title": "Nike",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/752b28cfd11073ce4645cc50ee23e49fe066a2b3.webp",
+    "previewSrc": "/media/images/752b28cfd11073ce4645cc50ee23e49fe066a2b3-720.webp",
+    "alt": "Mag cover",
+    "width": 1452,
+    "height": 1446
+  },
+  "workIds": [
+    "2c99d15e-71d1-4929-b174-adab45be2334"
+  ],
+  "isMultiEdition": false
+}

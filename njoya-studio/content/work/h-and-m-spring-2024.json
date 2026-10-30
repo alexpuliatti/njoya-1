@@ -1,0 +1,157 @@
+{
+  "id": "31ef9f5d-ca42-4f2e-85ff-0134e9b96e3e",
+  "slug": "h-and-m-spring-2024",
+  "title": "H&M, Spring 2024",
+  "client": "H&M",
+  "date": "2024-03-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/25c25e571a5edc73c062d4d0d1839b630149a3f1.webp",
+    "previewSrc": "/media/images/25c25e571a5edc73c062d4d0d1839b630149a3f1-720.webp",
+    "alt": "Model with a voluminous natural afro and silver drop earrings, caught mid-step against a soft beige backdrop. Styled in an oversized open white poplin shirt cropped to bare the midriff, paired with a knee-length crinkled silver metallic skirt and pointed silver embellished mules. Clean, sculptural, modern — silver and white as pure statement.",
+    "width": 1080,
+    "height": 1350
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/25c25e571a5edc73c062d4d0d1839b630149a3f1.webp",
+      "previewSrc": "/media/images/25c25e571a5edc73c062d4d0d1839b630149a3f1-720.webp",
+      "alt": "Mag Image 1",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/99618b537f945911a8860454a2b61f1fb6a5e458.webp",
+      "previewSrc": "/media/images/99618b537f945911a8860454a2b61f1fb6a5e458-720.webp",
+      "alt": "Mag Image 2",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b29557cbb440d0291dabe1ed81ca441cdaf1bac0.webp",
+      "previewSrc": "/media/images/b29557cbb440d0291dabe1ed81ca441cdaf1bac0-720.webp",
+      "alt": "Mag Image 3",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/c188ecf5e407dd808a8f4cd846db531014e9f472.webp",
+      "previewSrc": "/media/images/c188ecf5e407dd808a8f4cd846db531014e9f472-720.webp",
+      "alt": "Mag Image 4",
+      "width": 1080,
+      "height": 1346
+    },
+    {
+      "type": "image",
+      "src": "/media/images/bdf504f06d3a0657a81622cd65792d7132484559.webp",
+      "previewSrc": "/media/images/bdf504f06d3a0657a81622cd65792d7132484559-720.webp",
+      "alt": "Mag image 5",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/eb8b7e5003212ba132c2d41abc8bbd13bc95a31e.webp",
+      "previewSrc": "/media/images/eb8b7e5003212ba132c2d41abc8bbd13bc95a31e-720.webp",
+      "alt": "Mag Image 6",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/6711fd586c3c8a7818cdc02ef7c16560607db1fa.webp",
+      "previewSrc": "/media/images/6711fd586c3c8a7818cdc02ef7c16560607db1fa-720.webp",
+      "alt": "Mag image 7",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/436d2a297774f12324b10818539caae526e9a8d9.webp",
+      "previewSrc": "/media/images/436d2a297774f12324b10818539caae526e9a8d9-720.webp",
+      "alt": "Mag Image 8",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/53b9470f2437077557213a9cda6407cb2f06a494.webp",
+      "previewSrc": "/media/images/53b9470f2437077557213a9cda6407cb2f06a494-720.webp",
+      "alt": "Mag Image 9",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d9694072968a18f58ded6223c872570c52ef7169.webp",
+      "previewSrc": "/media/images/d9694072968a18f58ded6223c872570c52ef7169-720.webp",
+      "alt": "Mag Image 10",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b21843ed97d716811e77df54011ba2a50937cf21.webp",
+      "previewSrc": "/media/images/b21843ed97d716811e77df54011ba2a50937cf21-720.webp",
+      "alt": "Mag Image 11",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/923f7ae19ca50f0334c98249ddb9c68344e9bde2.webp",
+      "previewSrc": "/media/images/923f7ae19ca50f0334c98249ddb9c68344e9bde2-720.webp",
+      "alt": "Mag Image 12",
+      "width": 1080,
+      "height": 1350
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Kate Phelan"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Designer",
+      "name": "Eliana Masgalos"
+    },
+    {
+      "role": "other",
+      "customRole": "Models",
+      "name": "Anok Yai, Precious Lee, Raquel Zimmermann, Vittoria Ceretti, Bibi Breslin"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Eugene Souleiman"
+    },
+    {
+      "role": "other",
+      "customRole": "Manicurist",
+      "name": "Lauren Michelle Pires"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/h-and-m/editions/h-and-m-spring-2024",
+    "/shoots/h-and-m/editions/h-and-m-third-campaign"
+  ]
+}

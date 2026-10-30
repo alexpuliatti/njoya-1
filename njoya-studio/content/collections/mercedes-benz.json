@@ -1,0 +1,17 @@
+{
+  "id": "de14273d-4c87-4854-a223-ee5e5683b611",
+  "slug": "mercedes-benz",
+  "title": "Mercedes Benz",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/3c6eac39ade2b9bd148821bd07c5d7023516167d.webp",
+    "previewSrc": "/media/images/3c6eac39ade2b9bd148821bd07c5d7023516167d-720.webp",
+    "alt": "mag cover",
+    "width": 1534,
+    "height": 1922
+  },
+  "workIds": [
+    "cd1fbc20-012d-41b7-bd96-d8be40b53013"
+  ],
+  "isMultiEdition": false
+}

@@ -1,0 +1,102 @@
+{
+  "id": "e7d23f27-1203-40bb-ac36-c56bbce673a3",
+  "slug": "dazed-spring-2021",
+  "title": "Dazed, Spring 2021",
+  "client": "Dazed",
+  "date": "2021-03-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/61921973ef8fcbad4d47fbc8b61fc7f5076696c3.webp",
+    "previewSrc": "/media/images/61921973ef8fcbad4d47fbc8b61fc7f5076696c3-720.webp",
+    "alt": "Three models stand against a pale grey background, all dressed head-to-toe in vivid red. The central figure wears a voluminous red ball-gown coat with exaggerated gathered skirt, flanked by two models in structured red suiting. Each wears an elaborate sculptural headpiece of red floral and botanical elements — cascading dried blooms, branches, and textured forms exploding upward like living crowns. Arms folded, the central model faces the camera with a direct, composed gaze. The cover lines read \"Freedom is coming, but where are we going?\" and \"a move towards a movement.\"",
+    "width": 1474,
+    "height": 1922
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/79ad674d9898f000bdbc062b5f019fdd189d2e41.webp",
+      "previewSrc": "/media/images/79ad674d9898f000bdbc062b5f019fdd189d2e41-720.webp",
+      "alt": "Mag Image #1",
+      "width": 1358,
+      "height": 1772
+    },
+    {
+      "type": "image",
+      "src": "/media/images/08d5f68281227ac7660315bbfa8d02569e47124a.webp",
+      "previewSrc": "/media/images/08d5f68281227ac7660315bbfa8d02569e47124a-720.webp",
+      "alt": "Mag Image #2",
+      "width": 1917,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a1581a86650fee319f9210f0ec3e46d5f4645da9.webp",
+      "previewSrc": "/media/images/a1581a86650fee319f9210f0ec3e46d5f4645da9-720.webp",
+      "alt": "Mag Image #3",
+      "width": 1917,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/aac82966f3041c8fa44eaf26b99f3484e5318880.webp",
+      "previewSrc": "/media/images/aac82966f3041c8fa44eaf26b99f3484e5318880-720.webp",
+      "alt": "Mag Image #4",
+      "width": 1917,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/07cc4693dad84d05f08c0d5df8e98a789d38f12f.webp",
+      "previewSrc": "/media/images/07cc4693dad84d05f08c0d5df8e98a789d38f12f-720.webp",
+      "alt": "Mag Image #5",
+      "width": 1917,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/0707f9d4d0ddd26170280ee5cff7dd2bbb206bbc.webp",
+      "previewSrc": "/media/images/0707f9d4d0ddd26170280ee5cff7dd2bbb206bbc-720.webp",
+      "alt": "Mag Image #6",
+      "width": 1917,
+      "height": 2500
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "stylist",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "other",
+      "customRole": "Set Designer",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Virginie Moreira"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Ammy Drammeh"
+    },
+    {
+      "role": "other",
+      "customRole": "Casting",
+      "name": "11 Casting"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/dazed/editions/dazed-spring-2021",
+    "/shoots/dazed/editions/dazed-2021-spring-may"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "71973e91-2019-45cf-95f0-bfe646f19a96",
+  "slug": "alberta-ferretti",
+  "title": "Alberta Ferretti",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/b749e335b1f555c2373a67b2eb9e0004621b98a1.webp",
+    "previewSrc": "/media/images/b749e335b1f555c2373a67b2eb9e0004621b98a1-720.webp",
+    "alt": "Alberta Ferretti Cover",
+    "width": 1572,
+    "height": 1923
+  },
+  "workIds": [
+    "5526a0fc-9fb0-4344-9ce4-84b1eed82e4e"
+  ],
+  "isMultiEdition": false
+}

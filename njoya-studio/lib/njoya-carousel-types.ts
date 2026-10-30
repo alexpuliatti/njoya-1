@@ -1,0 +1,74 @@
+/**
+ * Carousel types shared between njoya-carousel, njoya-carousel-card,
+ * and njoya-carousel-detail-panel.
+ *
+ * If your existing njoya-carousel-types.ts has additional fields,
+ * just merge in `coverVideoPlaybackId` and `galleryVideoPlaybackIds`
+ * onto NjoyaCarouselItem — those are the only new bits.
+ */
+
+import type { GalleryEntry } from "@/lib/content/types";
+
+export interface SearchItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  category: string;
+  href: string;
+  imageUrl: string;
+  searchText: string;
+}
+
+export interface NjoyaCarouselMetadata {
+  label: string;
+  value: string;
+}
+
+export interface NjoyaCarouselItem {
+  id: string;
+  title: string;
+  subtitle: string;
+
+  /** Still image used by the card (when not hovering) and as the
+   *  source for the FLIP clone. For video items this is the Mux
+   *  thumbnail; for image-only items it's the cover image. */
+  imageUrl: string;
+  imageAlt?: string;
+  heroImageUrl?: string;
+  gallery?: GalleryEntry[];
+  unavailable?: boolean;
+
+  href: string;
+  linkLabel: string;
+  category: string;
+  type: "shoot" | "design-project";
+  isMultiEdition?: boolean;
+
+  images: string[];
+  metadata: NjoyaCarouselMetadata[];
+
+  /** ─── NEW ───────────────────────────────────────
+   *  When set, the card overlays a muted <video> that
+   *  plays on hover, and the detail panel hero renders
+   *  a <video> instead of an <Image>.
+   */
+  coverVideoPlaybackId?: string;
+
+  /** ─── NEW ───────────────────────────────────────
+   *  Additional gallery videos. Empty for now (schema
+   *  only has cover videos), but the detail panel
+   *  already renders these — add a field like
+   *  magVideo1..magVideoN later and they'll surface
+   *  automatically.
+   */
+  galleryVideoPlaybackIds?: string[];
+}
+
+export interface NjoyaClickPayload {
+  item: NjoyaCarouselItem;
+  imgEl: HTMLImageElement;
+  fromRect: DOMRect;
+  fromRadius: string;
+  morphProg: number;
+  rotation: number;
+}

@@ -1,0 +1,108 @@
+{
+  "id": "f1879b79-2b0d-4960-a849-6102ce206a66",
+  "slug": "vogue-2023-oct",
+  "title": "Vogue, October 2023",
+  "client": "Vogue",
+  "date": "2023-10-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/1c871ae77db51fabc2d2f0ea1cadc2f250764d0a.webp",
+    "previewSrc": "/media/images/1c871ae77db51fabc2d2f0ea1cadc2f250764d0a-720.webp",
+    "alt": "A model with voluminous, wind-blown platinum blonde hair wears an all-over red tartan ensemble — a draped crop top and a sweeping pleated midi skirt with an elongated dramatic train — posed against a red London double-decker bus. The look is maximalist and punk-inspired, with the bold plaid print echoing the bus's iconic red, set on a grey London street.",
+    "width": 1528,
+    "height": 1924
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/4d14c13f3241b92bd352c03810221029d551262d.webp",
+      "previewSrc": "/media/images/4d14c13f3241b92bd352c03810221029d551262d-720.webp",
+      "alt": "A model with voluminous, wind-blown platinum blonde hair wears an all-over red tartan ensemble — a draped crop top and a sweeping pleated midi skirt with an elongated dramatic train — posed against a red London double-decker bus. The look is maximalist and punk-inspired, with the bold plaid print echoing the bus's iconic red, set on a grey London street.",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/cc1a355cbdcde7084449b1819cf5435b21c2efd8.webp",
+      "previewSrc": "/media/images/cc1a355cbdcde7084449b1819cf5435b21c2efd8-720.webp",
+      "alt": "mag image 2",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/e77e7b26bd693262b0e12217a3f3b028a00cb734.webp",
+      "previewSrc": "/media/images/e77e7b26bd693262b0e12217a3f3b028a00cb734-720.webp",
+      "alt": "mag image 3",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/1e774860520c2e89fd7b0b98c2f2797e27a0e07a.webp",
+      "previewSrc": "/media/images/1e774860520c2e89fd7b0b98c2f2797e27a0e07a-720.webp",
+      "alt": "mag image 4",
+      "width": 1080,
+      "height": 1350
+    },
+    {
+      "type": "image",
+      "src": "/media/images/20c8789cbcfdb9addaf8e2cb78549e4ec39be5f2.webp",
+      "previewSrc": "/media/images/20c8789cbcfdb9addaf8e2cb78549e4ec39be5f2-720.webp",
+      "alt": "mag image 5",
+      "width": 1080,
+      "height": 714
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ad521bf1fdbcaca2e2620fd3344bc3522f895980.webp",
+      "previewSrc": "/media/images/ad521bf1fdbcaca2e2620fd3344bc3522f895980-720.webp",
+      "alt": "mag image 6",
+      "width": 1080,
+      "height": 715
+    },
+    {
+      "type": "image",
+      "src": "/media/images/948ca5b26d92b8a66a2d608f90dce2e54466c8f4.webp",
+      "previewSrc": "/media/images/948ca5b26d92b8a66a2d608f90dce2e54466c8f4-720.webp",
+      "alt": "mag image 7",
+      "width": 1080,
+      "height": 1346
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Kate Phelan"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Eugene Souleiman"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Chiao Li Hsu"
+    },
+    {
+      "role": "model",
+      "name": "Karolina Spakowski"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2023-oct"
+  ]
+}

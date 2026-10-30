@@ -1,0 +1,152 @@
+
+export default {
+  name: 'magazine',
+  title: 'Magazine',
+  type: 'document',
+  fields: [
+    {
+        name: 'shoot1',
+        title: 'Shoot #1',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot2',
+        title: 'Shoot #2',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot3',
+        title: 'Shoot #3',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot4',
+        title: 'Shoot #4',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot5',
+        title: 'Shoot #5',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot6',
+        title: 'Shoot #6',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot7',
+        title: 'Shoot #7',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot8',
+        title: 'Shoot #8',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot9',
+        title: 'Shoot #9',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot10',
+        title: 'Shoot #10',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot11',
+        title: 'Shoot #11',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot12',
+        title: 'Shoot #12',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot13',
+        title: 'Shoot #13',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot14',
+        title: 'Shoot #14',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot15',
+        title: 'Shoot #15',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot16',
+        title: 'Shoot #16',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot17',
+        title: 'Shoot #17',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot18',
+        title: 'Shoot #18',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot19',
+        title: 'Shoot #19',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot20',
+        title: 'Shoot #20',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot21',
+        title: 'Shoot #21',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot22',
+        title: 'Shoot #22',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot23',
+        title: 'Shoot #23',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+    {
+        name: 'shoot24',
+        title: 'Shoot #24',
+        type: 'reference',
+        to: {type: 'shoots'},
+    },
+  ]
+}

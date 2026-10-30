@@ -1,0 +1,108 @@
+{
+  "id": "5693f454-995b-4646-a198-afa4279248f3",
+  "slug": "vogue-2022-summer",
+  "title": "Vogue France, September 2022",
+  "client": "Vogue France",
+  "date": "2022-09-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/0b27f15c564584a2925cb848c287cde7dd19dced.webp",
+    "previewSrc": "/media/images/0b27f15c564584a2925cb848c287cde7dd19dced-720.webp",
+    "alt": "Kate Moss in a close-up editorial portrait with voluminous, wind-blown ombre hair, wearing iridescent blue sequined shoulders and a dangling chandelier earring. Her makeup features bold metallic blue eyeshadow against a soft lavender-grey gradient background. The mood is cosmic and ethereal, referencing the cover headline \"Beauté cosmique.\"",
+    "width": 1440,
+    "height": 1800
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/0b27f15c564584a2925cb848c287cde7dd19dced.webp",
+      "previewSrc": "/media/images/0b27f15c564584a2925cb848c287cde7dd19dced-720.webp",
+      "alt": "mag image 1",
+      "width": 1440,
+      "height": 1800
+    },
+    {
+      "type": "image",
+      "src": "/media/images/826e5ac20614ef1d891db674cf77a8ac067cc6b1.webp",
+      "previewSrc": "/media/images/826e5ac20614ef1d891db674cf77a8ac067cc6b1-720.webp",
+      "alt": "mag image 2",
+      "width": 1600,
+      "height": 2749
+    },
+    {
+      "type": "image",
+      "src": "/media/images/22794a3e41e54aaf0050f86e11ed8529cad86a98.webp",
+      "previewSrc": "/media/images/22794a3e41e54aaf0050f86e11ed8529cad86a98-720.webp",
+      "alt": "mag image 3",
+      "width": 2000,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8a71cd53fa6e05996eac920930cdc15580f8b235.webp",
+      "previewSrc": "/media/images/8a71cd53fa6e05996eac920930cdc15580f8b235-720.webp",
+      "alt": "mag image 4",
+      "width": 1440,
+      "height": 1797
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ba491ac948a2a8d508b73d6f9e0bf6cb617e3e47.webp",
+      "previewSrc": "/media/images/ba491ac948a2a8d508b73d6f9e0bf6cb617e3e47-720.webp",
+      "alt": "mag image 5",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "type": "image",
+      "src": "/media/images/222db826b5ee091f93197697cd5462ff2f9e4b6a.webp",
+      "previewSrc": "/media/images/222db826b5ee091f93197697cd5462ff2f9e4b6a-720.webp",
+      "alt": "mag image 8",
+      "width": 1440,
+      "height": 1080
+    },
+    {
+      "type": "image",
+      "src": "/media/images/b8321f1a05a7cd5bbb048cd184e7db5bd8ab9cbf.webp",
+      "previewSrc": "/media/images/b8321f1a05a7cd5bbb048cd184e7db5bd8ab9cbf-720.webp",
+      "alt": "mag image 9",
+      "width": 2480,
+      "height": 1683
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Carlijn Jacobs"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Kate Phelan"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "talent",
+      "name": "Kate Moss"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Syd Hayes"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Isamaya Ffrench"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2022-summer"
+  ]
+}

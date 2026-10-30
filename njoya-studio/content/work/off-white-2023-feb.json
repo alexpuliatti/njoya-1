@@ -1,0 +1,72 @@
+{
+  "id": "f251a6a6-0d9d-4995-bf90-0b8db6440a08",
+  "slug": "off-white-2023-feb",
+  "title": "Off-White, February 2023",
+  "client": "Off-White",
+  "date": "2023-02-01",
+  "categories": [
+    "commercials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37.webp",
+    "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-720.webp",
+    "alt": "Black and white studio shot of a young male model standing against a mottled grey backdrop, surrounded by scattered basketballs on the floor. He wears an Off-White varsity bomber jacket covered in embroidered patches and lettering — including \"Off-White,\" \"Milano Italy Chicago U.S.A.\" — paired with low-rise baggy wide-leg jeans, a white waistband peeking above, and white sneakers. He casually holds a basketball under one arm, looking directly at the camera with a cool, composed expression.",
+    "width": 1360,
+    "height": 1813
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba.webp",
+      "previewSrc": "/media/images/ff94f06c2da5b7582dcbc2e8f0cc64d59f2c4eba-720.webp",
+      "alt": "mag image 2",
+      "width": 1360,
+      "height": 765
+    },
+    {
+      "type": "image",
+      "src": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002.webp",
+      "previewSrc": "/media/images/283db99d838e11ec0c94d4b3d4f29ef69bffa002-720.webp",
+      "alt": "mag image 3",
+      "width": 1360,
+      "height": 1813
+    },
+    {
+      "type": "image",
+      "src": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37.webp",
+      "previewSrc": "/media/images/870cd2210595a56b34ec59572667c4ef638c4e37-720.webp",
+      "alt": "mag image 4",
+      "width": 1360,
+      "height": 1813
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Luis Alberto Rodriguez"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Ib Kamara"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Paolo Soffiatti"
+    },
+    {
+      "role": "castDirector",
+      "name": "Jonathan Johnson"
+    },
+    {
+      "role": "model",
+      "name": "Macek, Ruben Moreira, Tuuli Tamm"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/off-white/editions/off-white-2023-feb"
+  ]
+}

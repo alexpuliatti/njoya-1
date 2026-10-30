@@ -1,0 +1,18 @@
+{
+  "id": "9411c877-4b51-412d-a05d-a2f4723d8acb",
+  "slug": "chanel",
+  "title": "Chanel",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/c73d506b971ee5023f5c94d8f3ff798fe5126026.webp",
+    "previewSrc": "/media/images/c73d506b971ee5023f5c94d8f3ff798fe5126026-720.webp",
+    "alt": "Chanel Cover Magazine",
+    "width": 1517,
+    "height": 1928
+  },
+  "workIds": [
+    "279b6b0b-7048-43c3-aede-14829ddbc6ab"
+  ],
+  "isMultiEdition": true,
+  "coverVideoPlaybackId": "vcj002VsHfo2mu7YcZCIKTr7MkRO6Nb86AZ1f5jGyvDI"
+}

@@ -1,0 +1,750 @@
+{
+  "source": "../njoya-sanity-backup/extracted/production-export-2026-10-29t16-30-14-149z",
+  "excludedDrafts": 3,
+  "generatedSlugs": [
+    {
+      "id": "6d5b8c39-47fd-43e2-bb6f-81b09d286cc6",
+      "title": "Pleats Please Issey Miyake, June 2026",
+      "slug": "pleats-please-issey-miyake-june-2026"
+    },
+    {
+      "id": "bafe4b27-e90c-4285-817a-11b2778cd34a",
+      "title": "Christian Louboutin Men's Fall 2026, July 2026",
+      "slug": "christian-louboutin-mens-fall-2026-july-2026"
+    },
+    {
+      "id": "92cc915c-efa4-4f73-aa00-7d71f0b7b31a",
+      "title": "The Beat Goes On, Audemars Piguet 150th Anniversary Campaign",
+      "slug": "the-beat-goes-on-audemars-piguet-150th-anniversary-campaign"
+    },
+    {
+      "id": "1acdd8e5-92c3-4df6-a9c3-6659c87effad",
+      "title": "British Vogue, March 2025",
+      "slug": "british-vogue-march-2025"
+    },
+    {
+      "id": "cc1954d9-59a4-471e-9809-19137813a65f",
+      "title": "Dazed, Spring 2025",
+      "slug": "dazed-spring-2025"
+    },
+    {
+      "id": "ecfb9947-2e6a-49d6-a90e-f79055887173",
+      "title": "New Bond Street Windows, 2026",
+      "slug": "new-bond-street-windows-2026"
+    },
+    {
+      "id": "378914ba-d39e-42d4-8976-3f58276672eb",
+      "title": "Le Monde d'Hermès No. 87, Fall/Winter 2026",
+      "slug": "le-monde-dhermes-no-87-fall-winter-2026"
+    },
+    {
+      "id": "36165f79-c712-4d90-92a5-8d241b0471cf",
+      "title": "Canada Goose Festive Global Windows, 2025",
+      "slug": "canada-goose-festive-global-windows-2025"
+    },
+    {
+      "id": "44b74fc7-a71f-49b3-b2ce-378970534613",
+      "title": "Sculptures for Vans",
+      "slug": "sculptures-for-vans"
+    },
+    {
+      "id": "79ccc8ae-13c5-49ac-9b4b-819d64084823",
+      "title": "Hermès Windows 2023",
+      "slug": "hermes-windows-2023"
+    },
+    {
+      "id": "53eaf2c4-c6a3-4ff7-957c-99732d47a1f5",
+      "title": "I Love Campbell Australia",
+      "slug": "i-love-campbell-australia"
+    },
+    {
+      "id": "fefe418e-7518-4af7-a591-1cad5a67c3e4",
+      "title": "NAOMI: In Fashion",
+      "slug": "naomi-in-fashion"
+    },
+    {
+      "id": "8b5492cb-ecad-4994-900c-8dda8357bb9e",
+      "title": "Harvey Nichols Windows, 2026",
+      "slug": "harvey-nichols-windows-2026"
+    },
+    {
+      "id": "a2aa46fb-887b-434d-ae29-74b875b43d13",
+      "title": "Louboutin",
+      "slug": "louboutin"
+    }
+  ],
+  "unlinkedWork": [
+    {
+      "id": "6d5b8c39-47fd-43e2-bb6f-81b09d286cc6",
+      "title": "Pleats Please Issey Miyake, June 2026"
+    },
+    {
+      "id": "1acdd8e5-92c3-4df6-a9c3-6659c87effad",
+      "title": "British Vogue, March 2025"
+    },
+    {
+      "id": "378914ba-d39e-42d4-8976-3f58276672eb",
+      "title": "Le Monde d'Hermès No. 87, Fall/Winter 2026"
+    }
+  ],
+  "missingDates": [
+    {
+      "id": "97a27198-7e09-4a28-b135-24f4109f281b",
+      "title": "H&M Innovation Metaverse Design Story, December 2022"
+    },
+    {
+      "id": "4f23cf2e-116c-4123-a5c1-e5956f13dbdc",
+      "title": "Dior Magazine, No. 37, March 2022"
+    }
+  ],
+  "dateConflicts": [
+    {
+      "id": "ad25c23d-8ceb-4710-90fa-11f10ae4a272",
+      "title": "Brides de Galaxy, 2025",
+      "date": "2023-11-15",
+      "note": "Title says 2025; source date says 2023. Source date retained pending review."
+    }
+  ],
+  "categoryReview": [
+    {
+      "id": "70b0813b-9d52-4a9b-82ce-267601fe6ddc",
+      "title": "System No. 19, Spring/Summer 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "86ed8436-c086-4e6b-8965-64d05b927516",
+      "title": "H&M Innovation Design Story, Holiday 2021",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "97ad7387-4a88-4b33-bfbc-62d1c55b8080",
+      "title": "Dior Magazine No. 35, Winter 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "a13961a1-cca7-42c4-baec-ba587e5a8e88",
+      "title": "British Vogue, February 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "ac3ffb3b-5b4b-400b-98b4-9c5f18a6c5c9",
+      "title": "Vogue Italia, July 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "b2ba1aef-5e54-402c-9ae8-d080d143a84e",
+      "title": "Moncler x adidas Originals, The Art of Explorers, 2023",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "b839e5f6-0eee-4e91-9f22-8f1e6580e7c2",
+      "title": "Dries Van Noten, Spring/Summer 2022",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "f03541ee-7fb3-4a00-83d3-ba723c7a3335",
+      "title": "British Vogue, August 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "c16cfcd1-fdfe-428f-b9a2-7d1417efe592",
+      "title": "Perfect No. 7, Autumn/Winter 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "cce07dd1-6d8d-42fe-82aa-291d4300e078",
+      "title": "Dazed, Spring 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "e7d23f27-1203-40bb-ac36-c56bbce673a3",
+      "title": "Dazed, Spring 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "ad25c23d-8ceb-4710-90fa-11f10ae4a272",
+      "title": "Brides de Galaxy, 2025",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "9af5013e-2bce-4a0a-8de2-8172ef18d60b",
+      "title": "British Vogue, October 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "6d5b8c39-47fd-43e2-bb6f-81b09d286cc6",
+      "title": "Pleats Please Issey Miyake, June 2026",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "bafe4b27-e90c-4285-817a-11b2778cd34a",
+      "title": "Christian Louboutin Men's Fall 2026, July 2026",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "279b6b0b-7048-43c3-aede-14829ddbc6ab",
+      "title": "Chanel Beauty, Mother’s Day 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "6ad40c1b-3d7e-4632-8307-26c1eee4c404",
+      "title": "Acne Paper No. 19, Nocturne, S/S 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "10f5c26b-7037-4c4b-a2fc-6bce702f5aea",
+      "title": "W Magazine, June 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "18385486-6bcb-491c-ad8a-6f395d893d09",
+      "title": "W Magazine, June 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "81dbc336-623c-40f3-b8c6-c271b84b63ec",
+      "title": "Vogue, April 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "5693f454-995b-4646-a198-afa4279248f3",
+      "title": "Vogue France, September 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "daa3535a-60d3-4fde-87e5-c33e18112a3d",
+      "title": "British Vogue, February 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "92cc915c-efa4-4f73-aa00-7d71f0b7b31a",
+      "title": "The Beat Goes On, Audemars Piguet 150th Anniversary Campaign",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "1acdd8e5-92c3-4df6-a9c3-6659c87effad",
+      "title": "British Vogue, March 2025",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "cc1954d9-59a4-471e-9809-19137813a65f",
+      "title": "Dazed, Spring 2025",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "ecfb9947-2e6a-49d6-a90e-f79055887173",
+      "title": "New Bond Street Windows, 2026",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "378914ba-d39e-42d4-8976-3f58276672eb",
+      "title": "Le Monde d'Hermès No. 87, Fall/Winter 2026",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "10b1042f-13ab-45e8-8726-441facb463c1",
+      "title": "Dazed, Winter 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "e22bc855-53a0-4284-923a-994f803e5ca2",
+      "title": "Off-White, SS 23",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "36165f79-c712-4d90-92a5-8d241b0471cf",
+      "title": "Canada Goose Festive Global Windows, 2025",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "44b74fc7-a71f-49b3-b2ce-378970534613",
+      "title": "Sculptures for Vans",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "79ccc8ae-13c5-49ac-9b4b-819d64084823",
+      "title": "Hermès Windows 2023",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "e84f620f-5571-4aa6-9f05-1e4314bfd591",
+      "title": "Botter Spring Menswear Design",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "53eaf2c4-c6a3-4ff7-957c-99732d47a1f5",
+      "title": "I Love Campbell Australia",
+      "proposedCategories": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "6cc7ad54-c9a7-42d3-a6f9-a24f47e6a8e5",
+      "title": "Balmain Men’s Fall Winter,  2024",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "6d86ea9a-43d3-4cb1-a223-dd8b0cffa7c0",
+      "title": "Off-White Imaginary Club",
+      "proposedCategories": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "a4ca20c4-74a9-43fd-9ae2-d9f87ff3ee16",
+      "title": "K-Way Paris Fashion Week Show, 2023",
+      "proposedCategories": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "ea575415-5993-4ad7-8c27-0d07c7929484",
+      "title": "Selfridges Window",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "430b5cc4-28f5-459d-97b2-bc5307c52755",
+      "title": "Acne Paper, Issue 20 — Golden, S/S 2025",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "fefe418e-7518-4af7-a591-1cad5a67c3e4",
+      "title": "NAOMI: In Fashion",
+      "proposedCategories": [
+        "exhibition"
+      ]
+    },
+    {
+      "id": "8b5492cb-ecad-4994-900c-8dda8357bb9e",
+      "title": "Harvey Nichols Windows, 2026",
+      "proposedCategories": [
+        "worlds"
+      ]
+    },
+    {
+      "id": "8db22354-87ea-4d97-9263-8c3f4c84511f",
+      "title": "Vogue Italia, July 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "ba23e5b5-6a76-49b2-86fc-2f391f6318b7",
+      "title": "Vogue US, August 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "713e1a25-cc90-4b38-9efc-7be5f0682929",
+      "title": "Vogue Italia, April 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "c6fc2208-0d39-44a8-8182-335b559640d9",
+      "title": "Vogue Paris, September 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "e335cffa-161d-4b20-bf56-7b014bf049e0",
+      "title": "British Vogue, September 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "ff65ad54-4a50-4404-a4b8-4484728d1ef3",
+      "title": "Vogue Hommes, March 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "1898f67b-5666-4839-ac0f-090a0168705f",
+      "title": "Dazed, Summer 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "e64bb000-e1cc-4465-9855-44ea7c3cfa47",
+      "title": "Dazed, September 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "7fdb50fd-37a1-400d-b16c-6ad4a6c6e7c1",
+      "title": "Balmain, Spring 2024 Campaign",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "71dd7573-571c-4a67-b42c-e93f5209c434",
+      "title": "Balmain, September 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "5526a0fc-9fb0-4344-9ce4-84b1eed82e4e",
+      "title": "Alberta Ferretti, Fall/Winter 2022 Ad Campaign",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "0ebb4d98-8f16-4e6f-a08f-c5697d8f488f",
+      "title": "Dazed, Summer 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "4932f205-0e3a-4478-bdbd-88ae965e9310",
+      "title": "Dazed, November 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "4a8f9d77-b256-4eb2-a103-e21f925d5423",
+      "title": "Dazed, Summer 2025",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "8e5a71b0-f818-4e55-b0d8-10efd2ba4a55",
+      "title": "Dazed, Summer 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "e4584b6c-5b5a-4604-a818-d517b85238f8",
+      "title": "Dazed, June 2025",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "fb58600d-68bf-4825-a3cc-a2293dd18133",
+      "title": "Dazed, Summer 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "afebc806-19b2-479e-bee9-f899df0e2f79",
+      "title": "Del Core, A/W 2021",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "e867a2ec-ad89-4661-b661-c0e047d49a86",
+      "title": "Cactus Jack Dior, Summer 2022",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "31ef9f5d-ca42-4f2e-85ff-0134e9b96e3e",
+      "title": "H&M, Spring 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "83a18416-244b-4943-bc88-db72587a7340",
+      "title": "Dazed, December 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "877657d4-23c5-4cc5-95d6-26269491578a",
+      "title": "Dazed, March 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "bad61d29-ad8b-4ef0-aaeb-b3a64c2c659b",
+      "title": "Dazed, Autumn 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "97a27198-7e09-4a28-b135-24f4109f281b",
+      "title": "H&M Innovation Metaverse Design Story, December 2022",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "eba3e495-0a85-4a16-ac67-00535be1f3ad",
+      "title": "Lacoste, April 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "cd1fbc20-012d-41b7-bd96-d8be40b53013",
+      "title": "Mercedes-Benz x AWGE",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "39164410-2700-4bf3-ad21-bb17371980fb",
+      "title": "Off-White, August 2022",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "1b6c9e83-e66c-4c01-bf2e-c8c6e92d7c6e",
+      "title": "M Le Monde, October 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "4818726c-f6d5-403c-8e5f-45df6944d0b0",
+      "title": "Nike X Ambush, March 2023",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "4cbea949-0607-4e31-afbf-5bdcaa2bedb1",
+      "title": "The New York Times Magazine, January 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "728d66f1-f330-4ed6-aaf8-23ad4294e779",
+      "title": "Perfect No. 7, Autumn/Winter 2024 — Prada Special",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "940b860b-68dc-4a6e-bf4a-c4a7d673f205",
+      "title": "Perfect No. 6.5 — Rihanna in One Word",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "f251a6a6-0d9d-4995-bf90-0b8db6440a08",
+      "title": "Off-White, February 2023",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "179dc909-8df9-41e8-b60c-68bb1442754f",
+      "title": "T Magazine, Spring 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "1491650e-071c-4245-a33d-331e122f043f",
+      "title": "W Magazine, July 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "19199feb-98e9-46a0-bb62-3ccc7fd94088",
+      "title": "Off-White Eyewear, September 2022",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "30c431b4-b337-491b-9519-8a064909fba8",
+      "title": "Vogue, October 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "2e7cfa35-1517-4d98-bfe6-71480cd8af46",
+      "title": "Dazed, March 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "2c99d15e-71d1-4929-b174-adab45be2334",
+      "title": "Nike Euros Campaign 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    },
+    {
+      "id": "518d805b-e83e-4f77-b1df-43dfabeb6c95",
+      "title": "M Le Monde, October 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "323b57e0-5c35-4f7e-91ea-0945834acb6d",
+      "title": "M Le Monde, November 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "4c1faaa1-1cf4-4121-b643-c760ec36d202",
+      "title": "W Magazine, October 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "4f23cf2e-116c-4123-a5c1-e5956f13dbdc",
+      "title": "Dior Magazine, No. 37, March 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "72b530c9-5648-4cb2-8e89-73eac4a46a0a",
+      "title": "Dazed, November 2021",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "80b24701-f1da-40b7-b122-ebd5e8b47e6a",
+      "title": "W Magazine, February 2022",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef",
+      "title": "Dazed, Autumn 2021 — 30th Anniversary Issue",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "d2a869e6-42ce-4a03-bcdb-cf8bbf632a6f",
+      "title": "Dazed, June 2024",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "f1879b79-2b0d-4960-a849-6102ce206a66",
+      "title": "Vogue, October 2023",
+      "proposedCategories": [
+        "editorials"
+      ]
+    },
+    {
+      "id": "fbd8f400-e75c-4800-bef2-1a83d026447a",
+      "title": "H&M, May 2024",
+      "proposedCategories": [
+        "commercials"
+      ]
+    }
+  ],
+  "pendingHeroes": [
+    "Jaguar"
+  ],
+  "counts": {
+    "work": 90,
+    "collections": 23,
+    "images": 812,
+    "legacyRoutes": 123
+  },
+  "preservedVideoReferences": "Mux playback IDs only; no video files supplied"
+}

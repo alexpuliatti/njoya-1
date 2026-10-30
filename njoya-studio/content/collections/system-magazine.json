@@ -1,0 +1,17 @@
+{
+  "id": "ea161f01-a9af-4705-9592-46440fe48c99",
+  "slug": "system-magazine",
+  "title": "System Magazine",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/e39be83062753d59c27783e560c11e1b4f93169a.webp",
+    "previewSrc": "/media/images/e39be83062753d59c27783e560c11e1b4f93169a-720.webp",
+    "alt": "System Magazine",
+    "width": 1024,
+    "height": 1348
+  },
+  "workIds": [
+    "70b0813b-9d52-4a9b-82ce-267601fe6ddc"
+  ],
+  "isMultiEdition": false
+}

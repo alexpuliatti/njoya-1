@@ -1,0 +1,156 @@
+{
+  "id": "a13961a1-cca7-42c4-baec-ba587e5a8e88",
+  "slug": "vogue-2022-jan",
+  "title": "British Vogue, February 2022",
+  "client": "British Vogue",
+  "date": "2022-02-01",
+  "categories": [
+    "editorials"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/d3cce2c02b36012ecf7523ea23f3f48899dbda8c.webp",
+    "previewSrc": "/media/images/d3cce2c02b36012ecf7523ea23f3f48899dbda8c-720.webp",
+    "alt": "A group cover featuring nine Black models posed together against a warm brown background with a turquoise blue bench, all dressed in all-black looks ranging from tailored blazers to draped dresses. Their styling features voluminous dark curls, individual yet cohesive. The cover headline reads \"Fashion Now — First Look at the New Season & the Faces Shaping 2022,\" celebrating a landmark moment in representation in fashion.",
+    "width": 2362,
+    "height": 2953
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/d3cce2c02b36012ecf7523ea23f3f48899dbda8c.webp",
+      "previewSrc": "/media/images/d3cce2c02b36012ecf7523ea23f3f48899dbda8c-720.webp",
+      "alt": "mag image 1",
+      "width": 2362,
+      "height": 2953
+    },
+    {
+      "type": "image",
+      "src": "/media/images/a5a4041abdcc50c58e11f47ba8e1f677de30a924.webp",
+      "previewSrc": "/media/images/a5a4041abdcc50c58e11f47ba8e1f677de30a924-720.webp",
+      "alt": "mag image 2",
+      "width": 2362,
+      "height": 2953
+    },
+    {
+      "type": "image",
+      "src": "/media/images/36f7a100c9066f18a0d5f63cbc1cdceb4d5ed740.webp",
+      "previewSrc": "/media/images/36f7a100c9066f18a0d5f63cbc1cdceb4d5ed740-720.webp",
+      "alt": "mag image 3",
+      "width": 1200,
+      "height": 820
+    },
+    {
+      "type": "image",
+      "src": "/media/images/f119c68f008f0b2ab775aa9dd96747884ab8d656.webp",
+      "previewSrc": "/media/images/f119c68f008f0b2ab775aa9dd96747884ab8d656-720.webp",
+      "alt": "mag image 5",
+      "width": 1400,
+      "height": 957
+    },
+    {
+      "type": "image",
+      "src": "/media/images/680ce2a56957f859d94d6a844dbac571eb35b33b.webp",
+      "previewSrc": "/media/images/680ce2a56957f859d94d6a844dbac571eb35b33b-720.webp",
+      "alt": "mag image 7",
+      "width": 3655,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9aa355e979c1626d39dae98cc3522a66788518bc.webp",
+      "previewSrc": "/media/images/9aa355e979c1626d39dae98cc3522a66788518bc-720.webp",
+      "alt": "mag image 9",
+      "width": 1400,
+      "height": 956
+    },
+    {
+      "type": "image",
+      "src": "/media/images/419e3de83439bb9079e55a45e8af54688af96dec.webp",
+      "previewSrc": "/media/images/419e3de83439bb9079e55a45e8af54688af96dec-720.webp",
+      "alt": "mag image 11",
+      "width": 1400,
+      "height": 957
+    },
+    {
+      "type": "image",
+      "src": "/media/images/ff873ff153abb5cf42539bc8566464666ab30615.webp",
+      "previewSrc": "/media/images/ff873ff153abb5cf42539bc8566464666ab30615-720.webp",
+      "alt": "mag image 13",
+      "width": 3655,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/9feb4993580ec1f9f7bcb71f2ec274f150d7fe36.webp",
+      "previewSrc": "/media/images/9feb4993580ec1f9f7bcb71f2ec274f150d7fe36-720.webp",
+      "alt": "mag image 15",
+      "width": 2000,
+      "height": 2500
+    },
+    {
+      "type": "image",
+      "src": "/media/images/8acda0a0bc97b55af348d842b0fe9071009d5b26.webp",
+      "previewSrc": "/media/images/8acda0a0bc97b55af348d842b0fe9071009d5b26-720.webp",
+      "alt": "mag image 16",
+      "width": 800,
+      "height": 1095
+    },
+    {
+      "type": "image",
+      "src": "/media/images/732b6e16ef0ee69decb227106d9f8c49780f56f8.webp",
+      "previewSrc": "/media/images/732b6e16ef0ee69decb227106d9f8c49780f56f8-720.webp",
+      "alt": "mag image 17",
+      "width": 1400,
+      "height": 1912
+    },
+    {
+      "type": "image",
+      "src": "/media/images/baba8e3b66dd19ec0a2bb9332d6317acbd7eab75.webp",
+      "previewSrc": "/media/images/baba8e3b66dd19ec0a2bb9332d6317acbd7eab75-720.webp",
+      "alt": "mag image 18",
+      "width": 2000,
+      "height": 2500
+    }
+  ],
+  "credits": [
+    {
+      "role": "photographer",
+      "name": "Rafael Pavarotti"
+    },
+    {
+      "role": "other",
+      "customRole": "Fashion Editor/Stylist",
+      "name": "Edward Enninful"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Virginie Pinto Moreira"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Ammy Drammeh"
+    },
+    {
+      "role": "castDirector",
+      "name": "Rosie Vogel"
+    },
+    {
+      "role": "manicurist",
+      "name": "Pebbles Aikens"
+    },
+    {
+      "role": "model",
+      "name": "Abény Nhial, Adut Akech, Akon Changkou, Amar Akway, Anok Yai, Janet Jumbo, Majesty Amare, Maty Fall, Nyagua Ruea"
+    }
+  ],
+  "tags": [],
+  "legacyUrls": [
+    "/shoots/vogue/editions/vogue-2022-jan"
+  ]
+}

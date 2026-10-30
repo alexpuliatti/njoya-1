@@ -1,0 +1,35 @@
+{
+  "id": "7024b368-4009-49c3-b356-80ce4240a11f",
+  "slug": "dazed",
+  "title": "Dazed",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543.webp",
+    "previewSrc": "/media/images/2d89dfe86406598baad39a337a69118f8bbf2543-720.webp",
+    "alt": "Dazed magazine cover",
+    "width": 4500,
+    "height": 5625
+  },
+  "workIds": [
+    "8e5a71b0-f818-4e55-b0d8-10efd2ba4a55",
+    "4932f205-0e3a-4478-bdbd-88ae965e9310",
+    "cce07dd1-6d8d-42fe-82aa-291d4300e078",
+    "bad61d29-ad8b-4ef0-aaeb-b3a64c2c659b",
+    "877657d4-23c5-4cc5-95d6-26269491578a",
+    "83a18416-244b-4943-bc88-db72587a7340",
+    "72b530c9-5648-4cb2-8e89-73eac4a46a0a",
+    "2e7cfa35-1517-4d98-bfe6-71480cd8af46",
+    "1898f67b-5666-4839-ac0f-090a0168705f",
+    "0ebb4d98-8f16-4e6f-a08f-c5697d8f488f",
+    "e7d23f27-1203-40bb-ac36-c56bbce673a3",
+    "d2a869e6-42ce-4a03-bcdb-cf8bbf632a6f",
+    "e64bb000-e1cc-4465-9855-44ea7c3cfa47",
+    "e4584b6c-5b5a-4604-a818-d517b85238f8",
+    "4a8f9d77-b256-4eb2-a103-e21f925d5423",
+    "fb58600d-68bf-4825-a3cc-a2293dd18133",
+    "10b1042f-13ab-45e8-8726-441facb463c1",
+    "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef",
+    "cc1954d9-59a4-471e-9809-19137813a65f"
+  ],
+  "isMultiEdition": true
+}
