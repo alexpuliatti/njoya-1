@@ -10,8 +10,8 @@
   "kind": "design-project",
   "cover": {
     "type": "image",
-    "src": "/media/images/1959641f9e8ae6779e498f358b52adcae0bcfcb7.webp",
-    "previewSrc": "/media/images/1959641f9e8ae6779e498f358b52adcae0bcfcb7-720.webp",
+    "src": "/media/images/1959641f9e8ae6779e498f358b52adcae0bcfcb7-pf257cef.webp",
+    "previewSrc": "/media/images/1959641f9e8ae6779e498f358b52adcae0bcfcb7-pf257cef-480.webp",
     "alt": "Design Project Image 1",
     "width": 1080,
     "height": 1350
@@ -19,24 +19,24 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/00d2a036ffbbd742660ab90b670908bcafdf5afb.webp",
-      "previewSrc": "/media/images/00d2a036ffbbd742660ab90b670908bcafdf5afb-720.webp",
+      "src": "/media/images/00d2a036ffbbd742660ab90b670908bcafdf5afb-pf257cef.webp",
+      "previewSrc": "/media/images/00d2a036ffbbd742660ab90b670908bcafdf5afb-pf257cef-480.webp",
       "alt": "Design Project Image 2",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/b703ad13452f9b8c7ecf7ab0804b38259ae3c329.webp",
-      "previewSrc": "/media/images/b703ad13452f9b8c7ecf7ab0804b38259ae3c329-720.webp",
+      "src": "/media/images/b703ad13452f9b8c7ecf7ab0804b38259ae3c329-pf257cef.webp",
+      "previewSrc": "/media/images/b703ad13452f9b8c7ecf7ab0804b38259ae3c329-pf257cef-480.webp",
       "alt": "Design Project Image 3",
       "width": 1080,
       "height": 1350
     },
     {
       "type": "image",
-      "src": "/media/images/9292561e93882d4b4e756f0d20eabd4f30ad46ff.webp",
-      "previewSrc": "/media/images/9292561e93882d4b4e756f0d20eabd4f30ad46ff-720.webp",
+      "src": "/media/images/9292561e93882d4b4e756f0d20eabd4f30ad46ff-pf257cef.webp",
+      "previewSrc": "/media/images/9292561e93882d4b4e756f0d20eabd4f30ad46ff-pf257cef-480.webp",
       "alt": "Design Project Image 4",
       "width": 1080,
       "height": 1350

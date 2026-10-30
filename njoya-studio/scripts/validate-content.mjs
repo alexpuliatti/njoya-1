@@ -10,6 +10,7 @@ import {
   labSchema,
   siteSchema,
   workSchema,
+  responsiveMediaSchema,
 } from "../lib/content/schema.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -49,13 +50,33 @@ export async function validateContent({ checkMedia = true } = {}) {
   const slugs = new Set();
   const urls = new Set();
   const imagePaths = new Set();
+  const media = z
+    .object({ images: z.record(responsiveMediaSchema) })
+    .parse(await read("media-variants.json")).images;
   const categoryIds = new Set(categories.map((category) => category.id));
   if (categoryIds.size !== categories.length)
     throw new Error("Duplicate category IDs");
   const addImage = (image) => {
     if (image) {
+      const id = path.basename(image.src).split(/[.-]/)[0];
+      const responsive = media[id];
+      if (!responsive)
+        throw new Error(`Missing responsive media: ${image.src}`);
+      if (
+        image.src !== responsive.fallback.src ||
+        image.previewSrc !== responsive.variants[0].src
+      )
+        throw new Error(
+          `Outdated image reference: ${image.src}. Run npm run media:prepare.`,
+        );
+      if (
+        image.width !== responsive.width ||
+        image.height !== responsive.height
+      )
+        throw new Error(`Incorrect original dimensions: ${image.src}`);
       imagePaths.add(image.src);
       imagePaths.add(image.previewSrc);
+      responsive.variants.forEach((variant) => imagePaths.add(variant.src));
     }
   };
   for (const work of works) {
@@ -103,6 +124,23 @@ export async function validateContent({ checkMedia = true } = {}) {
   }
   if (Object.keys(routes).length !== urls.size)
     throw new Error("Legacy route map is out of sync");
+  for (const [id, image] of Object.entries(media)) {
+    let previousWidth = 0;
+    for (const variant of image.variants) {
+      if (
+        variant.width <= previousWidth ||
+        variant.width > image.width ||
+        !variant.src.endsWith(`.${image.format}`)
+      )
+        throw new Error(`Invalid responsive widths or format: ${id}`);
+      previousWidth = variant.width;
+    }
+    if (
+      image.fallback.width !== previousWidth ||
+      !image.fallback.src.endsWith(".webp")
+    )
+      throw new Error(`Missing full-size WebP fallback: ${id}`);
+  }
   if (checkMedia)
     await Promise.all(
       [...imagePaths].map(async (url) => {

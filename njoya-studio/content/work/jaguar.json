@@ -1,0 +1,63 @@
+{
+  "id": "jaguar-miami-2024",
+  "slug": "jaguar",
+  "title": "Jaguar",
+  "client": "Jaguar",
+  "date": "2024-12",
+  "categories": [
+    "worlds"
+  ],
+  "kind": "design-project",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/e3f8b0a788c8de5a650aa96ad18e5379cc7106d0-pf257cef.webp",
+    "previewSrc": "/media/images/e3f8b0a788c8de5a650aa96ad18e5379cc7106d0-pf257cef-480.webp",
+    "alt": "Sweeping curved walls in vivid pink, purple, orange and blue rise from a blue carpet at the Jaguar installation in Miami.",
+    "width": 4464,
+    "height": 5679
+  },
+  "gallery": [
+    {
+      "type": "image",
+      "src": "/media/images/b0c9ae15ae1768ab1dd8546c1f3e3f7cac075452-pf257cef.webp",
+      "previewSrc": "/media/images/b0c9ae15ae1768ab1dd8546c1f3e3f7cac075452-pf257cef-480.webp",
+      "alt": "A wide view through the Jaguar installation, with colourful curved partitions, tall panels and blue carpet.",
+      "width": 6343,
+      "height": 4672
+    },
+    {
+      "type": "image",
+      "src": "/media/images/d1e0830328ff76fcfb869ba5642194cd3ce75d8f-pf257cef.webp",
+      "previewSrc": "/media/images/d1e0830328ff76fcfb869ba5642194cd3ce75d8f-pf257cef-480.webp",
+      "alt": "A close view of the Jaguar installation’s blue, orange and purple surfaces, with intersecting curved walls and a blue central column.",
+      "width": 6595,
+      "height": 4610
+    }
+  ],
+  "credits": [
+    {
+      "role": "creativeDirector",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "njoyaTeam",
+      "name": "Luiza Chara, Aisha Ahmed, Axel Drury, Aurelie Simon"
+    },
+    {
+      "role": "other",
+      "customRole": "Render Artist",
+      "name": "Yung Kwok"
+    },
+    {
+      "role": "location",
+      "name": "Miami, USA"
+    }
+  ],
+  "tags": [
+    "Jaguar",
+    "Miami",
+    "Spatial design",
+    "Installation"
+  ],
+  "legacyUrls": []
+}

@@ -8,18 +8,25 @@ import type {
 import { useCallback, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useRouter } from "next/navigation";
-import Image from "next/image";
 
+import Image from "./studio-image";
 import StudioVideo from "./studio-video";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
+import {
+  coverSize,
+  imageSrcSet,
+  panelImageSize,
+  preferredImageSrc,
+} from "@/lib/image-sources";
 
 interface Props {
   item: NjoyaCarouselItem;
   onClick: (payload: NjoyaClickPayload) => void;
   resetSignal: number;
   priority?: boolean;
+  home?: boolean;
 }
 
 /* ─────────────────────────────────────────────────────
@@ -42,6 +49,7 @@ export default function NjoyaCarouselCard({
   onClick,
   resetSignal,
   priority = false,
+  home = false,
 }: Props) {
   const router = useRouter();
   const morphRef = useRef<HTMLDivElement>(null);
@@ -112,7 +120,18 @@ export default function NjoyaCarouselCard({
       const heroPreload = new window.Image();
 
       heroPreload.decoding = "async";
-      heroPreload.src = assetPath(item.heroImageUrl ?? item.imageUrl);
+      heroPreload.sizes = panelImageSize(item.cover);
+      // Match the detail panel's candidate instead of fetching the largest
+      // file on hover. AVIF support is already established by the card image.
+      const selectedAvif = imgRef.current?.currentSrc.endsWith(".avif");
+      const usePrimary =
+        item.cover?.responsive?.format !== "avif" || selectedAvif;
+
+      if (usePrimary) heroPreload.srcset = imageSrcSet(item.cover) ?? "";
+      heroPreload.src = preferredImageSrc(
+        usePrimary ? item.cover : undefined,
+        item.heroImageUrl ?? item.imageUrl,
+      );
     }
 
     hoverTl.current?.kill();
@@ -215,8 +234,9 @@ export default function NjoyaCarouselCard({
           fill
           alt={item.imageAlt ?? item.title}
           className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
+          image={item.cover}
           priority={priority}
-          sizes="(max-width: 767px) 82vw, (max-width: 1023px) 45vw, 32vw"
+          sizes={`(max-width: 767px) ${coverSize("82vw", home ? "clamp(300px, 46svh, 540px)" : "clamp(350px, 59svh, 600px)", item.cover)}, (max-width: 1023px) ${coverSize("45vw", "clamp(390px, 64svh, 720px)", item.cover)}, ${coverSize("32vw", "clamp(390px, 64svh, 720px)", item.cover)}`}
           src={assetPath(item.imageUrl)}
           style={{ borderRadius: "20px" }}
         />

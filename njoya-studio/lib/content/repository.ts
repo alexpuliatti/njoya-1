@@ -25,6 +25,7 @@ import {
   labSchema,
   siteSchema,
   workSchema,
+  responsiveMediaSchema,
 } from "./schema.mjs";
 import { compareWorkDate } from "./order.mjs";
 
@@ -33,6 +34,47 @@ import { creditsToMetadata } from "@/lib/credits";
 const directory = path.join(process.cwd(), "content");
 const readJson = async (file: string): Promise<unknown> =>
   JSON.parse(await fs.readFile(path.join(directory, file), "utf8"));
+const getMediaIndex = cache(async () => {
+  try {
+    return z
+      .object({ images: z.record(responsiveMediaSchema) })
+      .parse(await readJson("media-variants.json")).images;
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return {};
+    throw error;
+  }
+});
+
+async function withMedia<T>(value: T): Promise<T> {
+  const images = await getMediaIndex();
+  const visit = (value: unknown): unknown => {
+    const node = value as Record<string, unknown>;
+
+    if (Array.isArray(node)) return node.map(visit);
+    if (!node || typeof node !== "object") return node;
+    if (
+      (node.type === "image" || node.type === "synopsis") &&
+      typeof node.src === "string"
+    ) {
+      const media = images[path.basename(node.src).split(/[.-]/)[0]];
+
+      return media
+        ? {
+            ...node,
+            width: media.width,
+            height: media.height,
+            responsive: media,
+          }
+        : node;
+    }
+
+    return Object.fromEntries(
+      Object.entries(node).map(([key, child]) => [key, visit(child)]),
+    );
+  };
+
+  return visit(value) as T;
+}
 
 async function readDirectory<T>(
   folder: string,
@@ -42,9 +84,11 @@ async function readDirectory<T>(
     .filter((file) => file.endsWith(".json"))
     .sort();
 
-  return Promise.all(
-    files.map(async (file) =>
-      schema.parse(await readJson(`${folder}/${file}`)),
+  return withMedia(
+    await Promise.all(
+      files.map(async (file) =>
+        schema.parse(await readJson(`${folder}/${file}`)),
+      ),
     ),
   );
 }
@@ -58,7 +102,7 @@ export const getHome = cache(
 );
 export const getAbout = cache(
   async (): Promise<AboutContent> =>
-    aboutSchema.parse(await readJson("about.json")),
+    withMedia(aboutSchema.parse(await readJson("about.json"))),
 );
 export const getCategories = cache(
   async (): Promise<Category[]> =>
@@ -93,12 +137,21 @@ export const getLabEntries = cache(
 );
 
 export function workMetadata(work: Work) {
+  const dateLabel =
+    work.date?.length === 7
+      ? new Intl.DateTimeFormat("en-GB", {
+          month: "long",
+          year: "numeric",
+          timeZone: "UTC",
+        }).format(new Date(`${work.date}-01T00:00:00Z`))
+      : work.date;
+
   return [
     ...(work.client
       ? [{ label: "Client / publication", value: work.client }]
       : []),
     ...creditsToMetadata(work),
-    ...(work.date ? [{ label: "Date", value: work.date }] : []),
+    ...(dateLabel ? [{ label: "Date", value: dateLabel }] : []),
   ];
 }
 export function toCarouselItem(
@@ -112,7 +165,8 @@ export function toCarouselItem(
     id: work.id,
     title: work.title,
     subtitle: work.client,
-    imageUrl: work.cover.previewSrc,
+    imageUrl: work.cover.responsive?.fallback.src ?? work.cover.src,
+    cover: work.cover,
     imageAlt: work.cover.alt,
     heroImageUrl: work.cover.src,
     href: `/work/projects/${work.slug}`,

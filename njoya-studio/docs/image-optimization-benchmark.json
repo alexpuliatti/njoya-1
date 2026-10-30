@@ -1,0 +1,233 @@
+[
+  {
+    "name": "hermes-brides-de-galaxy",
+    "width": 2477,
+    "height": 1651,
+    "originalBytes": 4592950,
+    "currentBytes": 255822,
+    "variants": {
+      "webp-88": {
+        "bytes": 493318,
+        "ms": 617
+      },
+      "avif-60": {
+        "bytes": 311945,
+        "ms": 2803
+      },
+      "avif-65": {
+        "bytes": 367544,
+        "ms": 2966
+      },
+      "avif-72": {
+        "bytes": 446639,
+        "ms": 4971
+      },
+      "avif-75": {
+        "bytes": 497186,
+        "ms": 5195
+      },
+      "avif-80": {
+        "bytes": 602781,
+        "ms": 5571
+      }
+    }
+  },
+  {
+    "name": "lacoste-april-2024",
+    "width": 2560,
+    "height": 3200,
+    "originalBytes": 6547534,
+    "currentBytes": 122796,
+    "variants": {
+      "webp-88": {
+        "bytes": 251814,
+        "ms": 718
+      },
+      "avif-60": {
+        "bytes": 94409,
+        "ms": 1598
+      },
+      "avif-65": {
+        "bytes": 112509,
+        "ms": 1719
+      },
+      "avif-72": {
+        "bytes": 141332,
+        "ms": 3996
+      },
+      "avif-75": {
+        "bytes": 162519,
+        "ms": 4188
+      },
+      "avif-80": {
+        "bytes": 216698,
+        "ms": 4541
+      }
+    }
+  },
+  {
+    "name": "jaguar",
+    "width": 2560,
+    "height": 3257,
+    "originalBytes": 14593551,
+    "currentBytes": 192500,
+    "variants": {
+      "webp-88": {
+        "bytes": 486228,
+        "ms": 1008
+      },
+      "avif-60": {
+        "bytes": 177039,
+        "ms": 1549
+      },
+      "avif-65": {
+        "bytes": 221468,
+        "ms": 1647
+      },
+      "avif-72": {
+        "bytes": 293680,
+        "ms": 3331
+      },
+      "avif-75": {
+        "bytes": 344209,
+        "ms": 3476
+      },
+      "avif-80": {
+        "bytes": 470181,
+        "ms": 3732
+      }
+    }
+  },
+  {
+    "name": "vogue-hommes-march-2021",
+    "width": 763,
+    "height": 1077,
+    "originalBytes": 340678,
+    "currentBytes": 122380,
+    "variants": {
+      "webp-88": {
+        "bytes": 157266,
+        "ms": 156
+      },
+      "avif-60": {
+        "bytes": 114917,
+        "ms": 1513
+      },
+      "avif-65": {
+        "bytes": 134259,
+        "ms": 1587
+      },
+      "avif-72": {
+        "bytes": 163354,
+        "ms": 2468
+      },
+      "avif-75": {
+        "bytes": 177113,
+        "ms": 2504
+      },
+      "avif-80": {
+        "bytes": 199133,
+        "ms": 2616
+      }
+    }
+  },
+  {
+    "name": "dazed-autumn-2021-30th-anniversary-issue",
+    "width": 1200,
+    "height": 1500,
+    "originalBytes": 297706,
+    "currentBytes": 69526,
+    "variants": {
+      "webp-88": {
+        "bytes": 91858,
+        "ms": 173
+      },
+      "avif-60": {
+        "bytes": 48718,
+        "ms": 925
+      },
+      "avif-65": {
+        "bytes": 58166,
+        "ms": 983
+      },
+      "avif-72": {
+        "bytes": 70626,
+        "ms": 1868
+      },
+      "avif-75": {
+        "bytes": 78484,
+        "ms": 1937
+      },
+      "avif-80": {
+        "bytes": 97225,
+        "ms": 2078
+      }
+    }
+  },
+  {
+    "name": "rihanna",
+    "width": 1080,
+    "height": 1347,
+    "originalBytes": 220877,
+    "currentBytes": 164442,
+    "variants": {
+      "webp-88": {
+        "bytes": 215788,
+        "ms": 285
+      },
+      "avif-60": {
+        "bytes": 126297,
+        "ms": 570
+      },
+      "avif-65": {
+        "bytes": 143110,
+        "ms": 577
+      },
+      "avif-72": {
+        "bytes": 165391,
+        "ms": 699
+      },
+      "avif-75": {
+        "bytes": 175382,
+        "ms": 684
+      },
+      "avif-80": {
+        "bytes": 191944,
+        "ms": 682
+      }
+    }
+  },
+  {
+    "name": "studio-portrait",
+    "width": 1284,
+    "height": 2048,
+    "originalBytes": 283323,
+    "currentBytes": 160418,
+    "variants": {
+      "webp-88": {
+        "bytes": 231430,
+        "ms": 413
+      },
+      "avif-60": {
+        "bytes": 109621,
+        "ms": 733
+      },
+      "avif-65": {
+        "bytes": 140365,
+        "ms": 775
+      },
+      "avif-72": {
+        "bytes": 180102,
+        "ms": 1161
+      },
+      "avif-75": {
+        "bytes": 198955,
+        "ms": 1120
+      },
+      "avif-80": {
+        "bytes": 221067,
+        "ms": 1073
+      }
+    }
+  }
+]

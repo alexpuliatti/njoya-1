@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d.webp",
-    "previewSrc": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-720.webp",
+    "src": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-pf257cef.webp",
+    "previewSrc": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-pf257cef-480.avif",
     "alt": "Close-up portrait of a model wearing electric blue Off-White™ rectangular sunglasses with the brand's signature arrow logo. She sports a white turtleneck, a gold star-and-pearl drop earring, and a deep burgundy lip, set against a vivid cobalt blue background. The stark, graphic composition emphasises the eyewear with bold, high-contrast beauty.",
     "width": 1440,
     "height": 1800
@@ -19,56 +19,56 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d.webp",
-      "previewSrc": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-720.webp",
+      "src": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-pf257cef.webp",
+      "previewSrc": "/media/images/9455b165b5f10844252b29ebe816c5a707fdda4d-pf257cef-480.avif",
       "alt": "Close-up portrait of a model wearing electric blue Off-White™ rectangular sunglasses with the brand's signature arrow logo. She sports a white turtleneck, a gold star-and-pearl drop earring, and a deep burgundy lip, set against a vivid cobalt blue background. The stark, graphic composition emphasises the eyewear with bold, high-contrast beauty.",
       "width": 1440,
       "height": 1800
     },
     {
       "type": "image",
-      "src": "/media/images/bdc778e0b288b8f523060eb91c242d3a0a2cc6b6.webp",
-      "previewSrc": "/media/images/bdc778e0b288b8f523060eb91c242d3a0a2cc6b6-720.webp",
+      "src": "/media/images/bdc778e0b288b8f523060eb91c242d3a0a2cc6b6-pf257cef.webp",
+      "previewSrc": "/media/images/bdc778e0b288b8f523060eb91c242d3a0a2cc6b6-pf257cef-480.webp",
       "alt": "Mag Image 2",
       "width": 768,
       "height": 1024
     },
     {
       "type": "image",
-      "src": "/media/images/1e782b83f8f623252fec916a1dfaa4aa29006055.webp",
-      "previewSrc": "/media/images/1e782b83f8f623252fec916a1dfaa4aa29006055-720.webp",
+      "src": "/media/images/1e782b83f8f623252fec916a1dfaa4aa29006055-pf257cef.webp",
+      "previewSrc": "/media/images/1e782b83f8f623252fec916a1dfaa4aa29006055-pf257cef-480.avif",
       "alt": "Mag Image 3",
       "width": 1349,
       "height": 1687
     },
     {
       "type": "image",
-      "src": "/media/images/482e0b1ae45451f5fae7f5837c793d02b5487b00.webp",
-      "previewSrc": "/media/images/482e0b1ae45451f5fae7f5837c793d02b5487b00-720.webp",
+      "src": "/media/images/482e0b1ae45451f5fae7f5837c793d02b5487b00-pf257cef.webp",
+      "previewSrc": "/media/images/482e0b1ae45451f5fae7f5837c793d02b5487b00-pf257cef-480.webp",
       "alt": "Mag Image 4",
       "width": 853,
       "height": 1279
     },
     {
       "type": "image",
-      "src": "/media/images/28aaef4add3871a610f5ce17a1cbb36c4a8825c0.webp",
-      "previewSrc": "/media/images/28aaef4add3871a610f5ce17a1cbb36c4a8825c0-720.webp",
+      "src": "/media/images/28aaef4add3871a610f5ce17a1cbb36c4a8825c0-pf257cef.webp",
+      "previewSrc": "/media/images/28aaef4add3871a610f5ce17a1cbb36c4a8825c0-pf257cef-480.avif",
       "alt": "Mag Image 5",
       "width": 1911,
       "height": 2548
     },
     {
       "type": "image",
-      "src": "/media/images/0858e3309bd887109c76fb9195e9b6ddb603a457.webp",
-      "previewSrc": "/media/images/0858e3309bd887109c76fb9195e9b6ddb603a457-720.webp",
+      "src": "/media/images/0858e3309bd887109c76fb9195e9b6ddb603a457-pf257cef.webp",
+      "previewSrc": "/media/images/0858e3309bd887109c76fb9195e9b6ddb603a457-pf257cef-480.avif",
       "alt": "Mag Image 6",
       "width": 1911,
       "height": 2548
     },
     {
       "type": "image",
-      "src": "/media/images/ebac36659d5ffaefba6f3234ed7f26dce7ff2d40.webp",
-      "previewSrc": "/media/images/ebac36659d5ffaefba6f3234ed7f26dce7ff2d40-720.webp",
+      "src": "/media/images/ebac36659d5ffaefba6f3234ed7f26dce7ff2d40-pf257cef.webp",
+      "previewSrc": "/media/images/ebac36659d5ffaefba6f3234ed7f26dce7ff2d40-pf257cef-480.webp",
       "alt": "Mag Image 7",
       "width": 1920,
       "height": 1080

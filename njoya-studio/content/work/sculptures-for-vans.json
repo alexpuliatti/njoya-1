@@ -10,8 +10,8 @@
   "kind": "design-project",
   "cover": {
     "type": "image",
-    "src": "/media/images/b2c200ff1bdc66fa7ff3630f98064455946d0047.webp",
-    "previewSrc": "/media/images/b2c200ff1bdc66fa7ff3630f98064455946d0047-720.webp",
+    "src": "/media/images/b2c200ff1bdc66fa7ff3630f98064455946d0047-pf257cef.webp",
+    "previewSrc": "/media/images/b2c200ff1bdc66fa7ff3630f98064455946d0047-pf257cef-480.webp",
     "alt": "Sculptures for Vans",
     "width": 1366,
     "height": 2048
@@ -19,24 +19,24 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/98b47cd279fdea523bd279ee98980e6cae8a182b.webp",
-      "previewSrc": "/media/images/98b47cd279fdea523bd279ee98980e6cae8a182b-720.webp",
+      "src": "/media/images/98b47cd279fdea523bd279ee98980e6cae8a182b-pf257cef.webp",
+      "previewSrc": "/media/images/98b47cd279fdea523bd279ee98980e6cae8a182b-pf257cef-480.webp",
       "alt": "Sculptures for Vans — image 1",
       "width": 3840,
       "height": 5120
     },
     {
       "type": "image",
-      "src": "/media/images/5572987cb50d5d73ca81b59a8f88f9444315a792.webp",
-      "previewSrc": "/media/images/5572987cb50d5d73ca81b59a8f88f9444315a792-720.webp",
+      "src": "/media/images/5572987cb50d5d73ca81b59a8f88f9444315a792-pf257cef.webp",
+      "previewSrc": "/media/images/5572987cb50d5d73ca81b59a8f88f9444315a792-pf257cef-480.webp",
       "alt": "Sculptures for Vans — image 2",
       "width": 3024,
       "height": 4032
     },
     {
       "type": "image",
-      "src": "/media/images/6bd9fda244af4318baa5c029e76ac8e6b224c62f.webp",
-      "previewSrc": "/media/images/6bd9fda244af4318baa5c029e76ac8e6b224c62f-720.webp",
+      "src": "/media/images/6bd9fda244af4318baa5c029e76ac8e6b224c62f-pf257cef.webp",
+      "previewSrc": "/media/images/6bd9fda244af4318baa5c029e76ac8e6b224c62f-pf257cef-480.webp",
       "alt": "Sculptures for Vans — image 3",
       "width": 3550,
       "height": 4739

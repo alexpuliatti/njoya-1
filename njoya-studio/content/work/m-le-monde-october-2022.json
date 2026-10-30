@@ -10,8 +10,8 @@
   "kind": "edition",
   "cover": {
     "type": "image",
-    "src": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1.webp",
-    "previewSrc": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-720.webp",
+    "src": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-pf257cef.webp",
+    "previewSrc": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-pf257cef-480.avif",
     "alt": "Two models on a sand dune surrounded by dramatic red and pink smoke, with a bicycle cargo trailer in the foreground. Both wear dark, flowing outfits against a moody twilight sky.",
     "width": 2480,
     "height": 3307
@@ -19,24 +19,24 @@
   "gallery": [
     {
       "type": "image",
-      "src": "/media/images/6d311c52c4d86495a2ebe46b9569b9ddd02c3201.webp",
-      "previewSrc": "/media/images/6d311c52c4d86495a2ebe46b9569b9ddd02c3201-720.webp",
+      "src": "/media/images/6d311c52c4d86495a2ebe46b9569b9ddd02c3201-pf257cef.webp",
+      "previewSrc": "/media/images/6d311c52c4d86495a2ebe46b9569b9ddd02c3201-pf257cef-480.webp",
       "alt": "Mag Image 1",
       "width": 2480,
       "height": 3307
     },
     {
       "type": "image",
-      "src": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1.webp",
-      "previewSrc": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-720.webp",
+      "src": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-pf257cef.webp",
+      "previewSrc": "/media/images/97bef4f54ee045bbcd12d51fe85b5499e9f147c1-pf257cef-480.avif",
       "alt": "Mag Image 2",
       "width": 2480,
       "height": 3307
     },
     {
       "type": "image",
-      "src": "/media/images/aa867769f339f6fc26f90f8cc55f64696cbfdfc7.webp",
-      "previewSrc": "/media/images/aa867769f339f6fc26f90f8cc55f64696cbfdfc7-720.webp",
+      "src": "/media/images/aa867769f339f6fc26f90f8cc55f64696cbfdfc7-pf257cef.webp",
+      "previewSrc": "/media/images/aa867769f339f6fc26f90f8cc55f64696cbfdfc7-pf257cef-480.webp",
       "alt": "Mag Image 3",
       "width": 4961,
       "height": 3307

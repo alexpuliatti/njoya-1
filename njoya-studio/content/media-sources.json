@@ -4870,5 +4870,26 @@
     "originalFilename": "Luiza.jpeg",
     "width": 1276,
     "height": 2048
+  },
+  "e3f8b0a788c8de5a650aa96ad18e5379cc7106d0": {
+    "file": "image00006.jpg",
+    "localSource": "media/originals/e3f8b0a788c8de5a650aa96ad18e5379cc7106d0.jpg",
+    "originalFilename": "image00006.jpg",
+    "width": 4464,
+    "height": 5679
+  },
+  "b0c9ae15ae1768ab1dd8546c1f3e3f7cac075452": {
+    "file": "image00005.jpg",
+    "localSource": "media/originals/b0c9ae15ae1768ab1dd8546c1f3e3f7cac075452.jpg",
+    "originalFilename": "image00005.jpg",
+    "width": 6343,
+    "height": 4672
+  },
+  "d1e0830328ff76fcfb869ba5642194cd3ce75d8f": {
+    "file": "image00007.jpg",
+    "localSource": "media/originals/d1e0830328ff76fcfb869ba5642194cd3ce75d8f.jpg",
+    "originalFilename": "image00007.jpg",
+    "width": 6595,
+    "height": 4610
   }
 }

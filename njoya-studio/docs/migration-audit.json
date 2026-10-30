@@ -737,14 +737,22 @@
       ]
     }
   ],
-  "pendingHeroes": [
-    "Jaguar"
-  ],
+  "pendingHeroes": [],
   "counts": {
     "work": 90,
     "collections": 23,
     "images": 812,
     "legacyRoutes": 123
   },
-  "preservedVideoReferences": "Mux playback IDs only; no video files supplied"
+  "preservedVideoReferences": "Mux playback IDs only; no video files supplied",
+  "localAdditions": [
+    {
+      "id": "jaguar-miami-2024",
+      "title": "Jaguar",
+      "date": "2024-12",
+      "source": "additional material/Jaguar/",
+      "images": 3,
+      "note": "Supplied after the original Sanity import; source counts above remain the initial migration counts."
+    }
+  ]
 }

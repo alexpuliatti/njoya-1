@@ -12,11 +12,12 @@ test("project chronology uses work dates, with deterministic ties and undated wo
     { id: "b", title: "Same title", date: "2024-01-01" },
     { id: "undated", title: "Undated", date: null },
     { id: "recent", title: "Recent", date: "2026-01-01" },
+    { id: "month", title: "Month precision", date: "2024-12" },
     { id: "a", title: "Same title", date: "2024-01-01" },
   ];
   assert.deepEqual(
     records.sort(compareWorkDate).map((record) => record.id),
-    ["recent", "a", "b", "undated"],
+    ["recent", "month", "a", "b", "undated"],
   );
 });
 
@@ -113,15 +114,15 @@ test("ordered galleries support a synopsis image between photographs and videos"
     ["image", "synopsis", "video"],
   );
 });
-test("the homepage has four explicit hero slots without a fabricated Jaguar project", () => {
+test("the four homepage heroes resolve to published projects, including the supplied Jaguar work", () => {
   assert.equal(content.home.featured.length, 4);
-  assert.equal(
-    content.home.featured.find((entry) => entry.title === "Jaguar").workId,
-    null,
-  );
+  const jaguarId = content.home.featured.find((entry) => entry.title === "Jaguar").workId;
+  const jaguar = content.works.find((work) => work.id === jaguarId);
+  assert.equal(jaguar.client, "Jaguar");
+  assert.equal(jaguar.date, "2024-12");
+  assert.equal(jaguar.gallery.length, 2);
   assert.ok(
     content.home.featured
-      .filter((entry) => entry.workId)
       .every((entry) => content.works.some((work) => work.id === entry.workId)),
   );
 });

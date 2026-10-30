@@ -7,7 +7,7 @@
  * onto NjoyaCarouselItem — those are the only new bits.
  */
 
-import type { GalleryEntry } from "@/lib/content/types";
+import type { ContentImage, GalleryEntry } from "@/lib/content/types";
 
 export interface SearchItem {
   id: string;
@@ -33,6 +33,7 @@ export interface NjoyaCarouselItem {
    *  source for the FLIP clone. For video items this is the Mux
    *  thumbnail; for image-only items it's the cover image. */
   imageUrl: string;
+  cover?: ContentImage;
   imageAlt?: string;
   heroImageUrl?: string;
   gallery?: GalleryEntry[];

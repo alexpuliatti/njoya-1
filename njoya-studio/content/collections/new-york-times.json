@@ -4,8 +4,8 @@
   "title": "New York Times",
   "cover": {
     "type": "image",
-    "src": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3.webp",
-    "previewSrc": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3-720.webp",
+    "src": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3-pf257cef.webp",
+    "previewSrc": "/media/images/b8cafa5a5b70fc342d201932e10b10a810b3b8f3-pf257cef-480.webp",
     "alt": "Mag Cover",
     "width": 1537,
     "height": 1922
