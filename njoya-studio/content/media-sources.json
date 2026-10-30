@@ -5205,5 +5205,37 @@
     "profile": "cover",
     "width": 1080,
     "height": 1350
+  },
+  "b543db8ea13d91fb344801e4e8076e861f5dbcd3": {
+    "file": "COVER MAC_FACE-CAMPAIGN_SOCIALCROPS_LAUNCH_FL-Gabbriette.jpg",
+    "localSource": "media/originals/b543db8ea13d91fb344801e4e8076e861f5dbcd3.jpg",
+    "originalFilename": "COVER MAC_FACE-CAMPAIGN_SOCIALCROPS_LAUNCH_FL-Gabbriette.jpg",
+    "profile": "web",
+    "width": 3333,
+    "height": 4167
+  },
+  "160905b2c1d852ed619d36f0e516e43a3521b173": {
+    "file": "mac-full-cast-poster.jpg",
+    "localSource": "media/originals/160905b2c1d852ed619d36f0e516e43a3521b173.jpg",
+    "originalFilename": "mac-full-cast-poster.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1080
+  },
+  "0a2040b8e340c7a18ecdc12d27066dfdc1bc202c": {
+    "file": "mac-gabbriette-poster.jpg",
+    "localSource": "media/originals/0a2040b8e340c7a18ecdc12d27066dfdc1bc202c.jpg",
+    "originalFilename": "mac-gabbriette-poster.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1080
+  },
+  "3fe84fec7848ff7f24c408873f806b171dd6db1f": {
+    "file": "mac-kris-poster.jpg",
+    "localSource": "media/originals/3fe84fec7848ff7f24c408873f806b171dd6db1f.jpg",
+    "originalFilename": "mac-kris-poster.jpg",
+    "profile": "web",
+    "width": 1080,
+    "height": 1080
   }
 }

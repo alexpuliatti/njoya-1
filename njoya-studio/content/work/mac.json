@@ -1,0 +1,92 @@
+{
+  "id": "mac-motion",
+  "slug": "mac",
+  "title": "MAC",
+  "client": "MAC",
+  "date": null,
+  "categories": [
+    "motion"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/b543db8ea13d91fb344801e4e8076e861f5dbcd3-pe8c9d63.webp",
+    "previewSrc": "/media/images/b543db8ea13d91fb344801e4e8076e861f5dbcd3-pe8c9d63-480.webp",
+    "alt": "MAC Studio Fix campaign: black-and-white portrait of Gabbriette with the MAC logo.",
+    "width": 3333,
+    "height": 4167
+  },
+  "previewVideoSrc": "/media/videos/mac-preview-1f2116e004.mp4",
+  "gallery": [
+    {
+      "type": "video",
+      "src": "/media/videos/mac-full-cast-a47a1f4fc7.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/160905b2c1d852ed619d36f0e516e43a3521b173-pe8c9d63.webp",
+        "previewSrc": "/media/images/160905b2c1d852ed619d36f0e516e43a3521b173-pe8c9d63-480.webp",
+        "alt": "MAC Studio Fix full-cast campaign film: a performer poses on a sculptural plinth in a white studio.",
+        "width": 1080,
+        "height": 1080
+      },
+      "alt": "MAC Studio Fix full-cast campaign film: a performer poses on a sculptural plinth in a white studio."
+    },
+    {
+      "type": "video",
+      "src": "/media/videos/mac-gabbriette-1f2116e004.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/0a2040b8e340c7a18ecdc12d27066dfdc1bc202c-pe8c9d63.webp",
+        "previewSrc": "/media/images/0a2040b8e340c7a18ecdc12d27066dfdc1bc202c-pe8c9d63-480.webp",
+        "alt": "MAC Studio Fix campaign film featuring Gabbriette against a white studio background.",
+        "width": 1080,
+        "height": 1080
+      },
+      "alt": "MAC Studio Fix campaign film featuring Gabbriette against a white studio background."
+    },
+    {
+      "type": "video",
+      "src": "/media/videos/mac-kris-2871ddf0b8.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/3fe84fec7848ff7f24c408873f806b171dd6db1f-pe8c9d63.webp",
+        "previewSrc": "/media/images/3fe84fec7848ff7f24c408873f806b171dd6db1f-pe8c9d63-480.webp",
+        "alt": "MAC Studio Fix campaign film featuring Kris holding a foundation bottle on a sculptural platform.",
+        "width": 1080,
+        "height": 1080
+      },
+      "alt": "MAC Studio Fix campaign film featuring Kris holding a foundation bottle on a sculptural platform."
+    }
+  ],
+  "credits": [
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "njoyaTeam",
+      "name": "Luiza Chara, Alisson Rodrigues, Marie Thibouméry, Jean-Daniel, Axel Drury, Aurelie Simon, Aisha Ahamed"
+    },
+    {
+      "role": "photographer",
+      "name": "Inez and Vinoodh"
+    },
+    {
+      "role": "other",
+      "customRole": "Director",
+      "name": "Tyler Kohlkoff"
+    },
+    {
+      "role": "other",
+      "customRole": "Production",
+      "name": "AP Studio INC"
+    }
+  ],
+  "tags": [
+    "film",
+    "motion",
+    "MAC",
+    "Studio Fix"
+  ],
+  "legacyUrls": []
+}
