@@ -5,7 +5,8 @@
   "client": "Louboutin",
   "date": "2026-07-01",
   "categories": [
-    "commercials"
+    "commercials",
+    "motion"
   ],
   "kind": "edition",
   "cover": {
@@ -17,6 +18,19 @@
     "height": 1350
   },
   "gallery": [
+    {
+      "type": "video",
+      "src": "/media/videos/louboutin-film-12dd8a77c8.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63.webp",
+        "previewSrc": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63-480.webp",
+        "alt": "Christian Louboutin campaign film: sculptural silhouettes in front of a château, with the Christian Louboutin logo.",
+        "width": 720,
+        "height": 1280
+      },
+      "alt": "Christian Louboutin Men's — campaign film"
+    },
     {
       "type": "image",
       "src": "/media/images/6ba60ff786bdc1fd195b398fe5e5439940eeb948-pf257cef.webp",
@@ -139,8 +153,12 @@
       "name": "Karin Westerlund"
     }
   ],
-  "tags": [],
+  "tags": [
+    "film",
+    "motion"
+  ],
   "legacyUrls": [
     "/shoots/louboutin"
-  ]
+  ],
+  "previewVideoSrc": "/media/videos/louboutin-preview-12dd8a77c8.mp4"
 }

@@ -1,0 +1,18 @@
+{
+  "source": "motion/Louboutin (already on Web) /VIDEO christianlouboutin_1780498851_3911430075292159792_11285087.mp4",
+  "sourceBytes": 2727137,
+  "src": "/media/videos/louboutin-film-12dd8a77c8.mp4",
+  "bytes": 2727348,
+  "width": 720,
+  "height": 1280,
+  "audio": true,
+  "encoding": "Original H.264 video and AAC audio copied unchanged, metadata removed, faststart",
+  "streamSha256": {
+    "video": "7b7661445a86e88ef19eb2e0a88fd41148b4a5a27bc33fb0c2e53149d5452825",
+    "audio": "bbe4dbba4aefbe2246bd2a6af3828e71b007ea9241f942d093b52e4bf0d7d6a6"
+  },
+  "previewVideoSrc": "/media/videos/louboutin-preview-12dd8a77c8.mp4",
+  "previewBytes": 513114,
+  "preview": "Six seconds, 480×854 H.264 at 18 fps, CRF 24, 600 kbps maximum rate, audio removed",
+  "posterSrc": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63.webp"
+}
