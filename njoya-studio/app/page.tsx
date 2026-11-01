@@ -1,6 +1,6 @@
+import Link from "@/components/transition-link";
 import type { NjoyaCarouselItem } from "@/lib/njoya-carousel-types";
 
-import Link from "next/link";
 import { Suspense } from "react";
 import { ArrowUpRight } from "lucide-react";
 

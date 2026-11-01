@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { assetPath } from "@/lib/asset-path";
 import { getSearchIndex, getSite } from "@/lib/content/repository";
 import SearchProvider from "@/components/search-provider";
+import PageTransitionProvider from "@/components/page-transition-provider";
 import { Navbar } from "@/components/navbar";
 import StudioNavigation from "@/components/njoya-carousel-bottom-menu";
 import { siteConfig } from "@/config/site";
@@ -46,19 +47,21 @@ export default async function RootLayout({
         className={`${fontSans.variable} studio-body font-sans antialiased`}
       >
         <Providers themeProps={{ attribute: "class", forcedTheme: "dark" }}>
-          <SearchProvider catalog={searchIndex}>
-            <a className="skip-link" href="#main-content">
-              Skip to content
-            </a>
-            <Navbar instagram={site.instagram} />
-            <main className="studio-main" id="main-content">
-              {children}
-            </main>
-            <footer className="studio-footer">
-              <small>Copyright © 2026</small>
-            </footer>
-            <StudioNavigation />
-          </SearchProvider>
+          <PageTransitionProvider>
+            <SearchProvider catalog={searchIndex}>
+              <a className="skip-link" href="#main-content">
+                Skip to content
+              </a>
+              <Navbar instagram={site.instagram} />
+              <main className="studio-main" id="main-content" tabIndex={-1}>
+                {children}
+              </main>
+              <footer className="studio-footer">
+                <small>Copyright © 2026</small>
+              </footer>
+              <StudioNavigation />
+            </SearchProvider>
+          </PageTransitionProvider>
         </Providers>
       </body>
     </html>

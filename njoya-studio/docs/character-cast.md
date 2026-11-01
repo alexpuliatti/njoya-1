@@ -25,3 +25,9 @@ Movement assets: `observer-walk-down.webp`, `observer-walk-left.webp`, `observer
 The homepage card shares one semantic headline between the builder and explorer. Once the artwork is ready and the existing intro clears, they start together: the builder pulls the W and performs its twelve-frame turn on BUILD; the explorer rolls the O into the same WORLDS line, returns beside S and performs its own twelve-frame turn. Both remain visible on the final frame. The turn strips and exact generation/cleanup prompts are documented in `docs/card-turn-prompts.json`. The observer's About walking and blinking are unchanged. The homepage scene plays once, leaves the card link available, pauses in a hidden tab, and presents a readable still headline for reduced motion or artwork errors. The three original studies remain available; further exploration continues on the motion branch.
 
 The cast should feel like it inhabits the typography and edges of the work. Each moment has a short action and a clear finish; larger appearances belong in the Lab, with occasional smaller appearances elsewhere.
+
+## Lab project dividers
+
+The observer walks along the warm gradient lines above Conceptual sketches, The Making, and The result inside Lab project dialogs. Lines alternate right, left, then right, using the existing eight-frame walking strips. The character walks off the end and re-enters from the opposite side in the same direction. Each loop pauses outside the dialog viewport or in a hidden tab and resumes from its previous position. Reduced motion shows a still pose on the line.
+
+Open a project on `/lab` to see the walking characters. `components/lab-walking-divider.tsx` and its CSS module own the character, travel, and foot alignment. The lines reuse the existing static `GradientDivider` to avoid window-scroll subscriptions inside the independently scrolling dialog.
