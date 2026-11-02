@@ -7,12 +7,10 @@ import type {
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import NjoyaCarouselCard from "./njoya-carousel-card";
 import ProjectDialog from "./project-dialog";
 import StudioIntro from "./studio-intro";
-import { StudioIconButton } from "./ui/studio-button";
 
 export default function NjoyaCarousel({
   items,
@@ -32,10 +30,6 @@ export default function NjoyaCarousel({
   });
   const [payload, setPayload] = useState<NjoyaClickPayload | null>(null);
   const [reset, setReset] = useState(0);
-  const [selected, setSelected] = useState(0);
-  const [scrollable, setScrollable] = useState(false);
-  const [canPrevious, setCanPrevious] = useState(false);
-  const [canNext, setCanNext] = useState(false);
   const [reveal, setReveal] = useState(false);
   const dragging = useRef(false);
   const pointerDown = useRef(false);
@@ -46,14 +40,6 @@ export default function NjoyaCarousel({
 
   useEffect(() => {
     if (!api) return;
-    const select = () => {
-      setSelected(api.selectedScrollSnap());
-      setScrollable(api.scrollSnapList().length > 1);
-      setCanPrevious(api.canScrollPrev());
-      setCanNext(api.canScrollNext());
-    };
-
-    select();
     const down = () => {
       pointerDown.current = true;
       dragging.current = false;
@@ -68,12 +54,7 @@ export default function NjoyaCarousel({
       }, 80);
     };
 
-    api
-      .on("select", select)
-      .on("reInit", select)
-      .on("pointerDown", down)
-      .on("scroll", scroll)
-      .on("pointerUp", up);
+    api.on("pointerDown", down).on("scroll", scroll).on("pointerUp", up);
     const viewport = api.rootNode();
     const wheel = (event: WheelEvent) => {
       if (
@@ -106,12 +87,7 @@ export default function NjoyaCarousel({
     viewport.addEventListener("wheel", wheel, { passive: false });
 
     return () => {
-      api
-        .off("select", select)
-        .off("reInit", select)
-        .off("pointerDown", down)
-        .off("scroll", scroll)
-        .off("pointerUp", up);
+      api.off("pointerDown", down).off("scroll", scroll).off("pointerUp", up);
       viewport.removeEventListener("wheel", wheel);
     };
   }, [api, payload]);
@@ -160,49 +136,6 @@ export default function NjoyaCarousel({
             ))}
           </div>
         </div>
-        {scrollable && (
-          <div className="carousel-controls">
-            <span aria-live="polite" className="carousel-count">
-              {String(selected + 1).padStart(2, "0")}{" "}
-              <span>/ {String(items.length).padStart(2, "0")}</span>
-            </span>
-            <span aria-hidden="true" className="carousel-progress">
-              <span
-                style={{
-                  transform: `scaleX(${(selected + 1) / items.length})`,
-                }}
-              />
-            </span>
-            <StudioIconButton
-              disabled={!canPrevious}
-              label="Previous project"
-              variant="outline"
-              onClick={(event) =>
-                api?.scrollPrev(
-                  event.detail === 0 ||
-                    window.matchMedia("(prefers-reduced-motion: reduce)")
-                      .matches,
-                )
-              }
-            >
-              <ArrowLeft size={19} />
-            </StudioIconButton>
-            <StudioIconButton
-              disabled={!canNext}
-              label="Next project"
-              variant="outline"
-              onClick={(event) =>
-                api?.scrollNext(
-                  event.detail === 0 ||
-                    window.matchMedia("(prefers-reduced-motion: reduce)")
-                      .matches,
-                )
-              }
-            >
-              <ArrowRight size={19} />
-            </StudioIconButton>
-          </div>
-        )}
       </div>
       {showLoader && <StudioIntro onReveal={revealHome} />}
       <ProjectDialog clickPayload={payload} onClose={close} />
