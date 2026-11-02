@@ -31,12 +31,13 @@ export default function NjoyaCarousel({
   const [payload, setPayload] = useState<NjoyaClickPayload | null>(null);
   const [reset, setReset] = useState(0);
   const [reveal, setReveal] = useState(false);
+  const [homeReady, setHomeReady] = useState(!showLoader);
   const dragging = useRef(false);
   const pointerDown = useRef(false);
-  const revealHome = useCallback(
-    (animated: boolean) => setReveal(animated),
-    [],
-  );
+  const revealHome = useCallback((animated: boolean) => {
+    setReveal(animated);
+    setHomeReady(true);
+  }, []);
 
   useEffect(() => {
     if (!api) return;
@@ -124,6 +125,10 @@ export default function NjoyaCarousel({
               >
                 <NjoyaCarouselCard
                   home={!!pinned}
+                  introDelay={index * 65}
+                  introState={
+                    homeReady ? (reveal ? "animate" : "instant") : "pending"
+                  }
                   item={item}
                   priority={index < 2}
                   resetSignal={reset}
