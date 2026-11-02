@@ -22,7 +22,12 @@ export const metadata: Metadata = {
     "A multidisciplinary creative practice working across space, image, objects and experiences.",
   icons: { icon: assetPath("/favicon.ico") },
 };
-export const viewport: Viewport = { themeColor: "#261b15" };
+export const viewport: Viewport = {
+  themeColor: "#261b15",
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+};
 
 export default async function RootLayout({
   children,

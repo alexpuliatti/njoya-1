@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 import { assetPath } from "@/lib/asset-path";
-import { INTRO_SESSION_KEY } from "@/lib/intro";
 
 type IntroPhase = "loading" | "entering" | "holding" | "leaving" | "done";
 
@@ -18,11 +17,6 @@ export default function StudioIntro({
   const dismissed = phase === "done";
   const dismiss = useCallback(
     (animated: boolean) => {
-      try {
-        sessionStorage.setItem(INTRO_SESSION_KEY, "true");
-      } catch {
-        // The intro still works when browser storage is unavailable.
-      }
       onReveal(animated);
       setPhase(animated ? "leaving" : "done");
     },
@@ -36,14 +30,8 @@ export default function StudioIntro({
       return;
     }
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let seen = false;
 
-    try {
-      seen = sessionStorage.getItem(INTRO_SESSION_KEY) === "true";
-    } catch {
-      // Optional session memory.
-    }
-    if (seen || reducedMotion.matches) {
+    if (document.documentElement.dataset.njoyaIntro === "skip") {
       dismiss(false);
 
       return;
@@ -57,9 +45,10 @@ export default function StudioIntro({
     document.body.style.overflow = "hidden";
     dialog?.showModal();
     dialog?.focus({ preventScroll: true });
-    const fallback = window.setTimeout(() => dismiss(false), 6000);
+    const fallback = window.setTimeout(() => dismiss(false), 10000);
     const onMotionChange = () => {
-      if (reducedMotion.matches) dismiss(false);
+      if (reducedMotion.matches)
+        setPhase((current) => (current === "entering" ? "holding" : current));
     };
 
     reducedMotion.addEventListener("change", onMotionChange);
@@ -83,7 +72,11 @@ export default function StudioIntro({
 
   useEffect(() => {
     if (phase !== "holding") return;
-    const timer = window.setTimeout(() => dismiss(true), 800);
+    const timer = window.setTimeout(
+      () =>
+        dismiss(!window.matchMedia("(prefers-reduced-motion: reduce)").matches),
+      1000,
+    );
 
     return () => window.clearTimeout(timer);
   }, [phase, dismiss]);
@@ -131,7 +124,11 @@ export default function StudioIntro({
           onError={() => dismiss(false)}
           onLoad={() =>
             setPhase((current) =>
-              current === "loading" ? "entering" : current,
+              current === "loading"
+                ? window.matchMedia("(prefers-reduced-motion: reduce)").matches
+                  ? "holding"
+                  : "entering"
+                : current,
             )
           }
         />

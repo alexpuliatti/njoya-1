@@ -235,7 +235,7 @@ export default function NjoyaCarouselCard({
           className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
           image={item.cover}
           priority={priority}
-          sizes={`(max-width: 767px) ${coverSize("82vw", home ? "clamp(300px, 46svh, 540px)" : "clamp(350px, 59svh, 600px)", item.cover)}, (max-width: 1023px) ${coverSize("45vw", "clamp(390px, 64svh, 720px)", item.cover)}, ${coverSize("32vw", "clamp(390px, 64svh, 720px)", item.cover)}`}
+          sizes={`(max-width: 767px) ${coverSize("84vw", home ? "max(228px, calc(100svh - 380px))" : "clamp(330px, 62svh, 600px)", item.cover)}, (max-width: 1023px) ${coverSize("45vw", "clamp(390px, 64svh, 720px)", item.cover)}, ${coverSize("32vw", "clamp(390px, 64svh, 720px)", item.cover)}`}
           src={assetPath(item.imageUrl)}
           style={{ borderRadius: "var(--studio-radius)" }}
         />
@@ -261,7 +261,7 @@ export default function NjoyaCarouselCard({
           className="pointer-events-none absolute inset-0 z-[1]"
           style={{
             background:
-              "linear-gradient(180deg, transparent 35%, rgba(16,11,8,0.12) 55%, rgba(16,11,8,0.82) 100%)",
+              "linear-gradient(180deg, transparent 35%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.75) 75%, rgba(0,0,0,0.97) 100%)",
             borderRadius: "var(--studio-radius)",
           }}
         />

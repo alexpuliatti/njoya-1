@@ -15,8 +15,8 @@ export function imageSrcSet(image?: ContentImage) {
 }
 export function panelImageSize(image?: ContentImage) {
   return coverSize(
-    "min(90vw, calc(min(85vh, 780px) * 0.69231))",
-    "min(85vh, 780px)",
+    "min(90vw, calc(min(85svh, 780px) * 0.69231))",
+    "min(85svh, 780px)",
     image,
   );
 }
