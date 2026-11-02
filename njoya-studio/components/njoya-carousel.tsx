@@ -10,8 +10,9 @@ import useEmblaCarousel from "embla-carousel-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import NjoyaCarouselCard from "./njoya-carousel-card";
-import NjoyaCarouselDetailPanel from "./njoya-carousel-detail-panel";
+import ProjectDialog from "./project-dialog";
 import StudioIntro from "./studio-intro";
+import { StudioIconButton } from "./ui/studio-button";
 
 export default function NjoyaCarousel({
   items,
@@ -33,6 +34,8 @@ export default function NjoyaCarousel({
   const [reset, setReset] = useState(0);
   const [selected, setSelected] = useState(0);
   const [scrollable, setScrollable] = useState(false);
+  const [canPrevious, setCanPrevious] = useState(false);
+  const [canNext, setCanNext] = useState(false);
   const [reveal, setReveal] = useState(false);
   const dragging = useRef(false);
   const pointerDown = useRef(false);
@@ -46,6 +49,8 @@ export default function NjoyaCarousel({
     const select = () => {
       setSelected(api.selectedScrollSnap());
       setScrollable(api.scrollSnapList().length > 1);
+      setCanPrevious(api.canScrollPrev());
+      setCanNext(api.canScrollNext());
     };
 
     select();
@@ -134,7 +139,13 @@ export default function NjoyaCarousel({
         >
           <div className="project-track">
             {items.map((item, index) => (
-              <div key={item.id} className="project-slide">
+              <div
+                key={item.id}
+                aria-label={`${index + 1} of ${items.length}`}
+                aria-roledescription="slide"
+                className="project-slide"
+                role="group"
+              >
                 <NjoyaCarouselCard
                   home={!!pinned}
                   item={item}
@@ -155,9 +166,17 @@ export default function NjoyaCarousel({
               {String(selected + 1).padStart(2, "0")}{" "}
               <span>/ {String(items.length).padStart(2, "0")}</span>
             </span>
-            <button
-              aria-label="Previous project"
-              className="icon-button"
+            <span aria-hidden="true" className="carousel-progress">
+              <span
+                style={{
+                  transform: `scaleX(${(selected + 1) / items.length})`,
+                }}
+              />
+            </span>
+            <StudioIconButton
+              disabled={!canPrevious}
+              label="Previous project"
+              variant="outline"
               onClick={(event) =>
                 api?.scrollPrev(
                   event.detail === 0 ||
@@ -167,10 +186,11 @@ export default function NjoyaCarousel({
               }
             >
               <ArrowLeft size={19} />
-            </button>
-            <button
-              aria-label="Next project"
-              className="icon-button"
+            </StudioIconButton>
+            <StudioIconButton
+              disabled={!canNext}
+              label="Next project"
+              variant="outline"
               onClick={(event) =>
                 api?.scrollNext(
                   event.detail === 0 ||
@@ -180,12 +200,12 @@ export default function NjoyaCarousel({
               }
             >
               <ArrowRight size={19} />
-            </button>
+            </StudioIconButton>
           </div>
         )}
       </div>
       {showLoader && <StudioIntro onReveal={revealHome} />}
-      <NjoyaCarouselDetailPanel clickPayload={payload} onClose={close} />
+      <ProjectDialog clickPayload={payload} onClose={close} />
     </section>
   );
 }

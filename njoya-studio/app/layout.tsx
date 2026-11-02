@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "@/styles/studio-components.css";
 import type { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";

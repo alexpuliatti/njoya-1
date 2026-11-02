@@ -3,6 +3,8 @@
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+import { StudioIconButton } from "./ui/studio-button";
+
 export default function CategoryBrowser({
   children,
 }: {
@@ -33,20 +35,20 @@ export default function CategoryBrowser({
       <div className="category-browser-footer">
         <p className="browse-hint">Scroll to explore</p>
         <div>
-          <button
-            aria-label="Previous category"
-            className="icon-button"
+          <StudioIconButton
+            label="Previous category"
+            variant="outline"
             onClick={() => browse(-1)}
           >
             <ArrowLeft size={19} />
-          </button>
-          <button
-            aria-label="Next category"
-            className="icon-button"
+          </StudioIconButton>
+          <StudioIconButton
+            label="Next category"
+            variant="outline"
             onClick={() => browse(1)}
           >
             <ArrowRight size={19} />
-          </button>
+          </StudioIconButton>
         </div>
       </div>
     </section>

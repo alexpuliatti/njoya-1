@@ -1,6 +1,6 @@
 /**
  * Carousel types shared between njoya-carousel, njoya-carousel-card,
- * and njoya-carousel-detail-panel.
+ * and project-dialog.
  *
  * If your existing njoya-carousel-types.ts has additional fields,
  * just merge in `coverVideoPlaybackId` and `galleryVideoPlaybackIds`
@@ -68,10 +68,6 @@ export interface NjoyaCarouselItem {
 export interface NjoyaClickPayload {
   item: NjoyaCarouselItem;
   imgEl: HTMLImageElement;
-  fromRect: DOMRect;
-  fromRadius: string;
-  morphProg: number;
-  rotation: number;
   /** Keyboard activation opens the project immediately. */
   instant?: boolean;
 }

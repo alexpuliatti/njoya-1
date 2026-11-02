@@ -14,11 +14,7 @@ export function imageSrcSet(image?: ContentImage) {
     .join(", ");
 }
 export function panelImageSize(image?: ContentImage) {
-  return coverSize(
-    "min(90vw, calc(min(85svh, 780px) * 0.69231))",
-    "min(85svh, 780px)",
-    image,
-  );
+  return `(max-width: 767px) ${coverSize("calc(100vw - 56px)", "calc((100vw - 56px) * 1.25)", image)}, ${coverSize("min(52vw, 620px)", "min(70svh, 760px)", image)}`;
 }
 export function preferredImageSrc(image?: ContentImage, fallback = "") {
   return assetPath(
