@@ -46,15 +46,14 @@
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: start;
   gap: 24px;
 }
 
-.imageItem {
-  width: min(100%, var(--lab-image-max-width));
-  min-width: 0;
-  justify-self: center;
+.imageRow {
+  display: grid;
+  grid-template-columns: var(--gallery-columns);
+  align-items: start;
+  gap: 24px;
 }
 
 .imageGrid :global(.media-gallery) {
@@ -69,9 +68,8 @@
 }
 
 .imageGrid :global(.media-gallery img) {
-  aspect-ratio: var(--lab-image-ratio);
   height: auto;
-  object-fit: cover;
+  border-radius: 0;
 }
 
 @media (max-width: 767px) {
@@ -85,7 +83,7 @@
     padding: 0 16px 16px;
   }
 
-  .imageGrid {
+  .imageRow {
     grid-template-columns: minmax(0, 1fr);
   }
 }

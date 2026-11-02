@@ -14,33 +14,61 @@ import {
   StudioDialogPanel,
 } from "./ui/studio-dialog";
 
+// Balance adjacent pairs and trios without changing the image order. A combined
+// aspect ratio near 3 keeps rows comfortable for both drawings and photographs.
+function galleryRows(images: ContentImage[]): ContentImage[][] {
+  if (images.length < 2) return images.length ? [images] : [];
+
+  const layouts = new Map<number, { cost: number; rows: ContentImage[][] }>([
+    [images.length, { cost: 0, rows: [] }],
+  ]);
+
+  for (let start = images.length - 2; start >= 0; start--) {
+    for (const count of [2, 3]) {
+      const next = layouts.get(start + count);
+
+      if (!next) continue;
+      const row = images.slice(start, start + count);
+      const ratio = row.reduce((sum, image) => sum + image.width / image.height, 0);
+      const cost = (ratio - 3) ** 2 + next.cost;
+
+      if (cost < (layouts.get(start)?.cost ?? Infinity)) {
+        layouts.set(start, { cost, rows: [row, ...next.rows] });
+      }
+    }
+  }
+
+  return layouts.get(0)!.rows;
+}
+
 function LabImageGallery({ images }: { images: ContentImage[] }) {
-  const mobileWidth = "calc(100vw - 58px)";
-  const desktopWidth = "min(calc((100vw - 130px) / 2), 553px)";
+  const rows = galleryRows(images);
 
   return (
     <div className={styles.imageGrid}>
-      {images.map((image) => {
-        const ratio = image.width / image.height;
-        // Preserve portraits; trim less than 3% vertically from landscapes.
-        const frameRatio = ratio > 1 ? ratio * 1.03 : ratio;
-        const maxWidth = `${360 * frameRatio}px`;
+      {rows.map((row) => {
+        const ratios = row.map((image) => image.width / image.height);
+        const totalRatio = ratios.reduce((sum, ratio) => sum + ratio, 0);
+        const gaps = (row.length - 1) * 24;
+        const availableWidth = `min(calc(100vw - ${106 + gaps}px), ${1130 - gaps}px)`;
 
         return (
           <div
-            key={image.src}
-            className={styles.imageItem}
+            key={row[0].src}
+            className={styles.imageRow}
             style={
               {
-                "--lab-image-ratio": frameRatio,
-                "--lab-image-max-width": maxWidth,
+                "--gallery-columns": ratios.map((ratio) => `${ratio}fr`).join(" "),
               } as CSSProperties
             }
           >
-            <MediaGallery
-              entries={[image]}
-              sizes={`(max-width: 767px) min(${mobileWidth}, ${maxWidth}), min(${desktopWidth}, ${maxWidth})`}
-            />
+            {row.map((image, index) => (
+              <MediaGallery
+                key={image.src}
+                entries={[image]}
+                sizes={`(max-width: 767px) calc(100vw - 58px), calc(${availableWidth} * ${(ratios[index] / totalRatio).toFixed(5)})`}
+              />
+            ))}
           </div>
         );
       })}
