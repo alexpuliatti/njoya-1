@@ -9,6 +9,8 @@ import { useSearch } from "./search-provider";
 import { StudioButton, StudioIconButton } from "./ui/studio-button";
 
 import { siteConfig } from "@/config/site";
+import Image from "@/components/studio-image";
+import { assetPath } from "@/lib/asset-path";
 
 export function Navbar({ instagram }: { instagram: string }) {
   const pathname = usePathname().replace(/\/$/, "") || "/";
@@ -68,14 +70,15 @@ export function Navbar({ instagram }: { instagram: string }) {
   return (
     <header className="studio-header">
       <Link aria-label="Njoya Studios — home" className="wordmark" href="/">
-        <span aria-hidden="true" className="wordmark-name">
-          NJ
-          <span className="wordmark-o" />
-          YA
-        </span>
-        <span aria-hidden="true" className="wordmark-caption">
-          STUDIOS
-        </span>
+        <Image
+          priority
+          alt=""
+          aria-hidden="true"
+          className="wordmark-logo"
+          height={249}
+          src={assetPath("/media/brand/logo-njoya-whitetext.svg")}
+          width={796}
+        />
       </Link>
       {!isHome && (
         <nav aria-label="Main navigation" className="header-navigation">
