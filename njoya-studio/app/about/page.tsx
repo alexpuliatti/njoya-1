@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import { ArrowUpRight } from "lucide-react";
 
+import { GradientDivider } from "@/components/gradient-components/gradient-divider";
 import NewsletterForm from "@/components/newsletter-form";
 import AnimatedContent from "@/components/react-bits/animated-content";
 import { getAbout, getSite } from "@/lib/content/repository";
@@ -35,6 +36,7 @@ export default async function AboutPage() {
         </h1>
         <p className="biography-copy">{about.biography}</p>
       </section>
+      <GradientDivider className="about-gradient-divider" />
       <section aria-labelledby="clients-heading" className="selected-clients">
         <h2 className="eyebrow" id="clients-heading">
           Selected clients
@@ -45,6 +47,7 @@ export default async function AboutPage() {
           ))}
         </ul>
       </section>
+      <GradientDivider className="about-gradient-divider" />
       <section aria-labelledby="inquiries-heading" className="contact-section">
         <div>
           <p className="eyebrow">Start a conversation</p>
@@ -64,6 +67,7 @@ export default async function AboutPage() {
           ))}
         </div>
       </section>
+      <GradientDivider className="about-gradient-divider" />
       <section
         aria-labelledby="newsletter-heading"
         className="newsletter-section"

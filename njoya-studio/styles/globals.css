@@ -678,7 +678,10 @@ html[data-njoya-intro="skip"] .intro-overlay {
   max-width: 800px;
   margin-inline: auto;
   padding-block: 64px;
-  border-top: 1px solid var(--studio-line);
+}
+.about-gradient-divider {
+  max-width: 800px;
+  margin-inline: auto;
 }
 .selected-clients h2 {
   margin: 0 0 32px;

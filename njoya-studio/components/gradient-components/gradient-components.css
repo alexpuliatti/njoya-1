@@ -1,0 +1,46 @@
+/* Adapted from alexpuliatti/gradient-components; see README.md and LICENSE. */
+.gradient-line-base {
+  position: relative;
+  z-index: 1;
+  border-radius: 999px;
+  pointer-events: none;
+}
+.gradient-line-scroll {
+  will-change: transform;
+}
+.gradient-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  isolation: isolate;
+}
+.gradient-divider::before {
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  height: 1px;
+  background: var(--studio-line);
+  content: "";
+  transform: translateY(-50%);
+}
+.gradient-divider .gradient-line-base {
+  flex: 1;
+}
+.gradient-divider-label {
+  flex-shrink: 0;
+  padding-inline: 8px;
+  background: var(--studio-bg);
+  color: var(--studio-muted);
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+@media (prefers-reduced-motion: reduce) {
+  .gradient-line-scroll {
+    transform: none !important;
+    will-change: auto;
+  }
+}
