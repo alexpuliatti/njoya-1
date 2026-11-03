@@ -22,11 +22,15 @@ const PHASES = [
 /** An image cutout rig and live type, sharing a single, reversible timeline. */
 export default function WorldBuilderHeadline({
   controls = false,
+  playWhen = true,
   worlds,
+  onStart,
   onComplete,
 }: {
   controls?: boolean;
+  playWhen?: boolean;
   worlds?: ReactNode;
+  onStart?: () => void;
   onComplete?: () => void;
 }) {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -228,6 +232,7 @@ export default function WorldBuilderHeadline({
       }
       if (
         started ||
+        !playWhen ||
         document.hidden ||
         (waitsForIntro &&
           document.documentElement.dataset.njoyaIntro !== "skip")
@@ -244,6 +249,7 @@ export default function WorldBuilderHeadline({
             started = false;
             return;
           }
+          onStart?.();
           onComplete?.();
         }, 0);
         return;
@@ -367,6 +373,7 @@ export default function WorldBuilderHeadline({
       draw();
       setReady(true);
       setPlaying(true);
+      onStart?.();
       timeline.play();
     };
 
@@ -447,7 +454,7 @@ export default function WorldBuilderHeadline({
       letter.style.removeProperty("transform");
       delete root.dataset.enhanced;
     };
-  }, [controls, onComplete]);
+  }, [controls, onComplete, onStart, playWhen]);
 
   const replay = () => {
     const timeline = timelineRef.current;
