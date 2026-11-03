@@ -1,0 +1,21 @@
+{
+  "tool": "built-in image_gen",
+  "generation": "Use case: identity-preserve. Asset type: transparent miniature character cutout for a website character animation. Input images: identify ONLY the original RED-FACED character with oversized red head, blue and dark-green eyelids, small grey stone face and white wiry hair on top, yellow bead-and-pink piping facial decoration, white dotted cheek motifs and patterned lower body. Other characters and website screenshots in the references are context only; do not use them as this character's identity. Repose that same RED character into one clean full-body miniature, largely frontal with a slight three-quarter turn facing LEFT, in a relaxed curious peeking posture. Preserve the vivid red textured oversized face and distinctive long blue upper lids and dark green lower lids; BOTH eyes should be open enough to see a slim dark eye opening. Preserve the small stone mask and white wiry hair, orange/brown long human arms and human feet, yellow beads with pink cord, white circular dotted cheek motifs, black/green/white zebra-patterned hip form, blue gingham rounded panel and yellow mesh-patterned leg. One hand extends modestly LEFT at about waist height, as if resting on an invisible vertical card edge; the other arm rests naturally. Both feet visible and planted. Rich tactile collage / sculptural materials like the reference, simplified only enough to read small. Exact one character, entire silhouette visible, modest transparent padding. No card, props, lettering, pedestal, cast shadow, fog, bloom, coloured glow, backdrop or ground. Every pixel outside solid character surfaces must be truly alpha transparent, including gaps between limbs. Portrait or near-square composition with the large red face dominant, not cropped.",
+  "blink": "Use case: precise-object-edit / identity-preserve. Edit target: this exact supplied transparent red-faced observer miniature. Make a blink frame for a web animation. CHANGE ONLY the two large eye openings: lower both blue upper eyelids gently until the eyes are fully closed, meeting their lower lids in a thin curved seam; no white eyeball, no pupil and no visible dark open slit. The blue upper eyelid material and lower blue / dark green eyelid material stay the same, and each eye's outer oval boundary stays in exactly the same position and shape. Keep EVERYTHING else pixel-aligned and unchanged: 1254 × 1254 square canvas, character scale, position, silhouette, red face, all bead strings, stone mask, white hair, cheek motifs, arms, fingers, body, patterned legs, feet, texture, colours and transparency. Do not move, rotate, reshape or reframe the character. Keep background genuinely alpha transparent. This is one exact same character in one exact same pose, differing only in closed eyes.",
+  "openImage": "/Users/ap/.codex/generated_images/01a1a3c0-26da-7863-9881-600aecc3d0eb/exec-017d8aa2-7d10-40d4-8ece-f4bb09f129e1.png",
+  "closedImage": "/Users/ap/.codex/generated_images/01a1a3c0-26da-7863-9881-600aecc3d0eb/exec-7f5048cf-b7f4-467c-bf44-134df12283f3.png",
+  "dimensions": {
+    "width": 1254,
+    "height": 1254
+  },
+  "eyeOverlayRegions": {
+    "left": {
+      "boundsPixels": [414, 240, 568, 433],
+      "clipPath": "ellipse(6.5% 8% at 39.2% 26.8%)"
+    },
+    "right": {
+      "boundsPixels": [619, 193, 774, 377],
+      "clipPath": "ellipse(6.5% 7.7% at 55.5% 22.7%)"
+    }
+  }
+}

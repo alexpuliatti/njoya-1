@@ -14,6 +14,12 @@ Asset: `public/media/motion/explorer.webp`, a transparent 768 × 615 WebP prepar
 
 ## 03 — The observer
 
-The additional red-faced character with blue eyelids and patterned legs is a candidate for slower movement: a deliberate blink, a look around a project edge, or a quiet reaction to a Lab experiment. This is a direction for a future study, not an implemented animation.
+Red face, blue eyelids, patterned legs and a small stone mask. A quiet companion: peeks from behind a project, blinks once, takes another look and retreats. Preview: `/motion/observer`. The project image remains a working link to the Brides de Galaxy Lab page.
+
+Assets: `public/media/motion/observer.webp` and `observer-blink.webp`, two transparent 768 × 768 WebPs prepared with built-in image_gen from the user's red character reference. Only the closed-eye regions overlay the original character during the blink, keeping its body and textures steady. Exact prompts and eye coordinates are saved in `docs/observer-prompts.json`.
+
+## Homepage cast
+
+The local homepage card now shares one semantic headline across all three characters. After the existing intro clears, the builder finishes the W, the explorer rolls the O into the same WORLDS line, then the observer peeks around the card edge. The approved builder size and standing position remain. The sequence plays once, leaves the card link available, pauses in a hidden tab, and presents a readable still headline for reduced motion or artwork errors. These additions remain on the local motion branch; main contains the previously approved builder only.
 
 The cast should feel like it inhabits the typography and edges of the work. Each moment has a short action and a clear finish; larger appearances belong in the Lab, with occasional smaller appearances elsewhere.

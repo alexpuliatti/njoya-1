@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import NjoyaCarousel from "@/components/njoya-carousel";
 import HomeQueryRedirect from "@/components/home-query-redirect";
-import WorldBuilderHeadline from "@/components/world-builder-headline";
+import HomepageWorldBuilders from "@/components/homepage-world-builders";
 import {
   getCategories,
   getHome,
@@ -58,7 +58,7 @@ export default async function Home() {
             <span className="statement-topline">
               Njoya Studios <ArrowUpRight size={19} />
             </span>
-            <WorldBuilderHeadline />
+            <HomepageWorldBuilders />
             <p>{site.statement}</p>
             <span className="statement-footer">
               Space. Image. Objects. Experiences.

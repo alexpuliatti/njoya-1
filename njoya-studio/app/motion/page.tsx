@@ -70,6 +70,10 @@ export default async function MotionPage() {
             <span>02 / The explorer</span>
             <ArrowUpRight aria-hidden="true" size={16} />
           </Link>
+          <Link className={styles.studyLink} href="/motion/observer">
+            <span>03 / The observer</span>
+            <ArrowUpRight aria-hidden="true" size={16} />
+          </Link>
         </aside>
       </div>
     </div>
