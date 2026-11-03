@@ -1,0 +1,28 @@
+.observerWindow {
+  position: absolute;
+  top: 16%;
+  right: 0;
+  z-index: 3;
+  width: clamp(78px, 7vw, 108px);
+  height: clamp(116px, 11vw, 160px);
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  border-radius: 0 18px 18px 0;
+}
+
+@media (max-width: 767px) {
+  .observerWindow {
+    top: 2px;
+    right: 0;
+    width: 64px;
+    height: 75px;
+    border-radius: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observerWindow {
+    display: none;
+  }
+}

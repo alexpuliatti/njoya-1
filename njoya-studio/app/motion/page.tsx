@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import styles from "./motion.module.css";
 
@@ -66,6 +66,14 @@ export default async function MotionPage() {
             <span className={styles.detailNumber}>03</span>
             <p>Everything falls into place.</p>
           </div>
+          <Link className={styles.studyLink} href="/motion/explorer">
+            <span>02 / The explorer</span>
+            <ArrowUpRight aria-hidden="true" size={16} />
+          </Link>
+          <Link className={styles.studyLink} href="/motion/observer">
+            <span>03 / The observer</span>
+            <ArrowUpRight aria-hidden="true" size={16} />
+          </Link>
         </aside>
       </div>
     </div>

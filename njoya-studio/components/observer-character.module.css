@@ -1,0 +1,47 @@
+.character {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transform-origin: 65% 60%;
+}
+
+.image,
+.lids {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  object-fit: contain;
+}
+
+.lids {
+  opacity: 0;
+}
+
+.leftEye {
+  clip-path: ellipse(6.5% 8% at 39.2% 26.8%);
+}
+
+.rightEye {
+  clip-path: ellipse(6.5% 7.7% at 55.5% 22.7%);
+}
+
+.character[data-active="true"] {
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character {
+    display: none;
+  }
+}
