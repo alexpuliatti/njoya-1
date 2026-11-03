@@ -114,7 +114,7 @@ export default function LabProjectDialog({
             aria-labelledby={sketchesTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
-            <LabWalkingDivider />
+            <LabWalkingDivider action="build" />
             <h3 className={styles.sectionTitle} id={sketchesTitleId}>
               Conceptual sketches
             </h3>
@@ -126,7 +126,7 @@ export default function LabProjectDialog({
             aria-labelledby={makingTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
-            <LabWalkingDivider direction="left" />
+            <LabWalkingDivider action="dance" />
             <h3 className={styles.sectionTitle} id={makingTitleId}>
               The Making
             </h3>

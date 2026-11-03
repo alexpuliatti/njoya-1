@@ -28,6 +28,8 @@ The cast should feel like it inhabits the typography and edges of the work. Each
 
 ## Lab project dividers
 
-The observer walks along the warm gradient lines above Conceptual sketches, The Making, and The result inside Lab project dialogs. Lines alternate right, left, then right, using the existing eight-frame walking strips. The character walks off the end and re-enters from the opposite side in the same direction. Each loop pauses outside the dialog viewport or in a hidden tab and resumes from its previous position. Reduced motion shows a still pose on the line.
+The observer appears along the warm gradient lines inside Lab project dialogs. Above Conceptual sketches, 24 drawn character poses build a three-brick wall once: the scene starts empty, adds one separately controlled brick at a time, and keeps the finished wall standing. Above The Making, a 16-frame dance loops at eight frames per second. Above The result, the existing eight-frame walk goes off the end and re-enters from the opposite side in the same direction. Actions pause outside the dialog viewport or in a hidden tab and resume from their previous position. Reduced motion shows a still pose on the line.
 
-Open a project on `/lab` to see the walking characters. `components/lab-walking-divider.tsx` and its CSS module own the character, travel, and foot alignment. The lines reuse the existing static `GradientDivider` to avoid window-scroll subscriptions inside the independently scrolling dialog.
+Open a project on `/lab` to see the actions; reopening a project restarts the build. `components/lab-walking-divider.tsx` and its CSS module own playback, travel, and foot alignment. `lib/character-actions.ts` defines the shared build timeline and fixed brick placements. The lines reuse the existing static `GradientDivider` to avoid window-scroll subscriptions inside the independently scrolling dialog.
+
+Prompts, source art, packing metadata and contact sheets are in `docs/character-actions/`.

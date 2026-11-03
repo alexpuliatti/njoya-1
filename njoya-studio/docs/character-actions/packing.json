@@ -1,0 +1,675 @@
+{
+  "tool": "built-in image_gen",
+  "prepared": [
+    {
+      "action": "build",
+      "columns": 6,
+      "rows": 4,
+      "width": 192,
+      "height": 192,
+      "frameCount": 24,
+      "footY": 184,
+      "source": "docs/character-actions/source/observer-build-character.png",
+      "output": "public/media/motion/observer-build.webp",
+      "bytes": 238164,
+      "scale": 0.7154471544715447,
+      "placements": [
+        {
+          "index": 0,
+          "sourceBounds": {
+            "left": 7,
+            "top": 6,
+            "right": 167,
+            "bottom": 251,
+            "width": 161,
+            "height": 246
+          },
+          "left": 5,
+          "top": 4,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 1,
+          "sourceBounds": {
+            "left": 43,
+            "top": 23,
+            "right": 174,
+            "bottom": 250,
+            "width": 132,
+            "height": 228
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 2,
+          "sourceBounds": {
+            "left": 37,
+            "top": 50,
+            "right": 190,
+            "bottom": 251,
+            "width": 154,
+            "height": 202
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 3,
+          "sourceBounds": {
+            "left": 44,
+            "top": 52,
+            "right": 175,
+            "bottom": 251,
+            "width": 132,
+            "height": 200
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 4,
+          "sourceBounds": {
+            "left": 43,
+            "top": 24,
+            "right": 155,
+            "bottom": 250,
+            "width": 113,
+            "height": 227
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 5,
+          "sourceBounds": {
+            "left": 40,
+            "top": 6,
+            "right": 154,
+            "bottom": 250,
+            "width": 115,
+            "height": 245
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 6,
+          "sourceBounds": {
+            "left": 35,
+            "top": 9,
+            "right": 186,
+            "bottom": 250,
+            "width": 152,
+            "height": 242
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 7,
+          "sourceBounds": {
+            "left": 36,
+            "top": 20,
+            "right": 193,
+            "bottom": 250,
+            "width": 158,
+            "height": 231
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 8,
+          "sourceBounds": {
+            "left": 28,
+            "top": 7,
+            "right": 164,
+            "bottom": 250,
+            "width": 137,
+            "height": 244
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 9,
+          "sourceBounds": {
+            "left": 14,
+            "top": 31,
+            "right": 159,
+            "bottom": 250,
+            "width": 146,
+            "height": 220
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 10,
+          "sourceBounds": {
+            "left": 24,
+            "top": 46,
+            "right": 167,
+            "bottom": 250,
+            "width": 144,
+            "height": 205
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 11,
+          "sourceBounds": {
+            "left": 39,
+            "top": 15,
+            "right": 155,
+            "bottom": 248,
+            "width": 117,
+            "height": 234
+          },
+          "left": 5,
+          "top": 7,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 12,
+          "sourceBounds": {
+            "left": 33,
+            "top": 26,
+            "right": 169,
+            "bottom": 246,
+            "width": 137,
+            "height": 221
+          },
+          "left": 5,
+          "top": 8,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 13,
+          "sourceBounds": {
+            "left": 17,
+            "top": 41,
+            "right": 175,
+            "bottom": 249,
+            "width": 159,
+            "height": 209
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 14,
+          "sourceBounds": {
+            "left": 14,
+            "top": 51,
+            "right": 172,
+            "bottom": 248,
+            "width": 159,
+            "height": 198
+          },
+          "left": 5,
+          "top": 7,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 15,
+          "sourceBounds": {
+            "left": 15,
+            "top": 14,
+            "right": 130,
+            "bottom": 249,
+            "width": 116,
+            "height": 236
+          },
+          "left": 5,
+          "top": 7,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 16,
+          "sourceBounds": {
+            "left": 7,
+            "top": 59,
+            "right": 133,
+            "bottom": 250,
+            "width": 127,
+            "height": 192
+          },
+          "left": 5,
+          "top": 5,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 17,
+          "sourceBounds": {
+            "left": 18,
+            "top": 47,
+            "right": 128,
+            "bottom": 249,
+            "width": 111,
+            "height": 203
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 18,
+          "sourceBounds": {
+            "left": 27,
+            "top": 8,
+            "right": 139,
+            "bottom": 249,
+            "width": 113,
+            "height": 242
+          },
+          "left": 5,
+          "top": 6,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 19,
+          "sourceBounds": {
+            "left": 28,
+            "top": 16,
+            "right": 162,
+            "bottom": 246,
+            "width": 135,
+            "height": 231
+          },
+          "left": 5,
+          "top": 9,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 20,
+          "sourceBounds": {
+            "left": 22,
+            "top": 35,
+            "right": 183,
+            "bottom": 247,
+            "width": 162,
+            "height": 213
+          },
+          "left": 5,
+          "top": 8,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 21,
+          "sourceBounds": {
+            "left": 18,
+            "top": 35,
+            "right": 174,
+            "bottom": 246,
+            "width": 157,
+            "height": 212
+          },
+          "left": 5,
+          "top": 8,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 22,
+          "sourceBounds": {
+            "left": 8,
+            "top": 10,
+            "right": 145,
+            "bottom": 248,
+            "width": 138,
+            "height": 239
+          },
+          "left": 5,
+          "top": 7,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        },
+        {
+          "index": 23,
+          "sourceBounds": {
+            "left": 10,
+            "top": 8,
+            "right": 155,
+            "bottom": 247,
+            "width": 146,
+            "height": 240
+          },
+          "left": 5,
+          "top": 7,
+          "resizedWidth": 183,
+          "resizedHeight": 183,
+          "leftGutter": 0
+        }
+      ]
+    },
+    {
+      "action": "dance",
+      "columns": 4,
+      "rows": 4,
+      "width": 128,
+      "height": 192,
+      "frameCount": 16,
+      "footY": 184,
+      "source": "docs/character-actions/source/observer-dance-clean.png",
+      "output": "public/media/motion/observer-dance.webp",
+      "bytes": 147214,
+      "scale": 0.453125,
+      "placements": [
+        {
+          "index": 0,
+          "sourceBounds": {
+            "left": 15,
+            "top": 9,
+            "right": 239,
+            "bottom": 378,
+            "width": 225,
+            "height": 370
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 1,
+          "sourceBounds": {
+            "left": 12,
+            "top": 11,
+            "right": 239,
+            "bottom": 378,
+            "width": 228,
+            "height": 368
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 2,
+          "sourceBounds": {
+            "left": 16,
+            "top": 11,
+            "right": 253,
+            "bottom": 378,
+            "width": 238,
+            "height": 368
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 3,
+          "sourceBounds": {
+            "left": 9,
+            "top": 17,
+            "right": 245,
+            "bottom": 379,
+            "width": 237,
+            "height": 363
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 4,
+          "sourceBounds": {
+            "left": 34,
+            "top": 20,
+            "right": 221,
+            "bottom": 376,
+            "width": 188,
+            "height": 357
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 5,
+          "sourceBounds": {
+            "left": 10,
+            "top": 6,
+            "right": 241,
+            "bottom": 376,
+            "width": 232,
+            "height": 371
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 6,
+          "sourceBounds": {
+            "left": 17,
+            "top": 8,
+            "right": 237,
+            "bottom": 376,
+            "width": 221,
+            "height": 369
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 7,
+          "sourceBounds": {
+            "left": 19,
+            "top": 7,
+            "right": 224,
+            "bottom": 376,
+            "width": 206,
+            "height": 370
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 8,
+          "sourceBounds": {
+            "left": 5,
+            "top": 9,
+            "right": 255,
+            "bottom": 377,
+            "width": 251,
+            "height": 369
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 9,
+          "sourceBounds": {
+            "left": 0,
+            "top": 8,
+            "right": 255,
+            "bottom": 377,
+            "width": 256,
+            "height": 370
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 12
+        },
+        {
+          "index": 10,
+          "sourceBounds": {
+            "left": 0,
+            "top": 7,
+            "right": 207,
+            "bottom": 377,
+            "width": 208,
+            "height": 371
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 12
+        },
+        {
+          "index": 11,
+          "sourceBounds": {
+            "left": 5,
+            "top": 20,
+            "right": 250,
+            "bottom": 376,
+            "width": 246,
+            "height": 357
+          },
+          "left": 6,
+          "top": 14,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 12,
+          "sourceBounds": {
+            "left": 15,
+            "top": 10,
+            "right": 255,
+            "bottom": 378,
+            "width": 241,
+            "height": 369
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 13,
+          "sourceBounds": {
+            "left": 17,
+            "top": 9,
+            "right": 238,
+            "bottom": 378,
+            "width": 222,
+            "height": 370
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 14,
+          "sourceBounds": {
+            "left": 21,
+            "top": 9,
+            "right": 240,
+            "bottom": 378,
+            "width": 220,
+            "height": 370
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        },
+        {
+          "index": 15,
+          "sourceBounds": {
+            "left": 16,
+            "top": 9,
+            "right": 242,
+            "bottom": 378,
+            "width": 227,
+            "height": 370
+          },
+          "left": 6,
+          "top": 13,
+          "resizedWidth": 116,
+          "resizedHeight": 174,
+          "leftGutter": 0
+        }
+      ]
+    }
+  ]
+}
