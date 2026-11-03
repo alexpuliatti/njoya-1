@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 
-import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import styles from "./lab.module.css";
 
-import Image from "@/components/studio-image";
-import { assetPath } from "@/lib/asset-path";
-import { coverSize } from "@/lib/image-sources";
+import LabCaseStudy from "@/components/lab-case-study";
 import { getLabEntries } from "@/lib/content/repository";
 export const metadata: Metadata = {
   title: "Lab",
@@ -29,30 +26,9 @@ export default async function LabPage() {
         </p>
       </header>
       {entries.length ? (
-        <div className="lab-grid">
+        <div className={styles.studies}>
           {entries.map((entry) => (
-            <Link
-              key={entry.id}
-              className="lab-entry-card"
-              href={`/lab/${entry.slug}`}
-            >
-              {entry.gallery[0] && (
-                <Image
-                  alt={entry.gallery[0].alt}
-                  height={entry.gallery[0].height}
-                  image={entry.gallery[0]}
-                  sizes={`(max-width: 767px) ${coverSize("78vw", "380px", entry.gallery[0])}, ${coverSize("32vw", "380px", entry.gallery[0])}`}
-                  src={assetPath(entry.gallery[0].src)}
-                  width={entry.gallery[0].width}
-                />
-              )}
-              <p className="eyebrow">{entry.date}</p>
-              <h2>
-                {entry.title}
-                <ArrowUpRight size={21} />
-              </h2>
-              <p>{entry.summary}</p>
-            </Link>
+            <LabCaseStudy key={entry.id} entry={entry} />
           ))}
         </div>
       ) : (

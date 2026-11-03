@@ -1,0 +1,27 @@
+.studies {
+  display: grid;
+  gap: 72px;
+  margin-top: 65px;
+}
+
+.detail {
+  max-width: 1500px;
+  margin: 40px auto;
+  padding: 24px 7vw;
+}
+
+.back {
+  margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .studies {
+    margin-top: 45px;
+    gap: 56px;
+  }
+
+  .detail {
+    margin-top: 10px;
+    padding: 24px;
+  }
+}
