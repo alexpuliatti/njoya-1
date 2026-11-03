@@ -75,9 +75,9 @@ export function Navbar({ instagram }: { instagram: string }) {
           alt=""
           aria-hidden="true"
           className="wordmark-logo"
-          height={249}
-          src={assetPath("/media/brand/logo-njoya-whitetext.svg")}
-          width={796}
+          height={1028}
+          src={assetPath("/media/brand/logo-njoya-white.png")}
+          width={3302}
         />
       </Link>
       {!isHome && (
