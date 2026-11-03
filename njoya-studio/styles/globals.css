@@ -687,17 +687,34 @@ html[data-njoya-intro="skip"] .intro-overlay {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 16px 30px;
+  row-gap: 16px;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .selected-clients-list li {
+  position: relative;
+  flex: 1 1 auto;
+  max-width: 100%;
+  padding-inline: 14px;
   font-size: clamp(18px, 1.8vw, 25px);
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: -0.025em;
   text-wrap: balance;
+}
+/* Full rows clip the first dot, keeping separators between names on wrap. */
+.selected-clients-list li::before {
+  position: absolute;
+  top: 0.75em;
+  left: -3px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--studio-muted);
+  content: "";
+  transform: translateY(-50%);
 }
 .contact-section h2,
 .newsletter-section h2 {
@@ -1305,9 +1322,10 @@ html[data-njoya-intro="skip"] .intro-overlay {
     margin-bottom: 24px;
   }
   .selected-clients-list {
-    gap: 12px 22px;
+    row-gap: 12px;
   }
   .selected-clients-list li {
+    padding-inline: 12px;
     font-size: 18px;
   }
   .contact-section {
