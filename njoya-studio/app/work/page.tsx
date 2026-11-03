@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
-import Link from "@/components/transition-link";
 import Image from "@/components/studio-image";
 import { assetPath } from "@/lib/asset-path";
 import { coverSize } from "@/lib/image-sources";

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
-import Link from "@/components/transition-link";
 import NjoyaCarousel from "@/components/njoya-carousel";
 import {
   getCategories,

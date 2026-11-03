@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import styles from "../motion.module.css";
 import local from "./observer.module.css";
 
-import Link from "@/components/transition-link";
 import ObserverStudy from "@/components/observer-study";
 import { getLabEntries } from "@/lib/content/repository";
 

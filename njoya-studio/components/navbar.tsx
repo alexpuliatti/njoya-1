@@ -1,10 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Instagram, Search } from "lucide-react";
 import { useEffect, useRef } from "react";
 
-import Link from "./transition-link";
 import { useSearch } from "./search-provider";
 import { StudioButton, StudioIconButton } from "./ui/studio-button";
 

@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 import styles from "./motion.module.css";
 
-import Link from "@/components/transition-link";
 import WorldBuilderHeadline from "@/components/world-builder-headline";
 import { getSite } from "@/lib/content/repository";
 

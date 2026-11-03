@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import styles from "../lab.module.css";
 
-import Link from "@/components/transition-link";
 import { getLabEntries } from "@/lib/content/repository";
 import LabCaseStudy from "@/components/lab-case-study";
 import MediaGallery from "@/components/media-gallery";

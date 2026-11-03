@@ -1,7 +1,7 @@
-import Link from "./transition-link";
 import type { ContentImage, GalleryEntry } from "@/lib/content/types";
 import type { NjoyaCarouselMetadata } from "@/lib/njoya-carousel-types";
 
+import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 import Image from "./studio-image";

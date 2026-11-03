@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
-import Link from "@/components/transition-link";
 import NjoyaCarousel from "@/components/njoya-carousel";
 import {
   getCategories,

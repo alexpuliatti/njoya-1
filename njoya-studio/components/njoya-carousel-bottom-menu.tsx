@@ -1,8 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import Link from "./transition-link";
 import { siteConfig } from "@/config/site";
 
 export default function StudioNavigation() {
