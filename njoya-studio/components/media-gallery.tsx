@@ -1,4 +1,5 @@
 import type { GalleryEntry } from "@/lib/content/types";
+import type { CSSProperties } from "react";
 
 import Image from "./studio-image";
 import StudioVideo from "./studio-video";
@@ -18,7 +19,13 @@ export default function MediaGallery({
   if (!entries.length) return null;
 
   return (
-    <div className="media-gallery">
+    <div
+      className={
+        entries.length === 1
+          ? "media-gallery media-gallery-single"
+          : "media-gallery"
+      }
+    >
       {entries.map((entry, index) => (
         <figure
           key={`${entry.type}-${index}`}
@@ -26,8 +33,18 @@ export default function MediaGallery({
             entry.type === "synopsis"
               ? "synopsis-media"
               : entry.type === "video" && "src" in entry
-                ? `film-media${entry.poster.width > entry.poster.height ? " landscape-film" : ""}`
+                ? entry.poster.width > entry.poster.height
+                  ? "film-media landscape-film"
+                  : "film-media"
                 : undefined
+          }
+          style={
+            entry.type === "video" && "src" in entry
+              ? ({
+                  "--film-aspect-ratio":
+                    entry.poster.width / entry.poster.height,
+                } as CSSProperties)
+              : undefined
           }
         >
           {entry.type === "video" ? (
@@ -37,9 +54,17 @@ export default function MediaGallery({
               aria-label={entry.alt}
               height={"src" in entry ? entry.poster.height : undefined}
               muted={false}
-              poster={"src" in entry ? assetPath(entry.poster.src) : muxThumbnail(entry.playbackId)}
+              poster={
+                "src" in entry
+                  ? assetPath(entry.poster.src)
+                  : muxThumbnail(entry.playbackId)
+              }
               preload="none"
-              src={"src" in entry ? assetPath(entry.src) : muxPlaybackUrl(entry.playbackId)}
+              src={
+                "src" in entry
+                  ? assetPath(entry.src)
+                  : muxPlaybackUrl(entry.playbackId)
+              }
               width={"src" in entry ? entry.poster.width : undefined}
             />
           ) : (

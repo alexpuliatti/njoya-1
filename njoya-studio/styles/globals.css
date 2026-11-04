@@ -1051,15 +1051,13 @@ html[data-njoya-intro="skip"] .intro-overlay {
   color: var(--studio-muted);
 }
 .media-gallery figure.film-media {
-  width: min(100%, 440px);
+  width: min(100%, 440px, calc(75svh * var(--film-aspect-ratio)));
 }
 .media-gallery figure.landscape-film {
-  width: min(100%, 780px);
+  width: min(100%, 780px, calc(75svh * var(--film-aspect-ratio)));
 }
-.media-gallery .film-media video {
-  max-height: 75svh;
-  object-fit: contain;
-  background: #000;
+.media-gallery-single figure.film-media {
+  width: min(100%, 1128px, calc(85svh * var(--film-aspect-ratio)));
 }
 .synopsis-text {
   max-width: 650px;

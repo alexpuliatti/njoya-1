@@ -19,7 +19,7 @@ import {
 
 import { assetPath } from "@/lib/asset-path";
 import { panelImageSize } from "@/lib/image-sources";
-import { muxPlaybackUrl, muxThumbnail } from "@/lib/mux";
+import { muxPlaybackUrl } from "@/lib/mux";
 
 export default function ProjectDialog({
   clickPayload,
@@ -33,19 +33,12 @@ export default function ProjectDialog({
   if (!clickPayload) return null;
   const { item, imgEl, instant } = clickPayload;
   const gallery = item.gallery ?? [];
-  const heroFilm =
-    item.videoOnly && gallery[0]?.type === "video" ? gallery[0] : undefined;
-  const remainingGallery = heroFilm ? gallery.slice(1) : gallery;
 
   return (
     <StudioDialog
       key={item.id}
       aria-labelledby={titleId}
-      className={
-        heroFilm && gallery.length === 1
-          ? "project-dialog project-dialog-single-film"
-          : "project-dialog"
-      }
+      className="project-dialog"
       source={{ image: imgEl, instant }}
       onClose={onClose}
     >
@@ -57,50 +50,24 @@ export default function ProjectDialog({
           <StudioDialogClose label="Close project" />
         </header>
         <div className="project-dialog-overview">
-          <StudioDialogHero
-            className={heroFilm ? "project-dialog-film" : undefined}
-          >
-            {heroFilm ? (
+          <StudioDialogHero>
+            <Image
+              fill
+              priority
+              alt={item.imageAlt ?? item.title}
+              image={item.cover}
+              sizes={panelImageSize(item.cover)}
+              src={assetPath(item.heroImageUrl ?? item.imageUrl)}
+            />
+            {!item.videoOnly && item.coverVideoPlaybackId && (
               <StudioVideo
-                controls
+                autoPlay
+                loop
+                muted
                 playsInline
-                aria-label={heroFilm.alt}
-                height={"src" in heroFilm ? heroFilm.poster.height : undefined}
-                muted={false}
-                poster={
-                  "src" in heroFilm
-                    ? assetPath(heroFilm.poster.src)
-                    : muxThumbnail(heroFilm.playbackId)
-                }
-                preload="none"
-                src={
-                  "src" in heroFilm
-                    ? assetPath(heroFilm.src)
-                    : muxPlaybackUrl(heroFilm.playbackId)
-                }
-                width={"src" in heroFilm ? heroFilm.poster.width : undefined}
+                className="project-dialog-video"
+                src={muxPlaybackUrl(item.coverVideoPlaybackId)}
               />
-            ) : (
-              <>
-                <Image
-                  fill
-                  priority
-                  alt={item.imageAlt ?? item.title}
-                  image={item.cover}
-                  sizes={panelImageSize(item.cover)}
-                  src={assetPath(item.heroImageUrl ?? item.imageUrl)}
-                />
-                {item.coverVideoPlaybackId && (
-                  <StudioVideo
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="project-dialog-video"
-                    src={muxPlaybackUrl(item.coverVideoPlaybackId)}
-                  />
-                )}
-              </>
             )}
           </StudioDialogHero>
           <aside className="project-dialog-information">
@@ -128,7 +95,7 @@ export default function ProjectDialog({
               </details>
             )}
             <div className="project-dialog-links">
-              {remainingGallery.length > 0 && (
+              {gallery.length > 0 && (
                 <span className="project-gallery-cue">
                   <ArrowDown size={14} /> Explore the project below
                 </span>
@@ -143,7 +110,7 @@ export default function ProjectDialog({
             </div>
           </aside>
         </div>
-        {remainingGallery.length > 0 && (
+        {gallery.length > 0 && (
           <section
             aria-label="Project gallery"
             className="project-dialog-gallery"
@@ -151,11 +118,11 @@ export default function ProjectDialog({
             <div className="project-dialog-gallery-heading">
               <span className="eyebrow">Inside the project</span>
               <span className="eyebrow">
-                {String(remainingGallery.length).padStart(2, "0")}{" "}
-                {remainingGallery.length === 1 ? "entry" : "entries"}
+                {String(gallery.length).padStart(2, "0")}{" "}
+                {gallery.length === 1 ? "entry" : "entries"}
               </span>
             </div>
-            <MediaGallery entries={remainingGallery} maxWidth={780} />
+            <MediaGallery entries={gallery} maxWidth={780} />
           </section>
         )}
       </StudioDialogPanel>
