@@ -25,7 +25,7 @@ const PHASES = [
   "Find a little momentum",
   "Keep it rolling",
   "Steady, steady",
-  "A world takes shape",
+  "A place beside the S",
 ];
 
 export type RollingWorldHandle = {
@@ -128,6 +128,8 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       let letterWidth = 0.8;
       let actorWidth = 1.5;
       let actorHeight = 1.2;
+      let restingX = 4.4;
+      let restingScale = 1;
       let status: RollingWorldState = {
         ready: false,
         playing: false,
@@ -146,13 +148,31 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
         letter.style.removeProperty("transform");
         const worldBounds = world.getBoundingClientRect();
         const letterBounds = letter.getBoundingClientRect();
+        const baselineBounds = baseline.getBoundingClientRect();
 
         goalX = (letterBounds.left - worldBounds.left) / fontSize;
-        floor =
-          (baseline.getBoundingClientRect().top - worldBounds.top) / fontSize;
+        floor = (baselineBounds.top - worldBounds.top) / fontSize;
         letterWidth = letter.offsetWidth / fontSize;
         actorWidth = actor.offsetWidth / fontSize;
         actorHeight = actor.offsetHeight / fontSize;
+        // The baseline marker follows the S; the block's right edge does not.
+        const wordEnd = (baselineBounds.left - worldBounds.left) / fontSize;
+        const stage =
+          world.closest<HTMLElement>(".statement-card") ??
+          world.closest<HTMLElement>("section") ??
+          world;
+        const stageRight =
+          (stage.getBoundingClientRect().right - worldBounds.left) / fontSize -
+          0.12;
+
+        restingScale = Math.min(
+          1,
+          Math.max(0.1, (stageRight - wordEnd - 0.08) / actorWidth),
+        );
+        // Scaling around the sole keeps its height fixed; compensate in X
+        // so the resting silhouette still starts just beyond the S.
+        restingX =
+          wordEnd + 0.08 - actorWidth * 0.7 * (1 - restingScale);
         letter.style.transform = previousTransform;
         shadow.style.top = String(floor + 0.01) + "em";
         slot.style.left = String(goalX) + "em";
@@ -162,13 +182,16 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       const draw = () => {
         const bump =
           -Math.abs(Math.sin((pose.rotation * Math.PI) / 180)) * 0.025;
-        const actorX =
+        const pushingX =
           goalX +
           pose.x +
           letterWidth * 0.88 -
-          actorWidth * 0.07 +
-          pose.retreat;
+          actorWidth * 0.07;
+        const actorX = pushingX + (restingX - pushingX) * pose.retreat;
         const actorY = floor - actorHeight * 0.986 + pose.step;
+        const actorScale = 1 + (restingScale - 1) * pose.retreat;
+        const letterShadowX = goalX + pose.x + letterWidth * 0.2;
+        const actorShadowX = actorX + actorWidth * 0.7 - 0.3;
 
         letter.style.transform =
           "translate(" +
@@ -187,12 +210,18 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
           actorY +
           "em) rotate(" +
           pose.lean +
-          "deg) scaleY(" +
-          pose.squash +
+          "deg) scale(" +
+          actorScale +
+          ", " +
+          actorScale * pose.squash +
           ")";
         actor.style.opacity = String(pose.actorOpacity);
         shadow.style.transform =
-          "translateX(" + (goalX + pose.x + letterWidth * 0.2) + "em)";
+          "translateX(" +
+          (letterShadowX + (actorShadowX - letterShadowX) * pose.retreat) +
+          "em) scaleX(" +
+          actorScale +
+          ")";
         shadow.style.opacity = String(pose.actorOpacity * 0.16);
         ghosts.forEach((ghost) => {
           ghost.style.opacity = String(pose.ghostOpacity);
@@ -335,13 +364,14 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
           )
           .to(
             pose,
-            { retreat: 0.9, step: 0, duration: 0.65, ease: "power2.inOut" },
+            {
+              retreat: 1,
+              step: 0,
+              lean: 0,
+              duration: 0.85,
+              ease: "power2.inOut",
+            },
             4.1,
-          )
-          .to(
-            pose,
-            { actorOpacity: 0, duration: 0.4, ease: "power2.inOut" },
-            4.55,
           );
         report({ ready: true, reducedMotion: false });
         if (requestedRef.current) restart();
@@ -406,7 +436,8 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       const onResize = () => {
         if (!timeline) return;
         measure();
-        if (world.dataset.enhanced === "true") draw();
+        if (world.dataset.enhanced === "true" || timeline.progress() === 1)
+          draw();
       };
       const onVisibilityChange = () => {
         if (document.hidden && timeline?.isActive()) {
