@@ -1232,17 +1232,24 @@ html[data-njoya-intro="skip"] .intro-overlay {
     min-height: 0;
   }
   .portfolio-stage.has-statement {
+    --home-viewport-unit: 1svh;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: auto minmax(280px, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
     align-items: stretch;
     height: calc(
-      100svh - var(--studio-header-height) - var(--studio-navigation-height)
+      var(--home-viewport-unit) * 100 - var(--studio-header-height) -
+        var(--studio-navigation-height)
     );
-    min-height: 530px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    gap: 20px;
+    min-height: 0;
+    padding-top: clamp(8px, calc(var(--home-viewport-unit) * 1.5), 12px);
+    padding-bottom: clamp(8px, calc(var(--home-viewport-unit) * 1.5), 12px);
+    gap: clamp(12px, calc(var(--home-viewport-unit) * 2), 20px);
+  }
+  @supports (height: 100dvh) {
+    .portfolio-stage.has-statement {
+      --home-viewport-unit: 1dvh;
+    }
   }
   .statement-card {
     height: auto;
@@ -1256,6 +1263,14 @@ html[data-njoya-intro="skip"] .intro-overlay {
     line-height: 0.98;
     margin-bottom: 16px;
     letter-spacing: -0.045em;
+  }
+  .has-statement .statement-card h1 {
+    font-size: clamp(
+      34px,
+      min(11.5vw, calc(var(--home-viewport-unit) * 7)),
+      52px
+    );
+    margin-bottom: clamp(10px, calc(var(--home-viewport-unit) * 2), 16px);
   }
   .statement-card h1 span {
     display: inline;

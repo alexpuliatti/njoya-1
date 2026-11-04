@@ -61,6 +61,7 @@ export default function AboutObserver() {
     let pageBottom = 0;
     let topEdge = 0;
     let bottomEdge = window.innerHeight;
+    let viewportWidth = window.innerWidth;
     let currentScroll = window.scrollY;
     let targetScroll = window.scrollY;
     let lastTime = 0;
@@ -133,6 +134,20 @@ export default function AboutObserver() {
       setMode("idle");
       blink(!motion.matches && inView && !document.hidden);
     };
+    const measureViewport = () => {
+      const header = document.querySelector<HTMLElement>(".studio-header");
+      const navigation =
+        document.querySelector<HTMLElement>(".studio-navigation");
+      const navigationBounds = navigation?.getBoundingClientRect();
+
+      topEdge = Math.max(0, header?.getBoundingClientRect().bottom ?? 0) + 8;
+      bottomEdge = Math.min(
+        window.innerHeight - 8,
+        navigationBounds?.height && navigationBounds.top > topEdge
+          ? navigationBounds.top - 8
+          : window.innerHeight - 8,
+      );
+    };
     const measure = () => {
       const scroll = window.scrollY;
       const pageBounds = page.getBoundingClientRect();
@@ -142,24 +157,15 @@ export default function AboutObserver() {
         .querySelector<HTMLElement>(".biography-copy")
         ?.getBoundingClientRect();
       const newsletter = page.querySelector<HTMLElement>(".newsletter-section");
-      const header = document.querySelector<HTMLElement>(".studio-header");
-      const navigation =
-        document.querySelector<HTMLElement>(".studio-navigation");
-      const navigationBounds = navigation?.getBoundingClientRect();
       const gap = compact.matches ? 10 : 20;
 
+      viewportWidth = window.innerWidth;
       width = root.offsetWidth;
       height = root.offsetHeight;
       pageLeft = pageBounds.left;
       pageTop = pageBounds.top + scroll;
       pageBottom = pageBounds.bottom + scroll;
-      topEdge = Math.max(0, header?.getBoundingClientRect().bottom ?? 0) + 8;
-      bottomEdge = Math.min(
-        window.innerHeight - 8,
-        navigationBounds?.height && navigationBounds.top > topEdge
-          ? navigationBounds.top - 8
-          : window.innerHeight - 8,
-      );
+      measureViewport();
       route = buildObserverRoute({
         startY: copyBounds
           ? copyBounds.top + scroll + Math.min(copyBounds.height, height * FOOT)
@@ -316,6 +322,16 @@ export default function AboutObserver() {
       currentScroll = targetScroll;
       sync();
     };
+    const onViewportResize = () => {
+      if (window.innerWidth !== viewportWidth) {
+        onResize();
+        return;
+      }
+      // Phone browser chrome changes viewport height while scrolling. Keep
+      // the content route and active gesture, and only refresh its bounds.
+      measureViewport();
+      sync();
+    };
     const onLoad = () => {
       assetsReady = images.every(
         (image) => image.complete && image.naturalWidth,
@@ -341,7 +357,7 @@ export default function AboutObserver() {
 
     resizeObserver.observe(content);
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onResize, { passive: true });
+    window.addEventListener("resize", onViewportResize, { passive: true });
     motion.addEventListener("change", onResize);
     document.addEventListener("visibilitychange", sync);
     void document.fonts.ready.then(() => {
@@ -356,7 +372,7 @@ export default function AboutObserver() {
       blink(false);
       resizeObserver.disconnect();
       window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", onViewportResize);
       motion.removeEventListener("change", onResize);
       document.removeEventListener("visibilitychange", sync);
       for (const image of images) {
