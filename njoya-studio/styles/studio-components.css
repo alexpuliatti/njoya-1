@@ -343,6 +343,28 @@
     align-self: start;
   }
 }
+.studio-dialog-hero.project-dialog-film {
+  height: auto;
+  aspect-ratio: auto;
+  background: #000;
+}
+.project-dialog-film video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 75svh;
+  object-fit: contain;
+}
+.project-dialog-single-film .project-dialog-overview {
+  grid-template-columns: minmax(0, 1fr);
+}
+.project-dialog-single-film .project-dialog-film {
+  position: relative;
+  top: auto;
+}
+.project-dialog-single-film .project-dialog-film video {
+  max-height: 85svh;
+}
 .project-dialog-links {
   display: flex;
   align-items: flex-start;

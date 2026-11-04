@@ -3,6 +3,7 @@ import "server-only";
 import type {
   AboutContent,
   Category,
+  CategoryId,
   Collection,
   HomeContent,
   LabEntry,
@@ -148,8 +149,13 @@ export function toCarouselItem(
   work: Work,
   categories: Category[],
   videoPlaybackEnabled = false,
+  categoryId?: CategoryId,
 ): NjoyaCarouselItem {
   const media = workMedia(work, videoPlaybackEnabled);
+  const videoOnly = categoryId === "motion";
+  const gallery = videoOnly
+    ? media.gallery.filter((entry) => entry.type === "video")
+    : media.gallery;
 
   return {
     id: work.id,
@@ -162,17 +168,19 @@ export function toCarouselItem(
     href: `/work/projects/${work.slug}`,
     linkLabel: "View project",
     category:
-      categories.find((category) => category.id === work.categories[0])
-        ?.title ?? "Work",
+      categories.find(
+        (category) => category.id === (categoryId ?? work.categories[0]),
+      )?.title ?? "Work",
     type: work.kind === "edition" ? "shoot" : "design-project",
-    images: work.gallery.flatMap((entry) =>
+    images: gallery.flatMap((entry) =>
       entry.type === "video" ? [] : [entry.src],
     ),
-    gallery: media.gallery,
+    gallery,
+    videoOnly,
     metadata: workMetadata(work),
     coverVideoPlaybackId: media.coverVideoPlaybackId,
     previewVideoSrc: work.previewVideoSrc,
-    galleryVideoPlaybackIds: media.gallery.flatMap((entry) =>
+    galleryVideoPlaybackIds: gallery.flatMap((entry) =>
       entry.type === "video" && "playbackId" in entry ? [entry.playbackId] : [],
     ),
   };
