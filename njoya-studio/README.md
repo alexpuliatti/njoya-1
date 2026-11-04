@@ -59,7 +59,7 @@ The schema is in `lib/content/schema.mjs`. The server-only repository in `lib/co
 Edit its JSON file under `content/work/`, then rebuild. Preserve `id` and `slug` for existing projects. Each project has:
 
 - `id`, `slug`, `title`, `client`, and a `date` in `YYYY-MM-DD` format, or `YYYY-MM` when only the month is known (or `null` for a date that has not been established).
-- `categories`: one or more of `worlds`, `exhibition`, `commercials`, `editorials`.
+- `categories`: one or more of `worlds`, `exhibition`, `commercials`, `editorials`, `motion`.
 - `kind`: `edition` or `design-project`.
 - `cover`: a local image object.
 - `gallery`: an ordered array of image, synopsis-image, and video objects.

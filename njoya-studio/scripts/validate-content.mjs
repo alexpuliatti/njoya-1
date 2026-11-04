@@ -40,7 +40,7 @@ export async function validateContent({ checkMedia = true } = {}) {
     records("collections", collectionSchema),
     records("lab", labSchema),
     read("categories.json").then((value) =>
-      z.array(categorySchema).length(4).parse(value),
+      z.array(categorySchema).min(1).parse(value),
     ),
     read("home.json").then((value) => homeSchema.parse(value)),
     read("about.json").then((value) => aboutSchema.parse(value)),
@@ -113,7 +113,12 @@ export async function validateContent({ checkMedia = true } = {}) {
     if (!ids.has(id)) throw new Error(`Unknown featured work ID: ${id}`);
   addImage(about.portrait);
   about.team.forEach((person) => addImage(person.image));
-  lab.forEach((entry) => entry.gallery.forEach(addImage));
+  lab.forEach((entry) => {
+    entry.gallery.forEach(addImage);
+    entry.project?.sketches?.forEach(addImage);
+    entry.project?.making?.forEach(addImage);
+    entry.project?.result?.forEach(addImage);
+  });
   const routes = z.record(z.string()).parse(await read("legacy-routes.json"));
   for (const [oldUrl, destination] of Object.entries(routes)) {
     const work = works.find(

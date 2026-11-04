@@ -43,6 +43,9 @@ try {
     file: path.basename(source),
     localSource: original,
     originalFilename: path.basename(source),
+    ...(args.includes("--web") || sources[id]?.profile === "web"
+      ? { profile: "web" }
+      : {}),
   };
   const media = await prepareImage({ id, entry, root, temporary });
   sources[id] = { ...entry, width: media.width, height: media.height };

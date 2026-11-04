@@ -98,6 +98,14 @@ button:disabled {
   min-height: calc(100svh - 112px);
   padding-bottom: 100px;
 }
+.studio-footer {
+  padding: 20px 4.4vw max(24px, env(safe-area-inset-bottom));
+  color: var(--studio-muted);
+}
+.studio-footer small {
+  font-size: 12px;
+  line-height: 1.5;
+}
 .studio-header {
   position: sticky;
   top: 0;
@@ -821,7 +829,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
 }
 .lab-introduction > p:last-child {
   color: var(--studio-muted);
-  max-width: 390px;
+  max-width: none;
   font-size: 14px;
   line-height: 1.8;
 }
@@ -1149,6 +1157,12 @@ html[data-njoya-intro="skip"] .intro-overlay {
   .studio-main:has(.portfolio-stage.has-statement) {
     min-height: 0;
     padding-bottom: var(--studio-navigation-height);
+  }
+  .studio-footer {
+    padding-inline: var(--studio-gutter);
+  }
+  .studio-main:has(.portfolio-stage.has-statement) + .studio-footer {
+    padding-bottom: calc(var(--studio-navigation-height) + 24px);
   }
   .wordmark-logo {
     width: 104px;

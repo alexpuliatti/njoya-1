@@ -5,6 +5,7 @@ export const categoryIdSchema = z.enum([
   "exhibition",
   "commercials",
   "editorials",
+  "motion",
 ]);
 const localImagePath = z
   .string()
@@ -151,6 +152,17 @@ export const labSchema = z
     date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
     summary: z.string(),
     paragraphs: z.array(z.string()),
+    project: z
+      .object({
+        client: z.string().min(1),
+        title: z.string().min(1),
+        brief: z.string().min(1),
+        sketches: z.array(imageSchema).optional(),
+        making: z.array(imageSchema).optional(),
+        result: z.array(imageSchema).optional(),
+      })
+      .strict()
+      .optional(),
     gallery: z.array(imageSchema),
     published: z.boolean(),
   })

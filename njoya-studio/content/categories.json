@@ -22,5 +22,11 @@
     "title": "Editorials",
     "description": "Image-making through colour and storytelling.",
     "coverWorkId": "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef"
+  },
+  {
+    "id": "motion",
+    "title": "Motion",
+    "description": "Film, movement and visual storytelling.",
+    "coverWorkId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272"
   }
 ]

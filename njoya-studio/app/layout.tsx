@@ -54,6 +54,9 @@ export default async function RootLayout({
             <main className="studio-main" id="main-content">
               {children}
             </main>
+            <footer className="studio-footer">
+              <small>Copyright © 2026</small>
+            </footer>
             <StudioNavigation />
           </SearchProvider>
         </Providers>

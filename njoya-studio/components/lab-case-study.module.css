@@ -1,4 +1,5 @@
 .study {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
   align-items: center;
@@ -7,6 +8,30 @@
   border: 1px solid var(--studio-line);
   border-radius: var(--studio-radius);
   background: rgba(244, 239, 231, 0.015);
+}
+
+.trigger {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--studio-text);
+  outline-offset: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .study:has(.trigger:hover) {
+    border-color: var(--studio-muted);
+  }
 }
 
 .image {

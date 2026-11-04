@@ -56,7 +56,9 @@ export default async function WorkPage() {
               <span className="category-description">
                 {category.description}
               </span>
-              <span className="category-count">{count} projects</span>
+              <span className="category-count">
+                {count ? `${count} projects` : "Coming soon"}
+              </span>
             </span>
           </Link>
         );
