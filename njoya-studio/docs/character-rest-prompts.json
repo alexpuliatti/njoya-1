@@ -1,0 +1,87 @@
+{
+  "tool": "built-in image_gen",
+  "builder": {
+    "identityReference": "public/media/motion/world-builder.webp",
+    "prompt": "Use case: identity-preserve.\nAsset type: transparent replacement resting-pose sprite for an existing website character animation.\nInput image 1 is the sole identity reference and edit target: the grey stone-head, long green-arm, purple eye-covered sculptural character.\nPrimary request: show this exact same character AFTER it has finished pulling, physically TURNED from its left-facing pulling view toward the viewer into a front/three-quarter standing view. This must be a genuinely different body pose and camera-facing orientation, not the old pulling image rotated on the page or horizontally mirrored.\nKeep all identity details and tactile materials: elongated grey carved stone human head, long textured green arm with green human fingers, turquoise loops, glossy purple torso covered in eyes, yellow accent, red/orange curved side, lime hip, lavender legs, orange human feet. Preserve proportions and sculptural collage style. No redesign, new clothes or extra limbs.\nPose: torso upright and turned toward us, head looking toward the viewer with a slight turn to the right. Long green arm relaxed down near the body, hands released, no reaching or pulling. Knees much straighter, two feet visibly planted and separated, a quiet resting stance. Keep the entire character including fingers and toes visible. Preserve overall height similar to the reference. Landscape canvas close to the reference aspect ratio with transparent padding, foot soles on one horizontal line around 96% canvas height. Feet must be separated, not crossed.\nBackground: genuinely transparent alpha everywhere outside the solid character, including every gap between limbs. Crisp clean antialiased cutout edges.\nConstraints: exactly ONE character. No letter, typography, rope, props, pedestal, floor, ground shadow, haze, fog, glow or background color.",
+    "runtimeAsset": "public/media/motion/world-builder-rest.webp",
+    "preparation": {
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-b1360421-82bf-4e46-b952-32aecb96490a.png",
+      "output": "public/media/motion/world-builder-rest.webp",
+      "canvas": {
+        "width": 768,
+        "height": 650
+      },
+      "source": {
+        "format": "raw",
+        "width": 1364,
+        "height": 1153,
+        "channels": 4,
+        "depth": "uchar",
+        "premultiplied": false,
+        "size": 6290768
+      },
+      "crop": {
+        "left": 368,
+        "top": 7,
+        "width": 635,
+        "height": 1112
+      },
+      "placement": {
+        "left": 320,
+        "top": 5,
+        "width": 354,
+        "height": 620
+      },
+      "alphaBounds": {
+        "left": 0.4166666666666667,
+        "right": 0.8776041666666666,
+        "top": 0.007692307692307693,
+        "bottom": 0.9615384615384616
+      },
+      "footAnchor": "right",
+      "sole": 624
+    }
+  },
+  "explorer": {
+    "identityReference": "public/media/motion/explorer.webp",
+    "prompt": "Use case: identity-preserve.\nAsset type: transparent replacement resting-pose sprite for an existing website character animation.\nInput image 1 is the sole identity reference and edit target: the pink curved-head, green fringed-clothing, woven shoulder character.\nPrimary request: show this exact same character AFTER pushing a letter and stepping back, physically TURNED toward the viewer into a near-frontal/three-quarter standing view. It should look quietly toward us with a slight turn to its left. This must be a genuinely different body pose and facing orientation, not a mirrored or page-rotated copy of the pushing image.\nKeep the recognizable sculptural identity and all tactile materials: large pink curved head with its small black oval face and tiny white facial marks; red and white fringe accents and single brown horn; green/purple fluffy fringed clothing; woven green/yellow shoulder collar; yellow waist form; black/white mesh accessory; exactly two brown human arms and two brown feet. Preserve character colors, proportions and rich collage texture, no redesign or generic cartoon simplification.\nPose: stand taller with knees straighter, torso relaxed and turned toward the viewer. Both arms lowered naturally by the body with relaxed hands; no reaching, pushing or raised palms. Two feet separated and planted on the same horizontal line. Full-body entire silhouette, horn, hands and toes visible, similar height to reference. Landscape canvas close to reference aspect ratio, transparent padding, soles around 98% canvas height.\nBackground: genuinely transparent alpha outside solid surfaces and in all gaps between limbs; crisp clean antialiased cutout edges.\nConstraints: exactly ONE character. No wheel, letter, props, typography, pedestal, floor, ground shadow, fog, colored glow, haze or background.",
+    "runtimeAsset": "public/media/motion/explorer-rest.webp",
+    "preparation": {
+      "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-dc865191-c6c2-4c0e-8846-74f904f08337.png",
+      "output": "public/media/motion/explorer-rest.webp",
+      "canvas": {
+        "width": 768,
+        "height": 615
+      },
+      "source": {
+        "format": "raw",
+        "width": 1402,
+        "height": 1122,
+        "channels": 4,
+        "depth": "uchar",
+        "premultiplied": false,
+        "size": 6292176
+      },
+      "crop": {
+        "left": 427,
+        "top": 10,
+        "width": 503,
+        "height": 1101
+      },
+      "placement": {
+        "left": 349,
+        "top": 12,
+        "width": 272,
+        "height": 595
+      },
+      "alphaBounds": {
+        "left": 0.4544270833333333,
+        "right": 0.80859375,
+        "top": 0.01951219512195122,
+        "bottom": 0.9869918699186991
+      },
+      "footAnchor": "center",
+      "sole": 606
+    }
+  }
+}

@@ -7,6 +7,11 @@ import gsap from "gsap";
 import styles from "./rolling-world.module.css";
 
 import { assetPath } from "@/lib/asset-path";
+import { drawCharacterTurn } from "@/lib/character-turn";
+
+// Alpha bounds of the separate upright sprite on its shared 768px canvas.
+const REST_LEFT = 349 / 768;
+const REST_RIGHT = 621 / 768;
 
 const INITIAL_POSE = {
   x: 2.15,
@@ -15,6 +20,7 @@ const INITIAL_POSE = {
   step: 0,
   squash: 1,
   retreat: 0,
+  turn: 0,
   actorOpacity: 0,
   letterOpacity: 0,
   slotOpacity: 0.2,
@@ -106,9 +112,15 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
       const letter = world.querySelector<HTMLElement>("[data-rolling-letter]")!;
       const actor = world.querySelector<HTMLElement>("[data-rolling-actor]")!;
+      const action = world.querySelector<HTMLElement>("[data-rolling-action]")!;
+      const rest = world.querySelector<HTMLElement>("[data-rolling-rest]")!;
       const image = world.querySelector<HTMLImageElement>(
         "[data-rolling-image]",
       )!;
+      const restImage = world.querySelector<HTMLImageElement>(
+        "[data-rolling-rest-image]",
+      )!;
+      const images = [image, restImage];
       const baseline = world.querySelector<HTMLElement>(
         "[data-rolling-baseline]",
       )!;
@@ -128,6 +140,8 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       let letterWidth = 0.8;
       let actorWidth = 1.5;
       let actorHeight = 1.2;
+      let returningX = 4.4;
+      let returningScale = 1;
       let restingX = 4.4;
       let restingScale = 1;
       let status: RollingWorldState = {
@@ -165,14 +179,25 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
           (stage.getBoundingClientRect().right - worldBounds.left) / fontSize -
           0.12;
 
-        restingScale = Math.min(
+        returningScale = Math.min(
           1,
           Math.max(0.1, (stageRight - wordEnd - 0.08) / actorWidth),
         );
-        // Scaling around the sole keeps its height fixed; compensate in X
-        // so the resting silhouette still starts just beyond the S.
+        returningX = wordEnd + 0.08 - actorWidth * 0.7 * (1 - returningScale);
+        restingScale = Math.min(
+          1,
+          Math.max(
+            0.1,
+            (stageRight - wordEnd - 0.08) /
+              (actorWidth * (REST_RIGHT - REST_LEFT)),
+          ),
+        );
+        // Keep the narrower upright silhouette beside S, accounting for its
+        // transparent padding and the shared sole origin when scaling.
         restingX =
-          wordEnd + 0.08 - actorWidth * 0.7 * (1 - restingScale);
+          wordEnd +
+          0.08 -
+          actorWidth * (0.7 * (1 - restingScale) + REST_LEFT * restingScale);
         letter.style.transform = previousTransform;
         shadow.style.top = String(floor + 0.01) + "em";
         slot.style.left = String(goalX) + "em";
@@ -183,13 +208,14 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
         const bump =
           -Math.abs(Math.sin((pose.rotation * Math.PI) / 180)) * 0.025;
         const pushingX =
-          goalX +
-          pose.x +
-          letterWidth * 0.88 -
-          actorWidth * 0.07;
-        const actorX = pushingX + (restingX - pushingX) * pose.retreat;
+          goalX + pose.x + letterWidth * 0.88 - actorWidth * 0.07;
+        const returningActorX =
+          pushingX + (returningX - pushingX) * pose.retreat;
+        const actorX = returningActorX + (restingX - returningX) * pose.turn;
         const actorY = floor - actorHeight * 0.986 + pose.step;
-        const actorScale = 1 + (restingScale - 1) * pose.retreat;
+        const returningActorScale = 1 + (returningScale - 1) * pose.retreat;
+        const actorScale =
+          returningActorScale + (restingScale - returningScale) * pose.turn;
         const letterShadowX = goalX + pose.x + letterWidth * 0.2;
         const actorShadowX = actorX + actorWidth * 0.7 - 0.3;
 
@@ -216,6 +242,7 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
           actorScale * pose.squash +
           ")";
         actor.style.opacity = String(pose.actorOpacity);
+        drawCharacterTurn(action, rest, pose.turn);
         shadow.style.transform =
           "translateX(" +
           (letterShadowX + (actorShadowX - letterShadowX) * pose.retreat) +
@@ -372,7 +399,8 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
               ease: "power2.inOut",
             },
             4.1,
-          );
+          )
+          .to(pose, { turn: 1, duration: 0.7, ease: "power2.inOut" }, 5.05);
         report({ ready: true, reducedMotion: false });
         if (requestedRef.current) restart();
       };
@@ -415,7 +443,11 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
         },
       };
       const onLoad = () => {
-        if (!image.naturalWidth || disposed) return;
+        if (
+          disposed ||
+          !images.every((image) => image.complete && image.naturalWidth)
+        )
+          return;
         imageReady = true;
         unavailableRef.current = false;
         createTimeline();
@@ -457,15 +489,16 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       };
 
       report({ reducedMotion: motion.matches });
-      image.addEventListener("load", onLoad);
-      image.addEventListener("error", onError);
+      for (const image of images) {
+        image.addEventListener("load", onLoad);
+        image.addEventListener("error", onError);
+      }
       motion.addEventListener("change", onMotionChange);
       window.addEventListener("resize", onResize, { passive: true });
       document.addEventListener("visibilitychange", onVisibilityChange);
-      if (image.complete) {
-        if (image.naturalWidth) onLoad();
-        else onError();
-      }
+      if (images.some((image) => image.complete && !image.naturalWidth))
+        onError();
+      else onLoad();
       void document.fonts.ready.then(() => {
         if (!disposed) onResize();
       });
@@ -474,8 +507,10 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
         disposed = true;
         timeline?.kill();
         actionsRef.current = null;
-        image.removeEventListener("load", onLoad);
-        image.removeEventListener("error", onError);
+        for (const image of images) {
+          image.removeEventListener("load", onLoad);
+          image.removeEventListener("error", onError);
+        }
         motion.removeEventListener("change", onMotionChange);
         window.removeEventListener("resize", onResize);
         document.removeEventListener("visibilitychange", onVisibilityChange);
@@ -510,17 +545,32 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
         </span>
         <span className={styles.shadow} data-rolling-shadow="" />
         <span className={styles.actor} data-rolling-actor="">
-          <Image
-            unoptimized
-            alt=""
-            className={styles.image}
-            data-rolling-image=""
-            draggable={false}
-            height={615}
-            loading="eager"
-            src={assetPath("/media/motion/explorer.webp")}
-            width={768}
-          />
+          <span className={styles.actionPose} data-rolling-action="">
+            <Image
+              unoptimized
+              alt=""
+              className={`${styles.image} ${styles.pushingImage}`}
+              data-rolling-image=""
+              draggable={false}
+              height={615}
+              loading="eager"
+              src={assetPath("/media/motion/explorer.webp")}
+              width={768}
+            />
+          </span>
+          <span className={styles.restPose} data-rolling-rest="">
+            <Image
+              unoptimized
+              alt=""
+              className={styles.image}
+              data-rolling-rest-image=""
+              draggable={false}
+              height={615}
+              loading="eager"
+              src={assetPath("/media/motion/explorer-rest.webp")}
+              width={768}
+            />
+          </span>
         </span>
       </span>
     );
