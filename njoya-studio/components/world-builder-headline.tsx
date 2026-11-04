@@ -49,6 +49,9 @@ export default function WorldBuilderHeadline({
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const letter = root.querySelector<HTMLElement>("[data-builder-letter]")!;
     const actor = root.querySelector<HTMLElement>("[data-builder-actor]")!;
+    const upperBody = root.querySelector<HTMLElement>(
+      "[data-builder-upper-body]",
+    )!;
     const torso = root.querySelector<HTMLElement>("[data-builder-torso]")!;
     const head = root.querySelector<HTMLElement>("[data-builder-head]")!;
     const legs = root.querySelector<HTMLElement>("[data-builder-legs]")!;
@@ -80,6 +83,7 @@ export default function WorldBuilderHeadline({
       crouch: 0,
       head: 0,
       feet: 0,
+      standing: 0,
       rope: 0,
       slack: 0.12,
       opacity: 0,
@@ -140,6 +144,8 @@ export default function WorldBuilderHeadline({
       letter.style.transform = `translate(${pose.letterX}em, ${pose.letterY}em) rotate(${pose.letterRotation}deg)`;
       actor.style.transform = `translate(${actorX}em, ${actorY}em) rotate(${pose.lean}deg)`;
       actor.style.opacity = String(pose.opacity);
+      // Straighten from the hips while both soles stay anchored to BUILD.
+      upperBody.style.transform = `skewX(${-8 * pose.standing}deg) scaleY(${1 + 0.08 * pose.standing})`;
       torso.style.transform = `scaleY(${1 - pose.crouch * 0.035})`;
       head.style.transform = `translateY(${pose.crouch * 1.5}%) rotate(${pose.head}deg)`;
       legs.style.transform = `skewX(${pose.feet}deg)`;
@@ -361,13 +367,8 @@ export default function WorldBuilderHeadline({
         .to(pose, { slack: 0.22, rope: 0, duration: 0.35 }, 3.5)
         .to(
           pose,
-          { actorY: -0.075, head: -5, duration: 0.22, ease: "power2.out" },
-          4.0,
-        )
-        .to(
-          pose,
-          { actorY: 0, head: 0, duration: 0.35, ease: "power2.inOut" },
-          4.22,
+          { standing: 1, duration: 0.6, ease: "power2.inOut" },
+          3.85,
         );
 
       draw();
@@ -510,34 +511,39 @@ export default function WorldBuilderHeadline({
                 />
               </span>
               <span
-                className={`${styles.layer} ${styles.torso}`}
-                data-builder-torso=""
+                className={`${styles.layer} ${styles.upperBody}`}
+                data-builder-upper-body=""
               >
-                <Image
-                  unoptimized
-                  alt=""
-                  className={styles.image}
-                  data-builder-image=""
-                  draggable={false}
-                  height={650}
-                  loading="eager"
-                  src={assetPath(CHARACTER)}
-                  width={768}
-                />
-              </span>
-              <span
-                className={`${styles.layer} ${styles.head}`}
-                data-builder-head=""
-              >
-                <Image
-                  unoptimized
-                  alt=""
-                  className={styles.image}
-                  draggable={false}
-                  height={650}
-                  src={assetPath(CHARACTER)}
-                  width={768}
-                />
+                <span
+                  className={`${styles.layer} ${styles.torso}`}
+                  data-builder-torso=""
+                >
+                  <Image
+                    unoptimized
+                    alt=""
+                    className={styles.image}
+                    data-builder-image=""
+                    draggable={false}
+                    height={650}
+                    loading="eager"
+                    src={assetPath(CHARACTER)}
+                    width={768}
+                  />
+                </span>
+                <span
+                  className={`${styles.layer} ${styles.head}`}
+                  data-builder-head=""
+                >
+                  <Image
+                    unoptimized
+                    alt=""
+                    className={styles.image}
+                    draggable={false}
+                    height={650}
+                    src={assetPath(CHARACTER)}
+                    width={768}
+                  />
+                </span>
               </span>
             </span>
           </span>

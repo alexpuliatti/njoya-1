@@ -8,7 +8,7 @@ Run `npm run dev` from `njoya-studio`, then open `http://localhost:3000/motion`.
 
 ## First proof
 
-The first character grips a rope, braces, pulls the W in two movements, releases it and stays standing on BUILD. It is 20% larger than the first study; its soles track the actual tops of the BUILD letters across layouts. The other letters stay readable. Three clipped layers share one transparent 768 × 650 WebP (about 84 kB); GSAP drives the character, letter and rope on one timeline. No 3D model, new runtime dependency or video is required.
+The first character grips a rope, braces, pulls the W in two movements, releases it and straightens its upper body into a more upright resting pose. Both feet stay planted at the end of BUILD during that finish, with no final hop. The torso and head share a transform anchored at the hips; the original artwork's bent legs stay in place. It is 20% larger than the first study; its soles track the actual tops of the BUILD letters across layouts. The other letters stay readable. Three clipped layers share one transparent 768 × 650 WebP (about 84 kB); GSAP drives the character, letter and rope on one timeline. No 3D model, new runtime dependency or video is required.
 
 The home card keeps its mobile two-line heading. Reduced motion and image failure show the complete, still headline. Browser visibility pauses the timeline. All decorative pieces are hidden from assistive technology.
 
