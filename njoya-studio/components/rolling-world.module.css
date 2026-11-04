@@ -54,15 +54,23 @@
 }
 
 .world .actionPose,
-.world .restPose {
+.world .turnPose {
   position: absolute;
   inset: 0;
   display: block;
   transform-origin: 70% 98.6%;
 }
 
-.world .restPose {
+.world .turnPose {
+  overflow: hidden;
   opacity: 0;
+}
+
+.turnStrip {
+  display: block;
+  width: 1200%;
+  height: 100%;
+  max-width: none;
 }
 
 .world .shadow {

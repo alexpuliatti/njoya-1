@@ -1,0 +1,903 @@
+{
+  "tool": "built-in image_gen",
+  "frameCount": 12,
+  "playbackFps": 12,
+  "durationSeconds": 1,
+  "preview": "docs/card-turn-frame-preview.webp",
+  "builder": {
+    "prompt": "Use case: identity-preserve.\nAsset type: production FRAME-BY-FRAME TURN ANIMATION SPRITE SHEET, not a scene and not one pose.\nThe TWO supplied images show the SAME character at the beginning and end. Image 1 is the START pose and facing direction; Image 2 is the EXACT intended END pose and facing direction. Preserve the exact identity, colors, textured sculptural collage materials, head, limbs and accessories from these references. Do not introduce another character or redesign.\nMANDATORY OUTPUT: exactly TWELVE DIFFERENT consecutive full-body turn frames in a precise regular FOUR-column × THREE-row grid, read left to right, top row to bottom row. Overall landscape canvas roughly 8:5; cells are near-square landscape. Each frame contains one complete full-body character, all fingers, feet and head visible, safely inside its own equal cell. Same camera, scale and invisible ground baseline in every cell. No cell borders, no labels, no frame numbers. Do NOT draw only the start/end poses repeated—show all intermediate body orientations and limb movements.\nMotion: the character has just finished its task and now releases its hands, brings its arm(s) down, straightens its legs slightly, pivots its feet and physically turns its torso and head from the left-facing action pose toward the viewer/rightward three-quarter resting pose. The turn itself must be visible through intermediate shoulder/hip/head angles, not a flat page rotation, a horizontal mirror, or a dissolve between two still images. The arms relax gradually as the body turns. Each adjacent frame should move only a little, with no jump cut and no sudden costume/proportion changes.\nSequence: 1 matches Image 1; 2 fingers release and head begins to turn; 3 elbows begin retracting; 4 shoulders start rotating; 5 body a quarter of the way between references, arms partly lowered; 6 body halfway turned, legs shifting weight; 7 body just past halfway, hands lower; 8 hips and shoulders continue pivoting; 9 body three-quarters toward final view; 10 approaches Image 2 with arms almost resting; 11 settles almost exactly like Image 2; 12 matches Image 2. Do not spin a full 360 degrees; show the actual modest turn connecting these references. Feet remain on one level ground baseline throughout.\nTRUE TRANSPARENT ALPHA in every empty pixel around and between the characters and their limbs. Clean antialiased cutout edges. NO scattered colored pixels, red/green fog, haze, colored aura, cast shadows, floor, background, rope, letter, prop, typography or scenery. Keep the entire silhouettes fully visible in all 12 cells.\nIdentity specifics: elongated grey stone human head and face, long textured green arm with green human fingers, turquoise loops, glossy purple torso covered in eyes, yellow accent, red/orange curved side, lime hip, lavender legs and orange human feet. Exactly the same unusual sculptural anatomy as the two references, no extra limbs. Start in the braced, long-arm-reaching-left pose of Image 1, and end upright, head more toward the viewer/right and long green arm down exactly as Image 2. Keep the right foot planted as the main pivot; the left foot may make a small natural settling step.",
+    "cleanupPrompt": "Use case: background-extraction.\nEdit target: the exact TWELVE-FRAME turn sprite sheet supplied, FOUR equal columns × THREE equal rows. Change ONLY transparency/background.\nREMOVE every background patch, pale grey/white/tan haze, cloudy vignette, red/green/yellow speckle, colored aura, mist and colored dust OUTSIDE the actual solid character silhouettes. Do NOT keep a pale cloudy backdrop around a character. All empty space must be genuinely alpha-transparent, including limb gaps and all space between frames. Crisp clean antialiased cutout edges, zero colored halo.\nPreserve ALL TWELVE character poses, faces, colors, materials, limbs, hands and feet exactly as currently drawn. Keep each pose in precisely the same cell on this same canvas; do not resize, reframe, crop, change the grid or change any pose. Every actual solid character surface stays untouched. No floor, cast shadows, labels, numbers or borders. This is background removal only; exact same 12 characters/frames and layout.",
+    "source": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-d8bc2a1a-4ee3-45de-bf2d-f954cf4ab57a.png",
+    "cleanSource": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-22dfcd15-5a32-498f-8dbb-eb42d8deec3f.png",
+    "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-22dfcd15-5a32-498f-8dbb-eb42d8deec3f.png",
+    "action": "public/media/motion/world-builder.webp",
+    "rest": "public/media/motion/world-builder-rest.webp",
+    "output": "public/media/motion/world-builder-turn.webp",
+    "width": 256,
+    "height": 217,
+    "flip": false,
+    "anchor": "right",
+    "frames": [
+      {
+        "index": 0,
+        "sourceCell": {
+          "left": 0,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 43,
+          "top": 2,
+          "width": 327,
+          "height": 323
+        },
+        "sourceBody": {
+          "count": 40810,
+          "left": 45,
+          "right": 367,
+          "top": 4,
+          "bottom": 322,
+          "footLeft": 121,
+          "footRight": 333,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 203,
+          "y": 208.65384615384616
+        },
+        "scale": 0.6457149746804919,
+        "placement": {
+          "left": 16,
+          "top": 2,
+          "width": 211,
+          "height": 209
+        }
+      },
+      {
+        "index": 1,
+        "sourceCell": {
+          "left": 396,
+          "top": 0,
+          "width": 397,
+          "height": 331
+        },
+        "crop": {
+          "left": 36,
+          "top": 2,
+          "width": 324,
+          "height": 323
+        },
+        "sourceBody": {
+          "count": 40045,
+          "left": 38,
+          "right": 357,
+          "top": 4,
+          "bottom": 322,
+          "footLeft": 117,
+          "footRight": 324,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 203.3939393939394,
+          "y": 208.6234965034965
+        },
+        "scale": 0.6460003945897363,
+        "placement": {
+          "left": 17,
+          "top": 2,
+          "width": 209,
+          "height": 209
+        }
+      },
+      {
+        "index": 2,
+        "sourceCell": {
+          "left": 793,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 19,
+          "top": 2,
+          "width": 300,
+          "height": 324
+        },
+        "sourceBody": {
+          "count": 38771,
+          "left": 21,
+          "right": 316,
+          "top": 4,
+          "bottom": 323,
+          "footLeft": 89,
+          "footRight": 281,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 203.78787878787878,
+          "y": 208.59314685314683
+        },
+        "scale": 0.6442661713286713,
+        "placement": {
+          "left": 35,
+          "top": 2,
+          "width": 193,
+          "height": 209
+        }
+      },
+      {
+        "index": 3,
+        "sourceCell": {
+          "left": 1189,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 51,
+          "top": 3,
+          "width": 288,
+          "height": 323
+        },
+        "sourceBody": {
+          "count": 37622,
+          "left": 53,
+          "right": 336,
+          "top": 5,
+          "bottom": 323,
+          "footLeft": 121,
+          "footRight": 301,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 204.1818181818182,
+          "y": 208.5627972027972
+        },
+        "scale": 0.6465712344082251,
+        "placement": {
+          "left": 43,
+          "top": 2,
+          "width": 186,
+          "height": 209
+        }
+      },
+      {
+        "index": 4,
+        "sourceCell": {
+          "left": 0,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 93,
+          "top": 0,
+          "width": 265,
+          "height": 324
+        },
+        "sourceBody": {
+          "count": 35638,
+          "left": 95,
+          "right": 355,
+          "top": 1,
+          "bottom": 321,
+          "footLeft": 153,
+          "footRight": 321,
+          "footY": 321
+        },
+        "targetFoot": {
+          "x": 204.5757575757576,
+          "y": 208.53244755244756
+        },
+        "scale": 0.6428263947890116,
+        "placement": {
+          "left": 58,
+          "top": 2,
+          "width": 170,
+          "height": 208
+        }
+      },
+      {
+        "index": 5,
+        "sourceCell": {
+          "left": 396,
+          "top": 331,
+          "width": 397,
+          "height": 330
+        },
+        "crop": {
+          "left": 110,
+          "top": 0,
+          "width": 232,
+          "height": 325
+        },
+        "sourceBody": {
+          "count": 34498,
+          "left": 112,
+          "right": 339,
+          "top": 1,
+          "bottom": 322,
+          "footLeft": 154,
+          "footRight": 305,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 204.96969696969697,
+          "y": 208.50209790209792
+        },
+        "scale": 0.6411128002432351,
+        "placement": {
+          "left": 80,
+          "top": 2,
+          "width": 149,
+          "height": 208
+        }
+      },
+      {
+        "index": 6,
+        "sourceCell": {
+          "left": 793,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 85,
+          "top": 0,
+          "width": 203,
+          "height": 324
+        },
+        "sourceBody": {
+          "count": 32422,
+          "left": 87,
+          "right": 285,
+          "top": 0,
+          "bottom": 321,
+          "footLeft": 119,
+          "footRight": 257,
+          "footY": 321
+        },
+        "targetFoot": {
+          "x": 205.36363636363637,
+          "y": 208.47174825174824
+        },
+        "scale": 0.6413955609607783,
+        "placement": {
+          "left": 95,
+          "top": 3,
+          "width": 130,
+          "height": 208
+        }
+      },
+      {
+        "index": 7,
+        "sourceCell": {
+          "left": 1189,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 109,
+          "top": 0,
+          "width": 192,
+          "height": 324
+        },
+        "sourceBody": {
+          "count": 31335,
+          "left": 111,
+          "right": 298,
+          "top": 0,
+          "bottom": 321,
+          "footLeft": 143,
+          "footRight": 273,
+          "footY": 321
+        },
+        "targetFoot": {
+          "x": 205.75757575757575,
+          "y": 208.4413986013986
+        },
+        "scale": 0.6416783216783217,
+        "placement": {
+          "left": 101,
+          "top": 2,
+          "width": 123,
+          "height": 208
+        }
+      },
+      {
+        "index": 8,
+        "sourceCell": {
+          "left": 0,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 130,
+          "top": 0,
+          "width": 192,
+          "height": 326
+        },
+        "sourceBody": {
+          "count": 31543,
+          "left": 132,
+          "right": 319,
+          "top": 2,
+          "bottom": 323,
+          "footLeft": 164,
+          "footRight": 295,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 206.15151515151516,
+          "y": 208.41104895104894
+        },
+        "scale": 0.641961082395865,
+        "placement": {
+          "left": 100,
+          "top": 1,
+          "width": 123,
+          "height": 209
+        }
+      },
+      {
+        "index": 9,
+        "sourceCell": {
+          "left": 396,
+          "top": 661,
+          "width": 397,
+          "height": 331
+        },
+        "crop": {
+          "left": 120,
+          "top": 0,
+          "width": 191,
+          "height": 326
+        },
+        "sourceBody": {
+          "count": 31317,
+          "left": 122,
+          "right": 308,
+          "top": 2,
+          "bottom": 323,
+          "footLeft": 158,
+          "footRight": 290,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 206.54545454545456,
+          "y": 208.38069930069932
+        },
+        "scale": 0.6422438431134084,
+        "placement": {
+          "left": 97,
+          "top": 1,
+          "width": 123,
+          "height": 209
+        }
+      },
+      {
+        "index": 10,
+        "sourceCell": {
+          "left": 793,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 80,
+          "top": 0,
+          "width": 189,
+          "height": 326
+        },
+        "sourceBody": {
+          "count": 31033,
+          "left": 82,
+          "right": 266,
+          "top": 2,
+          "bottom": 323,
+          "footLeft": 119,
+          "footRight": 247,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 206.93939393939394,
+          "y": 208.35034965034964
+        },
+        "scale": 0.6425266038309516,
+        "placement": {
+          "left": 100,
+          "top": 1,
+          "width": 121,
+          "height": 209
+        }
+      },
+      {
+        "index": 11,
+        "sourceCell": {
+          "left": 1189,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 106,
+          "top": 0,
+          "width": 188,
+          "height": 326
+        },
+        "sourceBody": {
+          "count": 30759,
+          "left": 108,
+          "right": 291,
+          "top": 2,
+          "bottom": 323,
+          "footLeft": 146,
+          "footRight": 273,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 207.33333333333334,
+          "y": 208.32
+        },
+        "scale": 0.642809364548495,
+        "placement": {
+          "left": 100,
+          "top": 1,
+          "width": 121,
+          "height": 210
+        }
+      }
+    ]
+  },
+  "explorer": {
+    "prompt": "Use case: identity-preserve.\nAsset type: production FRAME-BY-FRAME TURN ANIMATION SPRITE SHEET, not a scene and not one pose.\nThe TWO supplied images show the SAME character at the beginning and end. Image 1 is the START pose and facing direction; Image 2 is the EXACT intended END pose and facing direction. Preserve the exact identity, colors, textured sculptural collage materials, head, limbs and accessories from these references. Do not introduce another character or redesign.\nMANDATORY OUTPUT: exactly TWELVE DIFFERENT consecutive full-body turn frames in a precise regular FOUR-column × THREE-row grid, read left to right, top row to bottom row. Overall landscape canvas roughly 8:5; cells are near-square landscape. Each frame contains one complete full-body character, all fingers, feet and head visible, safely inside its own equal cell. Same camera, scale and invisible ground baseline in every cell. No cell borders, no labels, no frame numbers. Do NOT draw only the start/end poses repeated—show all intermediate body orientations and limb movements.\nMotion: the character has just finished its task and now releases its hands, brings its arm(s) down, straightens its legs slightly, pivots its feet and physically turns its torso and head from the left-facing action pose toward the viewer/rightward three-quarter resting pose. The turn itself must be visible through intermediate shoulder/hip/head angles, not a flat page rotation, a horizontal mirror, or a dissolve between two still images. The arms relax gradually as the body turns. Each adjacent frame should move only a little, with no jump cut and no sudden costume/proportion changes.\nSequence: 1 matches Image 1; 2 fingers release and head begins to turn; 3 elbows begin retracting; 4 shoulders start rotating; 5 body a quarter of the way between references, arms partly lowered; 6 body halfway turned, legs shifting weight; 7 body just past halfway, hands lower; 8 hips and shoulders continue pivoting; 9 body three-quarters toward final view; 10 approaches Image 2 with arms almost resting; 11 settles almost exactly like Image 2; 12 matches Image 2. Do not spin a full 360 degrees; show the actual modest turn connecting these references. Feet remain on one level ground baseline throughout.\nTRUE TRANSPARENT ALPHA in every empty pixel around and between the characters and their limbs. Clean antialiased cutout edges. NO scattered colored pixels, red/green fog, haze, colored aura, cast shadows, floor, background, rope, letter, prop, typography or scenery. Keep the entire silhouettes fully visible in all 12 cells.\nIdentity specifics: large pink curved head and single brown horn, small black oval face with tiny white marks, red/white fringe, green/purple textured fringed clothing, woven green/yellow shoulder collar, yellow waist form, black-and-white mesh accessory, two brown human arms and two brown human feet. Start facing LEFT with both hands reaching LEFT as Image 1 (this is the on-screen orientation, do not reverse it). The palms release, arms drop gradually and the character turns toward the viewer, ending in the standing near-frontal view exactly like Image 2. Its feet make small pivoting steps without leaving the shared ground baseline.",
+    "cleanupPrompt": "Use case: background-extraction.\nEdit target: the exact TWELVE-FRAME turn sprite sheet supplied, FOUR equal columns × THREE equal rows. Change ONLY transparency/background.\nREMOVE every background patch, pale grey/white/tan haze, cloudy vignette, red/green/yellow speckle, colored aura, mist and colored dust OUTSIDE the actual solid character silhouettes. Do NOT keep a pale cloudy backdrop around a character. All empty space must be genuinely alpha-transparent, including limb gaps and all space between frames. Crisp clean antialiased cutout edges, zero colored halo.\nPreserve ALL TWELVE character poses, faces, colors, materials, limbs, hands and feet exactly as currently drawn. Keep each pose in precisely the same cell on this same canvas; do not resize, reframe, crop, change the grid or change any pose. Every actual solid character surface stays untouched. No floor, cast shadows, labels, numbers or borders. This is background removal only; exact same 12 characters/frames and layout.",
+    "source": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-4237a298-c351-4f3d-8983-2d2b6d5c218f.png",
+    "cleanSource": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-ca26d435-d602-4136-99c6-955c8c3d348c.png",
+    "input": "/Users/ap/.codex/generated_images/01a1a70d-10e1-7b31-b46c-56a10e4c73d4/exec-ca26d435-d602-4136-99c6-955c8c3d348c.png",
+    "action": "public/media/motion/explorer.webp",
+    "rest": "public/media/motion/explorer-rest.webp",
+    "output": "public/media/motion/explorer-turn.webp",
+    "width": 256,
+    "height": 205,
+    "flip": true,
+    "anchor": "center",
+    "frames": [
+      {
+        "index": 0,
+        "sourceCell": {
+          "left": 0,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 61,
+          "top": 12,
+          "width": 310,
+          "height": 307
+        },
+        "sourceBody": {
+          "count": 35807,
+          "left": 63,
+          "right": 368,
+          "top": 14,
+          "bottom": 316,
+          "footLeft": 128,
+          "footRight": 368,
+          "footY": 316
+        },
+        "targetFoot": {
+          "x": 157.83333333333334,
+          "y": 202
+        },
+        "scale": 0.6193619361936193,
+        "placement": {
+          "left": 42,
+          "top": 14,
+          "width": 192,
+          "height": 190
+        }
+      },
+      {
+        "index": 1,
+        "sourceCell": {
+          "left": 396,
+          "top": 0,
+          "width": 397,
+          "height": 331
+        },
+        "crop": {
+          "left": 54,
+          "top": 12,
+          "width": 307,
+          "height": 307
+        },
+        "sourceBody": {
+          "count": 35581,
+          "left": 56,
+          "right": 358,
+          "top": 14,
+          "bottom": 316,
+          "footLeft": 127,
+          "footRight": 358,
+          "footY": 316
+        },
+        "targetFoot": {
+          "x": 158.36363636363637,
+          "y": 202
+        },
+        "scale": 0.6225622562256226,
+        "placement": {
+          "left": 41,
+          "top": 13,
+          "width": 191,
+          "height": 191
+        }
+      },
+      {
+        "index": 2,
+        "sourceCell": {
+          "left": 793,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 30,
+          "top": 12,
+          "width": 283,
+          "height": 307
+        },
+        "sourceBody": {
+          "count": 33853,
+          "left": 32,
+          "right": 310,
+          "top": 14,
+          "bottom": 316,
+          "footLeft": 93,
+          "footRight": 310,
+          "footY": 316
+        },
+        "targetFoot": {
+          "x": 158.8939393939394,
+          "y": 202
+        },
+        "scale": 0.6257625762576258,
+        "placement": {
+          "left": 52,
+          "top": 12,
+          "width": 177,
+          "height": 192
+        }
+      },
+      {
+        "index": 3,
+        "sourceCell": {
+          "left": 1189,
+          "top": 0,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 32,
+          "top": 12,
+          "width": 255,
+          "height": 309
+        },
+        "sourceBody": {
+          "count": 31707,
+          "left": 34,
+          "right": 284,
+          "top": 14,
+          "bottom": 318,
+          "footLeft": 94,
+          "footRight": 284,
+          "footY": 317
+        },
+        "targetFoot": {
+          "x": 159.42424242424244,
+          "y": 202
+        },
+        "scale": 0.6248385494287133,
+        "placement": {
+          "left": 61,
+          "top": 11,
+          "width": 159,
+          "height": 193
+        }
+      },
+      {
+        "index": 4,
+        "sourceCell": {
+          "left": 0,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 83,
+          "top": 13,
+          "width": 223,
+          "height": 307
+        },
+        "sourceBody": {
+          "count": 29274,
+          "left": 85,
+          "right": 303,
+          "top": 15,
+          "bottom": 317,
+          "footLeft": 127,
+          "footRight": 303,
+          "footY": 317
+        },
+        "targetFoot": {
+          "x": 159.95454545454547,
+          "y": 202
+        },
+        "scale": 0.6321632163216321,
+        "placement": {
+          "left": 77,
+          "top": 10,
+          "width": 141,
+          "height": 194
+        }
+      },
+      {
+        "index": 5,
+        "sourceCell": {
+          "left": 396,
+          "top": 331,
+          "width": 397,
+          "height": 330
+        },
+        "crop": {
+          "left": 99,
+          "top": 10,
+          "width": 194,
+          "height": 310
+        },
+        "sourceBody": {
+          "count": 27892,
+          "left": 101,
+          "right": 290,
+          "top": 12,
+          "bottom": 317,
+          "footLeft": 131,
+          "footRight": 290,
+          "footY": 317
+        },
+        "targetFoot": {
+          "x": 160.4848484848485,
+          "y": 202
+        },
+        "scale": 0.6291344820756585,
+        "placement": {
+          "left": 90,
+          "top": 9,
+          "width": 122,
+          "height": 195
+        }
+      },
+      {
+        "index": 6,
+        "sourceCell": {
+          "left": 793,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 77,
+          "top": 4,
+          "width": 173,
+          "height": 317
+        },
+        "sourceBody": {
+          "count": 28238,
+          "left": 79,
+          "right": 247,
+          "top": 6,
+          "bottom": 318,
+          "footLeft": 97,
+          "footRight": 244,
+          "footY": 318
+        },
+        "targetFoot": {
+          "x": 161.0151515151515,
+          "y": 202
+        },
+        "scale": 0.6181624552231582,
+        "placement": {
+          "left": 103,
+          "top": 8,
+          "width": 107,
+          "height": 196
+        }
+      },
+      {
+        "index": 7,
+        "sourceCell": {
+          "left": 1189,
+          "top": 331,
+          "width": 396,
+          "height": 330
+        },
+        "crop": {
+          "left": 79,
+          "top": 3,
+          "width": 173,
+          "height": 320
+        },
+        "sourceBody": {
+          "count": 29016,
+          "left": 81,
+          "right": 249,
+          "top": 5,
+          "bottom": 320,
+          "footLeft": 98,
+          "footRight": 246,
+          "footY": 320
+        },
+        "targetFoot": {
+          "x": 161.54545454545453,
+          "y": 202
+        },
+        "scale": 0.6153624856156502,
+        "placement": {
+          "left": 104,
+          "top": 7,
+          "width": 106,
+          "height": 197
+        }
+      },
+      {
+        "index": 8,
+        "sourceCell": {
+          "left": 0,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 119,
+          "top": 3,
+          "width": 172,
+          "height": 322
+        },
+        "sourceBody": {
+          "count": 28510,
+          "left": 121,
+          "right": 288,
+          "top": 5,
+          "bottom": 322,
+          "footLeft": 133,
+          "footRight": 275,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 162.07575757575756,
+          "y": 202
+        },
+        "scale": 0.6145416428435296,
+        "placement": {
+          "left": 110,
+          "top": 6,
+          "width": 106,
+          "height": 198
+        }
+      },
+      {
+        "index": 9,
+        "sourceCell": {
+          "left": 396,
+          "top": 661,
+          "width": 397,
+          "height": 331
+        },
+        "crop": {
+          "left": 122,
+          "top": 4,
+          "width": 166,
+          "height": 321
+        },
+        "sourceBody": {
+          "count": 28176,
+          "left": 124,
+          "right": 285,
+          "top": 6,
+          "bottom": 322,
+          "footLeft": 142,
+          "footRight": 274,
+          "footY": 322
+        },
+        "targetFoot": {
+          "x": 162.6060606060606,
+          "y": 202
+        },
+        "scale": 0.6195392409903451,
+        "placement": {
+          "left": 109,
+          "top": 5,
+          "width": 103,
+          "height": 199
+        }
+      },
+      {
+        "index": 10,
+        "sourceCell": {
+          "left": 793,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 83,
+          "top": 2,
+          "width": 170,
+          "height": 324
+        },
+        "sourceBody": {
+          "count": 28564,
+          "left": 85,
+          "right": 250,
+          "top": 4,
+          "bottom": 323,
+          "footLeft": 111,
+          "footRight": 241,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 163.13636363636363,
+          "y": 202
+        },
+        "scale": 0.6167613636363637,
+        "placement": {
+          "left": 106,
+          "top": 4,
+          "width": 105,
+          "height": 200
+        }
+      },
+      {
+        "index": 11,
+        "sourceCell": {
+          "left": 1189,
+          "top": 661,
+          "width": 396,
+          "height": 331
+        },
+        "crop": {
+          "left": 84,
+          "top": 3,
+          "width": 164,
+          "height": 323
+        },
+        "sourceBody": {
+          "count": 28177,
+          "left": 86,
+          "right": 245,
+          "top": 5,
+          "bottom": 323,
+          "footLeft": 109,
+          "footRight": 240,
+          "footY": 323
+        },
+        "targetFoot": {
+          "x": 163.66666666666666,
+          "y": 202
+        },
+        "scale": 0.6217345872518286,
+        "placement": {
+          "left": 107,
+          "top": 3,
+          "width": 102,
+          "height": 201
+        }
+      }
+    ]
+  }
+}

@@ -10,10 +10,10 @@ import gsap from "gsap";
 import styles from "./world-builder-headline.module.css";
 
 import { assetPath } from "@/lib/asset-path";
-import { drawCharacterTurn } from "@/lib/character-turn";
+import { drawCharacterTurnFrames } from "@/lib/character-turn";
 
 const CHARACTER = "/media/motion/world-builder.webp";
-const REST_CHARACTER = "/media/motion/world-builder-rest.webp";
+const TURN_SEQUENCE = "/media/motion/world-builder-turn.webp";
 const PHASES = [
   "Find a grip",
   "A little effort",
@@ -52,17 +52,17 @@ export default function WorldBuilderHeadline({
     const letter = root.querySelector<HTMLElement>("[data-builder-letter]")!;
     const actor = root.querySelector<HTMLElement>("[data-builder-actor]")!;
     const action = root.querySelector<HTMLElement>("[data-builder-action]")!;
-    const rest = root.querySelector<HTMLElement>("[data-builder-rest]")!;
+    const sequence = root.querySelector<HTMLElement>("[data-builder-turn]")!;
     const torso = root.querySelector<HTMLElement>("[data-builder-torso]")!;
     const head = root.querySelector<HTMLElement>("[data-builder-head]")!;
     const legs = root.querySelector<HTMLElement>("[data-builder-legs]")!;
     const rope = root.querySelector<SVGPathElement>("[data-builder-rope]")!;
     const shadow = root.querySelector<HTMLElement>("[data-builder-shadow]")!;
     const image = root.querySelector<HTMLImageElement>("[data-builder-image]")!;
-    const restImage = root.querySelector<HTMLImageElement>(
-      "[data-builder-rest-image]",
+    const turnImage = root.querySelector<HTMLImageElement>(
+      "[data-builder-turn-image]",
     )!;
-    const images = [image, restImage];
+    const images = [image, turnImage];
     const scene = root.querySelector<HTMLElement>("[data-builder-scene]")!;
     const platform = root.querySelector<HTMLElement>(
       "[data-builder-platform]",
@@ -149,7 +149,7 @@ export default function WorldBuilderHeadline({
       letter.style.transform = `translate(${pose.letterX}em, ${pose.letterY}em) rotate(${pose.letterRotation}deg)`;
       actor.style.transform = `translate(${actorX}em, ${actorY}em) rotate(${pose.lean}deg)`;
       actor.style.opacity = String(pose.opacity);
-      drawCharacterTurn(action, rest, pose.turn);
+      drawCharacterTurnFrames(action, sequence, turnImage, pose.turn);
       torso.style.transform = `scaleY(${1 - pose.crouch * 0.035})`;
       head.style.transform = `translateY(${pose.crouch * 1.5}%) rotate(${pose.head}deg)`;
       legs.style.transform = `skewX(${pose.feet}deg)`;
@@ -369,7 +369,7 @@ export default function WorldBuilderHeadline({
           3.4,
         )
         .to(pose, { slack: 0.22, rope: 0, duration: 0.35 }, 3.5)
-        .to(pose, { turn: 1, duration: 0.7, ease: "power2.inOut" }, 3.95);
+        .to(pose, { turn: 1, duration: 1, ease: "none" }, 3.95);
 
       draw();
       setReady(true);
@@ -553,19 +553,19 @@ export default function WorldBuilderHeadline({
                 </span>
               </span>
               <span
-                className={`${styles.layer} ${styles.pose} ${styles.restPose}`}
-                data-builder-rest=""
+                className={`${styles.layer} ${styles.turnSequence}`}
+                data-builder-turn=""
               >
                 <Image
                   unoptimized
                   alt=""
-                  className={styles.image}
-                  data-builder-rest-image=""
+                  className={styles.turnStrip}
+                  data-builder-turn-image=""
                   draggable={false}
-                  height={650}
+                  height={217}
                   loading="eager"
-                  src={assetPath(REST_CHARACTER)}
-                  width={768}
+                  src={assetPath(TURN_SEQUENCE)}
+                  width={3072}
                 />
               </span>
             </span>

@@ -67,8 +67,16 @@
   transform-origin: 81% 96%;
 }
 
-.restPose {
+.turnSequence {
+  overflow: hidden;
   opacity: 0;
+}
+
+.turnStrip {
+  display: block;
+  width: 1200%;
+  max-width: none;
+  height: 100%;
 }
 
 .torso {

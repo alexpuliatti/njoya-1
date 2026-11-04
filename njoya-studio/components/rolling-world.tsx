@@ -7,11 +7,11 @@ import gsap from "gsap";
 import styles from "./rolling-world.module.css";
 
 import { assetPath } from "@/lib/asset-path";
-import { drawCharacterTurn } from "@/lib/character-turn";
+import { drawCharacterTurnFrames } from "@/lib/character-turn";
 
-// Alpha bounds of the separate upright sprite on its shared 768px canvas.
-const REST_LEFT = 349 / 768;
-const REST_RIGHT = 621 / 768;
+// Visible bounds of the final upright pose in the 256px turn-strip cell.
+const REST_LEFT = 108 / 256;
+const REST_RIGHT = 208 / 256;
 
 const INITIAL_POSE = {
   x: 2.15,
@@ -113,14 +113,14 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
       const letter = world.querySelector<HTMLElement>("[data-rolling-letter]")!;
       const actor = world.querySelector<HTMLElement>("[data-rolling-actor]")!;
       const action = world.querySelector<HTMLElement>("[data-rolling-action]")!;
-      const rest = world.querySelector<HTMLElement>("[data-rolling-rest]")!;
+      const sequence = world.querySelector<HTMLElement>("[data-rolling-turn]")!;
       const image = world.querySelector<HTMLImageElement>(
         "[data-rolling-image]",
       )!;
-      const restImage = world.querySelector<HTMLImageElement>(
-        "[data-rolling-rest-image]",
+      const strip = world.querySelector<HTMLImageElement>(
+        "[data-rolling-turn-image]",
       )!;
-      const images = [image, restImage];
+      const images = [image, strip];
       const baseline = world.querySelector<HTMLElement>(
         "[data-rolling-baseline]",
       )!;
@@ -242,7 +242,7 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
           actorScale * pose.squash +
           ")";
         actor.style.opacity = String(pose.actorOpacity);
-        drawCharacterTurn(action, rest, pose.turn);
+        drawCharacterTurnFrames(action, sequence, strip, pose.turn);
         shadow.style.transform =
           "translateX(" +
           (letterShadowX + (actorShadowX - letterShadowX) * pose.retreat) +
@@ -400,7 +400,7 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
             },
             4.1,
           )
-          .to(pose, { turn: 1, duration: 0.7, ease: "power2.inOut" }, 5.05);
+          .to(pose, { turn: 1, duration: 1, ease: "none" }, 5.05);
         report({ ready: true, reducedMotion: false });
         if (requestedRef.current) restart();
       };
@@ -558,17 +558,17 @@ const RollingWorld = forwardRef<RollingWorldHandle, Props>(
               width={768}
             />
           </span>
-          <span className={styles.restPose} data-rolling-rest="">
+          <span className={styles.turnPose} data-rolling-turn="">
             <Image
               unoptimized
               alt=""
-              className={styles.image}
-              data-rolling-rest-image=""
+              className={styles.turnStrip}
+              data-rolling-turn-image=""
               draggable={false}
-              height={615}
+              height={205}
               loading="eager"
-              src={assetPath("/media/motion/explorer-rest.webp")}
-              width={768}
+              src={assetPath("/media/motion/explorer-turn.webp")}
+              width={3072}
             />
           </span>
         </span>
