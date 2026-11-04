@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 
 import { GradientDivider } from "@/components/gradient-components/gradient-divider";
 import NewsletterForm from "@/components/newsletter-form";
+import ObserverCharacter from "@/components/observer-character";
 import AnimatedContent from "@/components/react-bits/animated-content";
 import { getAbout, getSite } from "@/lib/content/repository";
 
@@ -35,6 +36,9 @@ export default async function AboutPage() {
           <span>WE BUILD</span> <span>WORLDS</span>
         </h1>
         <p className="biography-copy">{about.biography}</p>
+        <div aria-hidden="true" className="biography-observer">
+          <ObserverCharacter autoPlay behavior="idle" />
+        </div>
       </section>
       <GradientDivider className="about-gradient-divider" />
       <section aria-labelledby="clients-heading" className="selected-clients">

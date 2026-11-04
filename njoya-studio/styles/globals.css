@@ -649,11 +649,16 @@ html[data-njoya-intro="skip"] .intro-overlay {
   text-align: center;
 }
 .studio-biography {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(140px, 18vw, 200px);
+  align-items: center;
+  column-gap: clamp(24px, 3vw, 40px);
   max-width: 960px;
   margin-inline: auto;
   padding-bottom: 80px;
 }
 .studio-biography h1 {
+  grid-column: 1 / -1;
   margin: 0 0 40px;
   font-size: clamp(44px, 6vw, 88px);
   font-weight: 550;
@@ -671,6 +676,11 @@ html[data-njoya-intro="skip"] .intro-overlay {
   line-height: 1.85;
   color: #e2d9d0;
   text-wrap: pretty;
+}
+.biography-observer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
 }
 .selected-clients,
 .contact-section,
@@ -1301,15 +1311,25 @@ html[data-njoya-intro="skip"] .intro-overlay {
     padding: 44px 24px 56px;
   }
   .studio-biography {
+    grid-template-columns: minmax(0, 1fr) clamp(100px, 24vw, 140px);
+    gap: 28px clamp(12px, 3vw, 20px);
     padding-bottom: 48px;
   }
   .studio-biography h1 {
-    font-size: clamp(42px, 11vw, 64px);
-    margin-bottom: 32px;
+    grid-column: 1;
+    grid-row: 1;
+    font-size: clamp(32px, 8vw, 48px);
+    margin-bottom: 0;
   }
   .biography-copy {
+    grid-column: 1 / -1;
+    grid-row: 2;
     font-size: 16px;
     line-height: 1.85;
+  }
+  .biography-observer {
+    grid-column: 2;
+    grid-row: 1;
   }
   .selected-clients,
   .contact-section,

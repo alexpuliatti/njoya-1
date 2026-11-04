@@ -24,6 +24,10 @@
   object-fit: contain;
 }
 
+.character[data-behavior="idle"] {
+  opacity: 1;
+}
+
 .lids {
   opacity: 0;
 }
@@ -36,12 +40,16 @@
   clip-path: ellipse(6.5% 7.7% at 55.5% 22.7%);
 }
 
-.character[data-active="true"] {
+.character[data-active="true"]:not([data-behavior="idle"]) {
   will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .character {
+  .character:not([data-behavior="idle"]) {
     display: none;
+  }
+
+  .character[data-behavior="idle"] .lids {
+    opacity: 0 !important;
   }
 }

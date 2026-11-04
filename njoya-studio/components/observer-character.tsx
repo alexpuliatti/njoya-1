@@ -19,6 +19,7 @@ export type ObserverCharacterHandle = {
 
 type Props = {
   autoPlay?: boolean;
+  behavior?: "peek" | "idle";
   className?: string;
   revealFrom?: "left" | "right";
   onComplete?: () => void;
@@ -31,6 +32,7 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
   function ObserverCharacter(
     {
       autoPlay = false,
+      behavior = "peek",
       className = "",
       revealFrom = "right",
       onComplete,
@@ -108,7 +110,9 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
       const showStill = () => {
         timelineRef.current?.kill();
         timelineRef.current = null;
-        root.style.opacity = "0";
+        root.style.opacity =
+          behavior === "idle" && images[0]?.naturalWidth ? "1" : "0";
+        lids.style.opacity = "0";
         root.dataset.active = "false";
         callbacks.current.onPlayingChange?.(false);
       };
@@ -116,21 +120,24 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         if (!timelineRef.current || motion.matches) return;
         if (document.hidden) {
           if (restart) timelineRef.current.pause(0, true);
-          root.style.opacity = "0";
+          root.style.opacity = behavior === "idle" ? "1" : "0";
           return;
         }
         root.dataset.active = "true";
+        if (behavior === "idle") root.style.opacity = "1";
         const timeline = timelineRef.current.timeScale(speed.current);
         if (restart || timeline.progress() >= 1) timeline.restart();
         else timeline.play();
         callbacks.current.onPlayingChange?.(true);
       };
       const prepare = () => {
-        if (
-          disposed ||
-          !images.every((image) => image.complete && image.naturalWidth)
-        )
+        if (disposed) return;
+        if (!images.every((image) => image.complete && image.naturalWidth)) {
+          // A valid base can remain visible even if a blink frame fails.
+          if (behavior === "idle" && images[0]?.naturalWidth)
+            root.style.opacity = "1";
           return;
+        }
         if (motion.matches) {
           showStill();
           callbacks.current.onReady?.(true);
@@ -140,6 +147,8 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
 
         const timeline = gsap.timeline({
           paused: true,
+          repeat: behavior === "idle" ? -1 : 0,
+          repeatDelay: behavior === "idle" ? 3.6 : 0,
           onUpdate: () => callbacks.current.onProgress?.(timeline.progress()),
           onComplete: () => {
             wanted.current = false;
@@ -150,54 +159,83 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         });
 
         timelineRef.current = timeline;
-        timeline
-          .fromTo(
-            root,
-            {
-              xPercent: direction * 90,
-              yPercent: 5,
-              rotation: direction * -5,
-              opacity: 0,
-            },
-            {
-              xPercent: 0,
-              yPercent: 0,
-              rotation: 0,
-              opacity: 1,
-              duration: 0.95,
-              ease: "power2.inOut",
-            },
-            0,
-          )
-          .fromTo(
-            lids,
-            { opacity: 0 },
-            { opacity: 1, duration: 0.08, ease: "none" },
-            1.55,
-          )
-          .to(lids, { opacity: 0, duration: 0.15, ease: "power1.inOut" }, 1.78)
-          .to(
-            root,
-            { rotation: direction * 2.5, duration: 0.45, ease: "power2.inOut" },
-            2.05,
-          )
-          .to(
-            root,
-            { rotation: direction * -1, duration: 0.4, ease: "power2.inOut" },
-            2.6,
-          )
-          .to(
-            root,
-            {
-              xPercent: direction * 90,
-              yPercent: 5,
-              rotation: direction * -4,
-              opacity: 0,
-              duration: 0.85,
-              ease: "power2.inOut",
-            },
-            3.25,
-          );
+        if (behavior === "idle") {
+          gsap.set(root, {
+            xPercent: 0,
+            yPercent: 0,
+            rotation: 0,
+            opacity: 1,
+          });
+          timeline
+            .fromTo(
+              lids,
+              { opacity: 0 },
+              { opacity: 1, duration: 0.08, ease: "none" },
+              1.55,
+            )
+            .to(
+              lids,
+              { opacity: 0, duration: 0.16, ease: "power1.inOut" },
+              1.67,
+            );
+        } else {
+          timeline
+            .fromTo(
+              root,
+              {
+                xPercent: direction * 90,
+                yPercent: 5,
+                rotation: direction * -5,
+                opacity: 0,
+              },
+              {
+                xPercent: 0,
+                yPercent: 0,
+                rotation: 0,
+                opacity: 1,
+                duration: 0.95,
+                ease: "power2.inOut",
+              },
+              0,
+            )
+            .fromTo(
+              lids,
+              { opacity: 0 },
+              { opacity: 1, duration: 0.08, ease: "none" },
+              1.55,
+            )
+            .to(
+              lids,
+              { opacity: 0, duration: 0.15, ease: "power1.inOut" },
+              1.78,
+            )
+            .to(
+              root,
+              {
+                rotation: direction * 2.5,
+                duration: 0.45,
+                ease: "power2.inOut",
+              },
+              2.05,
+            )
+            .to(
+              root,
+              { rotation: direction * -1, duration: 0.4, ease: "power2.inOut" },
+              2.6,
+            )
+            .to(
+              root,
+              {
+                xPercent: direction * 90,
+                yPercent: 5,
+                rotation: direction * -4,
+                opacity: 0,
+                duration: 0.85,
+                ease: "power2.inOut",
+              },
+              3.25,
+            );
+        }
         callbacks.current.onReady?.(true);
         if (wanted.current) play();
       };
@@ -219,7 +257,7 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         } else if (
           !document.hidden &&
           wanted.current &&
-          timeline.progress() < 1
+          (behavior === "idle" || timeline.progress() < 1)
         ) {
           timeline.play();
           callbacks.current.onPlayingChange?.(true);
@@ -249,13 +287,14 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         motion.removeEventListener("change", onMotionChange);
         document.removeEventListener("visibilitychange", onVisibilityChange);
       };
-    }, [revealFrom]);
+    }, [behavior, revealFrom]);
 
     return (
       <span
         ref={rootRef}
         aria-hidden="true"
         className={`${styles.character} ${className}`}
+        data-behavior={behavior}
       >
         <Image
           unoptimized
