@@ -1,14 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, type CSSProperties } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 import { StudioIconButton } from "./ui/studio-button";
 
 export default function CategoryBrowser({
   children,
+  categoryCount,
 }: {
   children: React.ReactNode;
+  categoryCount: number;
 }) {
   const track = useRef<HTMLDivElement>(null);
   const browse = (direction: number) => {
@@ -28,7 +30,11 @@ export default function CategoryBrowser({
   };
 
   return (
-    <section aria-label="Explore our work" className="category-stage">
+    <section
+      aria-label="Explore our work"
+      className="category-stage"
+      style={{ "--category-count": categoryCount } as CSSProperties}
+    >
       <div ref={track} className="category-track">
         {children}
       </div>

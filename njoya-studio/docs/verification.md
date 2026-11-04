@@ -1,5 +1,11 @@
 # Implementation verification
 
+Work layout correction verified on 4 November 2026:
+
+- Desktop columns and image sizing use the current category count. All five 3:4 cards share one row, with aligned labels and the copyright below the cards. Chrome checked the wide desktop layout, 1024×768 and 1440×540.
+- Chrome checked the two-card tablet carousel at 900×768, its next button, and the mobile carousel at 393×768. Motion uses a dedicated 505-byte SVG placeholder.
+- The Pages production build and all ten tests passed. Static verification passed 262 routes, 123 redirects and 2,960 asset/link checks.
+
 Verified locally on 30 October 2026.
 
 - GitHub Pages export passed 260 static route checks, 123 automatic-forwarding checks and 2,950 asset/link checks under `/njoya-1/`, including all responsive `srcset` candidates, the social-preview image and supplied intro artwork. Earlier Chrome checks confirmed search after refreshing its URL and forwarding from an old project URL.
