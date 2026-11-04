@@ -79,6 +79,7 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         pause: () => {
           wanted.current = false;
           timelineRef.current?.pause();
+          if (rootRef.current) rootRef.current.dataset.active = "false";
           callbacks.current.onPlayingChange?.(false);
         },
         progress: (value) => {
@@ -86,11 +87,14 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
           timelineRef.current
             ?.pause()
             .progress(Math.max(0, Math.min(1, value)));
+          if (rootRef.current) rootRef.current.dataset.active = "false";
           callbacks.current.onPlayingChange?.(false);
         },
         timeScale: (value) => {
           speed.current = value;
           timelineRef.current?.timeScale(value);
+          if (rootRef.current?.dataset.behavior === "idle" && wanted.current)
+            playRef.current?.(false);
         },
       }),
       [],
@@ -106,25 +110,38 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
       const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
       const direction = revealFrom === "left" ? -1 : 1;
       let disposed = false;
+      let imagesReady = false;
 
       const showStill = () => {
         timelineRef.current?.kill();
         timelineRef.current = null;
         root.style.opacity =
           behavior === "idle" && images[0]?.naturalWidth ? "1" : "0";
+        if (behavior === "idle") root.style.removeProperty("transform");
         lids.style.opacity = "0";
         root.dataset.active = "false";
         callbacks.current.onPlayingChange?.(false);
       };
       const play = (restart = true) => {
-        if (!timelineRef.current || motion.matches) return;
+        if (motion.matches || !imagesReady) return;
+        if (behavior === "idle") {
+          root.style.opacity = "1";
+          root.dataset.active = String(!document.hidden && speed.current > 0);
+          lids.style.animationDuration = `${6 / Math.max(0.01, speed.current)}s`;
+          if (restart && root.dataset.active === "true") {
+            for (const animation of lids.getAnimations())
+              animation.currentTime = 0;
+          }
+          callbacks.current.onPlayingChange?.(root.dataset.active === "true");
+          return;
+        }
+        if (!timelineRef.current) return;
         if (document.hidden) {
           if (restart) timelineRef.current.pause(0, true);
-          root.style.opacity = behavior === "idle" ? "1" : "0";
+          root.style.opacity = "0";
           return;
         }
         root.dataset.active = "true";
-        if (behavior === "idle") root.style.opacity = "1";
         const timeline = timelineRef.current.timeScale(speed.current);
         if (restart || timeline.progress() >= 1) timeline.restart();
         else timeline.play();
@@ -133,22 +150,30 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
       const prepare = () => {
         if (disposed) return;
         if (!images.every((image) => image.complete && image.naturalWidth)) {
+          imagesReady = false;
           // A valid base can remain visible even if a blink frame fails.
           if (behavior === "idle" && images[0]?.naturalWidth)
             root.style.opacity = "1";
           return;
         }
+        imagesReady = true;
         if (motion.matches) {
           showStill();
           callbacks.current.onReady?.(true);
+          return;
+        }
+        if (behavior === "idle") {
+          root.style.removeProperty("transform");
+          root.style.opacity = "1";
+          lids.style.opacity = "0";
+          callbacks.current.onReady?.(true);
+          if (wanted.current) play();
           return;
         }
         if (timelineRef.current) return;
 
         const timeline = gsap.timeline({
           paused: true,
-          repeat: behavior === "idle" ? -1 : 0,
-          repeatDelay: behavior === "idle" ? 3.6 : 0,
           onUpdate: () => callbacks.current.onProgress?.(timeline.progress()),
           onComplete: () => {
             wanted.current = false;
@@ -159,87 +184,63 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         });
 
         timelineRef.current = timeline;
-        if (behavior === "idle") {
-          gsap.set(root, {
-            xPercent: 0,
-            yPercent: 0,
-            rotation: 0,
-            opacity: 1,
-          });
-          timeline
-            .fromTo(
-              lids,
-              { opacity: 0 },
-              { opacity: 1, duration: 0.08, ease: "none" },
-              1.55,
-            )
-            .to(
-              lids,
-              { opacity: 0, duration: 0.16, ease: "power1.inOut" },
-              1.67,
-            );
-        } else {
-          timeline
-            .fromTo(
-              root,
-              {
-                xPercent: direction * 90,
-                yPercent: 5,
-                rotation: direction * -5,
-                opacity: 0,
-              },
-              {
-                xPercent: 0,
-                yPercent: 0,
-                rotation: 0,
-                opacity: 1,
-                duration: 0.95,
-                ease: "power2.inOut",
-              },
-              0,
-            )
-            .fromTo(
-              lids,
-              { opacity: 0 },
-              { opacity: 1, duration: 0.08, ease: "none" },
-              1.55,
-            )
-            .to(
-              lids,
-              { opacity: 0, duration: 0.15, ease: "power1.inOut" },
-              1.78,
-            )
-            .to(
-              root,
-              {
-                rotation: direction * 2.5,
-                duration: 0.45,
-                ease: "power2.inOut",
-              },
-              2.05,
-            )
-            .to(
-              root,
-              { rotation: direction * -1, duration: 0.4, ease: "power2.inOut" },
-              2.6,
-            )
-            .to(
-              root,
-              {
-                xPercent: direction * 90,
-                yPercent: 5,
-                rotation: direction * -4,
-                opacity: 0,
-                duration: 0.85,
-                ease: "power2.inOut",
-              },
-              3.25,
-            );
-        }
+        timeline
+          .fromTo(
+            root,
+            {
+              xPercent: direction * 90,
+              yPercent: 5,
+              rotation: direction * -5,
+              opacity: 0,
+            },
+            {
+              xPercent: 0,
+              yPercent: 0,
+              rotation: 0,
+              opacity: 1,
+              duration: 0.95,
+              ease: "power2.inOut",
+            },
+            0,
+          )
+          .fromTo(
+            lids,
+            { opacity: 0 },
+            { opacity: 1, duration: 0.08, ease: "none" },
+            1.55,
+          )
+          .to(lids, { opacity: 0, duration: 0.15, ease: "power1.inOut" }, 1.78)
+          .to(
+            root,
+            {
+              rotation: direction * 2.5,
+              duration: 0.45,
+              ease: "power2.inOut",
+            },
+            2.05,
+          )
+          .to(
+            root,
+            { rotation: direction * -1, duration: 0.4, ease: "power2.inOut" },
+            2.6,
+          )
+          .to(
+            root,
+            {
+              xPercent: direction * 90,
+              yPercent: 5,
+              rotation: direction * -4,
+              opacity: 0,
+              duration: 0.85,
+              ease: "power2.inOut",
+            },
+            3.25,
+          );
         callbacks.current.onReady?.(true);
         if (wanted.current) play();
       };
       const onError = () => {
+        imagesReady = false;
         showStill();
         callbacks.current.onReady?.(false);
       };
@@ -248,6 +249,13 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         else prepare();
       };
       const onVisibilityChange = () => {
+        if (behavior === "idle") {
+          if (document.hidden) {
+            root.dataset.active = "false";
+            callbacks.current.onPlayingChange?.(false);
+          } else if (wanted.current) play(false);
+          return;
+        }
         const timeline = timelineRef.current;
 
         if (!timeline) return;
@@ -257,7 +265,7 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         } else if (
           !document.hidden &&
           wanted.current &&
-          (behavior === "idle" || timeline.progress() < 1)
+          timeline.progress() < 1
         ) {
           timeline.play();
           callbacks.current.onPlayingChange?.(true);
@@ -280,6 +288,7 @@ const ObserverCharacter = forwardRef<ObserverCharacterHandle, Props>(
         timelineRef.current?.kill();
         timelineRef.current = null;
         playRef.current = null;
+        root.dataset.active = "false";
         for (const image of images) {
           image.removeEventListener("load", prepare);
           image.removeEventListener("error", onError);

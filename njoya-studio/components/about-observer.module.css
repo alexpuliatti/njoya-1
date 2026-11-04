@@ -1,0 +1,64 @@
+.performer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  width: var(--observer-width, 96px);
+  height: var(--observer-height, 144px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.performer[data-hidden="true"] {
+  visibility: hidden;
+}
+
+.performer[data-static="true"] {
+  position: absolute;
+}
+
+.sheet {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 800%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.idle {
+  position: absolute;
+  top: 4.17%;
+  left: -24.2%;
+  display: block;
+  width: 139.0625%;
+  aspect-ratio: 1;
+}
+
+.performer[data-mode="sprite"] .sheet {
+  opacity: 1;
+}
+
+.performer[data-mode="sprite"] .strip {
+  will-change: transform;
+}
+
+.performer[data-mode="sprite"] .idle {
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet {
+    display: none;
+  }
+}
