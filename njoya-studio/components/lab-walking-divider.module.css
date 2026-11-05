@@ -1,0 +1,73 @@
+.rail {
+  position: relative;
+  padding-top: 56px;
+  margin-bottom: clamp(24px, 3vw, 36px);
+  /* Hide the off-edge wrap while leaving room for the character above the line. */
+  clip-path: inset(-40px 0 -4px);
+  pointer-events: none;
+  user-select: none;
+}
+
+.performer {
+  position: absolute;
+  bottom: 1.5px;
+  left: 0;
+  z-index: 2;
+  display: block;
+  width: 56px;
+  height: 84px;
+  visibility: hidden;
+}
+
+.rail[data-ready="true"] .performer {
+  visibility: visible;
+}
+
+.window {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  /* The drawn foot anchor is y=184 in a 192px-high frame. */
+  transform: translateY(4.166667%);
+}
+
+.frames {
+  display: block;
+  width: 800%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  animation: gait 666.666667ms steps(8, end) infinite paused;
+}
+
+.rail[data-state="walking"] .frames {
+  animation-play-state: running;
+}
+
+.rail[data-state="still"] .frames {
+  animation: none;
+}
+
+@keyframes gait {
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .rail {
+    padding-top: 44px;
+  }
+
+  .performer {
+    width: 44px;
+    height: 66px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .frames {
+    animation: none;
+  }
+}

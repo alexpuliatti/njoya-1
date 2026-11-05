@@ -5,9 +5,8 @@ import type { CSSProperties } from "react";
 
 import { useId } from "react";
 
-import { GradientDivider } from "@/components/gradient-components/gradient-divider";
-
 import styles from "./lab-project-dialog.module.css";
+import LabWalkingDivider from "./lab-walking-divider";
 import MediaGallery from "./media-gallery";
 import {
   StudioDialog,
@@ -87,11 +86,7 @@ export default function LabProjectDialog({
             aria-labelledby={sketchesTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
-            <GradientDivider
-              animation="none"
-              className={styles.sectionDivider}
-              thickness="3px"
-            />
+            <LabWalkingDivider />
             <h3 className={styles.sectionTitle} id={sketchesTitleId}>
               Conceptual sketches
             </h3>
@@ -103,11 +98,7 @@ export default function LabProjectDialog({
             aria-labelledby={makingTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
-            <GradientDivider
-              animation="none"
-              className={styles.sectionDivider}
-              thickness="3px"
-            />
+            <LabWalkingDivider direction="left" />
             <h3 className={styles.sectionTitle} id={makingTitleId}>
               The Making
             </h3>
@@ -116,11 +107,7 @@ export default function LabProjectDialog({
         ) : null}
         {result.length > 0 ? (
           <section aria-labelledby={resultTitleId} className={styles.gallery}>
-            <GradientDivider
-              animation="none"
-              className={styles.sectionDivider}
-              thickness="3px"
-            />
+            <LabWalkingDivider />
             <h3 className={styles.sectionTitle} id={resultTitleId}>
               The result
             </h3>
