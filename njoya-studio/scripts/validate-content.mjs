@@ -50,6 +50,7 @@ export async function validateContent({ checkMedia = true } = {}) {
   const slugs = new Set();
   const urls = new Set();
   const imagePaths = new Set();
+  const videoPaths = new Set();
   const media = z
     .object({ images: z.record(responsiveMediaSchema) })
     .parse(await read("media-variants.json")).images;
@@ -92,8 +93,14 @@ export async function validateContent({ checkMedia = true } = {}) {
       urls.add(url);
     }
     addImage(work.cover);
-    for (const entry of work.gallery)
+    if (work.previewVideoSrc) videoPaths.add(work.previewVideoSrc);
+    for (const entry of work.gallery) {
       if (entry.type !== "video") addImage(entry);
+      else if ("src" in entry) {
+        videoPaths.add(entry.src);
+        addImage(entry.poster);
+      }
+    }
   }
   for (const collection of collections) {
     for (const id of collection.workIds)
@@ -148,13 +155,13 @@ export async function validateContent({ checkMedia = true } = {}) {
   }
   if (checkMedia)
     await Promise.all(
-      [...imagePaths].map(async (url) => {
+      [...imagePaths, ...videoPaths].map(async (url) => {
         try {
           if (!(await fs.stat(path.join(root, "public", url))).size)
             throw new Error("Empty image");
         } catch {
           throw new Error(
-            `Missing prepared image: ${url}. Run npm run media:prepare.`,
+            `Missing prepared media: ${url}. Prepare the referenced image or video.`,
           );
         }
       }),

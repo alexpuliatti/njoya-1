@@ -54,6 +54,8 @@ export interface NjoyaCarouselItem {
    *  a <video> instead of an <Image>.
    */
   coverVideoPlaybackId?: string;
+  /** Small silent local MP4 loaded only when the pointer previews the card. */
+  previewVideoSrc?: string;
 
   /** ─── NEW ───────────────────────────────────────
    *  Additional gallery videos. Empty for now (schema

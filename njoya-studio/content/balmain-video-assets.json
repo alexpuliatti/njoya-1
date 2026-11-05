@@ -1,0 +1,33 @@
+{
+  "project": "balmain-motion",
+  "fullFilms": "H.264 and AAC streams copied without re-encoding; MP4 metadata moved to the beginning with +faststart. Original resolution, frame rate and audio retained.",
+  "preview": {
+    "src": "/media/videos/balmain-preview-207ace2216.mp4",
+    "width": 540,
+    "height": 960,
+    "duration": 8,
+    "audio": false,
+    "encoder": "libx264, CRF 20, preset slow, yuv420p",
+    "bytes": 1284519
+  },
+  "films": [
+    {
+      "source": "motion/BALMAIN/Video/Snapinsta.app_video_An8g-r3_Z8t1cht5Ei1QiLhdIxbQhAQf4P0AIGIrocjzkZrymOet9RJ92FCqVsMWr9YWppLOknf1ffT2-zEXaq1J.mp4",
+      "src": "/media/videos/balmain-film-01-207ace2216.mp4",
+      "originalBytes": 5443672,
+      "bytes": 5443867
+    },
+    {
+      "source": "motion/BALMAIN/Video/Snapinsta.app_video_An8pwbAco85Z1O4-GsGPp5Vr-rXoOFaKFBb9c6W7HqZQ77XKKK67joSmlL_U2Tv-xoBHaG9Vy4REMU77mp_qmdw1.mp4",
+      "src": "/media/videos/balmain-film-02-55dd0456a3.mp4",
+      "originalBytes": 6235968,
+      "bytes": 6236175
+    },
+    {
+      "source": "motion/BALMAIN/Video/Snapinsta.app_video_An_tgMY36zRVmZLmM_8nN2LSDEpr2zfmN4aGqICmN-884Aw7CwuEMNBK1oVDn_mKgfjBkVLjlkETGlFLfUInI7tz.mp4",
+      "src": "/media/videos/balmain-film-03-f7b9871923.mp4",
+      "originalBytes": 7199260,
+      "bytes": 7199467
+    }
+  ]
+}

@@ -55,6 +55,19 @@ for (const [url, destination] of Object.entries(aliases)) {
     `Missing static redirect: ${url}`,
   );
 }
+// A serialized source in the React payload is insufficient: native local
+// films must have a playable src in the exported video element itself.
+for (const work of works) {
+  const localFilms = work.gallery.filter((entry) => entry.type === "video" && entry.src);
+  if (!localFilms.length) continue;
+  const html = await fs.readFile(pagePath(`/work/projects/${work.slug}`), "utf8");
+  const players = [...html.matchAll(/<video\b[^>]*>/g)].map((match) => match[0]);
+  for (const film of localFilms) {
+    const player = players.find((tag) => tag.includes(`src="${basePath}${film.src}"`));
+    assert.ok(player, `Missing playable local film: ${film.src}`);
+    assert.ok(player.includes('controls=""') && player.includes('preload="none"'), `Local films need controls and deferred loading: ${film.src}`);
+  }
+}
 assert.ok(
   await exists(path.join(output, "404.html")),
   "Missing custom 404 page",
@@ -72,7 +85,7 @@ for (const route of [...routes, "/404.html"]) {
     /\/_next\/image\?/,
     `Image optimizer is unavailable on Pages: ${route}`,
   );
-  const urls = [...html.matchAll(/\b(?:src|href)="(\/[^\"]*)"/g)].map(
+  const urls = [...html.matchAll(/\b(?:src|href|poster)="(\/[^\"]*)"/g)].map(
     (match) => match[1],
   );
   for (const match of html.matchAll(/\bsrcSet="([^\"]*)"/gi)) {

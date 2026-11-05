@@ -1,0 +1,104 @@
+{
+  "id": "balmain-motion",
+  "slug": "balmain-motion",
+  "title": "Balmain",
+  "client": "Balmain",
+  "date": null,
+  "categories": [
+    "motion"
+  ],
+  "kind": "edition",
+  "cover": {
+    "type": "image",
+    "src": "/media/images/cd898e14219d6c1388089a7221d04785a06a7904-pe8c9d63.webp",
+    "previewSrc": "/media/images/cd898e14219d6c1388089a7221d04785a06a7904-pe8c9d63-480.webp",
+    "alt": "Balmain fragrance campaign: a model poses with an oversized bronze perfume bottle against a vivid green background and a ring of fire.",
+    "width": 1080,
+    "height": 1350
+  },
+  "previewVideoSrc": "/media/videos/balmain-preview-207ace2216.mp4",
+  "gallery": [
+    {
+      "type": "video",
+      "src": "/media/videos/balmain-film-01-207ace2216.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/b2a97824a5ebd48199462b57e72ab0f4964045ea-pe8c9d63.webp",
+        "previewSrc": "/media/images/b2a97824a5ebd48199462b57e72ab0f4964045ea-pe8c9d63-480.webp",
+        "alt": "Balmain fragrance campaign film 1 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya.",
+        "width": 1080,
+        "height": 1920
+      },
+      "alt": "Balmain campaign film 1 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya."
+    },
+    {
+      "type": "video",
+      "src": "/media/videos/balmain-film-02-55dd0456a3.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/402178268e7188ab0a26f919f33ed1d3f03f3b95-pe8c9d63.webp",
+        "previewSrc": "/media/images/402178268e7188ab0a26f919f33ed1d3f03f3b95-pe8c9d63-480.webp",
+        "alt": "Balmain fragrance campaign film 2 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya.",
+        "width": 1080,
+        "height": 1920
+      },
+      "alt": "Balmain campaign film 2 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya."
+    },
+    {
+      "type": "video",
+      "src": "/media/videos/balmain-film-03-f7b9871923.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/dd1e64676f80b818d68e6d661a0f5d5dccf2fee8-pe8c9d63.webp",
+        "previewSrc": "/media/images/dd1e64676f80b818d68e6d661a0f5d5dccf2fee8-pe8c9d63-480.webp",
+        "alt": "Balmain fragrance campaign film 3 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya.",
+        "width": 1080,
+        "height": 1920
+      },
+      "alt": "Balmain campaign film 3 \u2014 directed by Carlijn Jacobs, set design by Ibby Njoya."
+    }
+  ],
+  "credits": [
+    {
+      "role": "creativeDirector",
+      "name": "Hans Dorsinville"
+    },
+    {
+      "role": "other",
+      "customRole": "Photographer & director",
+      "name": "Carlijn Jacobs"
+    },
+    {
+      "role": "stylist",
+      "name": "Imruh Asha"
+    },
+    {
+      "role": "setDesigner",
+      "name": "Ibby Njoya"
+    },
+    {
+      "role": "other",
+      "customRole": "Movement",
+      "name": "Jorge Dorsinville"
+    },
+    {
+      "role": "hairStylist",
+      "name": "Cyndia Harvey"
+    },
+    {
+      "role": "makeupArtist",
+      "name": "Lucy Bridge"
+    },
+    {
+      "role": "njoyaTeam",
+      "name": "Axel Drury"
+    }
+  ],
+  "tags": [
+    "film",
+    "motion",
+    "fragrance",
+    "Balmain"
+  ],
+  "legacyUrls": []
+}

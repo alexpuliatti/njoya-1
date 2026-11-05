@@ -48,6 +48,22 @@ fill their tiles with a centred crop; sketches fit in full on a white background
 Phone layouts use one column with the same height cap. Responsive image sizes
 account for the photo crop rather than requesting full-width gallery images.
 
+## BALMAIN motion films
+
+The three supplied films are already 1080×1920 H.264 at 25 fps with AAC audio.
+The prepared MP4s copy both streams without re-encoding and place the MP4 index
+at the start (`-c copy -map_metadata -1 -movflags +faststart`). Per-stream SHA-256
+checks confirmed that all three films retain the exact original video and audio.
+Their combined size is 18,879,509 bytes. A separate eight-second silent 540×960
+H.264 hover preview uses CRF 20 and weighs 1,284,519 bytes. Covers and video
+posters use the responsive WebP pipeline. Source-to-output mappings are recorded
+in `content/balmain-video-assets.json`; incoming originals stay in the ignored
+root `motion/` directory. Only the prepared files are committed and published.
+
+Full films use native controls and do not preload their video data. The card
+preview loads on desktop hover, pauses on leave, when off-screen, and when the
+tab is hidden. Reduced-motion and touch users get the supplied still cover.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.
