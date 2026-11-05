@@ -17,15 +17,26 @@ export default function NjoyaCarousel({
   pinned,
   label = "Projects",
   showLoader = false,
+  loop,
 }: {
   items: NjoyaCarouselItem[];
   pinned?: React.ReactNode;
   label?: string;
   showLoader?: boolean;
+  loop?: boolean;
 }) {
+  // Leave enough cards outside the three-card desktop viewport for Embla
+  // to recycle them without disabling looping on short collections.
+  const slides =
+    loop && items.length > 0 && items.length < 6
+      ? Array.from(
+          { length: items.length * Math.ceil(6 / items.length) },
+          (_, index) => items[index % items.length],
+        )
+      : items;
   const [viewportRef, api] = useEmblaCarousel({
     align: "start",
-    loop: items.length > 3,
+    loop: loop ?? items.length > 3,
     containScroll: "trimSnaps",
   });
   const [payload, setPayload] = useState<NjoyaClickPayload | null>(null);
@@ -115,10 +126,10 @@ export default function NjoyaCarousel({
           role="region"
         >
           <div className="project-track">
-            {items.map((item, index) => (
+            {slides.map((item, index) => (
               <div
-                key={item.id}
-                aria-label={`${index + 1} of ${items.length}`}
+                key={`${item.id}-${index}`}
+                aria-label={`${(index % items.length) + 1} of ${items.length}`}
                 aria-roledescription="slide"
                 className="project-slide"
                 role="group"
