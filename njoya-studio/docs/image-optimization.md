@@ -78,6 +78,18 @@ prepared frame from the video. Encoding details and source mapping are in
 `content/chanel-video-assets.json`. Tests inspect MP4 track handlers directly
 to ensure that neither published file contains an audio track.
 
+## MAC motion films
+
+The three MAC Studio Fix films retain their original 1080×1080 resolution and
+25 fps timing, encoded as H.264 CRF 18 with the slow preset and faststart. The
+original AAC audio is copied unchanged; per-film audio hashes confirm this.
+Together the films are 26,364,168 bytes, down from 127,512,262 bytes. SSIM against
+the original films is recorded in `content/mac-video-assets.json`. A six-second
+640×640 silent hover preview weighs 511,258 bytes. The supplied cover and three
+video-frame posters use the responsive WebP pipeline. Full films load only when
+played, with native controls; the preview follows the existing hover and
+reduced-motion behavior. Originals remain in the ignored `motion/MAC` folder.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.
