@@ -1053,6 +1053,9 @@ html[data-njoya-intro="skip"] .intro-overlay {
 .media-gallery figure.film-media {
   width: min(100%, 440px);
 }
+.media-gallery figure.landscape-film {
+  width: min(100%, 780px);
+}
 .media-gallery .film-media video {
   max-height: 75svh;
   object-fit: contain;

@@ -22,7 +22,13 @@ export default function MediaGallery({
       {entries.map((entry, index) => (
         <figure
           key={`${entry.type}-${index}`}
-          className={entry.type === "synopsis" ? "synopsis-media" : entry.type === "video" && "src" in entry ? "film-media" : undefined}
+          className={
+            entry.type === "synopsis"
+              ? "synopsis-media"
+              : entry.type === "video" && "src" in entry
+                ? `film-media${entry.poster.width > entry.poster.height ? " landscape-film" : ""}`
+                : undefined
+          }
         >
           {entry.type === "video" ? (
             <StudioVideo

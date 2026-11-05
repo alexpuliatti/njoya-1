@@ -5,7 +5,8 @@
   "client": "Chanel",
   "date": "2024-05-12",
   "categories": [
-    "commercials"
+    "commercials",
+    "motion"
   ],
   "kind": "edition",
   "cover": {
@@ -17,6 +18,19 @@
     "height": 1350
   },
   "gallery": [
+    {
+      "type": "video",
+      "src": "/media/videos/chanel-film-478eb394b5.mp4",
+      "poster": {
+        "type": "image",
+        "src": "/media/images/d143e08f26a7bfb32e2d7f246efdbc4d68a31c75-pe8c9d63.webp",
+        "previewSrc": "/media/images/d143e08f26a7bfb32e2d7f246efdbc4d68a31c75-pe8c9d63-480.webp",
+        "alt": "Chanel Mother’s Day film: pink, orange and white camellias surround a Chanel fragrance bottle.",
+        "width": 1280,
+        "height": 478
+      },
+      "alt": "Chanel Beauty, Mother’s Day — silent campaign film"
+    },
     {
       "type": "image",
       "src": "/media/images/bf7fbb6db85a4a22c72083ae4c3517717ea8248a-pf257cef.webp",
@@ -56,21 +70,15 @@
       "alt": "mag image 5",
       "width": 1080,
       "height": 1350
-    },
-    {
-      "type": "video",
-      "playbackId": "s00x5Ge8mFR00zsseSRpOFnnw61h3rcDJwXAQWqNpuHUk",
-      "alt": "Chanel Beauty, Mother’s Day 2024 — film"
     }
   ],
   "credits": [
     {
       "role": "photographer",
-      "name": "Nicolas Kantor⁠"
+      "name": "Nicolas Kantor"
     },
     {
-      "role": "other",
-      "customRole": "Set Designer",
+      "role": "setDesigner",
       "name": "Ibby Njoya"
     },
     {
@@ -79,14 +87,17 @@
       "name": "Jeremy Valender"
     },
     {
-      "role": "other",
-      "customRole": "1st Assistant Set Design",
+      "role": "njoyaTeam",
       "name": "Axel Drury"
     }
   ],
-  "tags": [],
+  "tags": [
+    "film",
+    "motion"
+  ],
   "legacyUrls": [
     "/shoots/chanel/editions/chanel"
   ],
-  "coverVideoPlaybackId": "vcj002VsHfo2mu7YcZCIKTr7MkRO6Nb86AZ1f5jGyvDI"
+  "coverVideoPlaybackId": "vcj002VsHfo2mu7YcZCIKTr7MkRO6Nb86AZ1f5jGyvDI",
+  "previewVideoSrc": "/media/videos/chanel-preview-478eb394b5.mp4"
 }
