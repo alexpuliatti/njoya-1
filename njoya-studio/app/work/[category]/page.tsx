@@ -58,6 +58,7 @@ export default async function CategoryPage({
             toCarouselItem(work, categories, site.videoPlaybackEnabled),
           )}
           label={category.title}
+          loop={category.id === "motion" ? true : undefined}
         />
       ) : (
         <section className="empty-state">
