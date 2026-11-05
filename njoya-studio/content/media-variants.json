@@ -26049,6 +26049,30 @@
         }
       ],
       "sourceBytes": 51547
+    },
+    "f0450d54d967e71da3c9635a05ac589105242c35": {
+      "signature": "pe8c9d63:122116:1793881754441.275",
+      "width": 720,
+      "height": 1280,
+      "format": "webp",
+      "fallback": {
+        "src": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63.webp",
+        "width": 720,
+        "bytes": 62708
+      },
+      "variants": [
+        {
+          "src": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63-480.webp",
+          "width": 480,
+          "bytes": 38950
+        },
+        {
+          "src": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63.webp",
+          "width": 720,
+          "bytes": 62708
+        }
+      ],
+      "sourceBytes": 122116
     }
   }
 }

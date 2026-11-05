@@ -90,6 +90,18 @@ video-frame posters use the responsive WebP pipeline. Full films load only when
 played, with native controls; the preview follows the existing hover and
 reduced-motion behavior. Originals remain in the ignored `motion/MAC` folder.
 
+## Louboutin motion film
+
+The existing Christian Louboutin Men's project is shared between Commercials
+and Motion, with its original eleven photographs, cover, credits and URL kept.
+The supplied 720×1280 H.264 film is already compact. Both video and AAC audio
+are copied unchanged into a faststart MP4; per-stream SHA-256 checks confirm
+identical encoded media. The full film is 2,727,348 bytes. A separate
+six-second silent hover preview is 513,114 bytes, encoded at
+480×854, 18 fps, CRF 24 and a 600 kbps maximum video rate. The native player uses
+`preload="none"`, with a responsive WebP poster extracted from the film. Source
+mapping and verification hashes are in `content/louboutin-video-assets.json`.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.
