@@ -1,7 +1,5 @@
 "use client";
 
-import type { SearchItem } from "@/lib/njoya-carousel-types";
-
 import {
   createContext,
   useCallback,
@@ -22,10 +20,8 @@ export const useSearch = () => useContext(SearchContext);
 
 export default function SearchProvider({
   children,
-  catalog,
 }: {
   children: React.ReactNode;
-  catalog: SearchItem[];
 }) {
   const [open, setOpen] = useState(false);
   const instantRef = useRef(false);
@@ -55,7 +51,6 @@ export default function SearchProvider({
       {open && (
         <SearchModal
           instant={instantRef.current}
-          items={catalog}
           onClose={() => setOpen(false)}
           onSubmit={(query) => {
             setOpen(false);

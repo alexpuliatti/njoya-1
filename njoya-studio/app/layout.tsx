@@ -5,7 +5,7 @@ import type { Metadata, Viewport } from "next";
 import { Providers } from "./providers";
 
 import { assetPath } from "@/lib/asset-path";
-import { getSearchIndex, getSite } from "@/lib/content/repository";
+import { getSite } from "@/lib/content/repository";
 import SearchProvider from "@/components/search-provider";
 import { Navbar } from "@/components/navbar";
 import StudioNavigation from "@/components/njoya-carousel-bottom-menu";
@@ -35,7 +35,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const [searchIndex, site] = await Promise.all([getSearchIndex(), getSite()]);
+  const site = await getSite();
 
   return (
     <html suppressHydrationWarning className="bg-[#261b15]" lang="en">
@@ -46,7 +46,7 @@ export default async function RootLayout({
         className={`${fontSans.variable} studio-body font-sans antialiased`}
       >
         <Providers themeProps={{ attribute: "class", forcedTheme: "dark" }}>
-          <SearchProvider catalog={searchIndex}>
+          <SearchProvider>
             <a className="skip-link" href="#main-content">
               Skip to content
             </a>
