@@ -1,10 +1,11 @@
 "use client";
 
 import type { ContentImage, LabEntry } from "@/lib/content/types";
+import type { CSSProperties } from "react";
 
 import { useId } from "react";
 
-import { coverSize } from "@/lib/image-sources";
+import { GradientDivider } from "@/components/gradient-components/gradient-divider";
 
 import styles from "./lab-project-dialog.module.css";
 import MediaGallery from "./media-gallery";
@@ -14,29 +15,36 @@ import {
   StudioDialogPanel,
 } from "./ui/studio-dialog";
 
-function LabImageGallery({
-  images,
-  sketches = false,
-}: {
-  images: ContentImage[];
-  sketches?: boolean;
-}) {
+function LabImageGallery({ images }: { images: ContentImage[] }) {
   const mobileWidth = "calc(100vw - 58px)";
   const desktopWidth = "min(calc((100vw - 130px) / 2), 553px)";
-  const imageSize = (width: string, image: ContentImage) =>
-    sketches
-      ? width
-      : coverSize(width, `min(calc((${width}) * 0.75), 360px)`, image);
 
   return (
-    <div className={`${styles.imageGrid} ${sketches ? styles.sketches : ""}`}>
-      {images.map((image) => (
-        <MediaGallery
-          key={image.src}
-          entries={[image]}
-          sizes={`(max-width: 767px) ${imageSize(mobileWidth, image)}, ${imageSize(desktopWidth, image)}`}
-        />
-      ))}
+    <div className={styles.imageGrid}>
+      {images.map((image) => {
+        const ratio = image.width / image.height;
+        // Preserve portraits; trim less than 3% vertically from landscapes.
+        const frameRatio = ratio > 1 ? ratio * 1.03 : ratio;
+        const maxWidth = `${360 * frameRatio}px`;
+
+        return (
+          <div
+            key={image.src}
+            className={styles.imageItem}
+            style={
+              {
+                "--lab-image-ratio": frameRatio,
+                "--lab-image-max-width": maxWidth,
+              } as CSSProperties
+            }
+          >
+            <MediaGallery
+              entries={[image]}
+              sizes={`(max-width: 767px) min(${mobileWidth}, ${maxWidth}), min(${desktopWidth}, ${maxWidth})`}
+            />
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -79,10 +87,15 @@ export default function LabProjectDialog({
             aria-labelledby={sketchesTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
+            <GradientDivider
+              animation="none"
+              className={styles.sectionDivider}
+              thickness="3px"
+            />
             <h3 className={styles.sectionTitle} id={sketchesTitleId}>
               Conceptual sketches
             </h3>
-            <LabImageGallery sketches images={project.sketches} />
+            <LabImageGallery images={project.sketches} />
           </section>
         ) : null}
         {project.making?.length ? (
@@ -90,6 +103,11 @@ export default function LabProjectDialog({
             aria-labelledby={makingTitleId}
             className={`${styles.gallery} ${styles.processSection}`}
           >
+            <GradientDivider
+              animation="none"
+              className={styles.sectionDivider}
+              thickness="3px"
+            />
             <h3 className={styles.sectionTitle} id={makingTitleId}>
               The Making
             </h3>
@@ -98,6 +116,11 @@ export default function LabProjectDialog({
         ) : null}
         {result.length > 0 ? (
           <section aria-labelledby={resultTitleId} className={styles.gallery}>
+            <GradientDivider
+              animation="none"
+              className={styles.sectionDivider}
+              thickness="3px"
+            />
             <h3 className={styles.sectionTitle} id={resultTitleId}>
               The result
             </h3>

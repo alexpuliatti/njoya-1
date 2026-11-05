@@ -31,7 +31,11 @@
 }
 
 .processSection {
-  margin-bottom: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
+}
+
+.sectionDivider {
+  margin-bottom: clamp(24px, 3vw, 36px);
 }
 
 .sectionTitle {
@@ -49,6 +53,12 @@
   gap: 24px;
 }
 
+.imageItem {
+  width: min(100%, var(--lab-image-max-width));
+  min-width: 0;
+  justify-self: center;
+}
+
 .imageGrid :global(.media-gallery) {
   display: block;
   min-width: 0;
@@ -61,15 +71,9 @@
 }
 
 .imageGrid :global(.media-gallery img) {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: var(--lab-image-ratio);
   height: auto;
-  max-height: 360px;
   object-fit: cover;
-}
-
-.sketches :global(.media-gallery img) {
-  object-fit: contain;
-  background: #fff;
 }
 
 @media (max-width: 767px) {
