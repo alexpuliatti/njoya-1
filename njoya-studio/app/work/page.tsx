@@ -34,10 +34,6 @@ export default async function WorkPage() {
               height: 800,
             }
           : works.find((work) => work.id === category.coverWorkId)?.cover;
-        const count = works.filter((work) =>
-          work.categories.includes(category.id),
-        ).length;
-
         return (
           <Link
             key={category.id}
@@ -62,9 +58,6 @@ export default async function WorkPage() {
               <span className="category-name">{category.title}</span>
               <span className="category-description">
                 {category.description}
-              </span>
-              <span className="category-count">
-                {count ? `${count} projects` : "Coming soon"}
               </span>
             </span>
           </Link>
