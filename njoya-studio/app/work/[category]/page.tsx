@@ -59,6 +59,7 @@ export default async function CategoryPage({
             category: category.title,
           }))}
           label={category.title}
+          loop={category.id === "motion" ? true : undefined}
         />
       ) : (
         <section className="empty-state">
