@@ -116,7 +116,7 @@ export default function LabProjectDialog({
           >
             <LabWalkingDivider action="build" />
             <h3 className={styles.sectionTitle} id={sketchesTitleId}>
-              Conceptual sketches
+              {project.sketchesTitle ?? "Conceptual sketches"}
             </h3>
             <LabImageGallery images={project.sketches} />
           </section>
@@ -141,6 +141,13 @@ export default function LabProjectDialog({
             </h3>
             <LabImageGallery images={result} />
           </section>
+        ) : null}
+        {project.closingParagraphs?.length ? (
+          <div className={`${styles.brief} ${styles.closing}`}>
+            {project.closingParagraphs.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         ) : null}
       </StudioDialogPanel>
     </StudioDialog>

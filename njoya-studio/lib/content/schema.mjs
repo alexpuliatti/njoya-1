@@ -169,9 +169,11 @@ export const labSchema = z
         client: z.string().min(1),
         title: z.string().min(1),
         brief: z.string().min(1),
+        sketchesTitle: z.string().min(1).optional(),
         sketches: z.array(imageSchema).optional(),
         making: z.array(imageSchema).optional(),
         result: z.array(imageSchema).optional(),
+        closingParagraphs: z.array(z.string().min(1)).optional(),
       })
       .strict()
       .optional(),

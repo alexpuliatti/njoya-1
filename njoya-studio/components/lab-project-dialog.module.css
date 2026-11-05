@@ -32,6 +32,21 @@
   padding: 0 24px 24px;
 }
 
+.closing {
+  max-width: 860px;
+  margin: 24px auto 0;
+  padding: 0 24px 40px;
+  white-space: normal;
+}
+
+.closing p {
+  margin: 0;
+}
+
+.closing p + p {
+  margin-top: 1em;
+}
+
 .processSection {
   margin-bottom: clamp(32px, 4vw, 48px);
 }
@@ -81,6 +96,11 @@
 
   .gallery {
     padding: 0 16px 16px;
+  }
+
+  .closing {
+    margin-top: 16px;
+    padding: 0 16px 32px;
   }
 
   .imageRow {
