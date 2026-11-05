@@ -1050,6 +1050,14 @@ html[data-njoya-intro="skip"] .intro-overlay {
   line-height: 1.8;
   color: var(--studio-muted);
 }
+.media-gallery figure.film-media {
+  width: min(100%, 440px);
+}
+.media-gallery .film-media video {
+  max-height: 75svh;
+  object-fit: contain;
+  background: #000;
+}
 .synopsis-text {
   max-width: 650px;
 }

@@ -81,8 +81,8 @@ await Promise.all(
         if (entry.status === 200 && !site.videoPlaybackEnabled) {
           assert.doesNotMatch(
             html,
-            /<video\b|(?:stream|image)\.mux\.com/i,
-            `${entry.url}: disabled video playback must use local stills`,
+            /(?:stream|image)\.mux\.com/i,
+            `${entry.url}: disabled remote video playback must not load Mux`,
           );
         }
       } catch (error) {

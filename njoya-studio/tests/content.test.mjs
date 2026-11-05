@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { validateContent } from "../scripts/validate-content.mjs";
 import { matchesSearch, normalizeSearch } from "../lib/content/search.mjs";
-import { workSchema } from "../lib/content/schema.mjs";
+import { workSchema, videoSchema } from "../lib/content/schema.mjs";
 import { compareWorkDate } from "../lib/content/order.mjs";
 
 const content = await validateContent();
@@ -113,6 +113,23 @@ test("ordered galleries support a synopsis image between photographs and videos"
     result.gallery.map((entry) => entry.type),
     ["image", "synopsis", "video"],
   );
+});
+test("local films require a prepared poster and cannot reference remote or traversing paths", () => {
+  const film = content.works.find((work) => work.slug === "balmain-motion").gallery[0];
+  assert.equal(videoSchema.safeParse(film).success, true);
+  assert.equal(videoSchema.safeParse({ ...film, poster: undefined }).success, false);
+  for (const src of ["https://example.com/film.mp4", "/media/videos/../film.mp4", "/media/videos/film.mov"]) {
+    assert.equal(videoSchema.safeParse({ ...film, src }).success, false);
+  }
+});
+test("Balmain is a Motion project with all three local films and supplied credits", () => {
+  const work = content.works.find((work) => work.slug === "balmain-motion");
+  assert.deepEqual(work.categories, ["motion"]);
+  assert.equal(work.gallery.length, 3);
+  assert.ok(work.gallery.every((entry) => entry.type === "video" && "src" in entry));
+  assert.equal(work.credits.length, 8);
+  assert.ok(work.credits.some((credit) => credit.name === "Carlijn Jacobs"));
+  assert.equal(content.categories.find((category) => category.id === "motion").coverWorkId, work.id);
 });
 test("the four homepage heroes resolve to published projects, including the supplied Jaguar work", () => {
   assert.equal(content.home.featured.length, 4);
