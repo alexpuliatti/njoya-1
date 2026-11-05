@@ -5169,5 +5169,41 @@
     "profile": "web",
     "width": 1280,
     "height": 478
+  },
+  "bf33213fa96dfe0a839e1384c4104992d1083d3d": {
+    "file": "719a90f765981f474298659b8f865cd05b791f34-2477x1651.png",
+    "originalFilename": "Bride de galaxy #1.png",
+    "width": 2477,
+    "height": 1651,
+    "profile": "cover"
+  },
+  "ec36b95a2d0f4e5c70cfc339ba4bfae007e7b488": {
+    "file": "6925a13f78612ce845a8414b9362cbac1d9673d2-8192x5464.png",
+    "originalFilename": "Image1.png",
+    "width": 8192,
+    "height": 5464,
+    "profile": "cover"
+  },
+  "5668d79c18261ab27144989196ef5bb6767bea42": {
+    "file": "5bd592197cf506be7d3b61c22bd93ddcfb7ea173-4500x5625.jpg",
+    "originalFilename": "DIGIT_Lacoste_BC24_Venus_4_5.jpg",
+    "width": 4500,
+    "height": 5625,
+    "profile": "cover"
+  },
+  "c1805d75886508f8e1bfbd6641b076baef544e7f": {
+    "file": "bbcf158f1acf15c7dfd99485f0cecf8ed53cdd29-1200x1500.jpg",
+    "originalFilename": "IG Covers3.jpg",
+    "width": 1200,
+    "height": 1500,
+    "profile": "cover"
+  },
+  "b0817af76ff4a30339bc4e7e35615083b2cade90": {
+    "file": "COVER IMAGE.jpg",
+    "localSource": "media/originals/cd898e14219d6c1388089a7221d04785a06a7904.jpg",
+    "originalFilename": "COVER IMAGE.jpg",
+    "profile": "cover",
+    "width": 1080,
+    "height": 1350
   }
 }

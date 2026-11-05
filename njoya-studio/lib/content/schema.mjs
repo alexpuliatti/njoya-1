@@ -105,6 +105,7 @@ export const categorySchema = z
     title: z.string().min(1),
     description: z.string(),
     coverWorkId: z.string().min(1),
+    cover: imageSchema.optional(),
   })
   .strict();
 export const homeSchema = z

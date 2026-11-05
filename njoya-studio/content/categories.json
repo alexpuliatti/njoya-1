@@ -3,30 +3,70 @@
     "id": "worlds",
     "title": "Worlds",
     "description": "Spaces, environments and experiences.",
-    "coverWorkId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272"
+    "coverWorkId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272",
+    "cover": {
+      "type": "image",
+      "src": "/media/images/bf33213fa96dfe0a839e1384c4104992d1083d3d-pb056f30.webp",
+      "previewSrc": "/media/images/bf33213fa96dfe0a839e1384c4104992d1083d3d-pb056f30-320.webp",
+      "alt": "Bride De Galaxy Image 1",
+      "width": 2477,
+      "height": 1651
+    }
   },
   {
     "id": "exhibition",
     "title": "Exhibition",
     "description": "Stories brought into physical space.",
-    "coverWorkId": "fefe418e-7518-4af7-a591-1cad5a67c3e4"
+    "coverWorkId": "fefe418e-7518-4af7-a591-1cad5a67c3e4",
+    "cover": {
+      "type": "image",
+      "src": "/media/images/ec36b95a2d0f4e5c70cfc339ba4bfae007e7b488-pb056f30.webp",
+      "previewSrc": "/media/images/ec36b95a2d0f4e5c70cfc339ba4bfae007e7b488-pb056f30-320.avif",
+      "alt": "NAOMI: In Fashion",
+      "width": 8192,
+      "height": 5464
+    }
   },
   {
     "id": "commercials",
     "title": "Commercials",
     "description": "Imagined worlds for brands.",
-    "coverWorkId": "eba3e495-0a85-4a16-ac67-00535be1f3ad"
+    "coverWorkId": "eba3e495-0a85-4a16-ac67-00535be1f3ad",
+    "cover": {
+      "type": "image",
+      "src": "/media/images/5668d79c18261ab27144989196ef5bb6767bea42-pb056f30.webp",
+      "previewSrc": "/media/images/5668d79c18261ab27144989196ef5bb6767bea42-pb056f30-320.avif",
+      "alt": "Venus Williams in a deep burgundy athletic set and red sneakers holds open the massive jaws of an oversized sculptural green crocodile with one arm raised, one foot planted on its red tongue — bold, athletic, and larger-than-life against a clean white background. Tagline: LACOSTE · PLAY BIG.",
+      "width": 4500,
+      "height": 5625
+    }
   },
   {
     "id": "editorials",
     "title": "Editorials",
     "description": "Image-making through colour and storytelling.",
-    "coverWorkId": "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef"
+    "coverWorkId": "d59ae7c0-21b9-40aa-9f6e-8a127efda8ef",
+    "cover": {
+      "type": "image",
+      "src": "/media/images/c1805d75886508f8e1bfbd6641b076baef544e7f-pb056f30.webp",
+      "previewSrc": "/media/images/c1805d75886508f8e1bfbd6641b076baef544e7f-pb056f30-320.avif",
+      "alt": "Rihanna stands centred against a deep blood-red backdrop, flanked by models Alton Mason and Omar Sesay in tailored black suits. She wears a sweeping floor-length white trench coat open over a minimal white string bikini, paired with thigh-high white leather boots, and holds a tall white cane. Her hair is a slicked, jet-black pixie-mullet, lips painted matte red. Mason holds an oversized white dome umbrella above her; Sesay carries a black briefcase. The mood is monumental, regal, and pristine — pure power dressing flipped into editorial drama. The bold black \"DAZED\" logotype dominates the top, with \"The Reign Never Stops\" stacked at right and \"30th Anniversary Issue\" running vertically.",
+      "width": 1200,
+      "height": 1500
+    }
   },
   {
     "id": "motion",
     "title": "Motion",
     "description": "Film, movement and visual storytelling.",
-    "coverWorkId": "balmain-motion"
+    "coverWorkId": "balmain-motion",
+    "cover": {
+      "type": "image",
+      "src": "/media/images/b0817af76ff4a30339bc4e7e35615083b2cade90-pb056f30.webp",
+      "previewSrc": "/media/images/b0817af76ff4a30339bc4e7e35615083b2cade90-pb056f30-320.webp",
+      "alt": "Balmain fragrance campaign: a model poses with an oversized bronze perfume bottle against a vivid green background and a ring of fire.",
+      "width": 1080,
+      "height": 1350
+    }
   }
 ]

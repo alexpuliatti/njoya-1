@@ -142,6 +142,10 @@ Use a prepared image object for the poster, just as for a project cover:
 
 `coverVideoPlaybackId` holds a cover-film reference. Always retain the local image cover.
 
+## Category covers
+
+The five Work category cards in `content/categories.json` have their own optional `cover` image objects, separate from the project's full-quality cover. Their source entries use `"profile": "cover"` for lighter AVIF/WebP files and additional 320px and 640px responsive sizes. `npm run media:prepare` regenerates them alongside the project images. When changing `coverWorkId`, replace or remove the category's `cover` too; without it the card falls back to the project cover.
+
 ## Select homepage projects
 
 `content/home.json` contains exactly four `{ "title": "Display title", "workId": "PROJECT_ID" }` entries. Match `workId` to a project's `id`. The studio statement is separate and stays fixed while the four project slots browse in a loop.

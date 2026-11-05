@@ -106,7 +106,7 @@ export const getAbout = cache(
 );
 export const getCategories = cache(
   async (): Promise<Category[]> =>
-    z.array(categorySchema).parse(await readJson("categories.json")),
+    withMedia(z.array(categorySchema).parse(await readJson("categories.json"))),
 );
 export const getCollections = cache(
   async (): Promise<Collection[]> =>

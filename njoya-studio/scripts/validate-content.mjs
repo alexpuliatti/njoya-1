@@ -108,9 +108,11 @@ export async function validateContent({ checkMedia = true } = {}) {
         throw new Error(`Broken collection link: ${collection.slug} -> ${id}`);
     addImage(collection.cover);
   }
-  for (const category of categories)
+  for (const category of categories) {
     if (!ids.has(category.coverWorkId))
       throw new Error(`Unknown category cover: ${category.id}`);
+    addImage(category.cover);
+  }
   const featuredIds = home.featured
     .map((entry) => entry.workId)
     .filter(Boolean);
