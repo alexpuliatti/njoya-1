@@ -98,6 +98,7 @@ export async function validateContent({ checkMedia = true } = {}) {
       if (entry.type !== "video") addImage(entry);
       else if ("src" in entry) {
         videoPaths.add(entry.src);
+        if (entry.previewVideoSrc) videoPaths.add(entry.previewVideoSrc);
         addImage(entry.poster);
       }
     }

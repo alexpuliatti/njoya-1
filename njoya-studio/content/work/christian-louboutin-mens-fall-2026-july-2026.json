@@ -21,6 +21,7 @@
     {
       "type": "video",
       "src": "/media/videos/louboutin-film-12dd8a77c8.mp4",
+      "previewVideoSrc": "/media/videos/louboutin-preview-12dd8a77c8.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/f0450d54d967e71da3c9635a05ac589105242c35-pe8c9d63.webp",

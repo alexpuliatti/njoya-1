@@ -2,7 +2,7 @@ import type { GalleryEntry } from "@/lib/content/types";
 import type { CSSProperties } from "react";
 
 import Image from "./studio-image";
-import StudioVideo from "./studio-video";
+import GalleryFilm from "./gallery-film";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl, muxThumbnail } from "@/lib/mux";
@@ -11,19 +11,29 @@ export default function MediaGallery({
   entries,
   maxWidth = 780,
   sizes = `(max-width: 767px) calc(100vw - 48px), ${maxWidth}px`,
+  hoverPreviews = false,
 }: {
   entries: GalleryEntry[];
   maxWidth?: number;
   sizes?: string;
+  hoverPreviews?: boolean;
 }) {
   if (!entries.length) return null;
+  const filmsOnly = entries.every((entry) => entry.type === "video");
 
   return (
     <div
-      className={
-        entries.length === 1
-          ? "media-gallery media-gallery-single"
-          : "media-gallery"
+      className={[
+        "media-gallery",
+        entries.length === 1 ? "media-gallery-single" : "",
+        filmsOnly ? "media-gallery-films" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
+      style={
+        filmsOnly
+          ? ({ "--film-columns": Math.min(entries.length, 3) } as CSSProperties)
+          : undefined
       }
     >
       {entries.map((entry, index) => (
@@ -48,18 +58,20 @@ export default function MediaGallery({
           }
         >
           {entry.type === "video" ? (
-            <StudioVideo
-              controls
-              playsInline
+            <GalleryFilm
               aria-label={entry.alt}
               height={"src" in entry ? entry.poster.height : undefined}
-              muted={false}
+              hoverPreview={hoverPreviews}
               poster={
                 "src" in entry
                   ? assetPath(entry.poster.src)
                   : muxThumbnail(entry.playbackId)
               }
-              preload="none"
+              previewSrc={
+                "src" in entry && entry.previewVideoSrc
+                  ? assetPath(entry.previewVideoSrc)
+                  : undefined
+              }
               src={
                 "src" in entry
                   ? assetPath(entry.src)

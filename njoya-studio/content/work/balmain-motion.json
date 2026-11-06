@@ -21,6 +21,7 @@
     {
       "type": "video",
       "src": "/media/videos/balmain-film-01-207ace2216.mp4",
+      "previewVideoSrc": "/media/videos/balmain-preview-207ace2216.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/b2a97824a5ebd48199462b57e72ab0f4964045ea-pe8c9d63.webp",
@@ -34,6 +35,7 @@
     {
       "type": "video",
       "src": "/media/videos/balmain-film-02-55dd0456a3.mp4",
+      "previewVideoSrc": "/media/videos/balmain-preview-02-55dd0456a3-hover.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/402178268e7188ab0a26f919f33ed1d3f03f3b95-pe8c9d63.webp",
@@ -47,6 +49,7 @@
     {
       "type": "video",
       "src": "/media/videos/balmain-film-03-f7b9871923.mp4",
+      "previewVideoSrc": "/media/videos/balmain-preview-03-f7b9871923-hover.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/dd1e64676f80b818d68e6d661a0f5d5dccf2fee8-pe8c9d63.webp",

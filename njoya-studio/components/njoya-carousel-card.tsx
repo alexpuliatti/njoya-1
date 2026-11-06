@@ -40,7 +40,7 @@ interface Props {
                  FLIP clone source. For video items this
                  is the Mux thumbnail; for image-only
                  items it's the cover image.
-     2. <StudioVideo>  overlay — only when coverVideoPlaybackId.
+     2. <StudioVideo>  overlay — when a local or legacy preview exists.
                  Starts at opacity 0; fades in + plays on
                  hover, fades out + pauses on leave.
      3. gradient
@@ -65,6 +65,8 @@ export default function NjoyaCarouselCard({
   const gradRef = useRef<HTMLDivElement>(null);
 
   const hoverTl = useRef<gsap.core.Timeline | null>(null);
+  const videoFade = useRef<gsap.core.Tween | null>(null);
+  const isHoveringRef = useRef(false);
   const isLaunchingRef = useRef(false);
   const hasPrefetchedRef = useRef(false);
   const hasPreloadedHeroRef = useRef(false);
@@ -78,20 +80,16 @@ export default function NjoyaCarouselCard({
 
   /* ── Reset to base ─────────────────────────────────── */
   const resetHover = useCallback(() => {
+    isHoveringRef.current = false;
+    isLaunchingRef.current = false;
     hoverTl.current?.kill();
+    videoFade.current?.kill();
+    videoRef.current?.pause();
     const duration = window.matchMedia("(prefers-reduced-motion: reduce)")
       .matches
       ? 0
       : 0.22;
-    const tl = gsap.timeline({
-      onComplete: () => {
-        isLaunchingRef.current = false;
-        // Pause the video so it stops decoding when off-screen.
-        // Don't reset currentTime — that flashes the very first
-        // frame, which can differ from the poster thumbnail.
-        if (videoRef.current) videoRef.current.pause();
-      },
-    });
+    const tl = gsap.timeline();
 
     tl.to(morphRef.current, { y: 0, duration, ease: "power2.out" }, 0).to(
       [imgRef.current, gradRef.current],
@@ -114,6 +112,7 @@ export default function NjoyaCarouselCard({
     )
       return;
     if (isLaunchingRef.current) return;
+    isHoveringRef.current = true;
 
     if (item.isMultiEdition && item.href && !hasPrefetchedRef.current) {
       router.prefetch(item.href);
@@ -140,6 +139,7 @@ export default function NjoyaCarouselCard({
     }
 
     hoverTl.current?.kill();
+    videoFade.current?.kill();
     const tl = gsap.timeline();
 
     tl.to(
@@ -152,18 +152,26 @@ export default function NjoyaCarouselCard({
       0,
     );
 
-    // Kick the video: play first (so the frame is decoded), then
-    // fade it in over the poster. play() returns a Promise that may
-    // reject on autoplay policy — we swallow it because muted videos
-    // are allowed to autoplay everywhere.
+    // Keep the still visible until playback actually starts. A rejected or
+    // slow request must not leave a blank overlay over the prepared cover.
     if (videoRef.current) {
       const v = videoRef.current;
-      const playPromise = v.play();
 
-      if (playPromise && typeof playPromise.catch === "function") {
-        playPromise.catch(() => undefined);
-      }
-      tl.to(v, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0.05);
+      v.muted = true;
+      v.play()
+        .then(() => {
+          if (!isHoveringRef.current || isLaunchingRef.current) {
+            v.pause();
+
+            return;
+          }
+          videoFade.current = gsap.to(v, {
+            opacity: 1,
+            duration: 0.25,
+            ease: "power2.out",
+          });
+        })
+        .catch(() => undefined);
     }
 
     hoverTl.current = tl;
@@ -181,33 +189,46 @@ export default function NjoyaCarouselCard({
   useEffect(
     () => () => {
       hoverTl.current?.kill();
+      videoFade.current?.kill();
+      isHoveringRef.current = false;
     },
     [],
   );
 
   useEffect(() => {
     const video = videoRef.current;
+
     if (!video) return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const pauseWhenHidden = () => {
-      if (document.hidden) video.pause();
+      if (document.hidden) resetHover();
+    };
+    const reduceMotion = () => {
+      if (motion.matches) resetHover();
     };
     const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) video.pause();
+      if (!entry.isIntersecting) resetHover();
     });
+
     observer.observe(video);
     document.addEventListener("visibilitychange", pauseWhenHidden);
+    motion.addEventListener("change", reduceMotion);
+
     return () => {
       observer.disconnect();
       document.removeEventListener("visibilitychange", pauseWhenHidden);
+      motion.removeEventListener("change", reduceMotion);
       video.pause();
     };
-  }, [hasVideo]);
+  }, [hasVideo, resetHover]);
 
   /* ── Click: launch detail panel ────────────────────── */
   const handleClick = (instant = false) => {
     if (!imgRef.current) return;
     isLaunchingRef.current = true;
+    isHoveringRef.current = false;
     hoverTl.current?.kill();
+    videoFade.current?.kill();
     videoRef.current?.pause();
     // Always pass the <img> — the panel clones the still poster,
     // which is what was visible (or about to be visible) anyway.
@@ -276,12 +297,12 @@ export default function NjoyaCarouselCard({
             loop
             muted
             playsInline
-            className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
             aria-hidden="true"
+            className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
             preload="none"
             src={videoSource}
-            tabIndex={-1}
             style={{ opacity: 0, borderRadius: "var(--studio-radius)" }}
+            tabIndex={-1}
           />
         )}
 
