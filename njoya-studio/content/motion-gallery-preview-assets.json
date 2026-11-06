@@ -1,0 +1,198 @@
+{
+  "purpose": "Separate short silent clips for Motion gallery hover previews. Full films, posters, and approved audio are unchanged.",
+  "encoding": "New clips: H.264 libx264, CRF 22, preset slow, yuv420p, source frame rate, Lanczos downscale, six seconds, audio removed, faststart. Existing prepared clips reused when they match the film.",
+  "films": [
+    {
+      "filmSrc": "/media/videos/balmain-film-01-207ace2216.mp4",
+      "source": "/media/videos/balmain-film-01-207ace2216.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 25.08,
+        "bytes": 5443867,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/balmain-preview-207ace2216.mp4",
+      "previewInfo": {
+        "width": 540,
+        "height": 960,
+        "duration": 8.0,
+        "bytes": 1284519,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": true
+    },
+    {
+      "filmSrc": "/media/videos/balmain-film-02-55dd0456a3.mp4",
+      "source": "motion/BALMAIN/Video/Snapinsta.app_video_An8pwbAco85Z1O4-GsGPp5Vr-rXoOFaKFBb9c6W7HqZQ77XKKK67joSmlL_U2Tv-xoBHaG9Vy4REMU77mp_qmdw1.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 25.1,
+        "bytes": 6235968,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/balmain-preview-02-55dd0456a3-hover.mp4",
+      "previewInfo": {
+        "width": 540,
+        "height": 960,
+        "duration": 6.0,
+        "bytes": 819778,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": false
+    },
+    {
+      "filmSrc": "/media/videos/balmain-film-03-f7b9871923.mp4",
+      "source": "motion/BALMAIN/Video/Snapinsta.app_video_An_tgMY36zRVmZLmM_8nN2LSDEpr2zfmN4aGqICmN-884Aw7CwuEMNBK1oVDn_mKgfjBkVLjlkETGlFLfUInI7tz.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1920,
+        "duration": 25.12,
+        "bytes": 7199260,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/balmain-preview-03-f7b9871923-hover.mp4",
+      "previewInfo": {
+        "width": 540,
+        "height": 960,
+        "duration": 6.0,
+        "bytes": 595506,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": false
+    },
+    {
+      "filmSrc": "/media/videos/mac-full-cast-a47a1f4fc7.mp4",
+      "source": "motion/MAC/VIDEO Full Cast Simulator_1x1_ONLINE.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1080,
+        "duration": 28.36,
+        "bytes": 66110397,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/mac-full-cast-a47a1f4fc7-hover.mp4",
+      "previewInfo": {
+        "width": 640,
+        "height": 640,
+        "duration": 6.0,
+        "bytes": 542799,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": false
+    },
+    {
+      "filmSrc": "/media/videos/mac-gabbriette-1f2116e004.mp4",
+      "source": "/media/videos/mac-gabbriette-1f2116e004.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1080,
+        "duration": 15.0,
+        "bytes": 6882652,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/mac-preview-1f2116e004.mp4",
+      "previewInfo": {
+        "width": 640,
+        "height": 640,
+        "duration": 6.0,
+        "bytes": 511258,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": true
+    },
+    {
+      "filmSrc": "/media/videos/mac-kris-2871ddf0b8.mp4",
+      "source": "motion/MAC/VIDEO Kris_Simulator_1x1_PAID.mp4",
+      "sourceInfo": {
+        "width": 1080,
+        "height": 1080,
+        "duration": 15.0,
+        "bytes": 30581495,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/mac-kris-2871ddf0b8-hover.mp4",
+      "previewInfo": {
+        "width": 640,
+        "height": 640,
+        "duration": 6.0,
+        "bytes": 340746,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": false
+    },
+    {
+      "filmSrc": "/media/videos/chanel-film-478eb394b5.mp4",
+      "source": "/media/videos/chanel-film-478eb394b5.mp4",
+      "sourceInfo": {
+        "width": 1280,
+        "height": 478,
+        "duration": 10.33,
+        "bytes": 1842008,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/chanel-preview-478eb394b5.mp4",
+      "previewInfo": {
+        "width": 640,
+        "height": 240,
+        "duration": 8.0,
+        "bytes": 429088,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": true
+    },
+    {
+      "filmSrc": "/media/videos/louboutin-film-12dd8a77c8.mp4",
+      "source": "/media/videos/louboutin-film-12dd8a77c8.mp4",
+      "sourceInfo": {
+        "width": 720,
+        "height": 1280,
+        "duration": 10.06,
+        "bytes": 2727348,
+        "audio": true,
+        "h264": true,
+        "yuv420p": true
+      },
+      "previewVideoSrc": "/media/videos/louboutin-preview-12dd8a77c8.mp4",
+      "previewInfo": {
+        "width": 480,
+        "height": 854,
+        "duration": 6.0,
+        "bytes": 513114,
+        "audio": false,
+        "h264": true,
+        "yuv420p": true
+      },
+      "reusedExistingPreview": true
+    }
+  ]
+}

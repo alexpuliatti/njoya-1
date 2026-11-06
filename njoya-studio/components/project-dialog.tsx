@@ -122,7 +122,11 @@ export default function ProjectDialog({
                 {gallery.length === 1 ? "entry" : "entries"}
               </span>
             </div>
-            <MediaGallery entries={gallery} maxWidth={780} />
+            <MediaGallery
+              entries={gallery}
+              hoverPreviews={item.videoOnly}
+              maxWidth={780}
+            />
           </section>
         )}
       </StudioDialogPanel>

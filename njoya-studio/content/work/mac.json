@@ -21,6 +21,7 @@
     {
       "type": "video",
       "src": "/media/videos/mac-full-cast-a47a1f4fc7.mp4",
+      "previewVideoSrc": "/media/videos/mac-full-cast-a47a1f4fc7-hover.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/160905b2c1d852ed619d36f0e516e43a3521b173-pe8c9d63.webp",
@@ -34,6 +35,7 @@
     {
       "type": "video",
       "src": "/media/videos/mac-gabbriette-1f2116e004.mp4",
+      "previewVideoSrc": "/media/videos/mac-preview-1f2116e004.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/0a2040b8e340c7a18ecdc12d27066dfdc1bc202c-pe8c9d63.webp",
@@ -47,6 +49,7 @@
     {
       "type": "video",
       "src": "/media/videos/mac-kris-2871ddf0b8.mp4",
+      "previewVideoSrc": "/media/videos/mac-kris-2871ddf0b8-hover.mp4",
       "poster": {
         "type": "image",
         "src": "/media/images/3fe84fec7848ff7f24c408873f806b171dd6db1f-pe8c9d63.webp",

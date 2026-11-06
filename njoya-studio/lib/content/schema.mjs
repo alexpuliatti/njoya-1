@@ -49,6 +49,7 @@ export const localVideoSchema = z
   .object({
     type: z.literal("video"),
     src: localVideoPath,
+    previewVideoSrc: localVideoPath.optional(),
     poster: imageSchema,
     alt: z.string().min(1),
   })
