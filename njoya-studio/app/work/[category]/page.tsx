@@ -55,7 +55,12 @@ export default async function CategoryPage({
       {selected.length ? (
         <NjoyaCarousel
           items={selected.map((work) =>
-            toCarouselItem(work, categories, site.videoPlaybackEnabled),
+            toCarouselItem(
+              work,
+              categories,
+              site.videoPlaybackEnabled,
+              category.id,
+            ),
           )}
           label={category.title}
           loop={category.id === "motion" ? true : undefined}

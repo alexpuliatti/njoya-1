@@ -25,3 +25,11 @@ Movement assets: `observer-walk-down.webp`, `observer-walk-left.webp`, `observer
 The homepage card shares one semantic headline between the builder and explorer. Once the artwork is ready and the existing intro clears, they start together: the builder pulls the W and performs its twelve-frame turn on BUILD; the explorer rolls the O into the same WORLDS line, returns beside S and performs its own twelve-frame turn. Both remain visible on the final frame. The turn strips and exact generation/cleanup prompts are documented in `docs/card-turn-prompts.json`. The observer's About walking and blinking are unchanged. The homepage scene plays once, leaves the card link available, pauses in a hidden tab, and presents a readable still headline for reduced motion or artwork errors. The three original studies remain available; further exploration continues on the motion branch.
 
 The cast should feel like it inhabits the typography and edges of the work. Each moment has a short action and a clear finish; larger appearances belong in the Lab, with occasional smaller appearances elsewhere.
+
+## Lab project dividers
+
+The observer appears along the warm gradient lines inside Lab project dialogs. Above Conceptual sketches, 24 drawn character poses build a three-brick wall once: the scene starts empty, adds one separately controlled brick at a time, and keeps the finished wall standing. Above The Making, a 16-frame dance loops at eight frames per second. Above The result, the existing eight-frame walk goes off the end and re-enters from the opposite side in the same direction. Actions pause outside the dialog viewport or in a hidden tab and resume from their previous position. Reduced motion shows a still pose on the line.
+
+Open a project on `/lab` to see the actions; reopening a project restarts the build. `components/lab-walking-divider.tsx` and its CSS module own playback, travel, and foot alignment. `lib/character-actions.ts` defines the shared build timeline and fixed brick placements. The lines reuse the existing static `GradientDivider` to avoid window-scroll subscriptions inside the independently scrolling dialog.
+
+Prompts, source art, packing metadata and contact sheets are in `docs/character-actions/`.

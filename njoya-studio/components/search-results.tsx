@@ -1,23 +1,24 @@
 "use client";
 
-import type { NjoyaCarouselItem, SearchItem } from "@/lib/njoya-carousel-types";
+import type { NjoyaCarouselItem } from "@/lib/njoya-carousel-types";
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 
 import NjoyaCarousel from "./njoya-carousel";
+import { StudioButton } from "./ui/studio-button";
 
 import { matchesSearch } from "@/lib/content/search.mjs";
 import { assetPath } from "@/lib/asset-path";
+import { useSearchCatalog } from "@/lib/use-search-catalog";
 
 export default function SearchResults({
-  index,
   items,
 }: {
-  index: SearchItem[];
   items: NjoyaCarouselItem[];
 }) {
+  const { catalog: index, loading, error, retry } = useSearchCatalog();
   const query = (useSearchParams().get("q") ?? "").trim();
   const router = useRouter();
   const matchedIds = new Set(
@@ -60,14 +61,25 @@ export default function SearchResults({
             </button>
           </div>
         </form>
-        {query && (
+        {query && !loading && !error && (
           <p>
             {results.length} {results.length === 1 ? "project" : "projects"} for
             “{query}”
           </p>
         )}
       </section>
-      {results.length ? (
+      {loading ? (
+        <div className="empty-state" role="status">
+          Loading search…
+        </div>
+      ) : error ? (
+        <div className="empty-state" role="alert">
+          <p>Search couldn’t load.</p>
+          <StudioButton variant="outline" onClick={retry}>
+            Try again
+          </StudioButton>
+        </div>
+      ) : results.length ? (
         <NjoyaCarousel items={results} label={`Results for ${query}`} />
       ) : (
         <div className="empty-state">

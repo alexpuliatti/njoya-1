@@ -31,8 +31,8 @@ export default async function LabPage() {
       </header>
       {entries.length ? (
         <div className={styles.studies}>
-          {entries.map((entry) => (
-            <LabCaseStudy key={entry.id} entry={entry} />
+          {entries.map((entry, index) => (
+            <LabCaseStudy key={entry.id} entry={entry} priority={index === 0} />
           ))}
         </div>
       ) : (

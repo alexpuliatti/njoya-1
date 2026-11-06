@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import fs from "node:fs/promises";
 import path from "node:path";
+import { assertExportMedia } from "./export-media.mjs";
+import { matchesSearch } from "../lib/content/search.mjs";
 
 const output = path.resolve("out");
 const { basePath, origin } = JSON.parse(
@@ -46,6 +48,38 @@ const exists = async (file) =>
     () => true,
     () => false,
   );
+const searchIndex = JSON.parse(
+  await fs.readFile(path.join(output, "search-index.json"), "utf8"),
+);
+assert.ok(Array.isArray(searchIndex), "Missing shared search catalog");
+assert.deepEqual(
+  searchIndex.map((item) => item.id).sort(),
+  works.map((work) => work.id).sort(),
+  "Shared search catalog must contain every Work project exactly once",
+);
+for (const work of works) {
+  const item = searchIndex.find((item) => item.id === work.id);
+  assert.equal(item.href, `/work/projects/${work.slug}`);
+  assert.equal(item.imageUrl, work.cover.previewSrc);
+  assert.ok(
+    matchesSearch(item, work.title),
+    `Unsearchable project: ${work.slug}`,
+  );
+}
+for (const [query, minimum] of [
+  ["Rihanna", 2],
+  ["hermes Luiza", 1],
+  ["Kwok Hei Yung", 1],
+]) {
+  assert.ok(
+    searchIndex.filter((item) => matchesSearch(item, query)).length >= minimum,
+    `Shared search catalog lost credit/accent matching: ${query}`,
+  );
+}
+await assertExportMedia({
+  output,
+  images: (await read("media-variants.json")).images,
+});
 for (const route of routes)
   assert.ok(await exists(pagePath(route)), `Missing static page: ${route}`);
 for (const [url, destination] of Object.entries(aliases)) {
@@ -58,14 +92,26 @@ for (const [url, destination] of Object.entries(aliases)) {
 // A serialized source in the React payload is insufficient: native local
 // films must have a playable src in the exported video element itself.
 for (const work of works) {
-  const localFilms = work.gallery.filter((entry) => entry.type === "video" && entry.src);
+  const localFilms = work.gallery.filter(
+    (entry) => entry.type === "video" && entry.src,
+  );
   if (!localFilms.length) continue;
-  const html = await fs.readFile(pagePath(`/work/projects/${work.slug}`), "utf8");
-  const players = [...html.matchAll(/<video\b[^>]*>/g)].map((match) => match[0]);
+  const html = await fs.readFile(
+    pagePath(`/work/projects/${work.slug}`),
+    "utf8",
+  );
+  const players = [...html.matchAll(/<video\b[^>]*>/g)].map(
+    (match) => match[0],
+  );
   for (const film of localFilms) {
-    const player = players.find((tag) => tag.includes(`src="${basePath}${film.src}"`));
+    const player = players.find((tag) =>
+      tag.includes(`src="${basePath}${film.src}"`),
+    );
     assert.ok(player, `Missing playable local film: ${film.src}`);
-    assert.ok(player.includes('controls=""') && player.includes('preload="none"'), `Local films need controls and deferred loading: ${film.src}`);
+    assert.ok(
+      player.includes('controls=""') && player.includes('preload="none"'),
+      `Local films need controls and deferred loading: ${film.src}`,
+    );
   }
 }
 assert.ok(
@@ -85,6 +131,17 @@ for (const route of [...routes, "/404.html"]) {
     /\/_next\/image\?/,
     `Image optimizer is unavailable on Pages: ${route}`,
   );
+  assert.ok(
+    !html.includes("searchText"),
+    `Search catalog embedded in page: ${route}`,
+  );
+  const payload = path.join(output, route, "index.txt");
+  if (await exists(payload)) {
+    assert.ok(
+      !(await fs.readFile(payload, "utf8")).includes("searchText"),
+      `Search catalog embedded in navigation payload: ${route}`,
+    );
+  }
   const urls = [...html.matchAll(/\b(?:src|href|poster)="(\/[^\"]*)"/g)].map(
     (match) => match[1],
   );
@@ -111,6 +168,10 @@ for (const route of [...routes, "/404.html"]) {
       decodeURIComponent(url.slice(basePath.length).split(/[?#]/)[0] || "/"),
     );
   }
+}
+for (const item of searchIndex) {
+  assets.add(item.href);
+  assets.add(item.imageUrl);
 }
 for (const url of assets) {
   const file = path.join(output, url);

@@ -1,0 +1,14 @@
+{
+  "source": "motion/CHANEL/Video.mov",
+  "sourceBytes": 5008874,
+  "src": "/media/videos/chanel-film-478eb394b5.mp4",
+  "bytes": 1842008,
+  "previewVideoSrc": "/media/videos/chanel-preview-478eb394b5.mp4",
+  "previewBytes": 429088,
+  "width": 1280,
+  "height": 478,
+  "audio": false,
+  "encoding": "H.264, CRF 18, preset slow, yuv420p, full-to-limited BT.709 range conversion, original frame timing, faststart; audio removed with -an",
+  "preview": "Eight seconds, 640px wide, H.264 CRF 20, no audio",
+  "ssim": 0.996077
+}

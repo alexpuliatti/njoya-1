@@ -1,0 +1,47 @@
+{
+  "encoding": "H.264 CRF 18, preset slow, yuv420p, original 1080×1080 resolution and frame timing; original AAC audio copied; faststart",
+  "films": [
+    {
+      "label": "full-cast",
+      "source": "motion/MAC/VIDEO Full Cast Simulator_1x1_ONLINE.mp4",
+      "sourceBytes": 66110397,
+      "src": "/media/videos/mac-full-cast-a47a1f4fc7.mp4",
+      "bytes": 14659828,
+      "width": 1080,
+      "height": 1080,
+      "audio": true,
+      "ssim": 0.991827,
+      "audioSha256": "549ac6f391fb28fa82f1710af83731f6df4bac352968b4a133f40b1b89240a06",
+      "posterSrc": "/media/images/160905b2c1d852ed619d36f0e516e43a3521b173-pe8c9d63.webp"
+    },
+    {
+      "label": "gabbriette",
+      "source": "motion/MAC/VIDEO Gabbriette_Simulator_1x1_PAID.mp4",
+      "sourceBytes": 30820370,
+      "src": "/media/videos/mac-gabbriette-1f2116e004.mp4",
+      "bytes": 6882652,
+      "width": 1080,
+      "height": 1080,
+      "audio": true,
+      "ssim": 0.991747,
+      "audioSha256": "1a814352c97151f1496e27e09da63f75827ddbffb918ae1c7c83d12729120103",
+      "posterSrc": "/media/images/0a2040b8e340c7a18ecdc12d27066dfdc1bc202c-pe8c9d63.webp"
+    },
+    {
+      "label": "kris",
+      "source": "motion/MAC/VIDEO Kris_Simulator_1x1_PAID.mp4",
+      "sourceBytes": 30581495,
+      "src": "/media/videos/mac-kris-2871ddf0b8.mp4",
+      "bytes": 4821688,
+      "width": 1080,
+      "height": 1080,
+      "audio": true,
+      "ssim": 0.995027,
+      "audioSha256": "7add652699c2de6d6bae994203e8a9be97d55fb646cd268dc74edeae542439d7",
+      "posterSrc": "/media/images/3fe84fec7848ff7f24c408873f806b171dd6db1f-pe8c9d63.webp"
+    }
+  ],
+  "previewVideoSrc": "/media/videos/mac-preview-1f2116e004.mp4",
+  "previewBytes": 511258,
+  "preview": "Six seconds, 640×640 H.264 CRF 22, audio removed"
+}

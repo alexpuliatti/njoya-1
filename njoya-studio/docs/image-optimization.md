@@ -64,6 +64,44 @@ Full films use native controls and do not preload their video data. The card
 preview loads on desktop hover, pauses on leave, when off-screen, and when the
 tab is hidden. Reduced-motion and touch users get the supplied still cover.
 
+## CHANEL motion film
+
+The existing Chanel Mother's Day project is shared between Commercials and
+Motion. All five supplied still images matched the original SHA-1 source IDs,
+so their prepared images and existing references are reused. The supplied
+1280×478 HEVC MOV is converted to H.264 CRF 18 at the original resolution and
+frame timing, with `-an` removing the audio track entirely and `+faststart`
+placing movie metadata before the media. It is 1,842,008 bytes, compared with
+5,008,874 bytes for the MOV. Range-normalized SSIM against the source is 0.996077.
+The eight-second silent hover preview is 429,088 bytes. The film poster is a
+prepared frame from the video. Encoding details and source mapping are in
+`content/chanel-video-assets.json`. Tests inspect MP4 track handlers directly
+to ensure that neither published file contains an audio track.
+
+## MAC motion films
+
+The three MAC Studio Fix films retain their original 1080×1080 resolution and
+25 fps timing, encoded as H.264 CRF 18 with the slow preset and faststart. The
+original AAC audio is copied unchanged; per-film audio hashes confirm this.
+Together the films are 26,364,168 bytes, down from 127,512,262 bytes. SSIM against
+the original films is recorded in `content/mac-video-assets.json`. A six-second
+640×640 silent hover preview weighs 511,258 bytes. The supplied cover and three
+video-frame posters use the responsive WebP pipeline. Full films load only when
+played, with native controls; the preview follows the existing hover and
+reduced-motion behavior. Originals remain in the ignored `motion/MAC` folder.
+
+## Louboutin motion film
+
+The existing Christian Louboutin Men's project is shared between Commercials
+and Motion, with its original eleven photographs, cover, credits and URL kept.
+The supplied 720×1280 H.264 film is already compact. Both video and AAC audio
+are copied unchanged into a faststart MP4; per-stream SHA-256 checks confirm
+identical encoded media. The full film is 2,727,348 bytes. A separate
+six-second silent hover preview is 513,114 bytes, encoded at
+480×854, 18 fps, CRF 24 and a 600 kbps maximum video rate. The native player uses
+`preload="none"`, with a responsive WebP poster extracted from the film. Source
+mapping and verification hashes are in `content/louboutin-video-assets.json`.
+
 ## Source limits
 
 Some selected originals are small: the Vogue Hommes cover is 763×1077. Larger dimensions created by upscaling cannot recover missing detail. The full Sanity export also includes unused page layouts, images with printed captions, and differently cropped copies. Those are not silently substituted for the selected project photographs.

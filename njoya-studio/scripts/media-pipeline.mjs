@@ -24,11 +24,30 @@ export const WEB_MEDIA_PROFILE = {
   format: "webp",
 };
 export const WEB_PROFILE_ID = `p${createHash("sha1").update(JSON.stringify(WEB_MEDIA_PROFILE)).digest("hex").slice(0, 7)}`;
+// Category cards need smaller steps and lighter encodings than project images.
+export const COVER_MEDIA_PROFILE = {
+  ...MEDIA_PROFILE,
+  maxWidth: 1920,
+  widths: [320, 480, 640, 960, 1440],
+  webp: { quality: 78, effort: 6 },
+  avif: { quality: 60, effort: 5, chromaSubsampling: "4:4:4" },
+};
+export const COVER_PROFILE_ID = `p${createHash("sha1").update(JSON.stringify(COVER_MEDIA_PROFILE)).digest("hex").slice(0, 7)}`;
+const profileForSource = (entry) =>
+  entry.profile === "cover"
+    ? COVER_MEDIA_PROFILE
+    : entry.profile === "web"
+      ? WEB_MEDIA_PROFILE
+      : MEDIA_PROFILE;
 export const profileIdForSource = (entry) =>
-  entry.profile === "web" ? WEB_PROFILE_ID : PROFILE_ID;
+  entry.profile === "cover"
+    ? COVER_PROFILE_ID
+    : entry.profile === "web"
+      ? WEB_PROFILE_ID
+      : PROFILE_ID;
 
 export async function prepareImage({ id, entry, root, sourceRoot, temporary }) {
-  const profile = entry.profile === "web" ? WEB_MEDIA_PROFILE : MEDIA_PROFILE;
+  const profile = profileForSource(entry);
   const profileId = profileIdForSource(entry);
   const source = entry.localSource
     ? path.join(root, entry.localSource)
@@ -130,7 +149,7 @@ export async function migrateImageReferences(root, images) {
       Object.entries(value).map(([key, child]) => [key, update(child)]),
     );
   };
-  const files = ["about.json"];
+  const files = ["about.json", "categories.json"];
   for (const folder of ["work", "collections", "lab"]) {
     for (const file of await fs.readdir(path.join(root, "content", folder)))
       if (file.endsWith(".json")) files.push(`${folder}/${file}`);

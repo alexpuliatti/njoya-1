@@ -4,7 +4,11 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import sharp from "sharp";
-import { prepareImage, WEB_PROFILE_ID } from "../scripts/media-pipeline.mjs";
+import {
+  prepareImage,
+  WEB_PROFILE_ID,
+  COVER_PROFILE_ID,
+} from "../scripts/media-pipeline.mjs";
 
 // Exercise the upload pipeline with a real EXIF-rotated source. This catches
 // upscaling, lost orientation and profiles that disagree with encoded bytes.
@@ -78,6 +82,33 @@ test("web gallery uploads cap large originals and retain responsive WebP candida
       assert.equal(metadata.height, Math.round((variant.width * 2) / 3));
       assert.equal((await fs.stat(file)).size, variant.bytes);
     }
+  } finally {
+    await fs.rm(root, { recursive: true, force: true });
+  }
+});
+
+test("cover images provide intermediate card sizes without cropping or upscaling", async () => {
+  const root = await fs.mkdtemp(path.join(os.tmpdir(), "njoya-cover-test-"));
+  try {
+    await sharp({
+      create: { width: 1000, height: 600, channels: 3, background: "#c85091" },
+    }).png().toFile(path.join(root, "cover.png"));
+    const media = await prepareImage({
+      id: "cover-test",
+      entry: { localSource: "cover.png", profile: "cover" },
+      root,
+      temporary: root,
+    });
+    assert.ok(media.signature.startsWith(`${COVER_PROFILE_ID}:`));
+    assert.deepEqual(media.variants.map((variant) => variant.width), [320, 480, 640, 960, 1000]);
+    for (const variant of [...media.variants, media.fallback]) {
+      const file = path.join(root, "public", variant.src);
+      const metadata = await sharp(file).metadata();
+      assert.equal(metadata.width, variant.width);
+      assert.equal(metadata.height, Math.round(variant.width * 0.6));
+      assert.equal((await fs.stat(file)).size, variant.bytes);
+    }
+    assert.equal((await sharp(path.join(root, "public", media.fallback.src)).metadata()).format, "webp");
   } finally {
     await fs.rm(root, { recursive: true, force: true });
   }

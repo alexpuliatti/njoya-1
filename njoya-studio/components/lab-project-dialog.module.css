@@ -20,17 +20,35 @@
 
 .brief {
   margin: 0;
+  white-space: pre-line;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(23px, 2.2vw, 28px);
-  line-height: 1.45;
+  font-size: clamp(18px, 1.6vw, 20px);
+  line-height: 1.6;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .gallery {
   padding: 0 24px 24px;
 }
 
+.closing {
+  max-width: 860px;
+  margin: 24px auto 0;
+  padding: 0 24px 40px;
+  white-space: normal;
+}
+
+.closing p {
+  margin: 0;
+}
+
+.closing p + p {
+  margin-top: 1em;
+}
+
 .processSection {
-  margin-bottom: 24px;
+  margin-bottom: clamp(32px, 4vw, 48px);
 }
 
 .sectionTitle {
@@ -43,7 +61,12 @@
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.imageRow {
+  display: grid;
+  grid-template-columns: var(--gallery-columns);
   align-items: start;
   gap: 24px;
 }
@@ -60,15 +83,8 @@
 }
 
 .imageGrid :global(.media-gallery img) {
-  aspect-ratio: 4 / 3;
   height: auto;
-  max-height: 360px;
-  object-fit: cover;
-}
-
-.sketches :global(.media-gallery img) {
-  object-fit: contain;
-  background: #fff;
+  border-radius: 0;
 }
 
 @media (max-width: 767px) {
@@ -78,15 +94,16 @@
     padding: 24px 16px 32px;
   }
 
-  .brief {
-    font-size: 23px;
-  }
-
   .gallery {
     padding: 0 16px 16px;
   }
 
-  .imageGrid {
+  .closing {
+    margin-top: 16px;
+    padding: 0 16px 32px;
+  }
+
+  .imageRow {
     grid-template-columns: minmax(0, 1fr);
   }
 }

@@ -105,6 +105,7 @@ export const categorySchema = z
     title: z.string().min(1),
     description: z.string(),
     coverWorkId: z.string().min(1),
+    cover: imageSchema.optional(),
   })
   .strict();
 export const homeSchema = z
@@ -168,9 +169,11 @@ export const labSchema = z
         client: z.string().min(1),
         title: z.string().min(1),
         brief: z.string().min(1),
+        sketchesTitle: z.string().min(1).optional(),
         sketches: z.array(imageSchema).optional(),
         making: z.array(imageSchema).optional(),
         result: z.array(imageSchema).optional(),
+        closingParagraphs: z.array(z.string().min(1)).optional(),
       })
       .strict()
       .optional(),

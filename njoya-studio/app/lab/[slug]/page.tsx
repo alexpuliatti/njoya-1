@@ -46,7 +46,7 @@ export default async function LabEntryPage({
       <Link className={`text-button ${styles.back}`} href="/lab">
         ← Back to Lab
       </Link>
-      <LabCaseStudy entry={entry} heading="h1" />
+      <LabCaseStudy priority entry={entry} heading="h1" />
       {entry.gallery.length > 1 ? (
         <MediaGallery entries={entry.gallery.slice(1)} />
       ) : null}

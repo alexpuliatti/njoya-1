@@ -3,23 +3,38 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { pruneUnusedExportMedia } from "./export-media.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/njoya-1";
-const siteUrl = process.env.SITE_URL ?? `https://alexpuliatti.github.io${basePath}/`;
+const siteUrl =
+  process.env.SITE_URL ?? `https://alexpuliatti.github.io${basePath}/`;
 // Next.js 14's static exporter always uses .next internally. Isolate the build
 // rather than replacing a running development server's generated files.
 const staging = await fs.mkdtemp(path.join(os.tmpdir(), "njoya-pages-build-"));
-const excluded = new Set(["node_modules", ".next", "out", "njoyastudio", "media", ".git"]);
+const excluded = new Set([
+  "node_modules",
+  ".next",
+  "out",
+  "njoyastudio",
+  "media",
+  ".git",
+]);
 try {
   await fs.cp(root, staging, {
     recursive: true,
     filter: (source) => {
       const top = path.relative(root, source).split(path.sep)[0];
-      return !excluded.has(top) && !top.startsWith(".env") && top !== ".DS_Store";
+      return (
+        !excluded.has(top) && !top.startsWith(".env") && top !== ".DS_Store"
+      );
     },
   });
-  await fs.symlink(path.join(root, "node_modules"), path.join(staging, "node_modules"), "dir");
+  await fs.symlink(
+    path.join(root, "node_modules"),
+    path.join(staging, "node_modules"),
+    "dir",
+  );
   const result = spawnSync("npm", ["run", "build"], {
     cwd: staging,
     stdio: "inherit",
@@ -36,11 +51,31 @@ try {
   if (result.status !== 0) {
     process.exitCode = result.status ?? 1;
   } else {
+    const images = JSON.parse(
+      await fs.readFile(
+        path.join(staging, "content/media-variants.json"),
+        "utf8",
+      ),
+    ).images;
+    const mediaPruning = await pruneUnusedExportMedia({
+      output: path.join(staging, "out"),
+      images,
+    });
+    console.log(
+      `Omitted ${mediaPruning.removedFiles} unused export files (${(mediaPruning.removedBytes / 1_000_000).toFixed(2)} MB); prepared source media is unchanged.`,
+    );
     const output = path.join(root, "out");
     await fs.rm(output, { recursive: true, force: true });
     await fs.cp(path.join(staging, "out"), output, { recursive: true });
     await fs.writeFile(path.join(output, ".nojekyll"), "");
-    await fs.writeFile(path.join(output, "pages-build.json"), JSON.stringify({ basePath, origin: new URL(siteUrl).origin }));
+    await fs.writeFile(
+      path.join(output, "pages-build.json"),
+      JSON.stringify({
+        basePath,
+        origin: new URL(siteUrl).origin,
+        mediaPruning,
+      }),
+    );
   }
 } finally {
   await fs.rm(staging, { recursive: true, force: true });

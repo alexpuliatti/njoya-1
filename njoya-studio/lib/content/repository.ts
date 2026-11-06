@@ -3,6 +3,7 @@ import "server-only";
 import type {
   AboutContent,
   Category,
+  CategoryId,
   Collection,
   HomeContent,
   LabEntry,
@@ -106,7 +107,7 @@ export const getAbout = cache(
 );
 export const getCategories = cache(
   async (): Promise<Category[]> =>
-    z.array(categorySchema).parse(await readJson("categories.json")),
+    withMedia(z.array(categorySchema).parse(await readJson("categories.json"))),
 );
 export const getCollections = cache(
   async (): Promise<Collection[]> =>
@@ -137,29 +138,24 @@ export const getLabEntries = cache(
 );
 
 export function workMetadata(work: Work) {
-  const dateLabel =
-    work.date?.length === 7
-      ? new Intl.DateTimeFormat("en-GB", {
-          month: "long",
-          year: "numeric",
-          timeZone: "UTC",
-        }).format(new Date(`${work.date}-01T00:00:00Z`))
-      : work.date;
-
   return [
     ...(work.client
       ? [{ label: "Client / publication", value: work.client }]
       : []),
     ...creditsToMetadata(work),
-    ...(dateLabel ? [{ label: "Date", value: dateLabel }] : []),
   ];
 }
 export function toCarouselItem(
   work: Work,
   categories: Category[],
   videoPlaybackEnabled = false,
+  categoryId?: CategoryId,
 ): NjoyaCarouselItem {
   const media = workMedia(work, videoPlaybackEnabled);
+  const videoOnly = categoryId === "motion";
+  const gallery = videoOnly
+    ? media.gallery.filter((entry) => entry.type === "video")
+    : media.gallery;
 
   return {
     id: work.id,
@@ -172,17 +168,19 @@ export function toCarouselItem(
     href: `/work/projects/${work.slug}`,
     linkLabel: "View project",
     category:
-      categories.find((category) => category.id === work.categories[0])
-        ?.title ?? "Work",
+      categories.find(
+        (category) => category.id === (categoryId ?? work.categories[0]),
+      )?.title ?? "Work",
     type: work.kind === "edition" ? "shoot" : "design-project",
-    images: work.gallery.flatMap((entry) =>
+    images: gallery.flatMap((entry) =>
       entry.type === "video" ? [] : [entry.src],
     ),
-    gallery: media.gallery,
+    gallery,
+    videoOnly,
     metadata: workMetadata(work),
     coverVideoPlaybackId: media.coverVideoPlaybackId,
     previewVideoSrc: work.previewVideoSrc,
-    galleryVideoPlaybackIds: media.gallery.flatMap((entry) =>
+    galleryVideoPlaybackIds: gallery.flatMap((entry) =>
       entry.type === "video" && "playbackId" in entry ? [entry.playbackId] : [],
     ),
   };

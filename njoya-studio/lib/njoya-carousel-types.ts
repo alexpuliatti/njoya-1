@@ -37,6 +37,8 @@ export interface NjoyaCarouselItem {
   imageAlt?: string;
   heroImageUrl?: string;
   gallery?: GalleryEntry[];
+  /** Motion category viewers show films without the project's still assets. */
+  videoOnly?: boolean;
   unavailable?: boolean;
 
   href: string;

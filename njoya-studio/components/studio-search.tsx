@@ -1,7 +1,5 @@
 "use client";
 
-import type { SearchItem } from "@/lib/njoya-carousel-types";
-
 import { useId, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
@@ -16,18 +14,18 @@ import {
 } from "./ui/studio-dialog";
 
 import { matchesSearch } from "@/lib/content/search.mjs";
+import { useSearchCatalog } from "@/lib/use-search-catalog";
 
 export default function StudioSearch({
-  items,
   instant,
   onClose,
   onSubmit,
 }: {
-  items: SearchItem[];
   instant: boolean;
   onClose: () => void;
   onSubmit: (query: string) => void;
 }) {
+  const { catalog: items, loading, error, retry } = useSearchCatalog();
   const [query, setQuery] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
   const titleId = useId();
@@ -84,13 +82,25 @@ export default function StudioSearch({
         )}
         <div aria-live="polite" className="studio-search-status">
           <span>
-            {hasQuery
-              ? `${matches.length} ${matches.length === 1 ? "project" : "projects"} found`
-              : "From the archive"}
+            {loading
+              ? "Loading projects…"
+              : error
+                ? "Search unavailable"
+                : hasQuery
+                  ? `${matches.length} ${matches.length === 1 ? "project" : "projects"} found`
+                  : "From the archive"}
           </span>
           <span>{hasQuery ? "Search results" : "Selected entries"}</span>
         </div>
         <div className="studio-search-results">
+          {error && (
+            <div className="studio-search-empty" role="alert">
+              <p>Search couldn’t load.</p>
+              <StudioButton variant="outline" onClick={retry}>
+                Try again
+              </StudioButton>
+            </div>
+          )}
           {visibleItems.map((item, index) => (
             <Link key={item.id} href={item.href} onClick={onClose}>
               <span className="studio-result-number">
@@ -116,7 +126,7 @@ export default function StudioSearch({
               <ArrowUpRight aria-hidden="true" size={17} strokeWidth={1.4} />
             </Link>
           ))}
-          {hasQuery && !matches.length && (
+          {!loading && !error && hasQuery && !matches.length && (
             <div className="studio-search-empty">
               <p>No worlds found.</p>
               <span>Try another name, collaborator or credit.</span>

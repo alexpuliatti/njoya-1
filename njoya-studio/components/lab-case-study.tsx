@@ -12,9 +12,11 @@ import LabProjectDialog from "@/components/lab-project-dialog";
 export default function LabCaseStudy({
   entry,
   heading = "h2",
+  priority = false,
 }: {
   entry: LabEntry;
   heading?: "h1" | "h2";
+  priority?: boolean;
 }) {
   const Heading = heading;
   const image = entry.gallery[0];
@@ -41,6 +43,7 @@ export default function LabCaseStudy({
             className={styles.image}
             height={image.height}
             image={image}
+            priority={priority}
             sizes="(max-width: 767px) calc(100vw - 90px), (max-width: 1500px) 45vw, 690px"
             src={image.src}
             width={image.width}

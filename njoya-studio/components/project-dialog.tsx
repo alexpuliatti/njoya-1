@@ -59,7 +59,7 @@ export default function ProjectDialog({
               sizes={panelImageSize(item.cover)}
               src={assetPath(item.heroImageUrl ?? item.imageUrl)}
             />
-            {item.coverVideoPlaybackId && (
+            {!item.videoOnly && item.coverVideoPlaybackId && (
               <StudioVideo
                 autoPlay
                 loop
@@ -118,7 +118,8 @@ export default function ProjectDialog({
             <div className="project-dialog-gallery-heading">
               <span className="eyebrow">Inside the project</span>
               <span className="eyebrow">
-                {String(gallery.length).padStart(2, "0")} entries
+                {String(gallery.length).padStart(2, "0")}{" "}
+                {gallery.length === 1 ? "entry" : "entries"}
               </span>
             </div>
             <MediaGallery entries={gallery} maxWidth={780} />
