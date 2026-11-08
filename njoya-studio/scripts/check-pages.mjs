@@ -16,12 +16,13 @@ const records = async (folder) =>
       .filter((name) => name.endsWith(".json"))
       .map((name) => read(`${folder}/${name}`)),
   );
-const [works, collections, categories, aliases, lab] = await Promise.all([
+const [works, collections, categories, aliases, lab, home] = await Promise.all([
   records("work"),
   records("collections"),
   read("categories.json"),
   read("legacy-routes.json"),
   records("lab"),
+  read("home.json"),
 ]);
 const pagePath = (url) => path.join(output, url, "index.html");
 const routes = new Set([
@@ -87,6 +88,28 @@ for (const [url, destination] of Object.entries(aliases)) {
   assert.ok(
     html.includes(`0;url=${basePath}${destination}`),
     `Missing static redirect: ${url}`,
+  );
+}
+// Homepage Motion cards share the section's visibility-controlled preview.
+const homepage = await fs.readFile(pagePath("/"), "utf8");
+const homepagePreviews = [...homepage.matchAll(/<video\b[^>]*>/g)].map(
+  (match) => match[0],
+);
+for (const feature of home.featured) {
+  const work = works.find((entry) => entry.id === feature.workId);
+
+  if (!work?.categories.includes("motion") || !work.previewVideoSrc) continue;
+  const preview = homepagePreviews.find((tag) =>
+    tag.includes(`src="${basePath}${work.previewVideoSrc}"`),
+  );
+
+  assert.ok(preview, `Missing homepage Motion preview: ${work.slug}`);
+  assert.ok(
+    preview.includes('preload="metadata"') &&
+      /\bmuted=""/i.test(preview) &&
+      /\bplaysinline=""/i.test(preview) &&
+      /\bloop=""/i.test(preview),
+    `Homepage Motion cards must use the silent inline looping preview: ${work.slug}`,
   );
 }
 // A serialized source in the React payload is insufficient: native local

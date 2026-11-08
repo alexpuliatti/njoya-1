@@ -27,7 +27,12 @@ export default async function Home() {
     const work = feature.workId ? byId.get(feature.workId) : undefined;
 
     if (work)
-      return toCarouselItem(work, categories, site.videoPlaybackEnabled);
+      return toCarouselItem(
+        work,
+        categories,
+        site.videoPlaybackEnabled,
+        work.categories.includes("motion") ? "motion" : undefined,
+      );
 
     return {
       id: `pending-${feature.title}`,
