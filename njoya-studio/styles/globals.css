@@ -1143,8 +1143,17 @@ html[data-njoya-intro="skip"] .intro-overlay {
   }
   .studio-main:has(.portfolio-stage.has-statement) + .studio-footer {
     position: fixed;
-    bottom: 0;
+    bottom: max(22px, env(safe-area-inset-bottom));
     left: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 56vw minmax(0, 1fr);
+    align-items: baseline;
+    width: 100%;
+    padding-block: 0;
+  }
+  .studio-footer .studio-navigation {
+    position: static;
+    grid-column: 2;
   }
   .portfolio-stage.has-statement {
     --home-card-height: min(64svh, 720px, calc(100svh - 266px));

@@ -56,8 +56,8 @@ export default async function RootLayout({
             </main>
             <footer className="studio-footer">
               <small>Copyright © 2027</small>
+              <StudioNavigation />
             </footer>
-            <StudioNavigation />
           </SearchProvider>
         </Providers>
       </body>
