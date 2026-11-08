@@ -17,6 +17,7 @@ import TiltedCard from "./react-bits/tilted-card";
 
 import { assetPath } from "@/lib/asset-path";
 import { muxPlaybackUrl } from "@/lib/mux";
+import { createVideoPreview } from "@/lib/video-preview.mjs";
 import {
   coverSize,
   imageSrcSet,
@@ -69,8 +70,8 @@ export default function NjoyaCarouselCard({
   const hoverTl = useRef<gsap.core.Timeline | null>(null);
   const videoFade = useRef<gsap.core.Tween | null>(null);
   const isHoveringRef = useRef(false);
-  const isVisibleRef = useRef(false);
-  const previewRequestRef = useRef(0);
+  const previewRef = useRef<ReturnType<typeof createVideoPreview> | null>(null);
+  const syncPreviewRef = useRef<(() => void) | null>(null);
   const isLaunchingRef = useRef(false);
   const hasPrefetchedRef = useRef(false);
   const hasPreloadedHeroRef = useRef(false);
@@ -82,49 +83,13 @@ export default function NjoyaCarouselCard({
       : undefined;
   const hasVideo = !!videoSource;
 
-  const playPreview = useCallback(() => {
-    const video = videoRef.current;
-    const canPlay = () =>
-      isVisibleRef.current &&
-      !document.hidden &&
-      !previewPaused &&
-      !isLaunchingRef.current &&
-      (item.videoOnly || isHoveringRef.current) &&
-      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (!video || !canPlay() || !video.paused) return;
-    const request = ++previewRequestRef.current;
-
-    video.muted = true;
-    video
-      .play()
-      .then(() => {
-        if (request !== previewRequestRef.current) return;
-        if (!canPlay()) {
-          video.pause();
-
-          return;
-        }
-        // Keep the prepared still visible until playback actually starts.
-        videoFade.current?.kill();
-        videoFade.current = gsap.to(video, {
-          opacity: 1,
-          duration: 0.25,
-          ease: "power2.out",
-        });
-      })
-      .catch(() => undefined);
-  }, [item.videoOnly, previewPaused]);
-
   /* ── Reset to base ─────────────────────────────────── */
   const resetHover = useCallback((keepPreview = false) => {
     isHoveringRef.current = false;
     isLaunchingRef.current = false;
     hoverTl.current?.kill();
     if (!keepPreview) {
-      previewRequestRef.current += 1;
-      videoFade.current?.kill();
-      videoRef.current?.pause();
+      previewRef.current?.setActive(false);
     }
     const duration = window.matchMedia("(prefers-reduced-motion: reduce)")
       .matches
@@ -137,10 +102,6 @@ export default function NjoyaCarouselCard({
       { scale: 1, duration, ease: "power2.out" },
       0,
     );
-
-    if (videoRef.current && !keepPreview) {
-      tl.to(videoRef.current, { opacity: 0, duration, ease: "power2.out" }, 0);
-    }
 
     hoverTl.current = tl;
   }, []);
@@ -192,7 +153,7 @@ export default function NjoyaCarouselCard({
       0,
     );
 
-    playPreview();
+    syncPreviewRef.current?.();
 
     hoverTl.current = tl;
   };
@@ -220,24 +181,44 @@ export default function NjoyaCarouselCard({
 
     if (!video) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let visible = false;
+    const preview = createVideoPreview(video, {
+      onPlaying: () => {
+        videoFade.current?.kill();
+        videoFade.current = gsap.to(video, {
+          opacity: 1,
+          duration: 0.25,
+          ease: "power2.out",
+        });
+      },
+      onStop: () => {
+        videoFade.current?.kill();
+        videoFade.current = gsap.to(video, {
+          opacity: 0,
+          duration: motion.matches ? 0 : 0.22,
+          ease: "power2.out",
+        });
+      },
+    });
+
+    previewRef.current = preview;
     const syncPreview = () => {
-      if (
-        document.hidden ||
-        motion.matches ||
-        previewPaused ||
-        !isVisibleRef.current
-      ) {
+      if (document.hidden || motion.matches || previewPaused || !visible) {
         resetHover();
-      } else if (item.videoOnly) {
-        playPreview();
+      } else {
+        preview.setActive(
+          !isLaunchingRef.current &&
+            (!!item.videoOnly || isHoveringRef.current),
+        );
       }
     };
     const observer = new IntersectionObserver(([entry]) => {
-      isVisibleRef.current = entry.isIntersecting;
+      visible = entry.isIntersecting;
       syncPreview();
     });
 
     observer.observe(video);
+    syncPreviewRef.current = syncPreview;
     syncPreview();
     document.addEventListener("visibilitychange", syncPreview);
     motion.addEventListener("change", syncPreview);
@@ -246,18 +227,12 @@ export default function NjoyaCarouselCard({
       observer.disconnect();
       document.removeEventListener("visibilitychange", syncPreview);
       motion.removeEventListener("change", syncPreview);
-      isVisibleRef.current = false;
-      previewRequestRef.current += 1;
-      video.pause();
+      preview.dispose();
+      previewRef.current = null;
+      syncPreviewRef.current = null;
+      videoFade.current?.kill();
     };
-  }, [
-    hasVideo,
-    item.videoOnly,
-    playPreview,
-    previewPaused,
-    resetHover,
-    resetSignal,
-  ]);
+  }, [hasVideo, item.videoOnly, previewPaused, resetHover, resetSignal]);
 
   /* ── Click: launch detail panel ────────────────────── */
   const handleClick = (instant = false) => {
@@ -266,8 +241,7 @@ export default function NjoyaCarouselCard({
     isHoveringRef.current = false;
     hoverTl.current?.kill();
     videoFade.current?.kill();
-    previewRequestRef.current += 1;
-    videoRef.current?.pause();
+    previewRef.current?.setActive(false);
     // Always pass the <img> — the panel clones the still poster,
     // which is what was visible (or about to be visible) anyway.
     onClick({
@@ -337,7 +311,7 @@ export default function NjoyaCarouselCard({
             playsInline
             aria-hidden="true"
             className="pointer-events-none absolute inset-0 block h-full w-full object-cover object-top"
-            preload="none"
+            preload={item.videoOnly ? "metadata" : "none"}
             src={videoSource}
             style={{ opacity: 0, borderRadius: "var(--studio-radius)" }}
             tabIndex={-1}

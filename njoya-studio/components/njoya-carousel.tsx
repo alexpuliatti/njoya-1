@@ -5,12 +5,28 @@ import type {
   NjoyaClickPayload,
 } from "@/lib/njoya-carousel-types";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 import NjoyaCarouselCard from "./njoya-carousel-card";
 import ProjectDialog from "./project-dialog";
 import StudioIntro from "./studio-intro";
+
+function subscribeDesktop(callback: () => void) {
+  const query = window.matchMedia("(min-width: 768px)");
+
+  query.addEventListener("change", callback);
+
+  return () => query.removeEventListener("change", callback);
+}
+const desktopSnapshot = () => window.matchMedia("(min-width: 768px)").matches;
+const serverDesktopSnapshot = () => false;
 
 export default function NjoyaCarousel({
   items,
@@ -25,10 +41,15 @@ export default function NjoyaCarousel({
   showLoader?: boolean;
   loop?: boolean;
 }) {
-  // Leave enough cards outside the three-card desktop viewport for Embla
-  // to recycle them without disabling looping on short collections.
+  const desktop = useSyncExternalStore(
+    subscribeDesktop,
+    desktopSnapshot,
+    serverDesktopSnapshot,
+  );
+  // Desktop needs extra slides outside its three-card viewport. On phones,
+  // reuse the original players so Safari retains their gesture permission.
   const slides =
-    loop && items.length > 0 && items.length < 6
+    desktop && loop && items.length > 0 && items.length < 6
       ? Array.from(
           { length: items.length * Math.ceil(6 / items.length) },
           (_, index) => items[index % items.length],
