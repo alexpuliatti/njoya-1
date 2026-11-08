@@ -1130,6 +1130,47 @@ html[data-njoya-intro="skip"] .intro-overlay {
     border-color: var(--studio-accent);
   }
 }
+@media (min-width: 768px) {
+  html:has(.portfolio-stage.has-statement),
+  body.studio-body:has(.portfolio-stage.has-statement) {
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior-y: none;
+  }
+  .studio-main:has(.portfolio-stage.has-statement) {
+    height: calc(100svh - 112px);
+    min-height: 0;
+  }
+  .studio-main:has(.portfolio-stage.has-statement) + .studio-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .portfolio-stage.has-statement {
+    --home-card-height: min(64svh, 720px, calc(100svh - 266px));
+    height: 100%;
+    min-height: 0;
+  }
+  .has-statement .statement-card,
+  .has-statement .project-card {
+    height: var(--home-card-height);
+  }
+  .has-statement .statement-card h1 {
+    font-size: clamp(
+      24px,
+      min(4.3vw, calc(var(--home-card-height) * 0.12)),
+      77px
+    );
+    margin-bottom: clamp(12px, 2.5svh, 24px);
+  }
+  .has-statement .statement-card p {
+    font-size: clamp(
+      10px,
+      min(1.1vw, calc(var(--home-card-height) * 0.044)),
+      16px
+    );
+  }
+}
 @media (min-width: 768px) and (max-width: 1023px) {
   .project-slide {
     flex-basis: 50%;
