@@ -141,8 +141,17 @@ test("Balmain is a Motion project with all three local films and supplied credit
   assert.ok(work.credits.some((credit) => credit.name === "Carlijn Jacobs"));
   assert.equal(content.categories.find((category) => category.id === "motion").coverWorkId, work.id);
 });
-test("the four homepage heroes resolve to published projects, including the supplied Jaguar work", () => {
-  assert.equal(content.home.featured.length, 4);
+test("the homepage retains its existing heroes and adds Balmain Motion as a fifth feature", () => {
+  assert.deepEqual(
+    content.home.featured.map((entry) => entry.workId),
+    [
+      "ad25c23d-8ceb-4710-90fa-11f10ae4a272",
+      "eba3e495-0a85-4a16-ac67-00535be1f3ad",
+      "jaguar-miami-2024",
+      "ff65ad54-4a50-4404-a4b8-4484728d1ef3",
+      "balmain-motion",
+    ],
+  );
   const jaguarId = content.home.featured.find((entry) => entry.title === "Jaguar").workId;
   const jaguar = content.works.find((work) => work.id === jaguarId);
   assert.equal(jaguar.client, "Jaguar");

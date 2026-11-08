@@ -120,7 +120,7 @@ export const homeSchema = z
           })
           .strict(),
       )
-      .length(4),
+      .min(1),
   })
   .strict();
 export const siteSchema = z

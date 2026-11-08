@@ -30,7 +30,7 @@ The local `experiment/refined-design` prototype adds a small owned component set
 
 Project cards open a framed viewer with an image morph, credits and the existing ordered gallery. Search uses the same native dialog shell, with thumbnails, suggested searches and an Escape-to-clear field. Keyboard activation and reduced-motion preferences skip the animated entrance; closing restores focus and page scrolling. The pointer highlight only runs for a fine pointer with motion enabled.
 
-Design references: [BoardUI controls](https://www.boardui.com/components), [React Bits Spotlight Card](https://reactbits.dev/components/spotlight-card), and [Motion Primitives Morphing Dialog](https://motion-primitives.com/docs/morphing-dialog). The four featured homepage cards now use an adapted [React Bits Tilted Card](https://reactbits.dev/components/tilted-card), with the upstream spring motion, a restrained hover tilt and a staggered entrance after the Njoya intro. Its source attribution and license are in `components/react-bits/`.
+Design references: [BoardUI controls](https://www.boardui.com/components), [React Bits Spotlight Card](https://reactbits.dev/components/spotlight-card), and [Motion Primitives Morphing Dialog](https://motion-primitives.com/docs/morphing-dialog). The featured homepage cards use an adapted [React Bits Tilted Card](https://reactbits.dev/components/tilted-card), with the upstream spring motion, a restrained hover tilt and a staggered entrance after the Njoya intro. Its source attribution and license are in `components/react-bits/`.
 
 To review locally, run `npm run dev`, open a project card, browse its credits and gallery, and close it with the close control, Escape or the backdrop. Open Search with its button or ⌘/Ctrl K; try a suggested search, clear it with Escape, then press Escape again to close. Check the same flows at phone width and with reduced motion enabled. The automated build and static checks pass; visual interaction QA remains pending because the browser-control host was unavailable during implementation.
 
@@ -38,7 +38,7 @@ To review locally, run `npm run dev`, open a project card, browse its credits an
 
 ```text
 content/site.json             Studio statement, inquiry contacts, video setting
-content/home.json             Exactly four featured project slots
+content/home.json             Ordered featured project slots (at least one)
 content/categories.json       Work categories and their cover project IDs
 content/about.json            Company biography, portrait and team
 content/work/*.json           Individual projects and shoot editions
@@ -148,9 +148,9 @@ The five Work category cards in `content/categories.json` have their own optiona
 
 ## Select homepage projects
 
-`content/home.json` contains exactly four `{ "title": "Display title", "workId": "PROJECT_ID" }` entries. Match `workId` to a project's `id`. The studio statement is separate and stays fixed while the four project slots browse in a loop.
+`content/home.json` contains an ordered list of `{ "title": "Display title", "workId": "PROJECT_ID" }` entries, with at least one feature. Match `workId` to a project's `id`. Add or replace entries only as requested. The studio statement is separate and stays fixed while the project cards browse in a loop.
 
-All four slots now point to published projects. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
+The five features include Balmain Motion alongside the four existing projects. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
 
 The homepage intro uses `public/media/brand/njoya-intro.webp`, prepared from the supplied logo artwork. It appears on each full homepage load, then reveals the homepage with an upward screen wipe. It stays dismissed during navigation within the same document. It finishes automatically without a visible skip button; Escape dismisses it immediately. Reduced-motion visitors see the still artwork briefly without the animated entrance or wipe. The pre-hydration setup is in `lib/intro.ts`.
 
