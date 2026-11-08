@@ -56,7 +56,7 @@ export interface NjoyaCarouselItem {
    *  a <video> instead of an <Image>.
    */
   coverVideoPlaybackId?: string;
-  /** Small silent local MP4 loaded only when the pointer previews the card. */
+  /** Small silent local MP4; visible Motion cards autoplay, other cards use hover. */
   previewVideoSrc?: string;
 
   /** ─── NEW ───────────────────────────────────────

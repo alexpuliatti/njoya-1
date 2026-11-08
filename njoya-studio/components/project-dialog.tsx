@@ -123,8 +123,8 @@ export default function ProjectDialog({
               </span>
             </div>
             <MediaGallery
+              autoplayPreviews={item.videoOnly}
               entries={gallery}
-              hoverPreviews={item.videoOnly}
               maxWidth={780}
             />
           </section>

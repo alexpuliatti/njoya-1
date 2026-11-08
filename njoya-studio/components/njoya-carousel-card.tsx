@@ -28,6 +28,7 @@ interface Props {
   item: NjoyaCarouselItem;
   onClick: (payload: NjoyaClickPayload) => void;
   resetSignal: number;
+  previewPaused?: boolean;
   priority?: boolean;
   home?: boolean;
   introDelay?: number;
@@ -42,7 +43,7 @@ interface Props {
                  items it's the cover image.
      2. <StudioVideo>  overlay — when a local or legacy preview exists.
                  Starts at opacity 0; fades in + plays on
-                 hover, fades out + pauses on leave.
+                 hover, or while visible in Motion.
      3. gradient
      4. card info
 
@@ -53,6 +54,7 @@ export default function NjoyaCarouselCard({
   item,
   onClick,
   resetSignal,
+  previewPaused = false,
   priority = false,
   home = false,
   introDelay = 0,
@@ -67,6 +69,8 @@ export default function NjoyaCarouselCard({
   const hoverTl = useRef<gsap.core.Timeline | null>(null);
   const videoFade = useRef<gsap.core.Tween | null>(null);
   const isHoveringRef = useRef(false);
+  const isVisibleRef = useRef(false);
+  const previewRequestRef = useRef(0);
   const isLaunchingRef = useRef(false);
   const hasPrefetchedRef = useRef(false);
   const hasPreloadedHeroRef = useRef(false);
@@ -78,13 +82,50 @@ export default function NjoyaCarouselCard({
       : undefined;
   const hasVideo = !!videoSource;
 
+  const playPreview = useCallback(() => {
+    const video = videoRef.current;
+    const canPlay = () =>
+      isVisibleRef.current &&
+      !document.hidden &&
+      !previewPaused &&
+      !isLaunchingRef.current &&
+      (item.videoOnly || isHoveringRef.current) &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (!video || !canPlay() || !video.paused) return;
+    const request = ++previewRequestRef.current;
+
+    video.muted = true;
+    video
+      .play()
+      .then(() => {
+        if (request !== previewRequestRef.current) return;
+        if (!canPlay()) {
+          video.pause();
+
+          return;
+        }
+        // Keep the prepared still visible until playback actually starts.
+        videoFade.current?.kill();
+        videoFade.current = gsap.to(video, {
+          opacity: 1,
+          duration: 0.25,
+          ease: "power2.out",
+        });
+      })
+      .catch(() => undefined);
+  }, [item.videoOnly, previewPaused]);
+
   /* ── Reset to base ─────────────────────────────────── */
-  const resetHover = useCallback(() => {
+  const resetHover = useCallback((keepPreview = false) => {
     isHoveringRef.current = false;
     isLaunchingRef.current = false;
     hoverTl.current?.kill();
-    videoFade.current?.kill();
-    videoRef.current?.pause();
+    if (!keepPreview) {
+      previewRequestRef.current += 1;
+      videoFade.current?.kill();
+      videoRef.current?.pause();
+    }
     const duration = window.matchMedia("(prefers-reduced-motion: reduce)")
       .matches
       ? 0
@@ -97,7 +138,7 @@ export default function NjoyaCarouselCard({
       0,
     );
 
-    if (videoRef.current) {
+    if (videoRef.current && !keepPreview) {
       tl.to(videoRef.current, { opacity: 0, duration, ease: "power2.out" }, 0);
     }
 
@@ -139,7 +180,6 @@ export default function NjoyaCarouselCard({
     }
 
     hoverTl.current?.kill();
-    videoFade.current?.kill();
     const tl = gsap.timeline();
 
     tl.to(
@@ -152,34 +192,14 @@ export default function NjoyaCarouselCard({
       0,
     );
 
-    // Keep the still visible until playback actually starts. A rejected or
-    // slow request must not leave a blank overlay over the prepared cover.
-    if (videoRef.current) {
-      const v = videoRef.current;
-
-      v.muted = true;
-      v.play()
-        .then(() => {
-          if (!isHoveringRef.current || isLaunchingRef.current) {
-            v.pause();
-
-            return;
-          }
-          videoFade.current = gsap.to(v, {
-            opacity: 1,
-            duration: 0.25,
-            ease: "power2.out",
-          });
-        })
-        .catch(() => undefined);
-    }
+    playPreview();
 
     hoverTl.current = tl;
   };
 
   const handleMouseLeave = () => {
     if (isLaunchingRef.current) return;
-    resetHover();
+    resetHover(!!item.videoOnly && !previewPaused);
   };
 
   useEffect(() => {
@@ -200,27 +220,44 @@ export default function NjoyaCarouselCard({
 
     if (!video) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const pauseWhenHidden = () => {
-      if (document.hidden) resetHover();
-    };
-    const reduceMotion = () => {
-      if (motion.matches) resetHover();
+    const syncPreview = () => {
+      if (
+        document.hidden ||
+        motion.matches ||
+        previewPaused ||
+        !isVisibleRef.current
+      ) {
+        resetHover();
+      } else if (item.videoOnly) {
+        playPreview();
+      }
     };
     const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) resetHover();
+      isVisibleRef.current = entry.isIntersecting;
+      syncPreview();
     });
 
     observer.observe(video);
-    document.addEventListener("visibilitychange", pauseWhenHidden);
-    motion.addEventListener("change", reduceMotion);
+    syncPreview();
+    document.addEventListener("visibilitychange", syncPreview);
+    motion.addEventListener("change", syncPreview);
 
     return () => {
       observer.disconnect();
-      document.removeEventListener("visibilitychange", pauseWhenHidden);
-      motion.removeEventListener("change", reduceMotion);
+      document.removeEventListener("visibilitychange", syncPreview);
+      motion.removeEventListener("change", syncPreview);
+      isVisibleRef.current = false;
+      previewRequestRef.current += 1;
       video.pause();
     };
-  }, [hasVideo, resetHover]);
+  }, [
+    hasVideo,
+    item.videoOnly,
+    playPreview,
+    previewPaused,
+    resetHover,
+    resetSignal,
+  ]);
 
   /* ── Click: launch detail panel ────────────────────── */
   const handleClick = (instant = false) => {
@@ -229,6 +266,7 @@ export default function NjoyaCarouselCard({
     isHoveringRef.current = false;
     hoverTl.current?.kill();
     videoFade.current?.kill();
+    previewRequestRef.current += 1;
     videoRef.current?.pause();
     // Always pass the <img> — the panel clones the still poster,
     // which is what was visible (or about to be visible) anyway.
@@ -290,7 +328,7 @@ export default function NjoyaCarouselCard({
         />
 
         {/* 2. Video overlay — only when this card has a cover video.
-              Starts hidden; hover handler fades it in + plays it. */}
+              Starts hidden until the silent preview is playing. */}
         {hasVideo && (
           <StudioVideo
             ref={videoRef}

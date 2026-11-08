@@ -8,28 +8,30 @@ import { Play } from "lucide-react";
 
 import StudioVideo from "./studio-video";
 
-/** Hover is a silent preview; an explicit play keeps the film and audio running. */
+/** Visible Motion films preview silently; explicit play starts the full film with audio. */
 export default function GalleryFilm({
-  hoverPreview = false,
+  autoplayPreview = false,
   previewSrc,
   ...props
 }: VideoHTMLAttributes<HTMLVideoElement> & {
-  hoverPreview?: boolean;
+  autoplayPreview?: boolean;
   previewSrc?: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const previewing = useRef(false);
+  const previewRequest = useRef(0);
   const [started, setStarted] = useState(false);
-  const canPreview = hoverPreview && !!previewSrc;
+  const canPreview = autoplayPreview && !!previewSrc;
 
   const stopPreview = useCallback(() => {
     if (!previewing.current) return;
     previewing.current = false;
+    previewRequest.current += 1;
     const video = videoRef.current;
 
     if (video) {
       video.pause();
-      // Restore the prepared poster and cancel any pending hover play request.
+      // Restore the prepared poster and cancel any pending preview play request.
       video.load();
     }
   }, []);
@@ -39,56 +41,50 @@ export default function GalleryFilm({
 
     if (!video) return;
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const pauseWhenHidden = () => {
-      if (document.hidden) {
+    let visible = false;
+    const syncPreview = () => {
+      if (!visible || document.hidden) {
         stopPreview();
         video.pause();
+
+        return;
       }
-    };
-    const reduceMotion = () => {
-      if (motion.matches) stopPreview();
+      if (!canPreview || started || motion.matches) {
+        stopPreview();
+
+        return;
+      }
+      if (previewing.current) return;
+      previewing.current = true;
+      const request = ++previewRequest.current;
+
+      // Set the DOM property before play(), including in Safari.
+      video.muted = true;
+      video.play().catch(() => {
+        if (request === previewRequest.current) previewing.current = false;
+      });
     };
     const observer = new IntersectionObserver(([entry]) => {
-      if (!entry.isIntersecting) {
-        stopPreview();
-        video.pause();
-      }
+      visible = entry.isIntersecting;
+      syncPreview();
     });
 
     observer.observe(video);
-    document.addEventListener("visibilitychange", pauseWhenHidden);
-    motion.addEventListener("change", reduceMotion);
+    document.addEventListener("visibilitychange", syncPreview);
+    motion.addEventListener("change", syncPreview);
 
     return () => {
       observer.disconnect();
-      document.removeEventListener("visibilitychange", pauseWhenHidden);
-      motion.removeEventListener("change", reduceMotion);
+      document.removeEventListener("visibilitychange", syncPreview);
+      motion.removeEventListener("change", syncPreview);
+      previewRequest.current += 1;
+      previewing.current = false;
       video.pause();
     };
-  }, [stopPreview]);
+  }, [canPreview, started, stopPreview]);
 
   return (
-    <div
-      className="gallery-film-player"
-      onPointerEnter={(event) => {
-        const video = videoRef.current;
-
-        if (
-          !canPreview ||
-          started ||
-          !video ||
-          event.pointerType !== "mouse" ||
-          !window.matchMedia("(hover: hover) and (pointer: fine)").matches ||
-          window.matchMedia("(prefers-reduced-motion: reduce)").matches
-        )
-          return;
-        previewing.current = true;
-        // Set the DOM property before play(), including in Safari.
-        video.muted = true;
-        video.play().catch(() => undefined);
-      }}
-      onPointerLeave={stopPreview}
-    >
+    <div className="gallery-film-player">
       <StudioVideo
         {...props}
         ref={videoRef}
@@ -109,6 +105,7 @@ export default function GalleryFilm({
 
             if (!video) return;
             previewing.current = false;
+            previewRequest.current += 1;
             // Switch to the full film within the click gesture so browsers
             // can start its approved audio without losing user activation.
             flushSync(() => setStarted(true));

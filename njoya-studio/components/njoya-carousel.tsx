@@ -141,6 +141,7 @@ export default function NjoyaCarousel({
                     homeReady ? (reveal ? "animate" : "instant") : "pending"
                   }
                   item={item}
+                  previewPaused={!!payload}
                   priority={index < 2}
                   resetSignal={reset}
                   onClick={(next) => {

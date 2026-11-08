@@ -11,12 +11,12 @@ export default function MediaGallery({
   entries,
   maxWidth = 780,
   sizes = `(max-width: 767px) calc(100vw - 48px), ${maxWidth}px`,
-  hoverPreviews = false,
+  autoplayPreviews = false,
 }: {
   entries: GalleryEntry[];
   maxWidth?: number;
   sizes?: string;
-  hoverPreviews?: boolean;
+  autoplayPreviews?: boolean;
 }) {
   if (!entries.length) return null;
   const filmsOnly = entries.every((entry) => entry.type === "video");
@@ -60,8 +60,8 @@ export default function MediaGallery({
           {entry.type === "video" ? (
             <GalleryFilm
               aria-label={entry.alt}
+              autoplayPreview={autoplayPreviews}
               height={"src" in entry ? entry.poster.height : undefined}
-              hoverPreview={hoverPreviews}
               poster={
                 "src" in entry
                   ? assetPath(entry.poster.src)
