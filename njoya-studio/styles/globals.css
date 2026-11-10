@@ -313,17 +313,6 @@ button:disabled {
   text-transform: uppercase;
   color: var(--studio-muted);
 }
-.statement-footer {
-  position: absolute;
-  bottom: 27px;
-  left: clamp(24px, 3vw, 48px);
-  right: 24px;
-  font-size: 9px;
-  color: var(--studio-muted);
-  line-height: 1.8;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
 .project-carousel {
   position: relative;
   min-width: 0;
@@ -1211,8 +1200,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
   .about-page .newsletter-signup {
     justify-self: center;
   }
-  .statement-topline,
-  .statement-footer {
+  .statement-topline {
     left: 24px;
   }
   .project-track {
@@ -1385,8 +1373,7 @@ html[data-njoya-intro="skip"] .intro-overlay {
     line-height: 1.6;
     font-weight: 400;
   }
-  .statement-topline,
-  .statement-footer {
+  .statement-topline {
     display: none;
   }
   .project-card {

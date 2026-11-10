@@ -65,9 +65,6 @@ export default async function Home() {
             </span>
             <HomepageWorldBuilders />
             <p>{site.statement}</p>
-            <span className="statement-footer">
-              Space. Image. Objects. Experiences.
-            </span>
           </Link>
         }
       />
