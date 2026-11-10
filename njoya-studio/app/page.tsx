@@ -2,7 +2,6 @@ import type { NjoyaCarouselItem } from "@/lib/njoya-carousel-types";
 
 import Link from "next/link";
 import { Suspense } from "react";
-import { ArrowUpRight } from "lucide-react";
 
 import NjoyaCarousel from "@/components/njoya-carousel";
 import HomeQueryRedirect from "@/components/home-query-redirect";
@@ -60,9 +59,6 @@ export default async function Home() {
         label="Selected projects"
         pinned={
           <Link className="statement-card" href="/about">
-            <span className="statement-topline">
-              Njoya Studios <ArrowUpRight size={19} />
-            </span>
             <HomepageWorldBuilders />
             <p>{site.statement}</p>
           </Link>
