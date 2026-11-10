@@ -53,7 +53,7 @@ export default function LabCaseStudy({
           <Heading className={styles.title} id={`case-study-${entry.slug}`}>
             {entry.title}
           </Heading>
-          <p className={styles.summary}>{entry.summary}</p>
+          <p className={styles.paragraph}>{entry.summary}</p>
           {entry.paragraphs.map((paragraph, index) => (
             <p key={index} className={styles.paragraph}>
               {paragraph}

@@ -54,13 +54,6 @@
   text-wrap: balance;
 }
 
-.summary {
-  margin: 0 0 24px;
-  font-size: 17px;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-}
-
 .paragraph {
   margin: 0 0 18px;
   color: var(--studio-muted);
