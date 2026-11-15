@@ -46,7 +46,7 @@ export default function NewsletterForm() {
         role="status"
       >
         {submitted
-          ? "Thanks for your interest. Sign-ups are coming soon; your email hasn’t been saved."
+          ? "Thanks for your interest. Signups are coming soon; your email hasn’t been saved."
           : "Coming soon. Subscriptions aren’t open yet."}
       </p>
     </form>

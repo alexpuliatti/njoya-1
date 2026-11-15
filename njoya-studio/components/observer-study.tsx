@@ -112,7 +112,7 @@ export default function ObserverStudy({
             <RotateCcw aria-hidden="true" size={13} /> Peek again
           </button>
           <button
-            aria-label="Half-speed playback"
+            aria-label="Half speed playback"
             aria-pressed={slow}
             className={styles.speed}
             disabled={!ready || reduced}

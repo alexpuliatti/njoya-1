@@ -69,7 +69,7 @@ export function Navbar({ instagram }: { instagram: string }) {
 
   return (
     <header className="studio-header">
-      <Link aria-label="Njoya Studios — home" className="wordmark" href="/">
+      <Link aria-label="Njoya Studios home" className="wordmark" href="/">
         <Image
           priority
           alt=""

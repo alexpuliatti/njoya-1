@@ -26,7 +26,7 @@ export async function generateMetadata({
   return {
     title: work?.title ?? "Project",
     description: work
-      ? `${work.title} — ${work.client}. A project by Njoya Studios.`
+      ? `${work.title}, ${work.client}. A project by Njoya Studios.`
       : undefined,
   };
 }

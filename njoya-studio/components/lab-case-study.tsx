@@ -31,7 +31,7 @@ export default function LabCaseStudy({
         {entry.project ? (
           <button
             aria-haspopup="dialog"
-            aria-label={`Open ${entry.project.client} — ${entry.project.title}`}
+            aria-label={`Open ${entry.project.client}: ${entry.project.title}`}
             className={styles.trigger}
             type="button"
             onClick={(event) => setDialog({ instant: event.detail === 0 })}

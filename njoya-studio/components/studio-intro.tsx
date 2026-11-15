@@ -116,7 +116,7 @@ export default function StudioIntro({
         <Image
           priority
           unoptimized
-          alt="Njoya Studios — colourful sculptural artwork and studio wordmark"
+          alt="Njoya Studios, colourful sculptural artwork and studio wordmark"
           draggable={false}
           height={1000}
           src={assetPath("/media/brand/njoya-intro.webp")}

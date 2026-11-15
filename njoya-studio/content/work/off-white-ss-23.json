@@ -1,8 +1,8 @@
 {
   "id": "e22bc855-53a0-4284-923a-994f803e5ca2",
   "slug": "off-white-ss-23",
-  "title": "Off-White, SS 23",
-  "client": "Off-White",
+  "title": "Off White, SS 23",
+  "client": "Off White",
   "date": "2023-01-01",
   "categories": [
     "commercials"
@@ -12,7 +12,7 @@
     "type": "image",
     "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef.webp",
     "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef-480.avif",
-    "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder-blue oversized double-breasted coat with matching wide-leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders — while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
+    "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder blue oversized double breasted coat with matching wide leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders, while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
     "width": 1080,
     "height": 1351
   },
@@ -21,7 +21,7 @@
       "type": "image",
       "src": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef.webp",
       "previewSrc": "/media/images/4aabbed4c62c90f74b47271fbbbfb77af2538468-pf257cef-480.avif",
-      "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder-blue oversized double-breasted coat with matching wide-leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders — while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
+      "alt": "Shot from an elevated angle on a grey London pavement, a model stands completely still in a powder blue oversized double breasted coat with matching wide leg trousers and white sneakers, dark rectangular sunglasses framing their face, long dark hair loose on their shoulders, while blurred pedestrians rush past in every direction around them, a sharp study in stillness amid urban motion.",
       "width": 1080,
       "height": 1351
     },
@@ -99,7 +99,7 @@
     },
     {
       "role": "castDirector",
-      "name": "Mischa Notcutt, Sarah-Maria Booth"
+      "name": "Mischa Notcutt, Sarah Maria Booth"
     },
     {
       "role": "model",

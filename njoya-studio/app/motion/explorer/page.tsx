@@ -9,7 +9,7 @@ import ExplorerLetterStudy from "@/components/explorer-letter-study";
 import { getSite } from "@/lib/content/repository";
 
 export const metadata: Metadata = {
-  title: "The explorer — Motion study",
+  title: "The explorer: Motion study",
   robots: { index: false, follow: false },
 };
 

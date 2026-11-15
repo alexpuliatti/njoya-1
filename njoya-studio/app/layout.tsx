@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     new URL(process.env.SITE_URL || "http://localhost:3000").origin,
   ),
-  title: { default: siteConfig.name, template: `%s — ${siteConfig.name}` },
+  title: { default: siteConfig.name, template: `%s | ${siteConfig.name}` },
   description:
     "A multidisciplinary creative practice working across space, image, objects and experiences.",
   icons: { icon: assetPath("/favicon.ico") },

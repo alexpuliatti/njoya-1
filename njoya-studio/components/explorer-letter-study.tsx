@@ -61,7 +61,7 @@ export default function ExplorerLetterStudy() {
             <RotateCcw aria-hidden="true" size={13} /> Replay
           </button>
           <button
-            aria-label="Half-speed playback"
+            aria-label="Half speed playback"
             aria-pressed={slow}
             className={styles.speedButton}
             disabled={disabled}

@@ -55,6 +55,7 @@ body.studio-body {
   background: var(--studio-bg);
   color: var(--studio-text);
   font-optical-sizing: auto;
+  hyphens: none;
 }
 ::selection {
   background: #dbc3a6;

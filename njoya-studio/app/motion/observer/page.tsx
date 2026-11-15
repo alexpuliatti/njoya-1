@@ -10,7 +10,7 @@ import ObserverStudy from "@/components/observer-study";
 import { getLabEntries } from "@/lib/content/repository";
 
 export const metadata: Metadata = {
-  title: "The observer — Motion study",
+  title: "The observer: Motion study",
   robots: { index: false, follow: false },
 };
 

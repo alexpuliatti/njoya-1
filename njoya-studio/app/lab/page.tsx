@@ -22,7 +22,7 @@ export default async function LabPage() {
         </h1>
         <p>
           Our studio explores the creative direction of worlds where ideas come
-          to life. The process always begins with a narrative - a story that
+          to life. The process always begins with a narrative: a story that
           engages our thoughts and feelings. From this foundation, we use memory,
           colour, texture, materials, forms, and sound to shape the identity and
           atmosphere of each project. Here, we share a glimpse into our process,
