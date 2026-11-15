@@ -175,6 +175,7 @@ export const labSchema = z
         making: z.array(imageSchema).optional(),
         result: z.array(imageSchema).optional(),
         closingParagraphs: z.array(z.string().min(1)).optional(),
+        closingItalic: z.boolean().optional(),
       })
       .strict()
       .optional(),

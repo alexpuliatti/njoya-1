@@ -43,6 +43,10 @@
   margin: 0;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .closing p + p {
   margin-top: 1em;
 }

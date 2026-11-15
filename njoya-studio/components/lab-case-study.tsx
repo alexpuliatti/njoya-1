@@ -51,7 +51,7 @@ export default function LabCaseStudy({
         ) : null}
         <div className={styles.copy}>
           <Heading className={styles.title} id={`case-study-${entry.slug}`}>
-            {entry.title}
+            <i>{entry.title}</i>
           </Heading>
           <p className={styles.paragraph}>{entry.summary}</p>
           {entry.paragraphs.map((paragraph, index) => (

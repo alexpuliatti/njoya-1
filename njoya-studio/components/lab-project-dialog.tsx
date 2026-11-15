@@ -105,7 +105,9 @@ export default function LabProjectDialog({
         <div className={styles.introduction}>
           <h2 className={styles.title} id={titleId}>
             <span>{project.client}</span>
-            <span>{project.title}</span>
+            <span>
+              <i>{project.title}</i>
+            </span>
           </h2>
           <p className={styles.brief}>{project.brief}</p>
         </div>
@@ -143,7 +145,9 @@ export default function LabProjectDialog({
           </section>
         ) : null}
         {project.closingParagraphs?.length ? (
-          <div className={`${styles.brief} ${styles.closing}`}>
+          <div
+            className={`${styles.brief} ${styles.closing} ${project.closingItalic ? styles.italic : ""}`}
+          >
             {project.closingParagraphs.map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
             ))}
