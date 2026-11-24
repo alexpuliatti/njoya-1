@@ -5,16 +5,16 @@
   "client": "Audemars Piguet",
   "date": "2025-01-01",
   "categories": [
-    "worlds"
+    "commercials"
   ],
   "kind": "design-project",
   "cover": {
     "type": "image",
-    "src": "/media/images/de798d5f5fc62efe89ecb16ada2c8b482921114b-pf257cef.webp",
-    "previewSrc": "/media/images/de798d5f5fc62efe89ecb16ada2c8b482921114b-pf257cef-480.webp",
-    "alt": "Campaign celebrating Audemars Piguet's 150th anniversary, shot by Campbell Addy with set design by Ibby Njoya (Njoya Studios). A portrait driven, cinematic campaign titled \"The Beat Goes On,\" honouring the artisans, engineers, and collaborators of the Manufacture over 150 years of watchmaking excellence. Vibrant, diverse, and dynamically composed, the campaign was shot in Le Brassus, the brand's home in the Vallée de Joux, Switzerland.",
-    "width": 2481,
-    "height": 3508
+    "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef.webp",
+    "previewSrc": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef-480.webp",
+    "alt": "The Audemars Piguet anniversary campaign group poses around a curved grass-roofed building, with musicians on the roof and a photographer in the foreground.",
+    "width": 1650,
+    "height": 1900
   },
   "gallery": [
     {

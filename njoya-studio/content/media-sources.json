@@ -5389,5 +5389,12 @@
     "profile": "web",
     "width": 4452,
     "height": 6678
+  },
+  "cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc": {
+    "file": "ap-cover-crop-x100-y950-w1650-h1900.png",
+    "localSource": "media/originals/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc.png",
+    "originalFilename": "ap-cover-crop-x100-y950-w1650-h1900.png",
+    "width": 1650,
+    "height": 1900
   }
 }

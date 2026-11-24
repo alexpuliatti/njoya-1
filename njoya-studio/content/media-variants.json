@@ -26665,6 +26665,40 @@
         }
       ],
       "sourceBytes": 18505317
+    },
+    "cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc": {
+      "signature": "pf257cef:7429182:1794783843668.9282",
+      "width": 1650,
+      "height": 1900,
+      "format": "webp",
+      "fallback": {
+        "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef.webp",
+        "width": 1650,
+        "bytes": 685062
+      },
+      "variants": [
+        {
+          "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef-480.webp",
+          "width": 480,
+          "bytes": 96532
+        },
+        {
+          "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef-960.webp",
+          "width": 960,
+          "bytes": 324154
+        },
+        {
+          "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef-1600.webp",
+          "width": 1600,
+          "bytes": 650476
+        },
+        {
+          "src": "/media/images/cbb366ae4cab09bcd6b7cfacf99a8de5a9e07bbc-pf257cef.webp",
+          "width": 1650,
+          "bytes": 685062
+        }
+      ],
+      "sourceBytes": 7429182
     }
   }
 }
