@@ -1,24 +1,85 @@
 {
   "featured": [
     {
-      "title": "Brides de Galaxy",
-      "workId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272"
+      "category": "worlds",
+      "projects": [
+        {
+          "title": "Brides de Galaxy",
+          "workId": "ad25c23d-8ceb-4710-90fa-11f10ae4a272"
+        },
+        {
+          "title": "Jaguar",
+          "workId": "jaguar-miami-2024"
+        },
+        {
+          "title": "Harvey Nichols Windows",
+          "workId": "8b5492cb-ecad-4994-900c-8dda8357bb9e"
+        }
+      ]
     },
     {
-      "title": "Lacoste",
-      "workId": "eba3e495-0a85-4a16-ac67-00535be1f3ad"
+      "category": "exhibition",
+      "projects": [
+        {
+          "title": "NAOMI: In Fashion",
+          "workId": "fefe418e-7518-4af7-a591-1cad5a67c3e4"
+        },
+        {
+          "title": "I Love Campbell Australia",
+          "workId": "53eaf2c4-c6a3-4ff7-957c-99732d47a1f5"
+        }
+      ]
     },
     {
-      "title": "Jaguar",
-      "workId": "jaguar-miami-2024"
+      "category": "commercials",
+      "projects": [
+        {
+          "title": "Lacoste",
+          "workId": "eba3e495-0a85-4a16-ac67-00535be1f3ad"
+        },
+        {
+          "title": "Pleats Please Issey Miyake",
+          "workId": "6d5b8c39-47fd-43e2-bb6f-81b09d286cc6"
+        },
+        {
+          "title": "Nike Euros Campaign",
+          "workId": "2c99d15e-71d1-4929-b174-adab45be2334"
+        }
+      ]
     },
     {
-      "title": "Vogue Hommes",
-      "workId": "ff65ad54-4a50-4404-a4b8-4484728d1ef3"
+      "category": "editorials",
+      "projects": [
+        {
+          "title": "Vogue Hommes",
+          "workId": "ff65ad54-4a50-4404-a4b8-4484728d1ef3"
+        },
+        {
+          "title": "Acne Paper, Issue 20: Golden",
+          "workId": "430b5cc4-28f5-459d-97b2-bc5307c52755"
+        },
+        {
+          "title": "Perfect No. 6.5: Rihanna in One Word",
+          "workId": "940b860b-68dc-4a6e-bf4a-c4a7d673f205"
+        }
+      ]
     },
     {
-      "title": "Balmain",
-      "workId": "balmain-motion"
+      "category": "motion",
+      "projects": [
+        {
+          "title": "Balmain",
+          "workId": "balmain-motion"
+        },
+        {
+          "title": "Chanel Beauty, Mother’s Day",
+          "workId": "279b6b0b-7048-43c3-aede-14829ddbc6ab"
+        },
+        {
+          "title": "MAC",
+          "workId": "mac-motion"
+        }
+      ]
     }
   ]
 }

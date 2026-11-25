@@ -3,9 +3,10 @@ import type { NjoyaCarouselItem } from "@/lib/njoya-carousel-types";
 import Link from "next/link";
 import { Suspense } from "react";
 
-import NjoyaCarousel from "@/components/njoya-carousel";
+import HomepageCarousel from "@/components/homepage-carousel";
 import HomeQueryRedirect from "@/components/home-query-redirect";
 import HomepageWorldBuilders from "@/components/homepage-world-builders";
+import { homepageCycleCount } from "@/lib/homepage-cycle.mjs";
 import {
   getCategories,
   getHome,
@@ -22,41 +23,35 @@ export default async function Home() {
     getCategories(),
   ]);
   const byId = new Map(works.map((work) => [work.id, work]));
-  const items: NjoyaCarouselItem[] = home.featured.map((feature) => {
-    const work = feature.workId ? byId.get(feature.workId) : undefined;
+  const cycleCount = homepageCycleCount(
+    home.featured.map((slot) => slot.projects.length),
+  );
+  const cycles: NjoyaCarouselItem[][] = Array.from(
+    { length: cycleCount },
+    (_, cycle) =>
+      home.featured.map((slot) => {
+        const feature = slot.projects[cycle % slot.projects.length];
+        const work = byId.get(feature.workId);
 
-    if (work)
-      return toCarouselItem(
-        work,
-        categories,
-        site.videoPlaybackEnabled,
-        work.categories.includes("motion") ? "motion" : undefined,
-      );
+        if (!work)
+          throw new Error(`Unknown homepage project: ${feature.workId}`);
 
-    return {
-      id: `pending-${feature.title}`,
-      title: feature.title,
-      subtitle: "Coming soon",
-      imageUrl: "",
-      href: "",
-      linkLabel: "",
-      category: "Selected project",
-      type: "design-project",
-      images: [],
-      metadata: [],
-      unavailable: true,
-    };
-  });
+        return toCarouselItem(
+          work,
+          categories,
+          site.videoPlaybackEnabled,
+          slot.category,
+        );
+      }),
+  );
 
   return (
     <>
       <Suspense fallback={null}>
         <HomeQueryRedirect />
       </Suspense>
-      <NjoyaCarousel
-        showLoader
-        items={items}
-        label="Selected projects"
+      <HomepageCarousel
+        cycles={cycles}
         pinned={
           <Link className="statement-card" href="/about">
             <HomepageWorldBuilders />

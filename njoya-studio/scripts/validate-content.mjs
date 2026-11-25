@@ -115,12 +115,17 @@ export async function validateContent({ checkMedia = true } = {}) {
     addImage(category.cover);
   }
   const featuredIds = home.featured
-    .map((entry) => entry.workId)
-    .filter(Boolean);
+    .flatMap((slot) => slot.projects.map((project) => project.workId));
   if (new Set(featuredIds).size !== featuredIds.length)
     throw new Error("Duplicate homepage projects");
   for (const id of featuredIds)
     if (!ids.has(id)) throw new Error(`Unknown featured work ID: ${id}`);
+  for (const slot of home.featured)
+    for (const project of slot.projects) {
+      const work = works.find((work) => work.id === project.workId);
+      if (!work.categories.includes(slot.category))
+        throw new Error(`Homepage project ${work.slug} is not in ${slot.category}`);
+    }
   addImage(about.portrait);
   about.team.forEach((person) => addImage(person.image));
   lab.forEach((entry) => {

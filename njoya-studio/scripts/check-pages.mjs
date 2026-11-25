@@ -95,10 +95,19 @@ const homepage = await fs.readFile(pagePath("/"), "utf8");
 const homepagePreviews = [...homepage.matchAll(/<video\b[^>]*>/g)].map(
   (match) => match[0],
 );
-for (const feature of home.featured) {
+for (const slot of home.featured) {
+  for (const feature of slot.projects) {
+    const work = works.find((entry) => entry.id === feature.workId);
+
+    assert.ok(
+      homepage.includes(work.cover.src) && homepage.includes(work.slug),
+      `Missing homepage cycle project: ${work.slug}`,
+    );
+  }
+  const feature = slot.projects[0];
   const work = works.find((entry) => entry.id === feature.workId);
 
-  if (!work?.categories.includes("motion") || !work.previewVideoSrc) continue;
+  if (slot.category !== "motion" || !work.previewVideoSrc) continue;
   const preview = homepagePreviews.find((tag) =>
     tag.includes(`src="${basePath}${work.previewVideoSrc}"`),
   );

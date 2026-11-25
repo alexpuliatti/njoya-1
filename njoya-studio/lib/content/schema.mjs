@@ -115,12 +115,26 @@ export const homeSchema = z
       .array(
         z
           .object({
-            title: z.string().min(1),
-            workId: z.string().nullable(),
+            category: categoryIdSchema,
+            projects: z
+              .array(
+                z
+                  .object({
+                    title: z.string().min(1),
+                    workId: z.string().min(1),
+                  })
+                  .strict(),
+              )
+              .min(2)
+              .max(3),
           })
           .strict(),
       )
-      .min(1),
+      .length(categoryIdSchema.options.length)
+      .refine(
+        (slots) => new Set(slots.map((slot) => slot.category)).size === slots.length,
+        "Each homepage category must appear once",
+      ),
   })
   .strict();
 export const siteSchema = z

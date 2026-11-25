@@ -38,7 +38,7 @@ To review locally, run `npm run dev`, open a project card, browse its credits an
 
 ```text
 content/site.json             Studio statement, inquiry contacts, video setting
-content/home.json             Ordered featured project slots (at least one)
+content/home.json             Five category slots, two or three project choices each
 content/categories.json       Work categories and their cover project IDs
 content/about.json            Company biography, portrait and team
 content/work/*.json           Individual projects and shoot editions
@@ -148,9 +148,11 @@ The five Work category cards in `content/categories.json` have their own optiona
 
 ## Select homepage projects
 
-`content/home.json` contains an ordered list of `{ "title": "Display title", "workId": "PROJECT_ID" }` entries, with at least one feature. Match `workId` to a project's `id`. Add or replace entries only as requested. The studio statement is separate and stays fixed while the project cards browse in a loop.
+`content/home.json` contains five ordered `featured` slots, one per category. Each slot has a `category` and a `projects` array of two or three `{ "title": "Display title", "workId": "PROJECT_ID" }` choices. Match each `workId` to an existing project assigned to that category, and keep all project references distinct. Cards use the actual Work title; the config title identifies the choice for editors.
 
-The five features include Balmain Motion alongside the four existing projects. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
+Each full page load advances every category to its next project, wrapping at the end of its own list. Exhibition has two choices; the other categories have three, so the full selection repeats after six loads. Client-side navigation keeps the current selection. The selection is stored per browser tab; blocked session storage falls back to a usable selection. Add or replace choices only as requested. The studio statement stays fixed while the project cards browse in a loop.
+
+All five previous featured projects remain among the configured choices. Jaguar uses the supplied Miami installation photographs and credits, dated December 2024.
 
 The homepage intro uses `public/media/brand/njoya-intro.webp`, prepared from the supplied logo artwork. It appears on each full homepage load, then reveals the homepage with an upward screen wipe. It stays dismissed during navigation within the same document. It finishes automatically without a visible skip button; Escape dismisses it immediately. Reduced-motion visitors see the still artwork briefly without the animated entrance or wipe. The pre-hydration setup is in `lib/intro.ts`.
 

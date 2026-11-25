@@ -2,7 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { validateContent } from "../scripts/validate-content.mjs";
 import { matchesSearch, normalizeSearch } from "../lib/content/search.mjs";
-import { workSchema, videoSchema } from "../lib/content/schema.mjs";
+import { homeSchema, workSchema, videoSchema } from "../lib/content/schema.mjs";
 import { compareWorkDate } from "../lib/content/order.mjs";
 
 const content = await validateContent();
@@ -141,24 +141,50 @@ test("Balmain is a Motion project with all three local films and supplied credit
   assert.ok(work.credits.some((credit) => credit.name === "Carlijn Jacobs"));
   assert.equal(content.categories.find((category) => category.id === "motion").coverWorkId, work.id);
 });
-test("the homepage retains its existing heroes and adds Balmain Motion as a fifth feature", () => {
+test("the homepage has distinct projects in their assigned categories and retains the existing heroes", () => {
   assert.deepEqual(
-    content.home.featured.map((entry) => entry.workId),
-    [
+    content.home.featured.map((slot) => slot.category),
+    ["worlds", "exhibition", "commercials", "editorials", "motion"],
+  );
+  const featuredIds = content.home.featured.flatMap((slot) =>
+    slot.projects.map((project) => project.workId),
+  );
+  assert.equal(new Set(featuredIds).size, featuredIds.length);
+  for (const original of [
       "ad25c23d-8ceb-4710-90fa-11f10ae4a272",
       "eba3e495-0a85-4a16-ac67-00535be1f3ad",
       "jaguar-miami-2024",
       "ff65ad54-4a50-4404-a4b8-4484728d1ef3",
       "balmain-motion",
-    ],
-  );
-  const jaguarId = content.home.featured.find((entry) => entry.title === "Jaguar").workId;
-  const jaguar = content.works.find((work) => work.id === jaguarId);
+  ]) assert.ok(featuredIds.includes(original));
+  for (const slot of content.home.featured) {
+    assert.equal(slot.projects.length, slot.category === "exhibition" ? 2 : 3);
+    for (const project of slot.projects) {
+      const work = content.works.find((work) => work.id === project.workId);
+
+      assert.ok(work.categories.includes(slot.category));
+      if (slot.category === "motion")
+        assert.ok(work.gallery.some((entry) => entry.type === "video" && "src" in entry));
+    }
+  }
+});
+test("homepage configuration accepts two or three projects and rejects incomplete cycles and repeated categories", () => {
+  const twoChoices = structuredClone(content.home);
+  twoChoices.featured[0].projects.pop();
+  assert.equal(homeSchema.safeParse(twoChoices).success, true);
+  const incomplete = structuredClone(content.home);
+  incomplete.featured[0].projects.splice(1);
+  assert.equal(homeSchema.safeParse(incomplete).success, false);
+  const tooMany = structuredClone(content.home);
+  tooMany.featured[0].projects.push(tooMany.featured[0].projects[0]);
+  assert.equal(homeSchema.safeParse(tooMany).success, false);
+  const repeated = structuredClone(content.home);
+  repeated.featured[1].category = repeated.featured[0].category;
+  assert.equal(homeSchema.safeParse(repeated).success, false);
+});
+test("the featured Jaguar retains its supplied project details", () => {
+  const jaguar = content.works.find((work) => work.id === "jaguar-miami-2024");
   assert.equal(jaguar.client, "Jaguar");
   assert.equal(jaguar.date, "2024-12");
   assert.equal(jaguar.gallery.length, 2);
-  assert.ok(
-    content.home.featured
-      .every((entry) => content.works.some((work) => work.id === entry.workId)),
-  );
 });
