@@ -44,9 +44,6 @@ export default function ProjectDialog({
     >
       <StudioDialogPanel className="project-dialog-panel">
         <header className="project-dialog-toolbar">
-          <span className="eyebrow">
-            Njoya Studios <span aria-hidden="true">/</span> Selected work
-          </span>
           <StudioDialogClose label="Close project" />
         </header>
         <div className="project-dialog-overview">
@@ -115,13 +112,6 @@ export default function ProjectDialog({
             aria-label="Project gallery"
             className="project-dialog-gallery"
           >
-            <div className="project-dialog-gallery-heading">
-              <span className="eyebrow">Inside the project</span>
-              <span className="eyebrow">
-                {String(gallery.length).padStart(2, "0")}{" "}
-                {gallery.length === 1 ? "entry" : "entries"}
-              </span>
-            </div>
             <MediaGallery
               autoplayPreviews={item.videoOnly}
               entries={gallery}

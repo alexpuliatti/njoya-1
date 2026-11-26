@@ -97,9 +97,6 @@ export default function LabProjectDialog({
     <StudioDialog aria-labelledby={titleId} instant={instant} onClose={onClose}>
       <StudioDialogPanel className="project-dialog-panel">
         <header className="project-dialog-toolbar">
-          <span className="eyebrow">
-            Njoya Studios <span aria-hidden="true">/</span> Lab
-          </span>
           <StudioDialogClose label="Close project" />
         </header>
         <div className={styles.introduction}>
