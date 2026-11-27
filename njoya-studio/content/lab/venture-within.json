@@ -13,14 +13,6 @@
     "sketches": [
       {
         "type": "image",
-        "src": "/media/images/4d1cfe93947a737faa045a92319c18bbe0e0c352-pe8c9d63.webp",
-        "previewSrc": "/media/images/4d1cfe93947a737faa045a92319c18bbe0e0c352-pe8c9d63-480.webp",
-        "alt": "Colour sketch of a vivid, twisting tree with bare branches, small houses and a striped ground.",
-        "width": 953,
-        "height": 1280
-      },
-      {
-        "type": "image",
         "src": "/media/images/6c4bf110e29fd710c1bf5bd1484f79d44373b272-pe8c9d63.webp",
         "previewSrc": "/media/images/6c4bf110e29fd710c1bf5bd1484f79d44373b272-pe8c9d63-480.webp",
         "alt": "Concept render of a branching castle tree with small doorways and Hermès objects against a pink backdrop.",
@@ -45,14 +37,6 @@
       },
       {
         "type": "image",
-        "src": "/media/images/60bf8ededa9a9fa26f5d81226c7fa2bd2dad9a5e-pe8c9d63.webp",
-        "previewSrc": "/media/images/60bf8ededa9a9fa26f5d81226c7fa2bd2dad9a5e-pe8c9d63-480.webp",
-        "alt": "Colour concept sketch of a curved bridge above an orange landscape, with boats and patterned sculptural details.",
-        "width": 5120,
-        "height": 2914
-      },
-      {
-        "type": "image",
         "src": "/media/images/4b5f31480870bfad8082fcee14b1fd2692f4e152-pe8c9d63.webp",
         "previewSrc": "/media/images/4b5f31480870bfad8082fcee14b1fd2692f4e152-pe8c9d63-480.webp",
         "alt": "Concept render of a curved bridge between sculptural columns in a pink Hermès window.",
@@ -66,14 +50,6 @@
         "alt": "Concept render of three suspended woven panels displaying colourful Hermès scarves.",
         "width": 1600,
         "height": 896
-      },
-      {
-        "type": "image",
-        "src": "/media/images/bd1f3de9d9338de6e59377894aefb87e89d592e6-pe8c9d63.webp",
-        "previewSrc": "/media/images/bd1f3de9d9338de6e59377894aefb87e89d592e6-pe8c9d63-480.webp",
-        "alt": "Three colour studies of a sculptural horse with layered, patterned details for Venture Within.",
-        "width": 3840,
-        "height": 2160
       }
     ],
     "making": [
